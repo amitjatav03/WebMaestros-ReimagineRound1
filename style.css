@@ -1,15 +1,16 @@
-:root{
-    --blue: #211F3F;
-    --dark-blue: #161b2c;
-    --light: #e0e6ff;
-    --chocolate: #3f331f;
-    --dark-brown: #2c2416;
+:root {
+  --blue: #211f3f;
+  --dark-blue: #161b2c;
+  --light: #e0e6ff;
+  --chocolate: #3f331f;
+  --dark-brown: #2c2416;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
 }
 
 html,
@@ -27,7 +28,7 @@ body {
   padding: 0;
 }
 
-#top-bar{
+#top-bar {
   display: flex;
   width: 80vw;
   height: 10rem;
@@ -40,28 +41,28 @@ body {
   z-index: 999;
 }
 
-#top-bar img{
+#top-bar img {
   width: 15vw;
 }
 
-#top-bar i{
+#top-bar i {
   font-size: 3.5vw;
   filter: invert(1);
   cursor: pointer;
 }
 
-.front{
-    width: 100%;
-    height: 100vh;
-    background-color: var(--dark-blue);
+.front {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--dark-blue);
 }
 
 .swiper {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }
 
 .swiper-slide {
@@ -78,9 +79,68 @@ body {
   cursor: default;
 }
 
+.swiper-slide h1{
+  position: absolute;
+  top: 50%;
+  z-index: 999;
+  font-size: 5vw;
+  font-weight: 600;
+  display: none;
+}
+
+#second-main {
+  border-radius: 2%;
+  width: 100%;
+  height: 500vh;
+  background-color: var(--dark-brown);
+  position: absolute;
+  z-index: 2000;
+  color: black;
+}
+
 
 #page2{
-    width: 100%;
-    height: 100vh;
-    background-color: var(--light);
+  width: 100%;
+  padding: 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
+
+#first, #second, #third{
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+
+.first-cards{
+  width: 50%;
+}
+
+.second-cards{
+  width: 33%;
+}
+
+.new-and-trending{
+  background-color: #D4DDFB;
+}
+
+.streaming-now{
+  width: 60%;
+}
+
+
+
+.cards{
+  height: 50vh;
+  padding: 2rem 4rem;
+  border-radius: 5%;
+}
+
+.cards h1{
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 600;
+}
+

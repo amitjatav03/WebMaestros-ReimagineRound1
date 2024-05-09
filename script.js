@@ -38,3 +38,29 @@ Shery.hoverWithMediaCircle("img" /* Element to target.*/, {
   images: ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-4-1361526.jpeg"] /*OR*/,
   //videos: ["video1.mp4", "video2.mp4"],
 });
+
+
+gsap.to("#second-main", {
+  top: 0,
+  scrollTrigger: {
+    scroller: "body",
+    trigger: "#second-main",
+    markers: true,
+    start: "top 95%",
+    end: "top 10%",
+    scrub: 1
+  }
+})
+
+
+
+var apexImg = document.querySelector("#manorlordsImg");
+var apexTitle =document.querySelector("#manorlordsTitle");
+
+apexImg.addEventListener("mouseenter", function(){
+  apexTitle.style.display = "block";
+})
+
+apexImg.addEventListener("mouseout", function(){
+  apexTitle.style.display = "none";
+})
