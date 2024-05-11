@@ -23,6 +23,9 @@
 
   <body>
     <div id="main">
+      <div id="title">
+        <h1>Features and Recommendation</h1>
+      </div>
       <div id="top-bar">
         <img
           src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
@@ -32,10 +35,12 @@
       </div>
       <div id="cursor">
         <div class="front">
+          <video id="mainvid" src="pubgnew.mp4" autoplay muted loop></video>
           <div class="swiper mySwiper">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <img id="apeximg" src="images/img-1-apexlegends.jpg" />
+                <!-- <img id="apeximg" src="images/img-1-apexlegends.jpg" /> -->
+                <video src="VID.mp4" autoplay mute loop></video>
                 <h1 id="apextitle">APEX LEGENDS</h1>
               </div>
               <div class="swiper-slide">
@@ -55,33 +60,184 @@
       </div>
   
       <div id="second-main">
-        <div id="page2">
+        <div id="page2" class="rounded-md">
+          <h1 class="text-8xl text-white uppercase">Explore More</h1>
           <div id="first">
             <div class="cards first-cards new-and-trending">
               <h1>New & Trending</h1>
             </div>
-            <div class="cards first-cards top-seller bg-yellow-500">
+            <div class="cards first-cards top-seller bg-zinc-500">
               <h1>Top seller</h1>
             </div>
           </div>
           <div id="second">
-            <div class="cards second-cards popular bg-blue-500">
+            <div class="cards second-cards popular bg-blue-300">
               <h1>Popular</h1>
             </div>
             <div class="cards second-cards incoming bg-zinc-400">
-              <h1>Incoming</h1>
+              <h1>Upcoming</h1>
             </div>
-            <div class="cards second-cards specials bg-purple-400">
+            <div class="cards second-cards specials bg-pink-400 spec">
               <h1>Specials</h1>
             </div>
           </div>
           <div id="third">
-            <div class="cards third-cards streaming-now bg-orange-500">
+            <div class="cards third-cards streaming-now bg-zinc-500">
               <h1>Streaming Now</h1>
             </div>
-            <div class="cards third-cards steam-gift-cards bg-green-500">
+            <div class="cards third-cards steam-gift-cards last">
               <h1>Steam Gift Cards</h1>
             </div>
+          </div>
+        </div>
+
+        <div class="page3 w-full h-screen bg-[--dark-blue] flex justify-center flex-col gap-10">
+          <div class="offer-title text-center">
+            <h1 class="text-6xl text-white uppercase ">Special Offers</h1>
+          </div>
+          <div class="marque-effect relative h-1/2 overflow-hidden">
+            <div class="blur-left absolute left-0 top-0">left</div>
+            <div class="blur-right absolute right-0 top-0"></div>
+            <div class="move h-full absolute top-0 left-0 whitespace-nowrap">
+              <div class="marquee-cards">
+                <div class="img-section">
+                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
+
+                </div>
+                <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                  <div class="offer w-3/5 h-3/5 bg-blue-200 rounded-md flex overflow-hidden">
+                    <div class="offer-left w-1/2 bg-purple-500 flex justify-center items-center">
+                      <h1 class="text-2xl font-semibold">-20%</h1>
+                    </div>
+                    <div class="offer-right w-1/2 bg-zinc-400 flex flex-col">
+                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                      <div class="offer-r-left h-1/2 flex justify-center items-center bg-blue-700"><p>$1,040</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="marquee-cards">
+                <div class="img-section">
+                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/8f0a57df9911fe494ebfe064/spotlight_image_english.jpg?t=1715185347" alt="">
+
+                </div>
+                <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                  <div class="offer w-3/5 h-3/5 bg-blue-200 rounded-md flex overflow-hidden">
+                    <div class="offer-left w-1/2 bg-purple-500 flex justify-center items-center">
+                      <h1 class="text-2xl font-semibold">-20%</h1>
+                    </div>
+                    <div class="offer-right w-1/2 bg-zinc-400 flex flex-col">
+                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                      <div class="offer-r-left h-1/2 flex justify-center items-center bg-blue-700"><p>$1,040</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="marquee-cards">
+                <div class="img-section">
+                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
+
+                </div>
+                <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                  <div class="offer w-3/5 h-3/5 bg-blue-200 rounded-md flex overflow-hidden">
+                    <div class="offer-left w-1/2 bg-purple-500 flex justify-center items-center">
+                      <h1 class="text-2xl font-semibold">-20%</h1>
+                    </div>
+                    <div class="offer-right w-1/2 bg-zinc-400 flex flex-col">
+                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                      <div class="offer-r-left h-1/2 flex justify-center items-center bg-blue-700"><p>$1,040</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="marquee-cards">
+                <div class="img-section">
+                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
+
+                </div>
+                <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                  <div class="offer w-3/5 h-3/5 bg-blue-200 rounded-md flex overflow-hidden">
+                    <div class="offer-left w-1/2 bg-purple-500 flex justify-center items-center">
+                      <h1 class="text-2xl font-semibold">-20%</h1>
+                    </div>
+                    <div class="offer-right w-1/2 bg-zinc-400 flex flex-col">
+                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                      <div class="offer-r-left h-1/2 flex justify-center items-center bg-blue-700"><p>$1,040</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="marquee-cards">
+                <div class="img-section">
+                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
+
+                </div>
+                <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                  <div class="offer w-3/5 h-3/5 bg-blue-200 rounded-md flex overflow-hidden">
+                    <div class="offer-left w-1/2 bg-purple-500 flex justify-center items-center">
+                      <h1 class="text-2xl font-semibold">-20%</h1>
+                    </div>
+                    <div class="offer-right w-1/2 bg-zinc-400 flex flex-col">
+                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                      <div class="offer-r-left h-1/2 flex justify-center items-center bg-blue-700"><p>$1,040</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="marquee-cards">
+                <div class="img-section">
+                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/8f0a57df9911fe494ebfe064/spotlight_image_english.jpg?t=1715185347" alt="">
+
+                </div>
+                <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                  <div class="offer w-3/5 h-3/5 bg-blue-200 rounded-md flex overflow-hidden">
+                    <div class="offer-left w-1/2 bg-purple-500 flex justify-center items-center">
+                      <h1 class="text-2xl font-semibold">-20%</h1>
+                    </div>
+                    <div class="offer-right w-1/2 bg-zinc-400 flex flex-col">
+                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                      <div class="offer-r-left h-1/2 flex justify-center items-center bg-blue-700"><p>$1,040</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="marquee-cards">
+                <div class="img-section">
+                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
+
+                </div>
+                <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                  <div class="offer w-3/5 h-3/5 bg-blue-200 rounded-md flex overflow-hidden">
+                    <div class="offer-left w-1/2 bg-purple-500 flex justify-center items-center">
+                      <h1 class="text-2xl font-semibold">-20%</h1>
+                    </div>
+                    <div class="offer-right w-1/2 bg-zinc-400 flex flex-col">
+                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                      <div class="offer-r-left h-1/2 flex justify-center items-center bg-blue-700"><p>$1,040</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="marquee-cards">
+                <div class="img-section">
+                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
+
+                </div>
+                <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                  <div class="offer w-3/5 h-3/5 bg-blue-200 rounded-md flex overflow-hidden">
+                    <div class="offer-left w-1/2 bg-purple-500 flex justify-center items-center">
+                      <h1 class="text-2xl font-semibold">-20%</h1>
+                    </div>
+                    <div class="offer-right w-1/2 bg-zinc-400 flex flex-col">
+                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                      <div class="offer-r-left h-1/2 flex justify-center items-center bg-blue-700"><p>$1,040</p></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            
           </div>
         </div>
       </div>

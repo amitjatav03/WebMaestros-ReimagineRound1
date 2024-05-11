@@ -10,7 +10,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: gilroy;
+  /* font-family: gilroy; */
+  font-family: "League Gothic";
 }
 
 html,
@@ -30,7 +31,7 @@ body {
 
 #top-bar {
   display: flex;
-  width: 80vw;
+  width: 90vw;
   height: 10rem;
   position: fixed;
   top: -2%;
@@ -51,10 +52,35 @@ body {
   cursor: pointer;
 }
 
+#title h1{
+  position: absolute;
+  color: white;
+  left: 50%;
+  transform: translate(-50%);
+  top: 88%;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+
+}
+
 .front {
   width: 100%;
   height: 100vh;
-  background-color: var(--dark-blue);
+  /* background-color: var(--dark-blue); */
+  background: url("VID.mp4");
+  background-size: cover;
+  background-position: center;
+  /* background: linear-gradient(220.55deg, #5D85A6 0%, #0E2C5E 100%); */
+}
+
+
+#mainvid{
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+
 }
 
 .swiper {
@@ -72,11 +98,12 @@ body {
   height: 70vh;
 }
 
-.swiper-slide img {
+.swiper-slide img, video {
   display: block;
   width: 50vw;
   height: 70vh;
   cursor: default;
+  /* border-radius: 2rem; */
 }
 
 .swiper-slide h1{
@@ -92,7 +119,7 @@ body {
   border-radius: 2%;
   width: 100%;
   height: 500vh;
-  background-color: var(--dark-brown);
+  /* background-color: var(--chocolate); */
   position: absolute;
   z-index: 2000;
   color: black;
@@ -104,6 +131,13 @@ body {
   padding: 2rem 2rem;
   display: flex;
   flex-direction: column;
+  /* background-color: rgb(225, 225, 225); */
+  /* background-color: var(--dark-blue); */
+  /* background-color: var(--dark-brown); */
+  background-color: black;
+  /* border-radius: 4rem; */
+  border-top-left-radius: 4rem;
+  border-top-right-radius: 4rem;
   gap: 2rem;
 }
 
@@ -113,6 +147,13 @@ body {
   gap: 2rem;
 }
 
+.last{
+  background-color: #b3a79d;
+}
+
+.spec{
+  background-color: #ffefe0 ;
+}
 
 .first-cards{
   width: 50%;
@@ -133,7 +174,7 @@ body {
 
 
 .cards{
-  height: 50vh;
+  height: 80vh;
   padding: 2rem 4rem;
   border-radius: 5%;
 }
@@ -144,3 +185,88 @@ body {
   font-weight: 600;
 }
 
+
+.marque-effect .move{
+  animation-name: marquee;
+  animation-duration: 50s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  display: flex;
+  gap: 2rem;
+  white-space: nowrap;
+  padding: 0 5vw;
+}
+.marque-effect .move:hover{
+  animation-play-state: paused;
+}
+
+
+.marquee-cards{
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+  display: flex;
+  flex-direction: column;
+  white-space: nowrap;
+  height: 100%;
+  background-color: var(--blue);
+  width: 20vw;
+  border-radius: .5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.offer-title h1{
+  color: var(--light);
+}
+
+@keyframes marquee{
+  0%{
+    transform: translateX(10%);
+  }
+  100%{
+    transform: translateX(-100%);
+  }
+}
+
+.img-section{
+  width: 100%;
+  height: 65%;
+  overflow: hidden;
+}
+
+.marquee-cards img{
+  height: 100%;
+  width: 100%;
+}
+
+.marquee-cards:hover .marquee-img{
+  transform: scale(1.05);
+}
+
+
+.blur-left{
+  width: 25%;
+  height: 100%;
+  background-color: var(--dark-blue);
+  z-index: 800;
+  background: linear-gradient(to right, var(--dark-blue), transparent);
+  pointer-events: none;
+}
+
+
+.blur-right{
+  width: 40%;
+  height: 100%;
+  background-color: var(--dark-blue);
+  z-index: 800;
+  background: linear-gradient(to left, var(--dark-blue), transparent);
+  pointer-events: none;
+}
+
+.offer-left{
+  background-color: var(--light);
+}
+
+.offer-r-left{
+  background-color: rgb(135, 105, 150);
+}
