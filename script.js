@@ -40,11 +40,11 @@ var swiper = new Swiper(".mySwiper", {
 // });
 
 
-gsap.to("#second-main", {
+gsap.to(".second-main", {
   top: 0,
   scrollTrigger: {
     scroller: "body",
-    trigger: "#second-main",
+    trigger: ".second-main",
     start: "top 95%",
     end: "top 10%",
     scrub: 1

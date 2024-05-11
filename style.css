@@ -3,6 +3,11 @@
   src: url(fonts/LeagueGothic-Regular.otf);
 }
 
+@font-face {
+  font-family: Gilroy;
+  src: url(fonts/Gilroy-Regular.ttf);
+}
+
 :root {
   --blue: #211f3f;
   --dark-blue: #161b2c;
@@ -123,7 +128,6 @@ body {
 #second-main {
   border-radius: 2%;
   width: 100%;
-  height: 500vh;
   /* background-color: var(--chocolate); */
   position: absolute;
   z-index: 2000;
@@ -193,7 +197,7 @@ body {
 
 .marque-effect .move{
   animation-name: marquee;
-  animation-duration: 50s;
+  animation-duration: 25s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-play-state: running;
@@ -226,10 +230,10 @@ body {
 
 @keyframes marquee{
   0%{
-    transform: translateX(10%);
+    transform: translateX(0);
   }
   100%{
-    transform: translateX(-100%);
+    transform: translateX(-48%);
   }
 }
 
@@ -269,9 +273,19 @@ body {
 }
 
 .offer-left{
-  background-color: var(--light);
+  background-color: #b3a79d;
 }
 
-.offer-r-left{
-  background-color: rgb(135, 105, 150);
+.offer-r-top{
+  background-color: #dadada;
+}
+
+.offer-r-bottom{
+  background-color: #D4DDFB;
+}
+
+
+
+.footer{
+  font-family: 'gilroy';
 }
