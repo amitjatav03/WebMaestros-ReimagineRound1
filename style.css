@@ -1,3 +1,8 @@
+@font-face {
+  font-family: LeagueGothic;
+  src: url(fonts/LeagueGothic-Regular.otf);
+}
+
 :root {
   --blue: #211f3f;
   --dark-blue: #161b2c;
@@ -11,7 +16,7 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: gilroy; */
-  font-family: "League Gothic";
+  font-family: LeagueGothic;
 }
 
 html,
