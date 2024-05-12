@@ -168,3 +168,55 @@ function footerAnime(){
 
 
 footerAnime();
+
+
+
+
+// CATEGORY SECTION
+let active = 4;
+let categories = document.querySelectorAll(".panel h2");
+let first = document.querySelectorAll(".first");
+
+gsap.to(categories, {
+  opacity: .6
+})
+gsap.to(categories[active-1], {
+  opacity: 1
+})
+gsap.to(first[active-1], {
+  opacity: 1
+})
+
+categories.forEach((val, idx) => {
+  val.addEventListener("click", () => {
+    gsap.to(".circle", {
+      rotate: -(4 - (idx+1))*50,
+      ease: Expo.easeInOut,
+      duration: 1,
+    })
+    greyout();
+
+    gsap.to(val, {
+      opacity: 1
+    })
+    gsap.to(first[idx], {
+      opacity: 1
+    })
+  })
+})
+
+
+function greyout() {
+  gsap.to(categories, {
+    opacity: .6
+  })
+  gsap.to(first, {
+    opacity: .4
+  })
+}
+
+gsap.to(".circle", {
+  rotate: 0,
+  ease: Expo.easeInOut,
+  duration: 2
+})
