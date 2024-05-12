@@ -19,83 +19,100 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="responsive.css">
   </head>
 
   <body>
-    <div id="main">
-      <div id="title">
-        <h1>Features and Recommendation</h1>
+    <div class="main">
+
+      <!-- <div class="title absolute text-white left-1/2 -translate-x-[50%] top-[5%] text-[2vw] uppercase">
+        <h1 class="font-[gilroy] font-bold text-[var(--light)]">Features & Recommendation</h1>
+      </div> -->
+
+      <div class="top-bar max-sm:top-[7%] fixed w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[99]">
+
+        <img class="max-sm:w-[35vw] w-[15vw]" src="images/steam_logo.svg"
+          alt=""/>
+
+        <i class="ri-menu-3-line max-sm:text-[8vw] text-[3.5vw] invert cursor-pointer"></i>
       </div>
-      <div id="top-bar">
-        <img
-          src="https://store.cloudflare.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
-          alt=""
-        />
-        <i class="ri-menu-3-line"></i>
-      </div>
-      <div id="cursor">
-        <div class="front">
-          <video id="mainvid" src="pubgnew.mp4" autoplay muted loop></video>
-          <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <!-- <img id="apeximg" src="images/img-1-apexlegends.jpg" /> -->
-                <video src="VID.mp4" autoplay mute loop></video>
-                <h1 id="apextitle">APEX LEGENDS</h1>
-              </div>
-              <div class="swiper-slide">
-                <img id="manorlordsImg" src="images/img-2-manorlords.jpg" />
-                <h1 id="manorlordsTitle">MANOR LORDS</h1>
-              </div>
-              <div class="swiper-slide">
-                <img src="images/img-3-vrising.jpg" />
-              </div>
-              <div class="swiper-slide">
-                <img src="images/img-4-1361526.jpeg" />
-              </div>
+
+
+      <div class="front w-full h-screen bg-[var(--dark-blue)]">
+
+        <div class="swiper mySwiper absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <img src="images/img-1-apexlegends.jpg"/>
+              <h1>APEX LEGENDS</h1>
+            </div>
+            <div class="swiper-slide">
+              <img id="manorlordsImg" src="images/img-2-manorlords.jpg" />
+              <h1 id="manorlordsTitle">MANOR LORDS</h1>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/img-3-vrising.jpg" />
+            </div>
+            <div class="swiper-slide">
+              <img src="images/img-4-1361526.jpeg" />
             </div>
           </div>
-          <div class="swiper-pagination"></div>
+
         </div>
+
+        <div class="swiper-pagination"></div>
+
       </div>
   
       <div class="second-main w-full h-full absolute bg-[black] rounded-[25vw] z-[2000]">
-        <div id="page2" class="rounded-md">
-          <h1 class="text-8xl text-white uppercase">Explore More</h1>
+
+        <!-- <div class="page2 w-full p-[1rem] flex flex-col gap-[1rem] rounded-t-[2rem] bg-black">
+
+          <h1 class="max-sm:text-4xl max-sm:text-center font-bold text-8xl text-white uppercase">Explore More</h1>
+
           <div id="first">
-            <div class="cards first-cards new-and-trending">
+
+            <div class="cards max-sm:w-full max-sm:h-[45vh] first-cards new-and-trending bg-[#D4DDFB] w-1/2">
               <h1>New & Trending</h1>
             </div>
-            <div class="cards first-cards top-seller bg-zinc-500">
+
+            <div class="cards max-sm:w-full max-sm:h-[45vh] first-cards top-seller bg-zinc-500 w-1/2">
               <h1>Top seller</h1>
             </div>
+
           </div>
+
           <div id="second">
-            <div class="cards second-cards popular bg-blue-300">
+            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards popular bg-blue-300 w-2/6">
               <h1>Popular</h1>
             </div>
-            <div class="cards second-cards incoming bg-zinc-400">
+            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards incoming bg-zinc-400 w-2/6">
               <h1>Upcoming</h1>
             </div>
-            <div class="cards second-cards specials bg-pink-400 spec">
+            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards specials bg-[#ffefe0] w-2/6">
               <h1>Specials</h1>
             </div>
           </div>
+
           <div id="third">
-            <div class="cards third-cards streaming-now bg-zinc-500">
+            <div class="cards max-sm:w-full max-sm:h-[45vh] third-cards streaming-now w-3/5 bg-zinc-500">
               <h1>Streaming Now</h1>
             </div>
-            <div class="cards third-cards steam-gift-cards last">
+            <div class="cards max-sm:w-full max-sm:h-[45vh] third-cards steam-gift-cards w-2/5 bg-[#b3a79d]">
               <h1>Steam Gift Cards</h1>
             </div>
           </div>
-        </div>  
+        </div>   -->
 
-        <div class="page3 w-full h-screen bg-[--dark-blue] flex justify-center flex-col gap-10">
-          <div class="offer-title text-center">
-            <h1 class="text-6xl text-white uppercase ">Special Offers</h1>
+        <div class="category-page w-full h-screen bg-zinc-600"></div>
+
+        <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen bg-[var(--dark-blue)] flex justify-center flex-col gap-10">
+          <div class="offer-title max-sm:mt-20 px-6">
+            <h1 class="max-sm:text-4xl text-6xl tracking-tight text-white  ">Special Offers</h1>
           </div>
-          <div class="marque-effect relative h-1/2 overflow-hidden">
+          <div class="marque-effect relative max-sm:h-4/5 h-1/2 overflow-hidden">
             <div class="blur-left absolute left-0 top-0"></div>
             <div class="blur-right absolute right-0 top-0"></div>
             <div class="move h-full absolute top-0 left-0 whitespace-nowrap">
@@ -118,7 +135,7 @@
               </div>
               <div class="marquee-cards">
                 <div class="img-section">
-                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/8f0a57df9911fe494ebfe064/spotlight_image_english.jpg?t=1715185347" alt="">
+                  <img class="marquee-img" src="images/img-1-apexlegends.jpg" alt="">
 
                 </div>
                 <div class="offer-section w-full h-[45%] flex justify-center items-center">
@@ -241,13 +258,13 @@
           </div>
         </div>
 
-        <footer class="w-full h-screen bg-[#171A21] text-[--light] flex flex-col">
-          <div class="footer-top w-full h-[35%] flex justify-between px-[10vw] py-8 font-[Gilroy] gap-4">
-            <div class="f-top-right">
-              <img class="w-[8vw]" src="images/logo_steam_footer.png" alt="">
+        <footer class="w-full relative h-screen h-[90vh] bg-[#171A21] text-[--light] flex flex-col">
+          <div class="footer-top relative top-0 w-full h-[35%] flex justify-between px-[10vw] py-8 font-[Gilroy] gap-4">
+            <div class="f-top-left">
+              <img class="max-sm:w-[25vw] w-[8vw]" src="images/logo_steam_footer.png" alt="">
             </div>
-            <div class="f-top-left flex gap-[8vw] text-xl">
-              <div class="f-left1 flex flex-col">
+            <div class="f-top-right flex max-sm:gap-[2vw] gap-[8vw] text-xl">
+              <div class="f-right1 flex flex-col">
                 <a class="font-[Gilroy] capitalize" href="#">about valve</a>
                 <a class="font-[Gilroy] capitalize" href="#">jobs</a>
                 <a class="font-[Gilroy] capitalize" href="#">steamworks</a>
@@ -255,7 +272,7 @@
                 <a class="font-[Gilroy] capitalize" href="#">support</a>
                 <a class="font-[Gilroy] capitalize" href="#">gift cards</a>
               </div>
-              <div class="f-left2 flex flex-col uppercase tracking-normal">
+              <div class="f-right2 flex flex-col uppercase tracking-normal">
                 <a class="font-[Gilroy] capitalize" href="#"><span><i class="ri-facebook-circle-fill"></i></span>Steam</a>
                 <a class="font-[Gilroy] lowercase" href="#"><span><i class="ri-twitter-x-fill"></i></span>@steam</a>
               </div>
@@ -263,14 +280,22 @@
             
           </div>
           <div class="footer-mid w-full h-[30%] flex justify-center items-center">
+
             <div class="f-mid w-4/5 flex flex-col gap-[1rem]">
-              <div class="top-line w-full h-[2px] bg-white"></div>
+
+              <div class="top-line w-full h-[1px] bg-[var(--light)]"></div>
+
               <div class="valve-section w-full px-[10vw] flex flex-col font-[Gilroy] justify-center items-center  gap-[1rem]">
-                <div class="valve-content flex gap-[1rem]">
-                  <img class="w-[8vw]" src="images/footerLogo_valve_new.png" alt="">
-                  <p class="font-[Gilroy]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable.</p>
+
+                <div class="valve-content flex max-sm:flex-col max-sm:justify-center max-sm:items-center gap-[1rem]">
+
+                  <img class="w-[8vw] max-sm:w-[15vw]" src="images/footerLogo_valve_new.png" alt="">
+
+                  <p class="font-[Gilroy] max-sm:text-center max-sm:text-[2.5vw]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable.</p>
+
                 </div>
-                <div class="valve-links flex justify-center gap-[2rem]">
+
+                <div class="valve-links flex justify-center gap-[2rem] max-sm:gap-[1rem]">
                   <a class="font-[Gilroy] capitalize" href="#">privacy policy</a>
                   <a class="font-[Gilroy] capitalize" href="#">legal</a>
                   <a class="font-[Gilroy] capitalize" href="#">steam subscriber agreement</a>
@@ -278,12 +303,12 @@
                   <a class="font-[Gilroy] capitalize" href="#">cookies</a>
                 </div>
               </div>
-              <div class="btm-line w-full h-[2px] bg-white"></div>
+              <div class="btm-line w-full h-[1px] bg-[var(--light)]"></div>
             </div>
-            </div>
+          </div>
             
           <div class="footer-bottom overflow-hidden w-full h-[35%] flex justify-center items-center">
-            <h1 class="text-[20vw] font-[Gilroy] font-bold tracking-wider">Steam</h1>
+            <h1 class="footer-title text-[20vw] font-[Gilroy] font-bold tracking-wider">Steam</h1>
           </div>
         </footer>
       </div>
