@@ -220,3 +220,27 @@ gsap.to(".circle", {
   ease: Expo.easeInOut,
   duration: 2
 })
+
+
+
+let swiper = document.querySelector(".swiper");
+let videoBtn = document.querySelector(".vdo-btn");
+
+
+videoBtn.addEventListener("click", function(){
+  swiper.style.top = "-100vh";
+})
+
+
+let imgs = ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg"];
+let swiperSlides = document.querySelectorAll(".swiper-slide");
+let swiperImages = document.querySelectorAll(".swiper-slide img");
+let firstImg = document.querySelector("#firstimg");
+
+let idx;
+idx = 0;
+setInterval(function() {
+  firstImg.src = `${imgs[idx]}`;
+  console.log(imgs[idx]);
+  idx ++;
+}, 2000);

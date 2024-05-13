@@ -29,7 +29,7 @@
         <h1 class="font-[gilroy] font-bold text-[var(--light)]">Features & Recommendation</h1>
       </div> -->
 
-      <div class="top-bar max-sm:top-[7%] fixed w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[99]">
+      <div class="top-bar max-sm:top-[7%] fixed w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[4500]">
 
         <img class="max-sm:w-[35vw] w-[15vw]" src="images/steam_logo.svg"
           alt=""/>
@@ -37,15 +37,18 @@
         <i class="ri-menu-3-line max-sm:text-[8vw] text-[3.5vw] invert cursor-pointer"></i>
       </div>
 
+      <button class="vdo-btn fixed z-[5000] top-[88%] left-[50%] -translate-x-[50%] text-white bg-blue-600 px-4 py-2 rounded-md">Play Video</button>
 
-      <div class="front w-full h-screen bg-[var(--dark-blue)]">
 
-        <div class="swiper mySwiper absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+      <div class="front relative w-full h-screen bg-[var(--dark-blue)]">
+        <video class="absolute w-full h-screen top-0 left-0 z-[999] object-cover object-center" src="pubgnew.mp4" autoplay muted loop></video>
+
+          <div class="swiper mySwiper absolute z-[4000] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
 
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <img src="images/img-1-apexlegends.jpg"/>
+              <img id="firstimg" src="images/img-1-apexlegends.jpg"/>
               <h1>APEX LEGENDS</h1>
             </div>
             <div class="swiper-slide">
@@ -65,9 +68,9 @@
 
       </div>
   
-      <div class="second-main w-full h-full absolute rounded-[25vw] z-[2000]">
+      <div class="second-main w-full h-full absolute rounded-[25vw] z-[8000]">
 
-        <!-- <div class="page2 w-full p-[1rem] flex flex-col gap-[1rem] rounded-t-[2rem] bg-black">
+        <div class="page2 w-full p-[1rem] flex flex-col gap-[1rem] rounded-t-[2rem] bg-black">
 
           <h1 class="max-sm:text-4xl max-sm:text-center font-bold text-8xl text-white uppercase">Explore More</h1>
 
@@ -103,7 +106,7 @@
               <h1>Steam Gift Cards</h1>
             </div>
           </div>
-        </div>   -->
+        </div>  
 
         <div class="category-page overflow-hidden relative w-full h-screen bg-[#EBF1FC] px-[9.5vw] py-[6vw]">
           <h1 class="category-title font-bold text-[3vw] tracking-tight leading-none text-[var(--dark-blue)]">Browse by <br> Categories</h1>
