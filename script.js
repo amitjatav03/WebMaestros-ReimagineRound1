@@ -62,10 +62,10 @@ Shery.mouseFollower({
 // });
 
 
-// Shery.hoverWithMediaCircle("img" /* Element to target.*/, {
-//   images: ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-4-1361526.jpeg"] /*OR*/,
-//   //videos: ["video1.mp4", "video2.mp4"],
-// });
+Shery.hoverWithMediaCircle("img" /* Element to target.*/, {
+  images: ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-4-1361526.jpeg"] /*OR*/,
+  //videos: ["video1.mp4", "video2.mp4"],
+});
 
 
 gsap.to(".second-main", {
@@ -225,11 +225,31 @@ gsap.to(".circle", {
 
 let swiper = document.querySelector(".swiper");
 let videoBtn = document.querySelector(".vdo-btn");
-
+let closeBtn = document.querySelector(".close-btn");
+let overlay = document.querySelector(".overlay");
 
 videoBtn.addEventListener("click", function(){
-  swiper.style.top = "-100vh";
+  // swiper.style.top = "-100vh";
+  overlay.style.display = "none";
+  closeBtn.style.display = "block";
+  gsap.to(".close-btn", {
+    top: "15%"
+  })
+  gsap.to(swiper, {
+    top: "-100vh"
+  })
 })
+
+closeBtn.addEventListener("click", function(){
+  overlay.style.display = "block";
+    gsap.to(".close-btn", {
+      top: "-15%"
+    })
+    gsap.to(swiper, {
+      top: "50%"
+    })
+})
+
 
 
 let imgs = ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg"];

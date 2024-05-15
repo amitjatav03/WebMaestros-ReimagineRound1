@@ -37,10 +37,14 @@
         <i class="ri-menu-3-line max-sm:text-[8vw] text-[3.5vw] invert cursor-pointer"></i>
       </div>
 
-      <button class="vdo-btn fixed z-[5000] top-[88%] left-[50%] -translate-x-[50%] text-white bg-blue-600 px-4 py-2 rounded-md">Play Video</button>
+      <button class="vdo-btn fixed z-[5000] top-[88%] left-[50%] -translate-x-[50%] text-white bg-blue-600 px-4 py-2 rounded-md"></button>
+      <button class="close-btn fixed z-[5000] top-[-15%] left-[50%] -translate-x-[50%] text-white px-4 py-2 rounded-full bg-black text-white text-[2rem] w-[4rem] h-[4rem] hidden flex justify-center items-center">x</button>
 
-
+      
+      
       <div class="front relative w-full h-screen bg-[var(--dark-blue)]">
+        <div class="overlay absolute w-full h-screen z-[1000]"></div>
+
         <video class="absolute w-full h-screen top-0 left-0 z-[999] object-cover object-center" src="pubgnew.mp4" autoplay muted loop></video>
 
           <div class="swiper mySwiper absolute z-[4000] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
@@ -69,48 +73,9 @@
       </div>
   
       <div class="second-main w-full h-full absolute rounded-[25vw] z-[8000]">
-
-        <div class="page2 w-full p-[1rem] flex flex-col gap-[1rem] rounded-t-[2rem] bg-black">
-
-          <h1 class="max-sm:text-4xl max-sm:text-center font-bold text-8xl text-white uppercase">Explore More</h1>
-
-          <div id="first">
-
-            <div class="cards max-sm:w-full max-sm:h-[45vh] first-cards new-and-trending bg-[#D4DDFB] w-1/2">
-              <h1>New & Trending</h1>
-            </div>
-
-            <div class="cards max-sm:w-full max-sm:h-[45vh] first-cards top-seller bg-zinc-500 w-1/2">
-              <h1>Top seller</h1>
-            </div>
-
-          </div>
-
-          <div id="second">
-            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards popular bg-blue-300 w-2/6">
-              <h1>Popular</h1>
-            </div>
-            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards incoming bg-zinc-400 w-2/6">
-              <h1>Upcoming</h1>
-            </div>
-            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards specials bg-[#ffefe0] w-2/6">
-              <h1>Specials</h1>
-            </div>
-          </div>
-
-          <div id="third">
-            <div class="cards max-sm:w-full max-sm:h-[45vh] third-cards streaming-now w-3/5 bg-zinc-500">
-              <h1>Streaming Now</h1>
-            </div>
-            <div class="cards max-sm:w-full max-sm:h-[45vh] third-cards steam-gift-cards w-2/5 bg-[#b3a79d]">
-              <h1>Steam Gift Cards</h1>
-            </div>
-          </div>
-        </div>  
-
         <div class="category-page overflow-hidden relative w-full h-screen bg-[#EBF1FC] px-[9.5vw] py-[6vw]">
-          <h1 class="category-title font-bold text-[3vw] tracking-tight leading-none text-[var(--dark-blue)]">Browse by <br> Categories</h1>
-          <div class="circle flex justify-center items-center border-2 bg-[#EBF1FC] rounded-full">
+          <h1 class="category-title font-bold text-5xl tracking-tight leading-none text-[var(--dark-blue)] font-[elianto] uppercase">Browse by <br> Categories</h1>
+          <div class="circle flex justify-center items-center bg-transparent rounded-full">
             <div class="stripe stp1">
               <div class="first">
                 <!-- <h1>Action</h1> -->
@@ -176,20 +141,60 @@
             </div>
           </div>
 
-          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-1/2 left-[10%] -translate-y-1/2 justify-center">
-            <h2>Action</h2>
-            <h2>Anime</h2>
-            <h2>All Sports</h2>
-            <h2>Role Playing</h2>
-            <h2>Survival</h2>
-            <h2>Multiplayer</h2>
-            <h2>Puzzle</h2>
+          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-1/2 left-[10%] -translate-y-1/2 justify-center ">
+            <h2 class="font-[coldiac] uppercase font-[900]">Action</h2>
+            <h2 class="font-[coldiac] uppercase font-[900]">Anime</h2>
+            <h2 class="font-[coldiac] uppercase font-[900]">All Sports</h2>
+            <h2 class="font-[coldiac] uppercase font-[900]">Role Playing</h2>
+            <h2 class="font-[coldiac] uppercase font-[900]">Survival</h2>
+            <h2 class="font-[coldiac] uppercase font-[900]">Multiplayer</h2>
+            <h2 class="font-[coldiac] uppercase font-[900]">Puzzle</h2>
           </div>
         </div>
 
+        <div class="page2 w-full p-[1rem] flex flex-col gap-[2rem]  py-10 px-10">
+
+          <h1 class="max-sm:text-4xl max-sm:text-center font-bold text-6xl text-white uppercase font-[elianto] text-center mb-10">Explore More</h1>
+
+          <div id="first">
+
+            <div class="cards max-sm:w-full max-sm:h-[45vh] first-cards new-and-trending bg-[#D4DDFB] w-1/2">
+              <h1>New & Trending</h1>
+            </div>
+
+            <div class="cards max-sm:w-full max-sm:h-[45vh] first-cards top-seller bg-zinc-500 w-1/2">
+              <h1>Top seller</h1>
+            </div>
+
+          </div>
+
+          <div id="second">
+            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards popular bg-blue-300 w-2/6">
+              <h1>Popular</h1>
+            </div>
+            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards incoming bg-zinc-400 w-2/6">
+              <h1>Upcoming</h1>
+            </div>
+            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards specials bg-[#ffefe0] w-2/6">
+              <h1>Specials</h1>
+            </div>
+          </div>
+
+          <div id="third">
+            <div class="cards max-sm:w-full max-sm:h-[45vh] third-cards streaming-now w-3/5 bg-zinc-500">
+              <h1>Streaming Now</h1>
+            </div>
+            <div class="cards max-sm:w-full max-sm:h-[45vh] third-cards steam-gift-cards w-2/5 bg-[#b3a79d]">
+              <h1>Steam Gift Cards</h1>
+            </div>
+          </div>
+        </div>  
+
+        
+
         <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen bg-[var(--dark-blue)] flex justify-center flex-col gap-10">
-          <div class="offer-title max-sm:mt-20 px-6">
-            <h1 class="max-sm:text-4xl text-6xl tracking-tight text-white  ">Special Offers</h1>
+          <div class="offer-title max-sm:mt-20 px-20">
+            <h1 class="max-sm:text-4xl text-6xl tracking-tight text-white font-[elianto] uppercase text-center">Special Offers</h1>
           </div>
           <div class="marque-effect relative max-sm:h-4/5 h-1/2 overflow-hidden">
             <div class="blur-left absolute left-0 top-0"></div>
@@ -386,8 +391,9 @@
             </div>
           </div>
             
-          <div class="footer-bottom overflow-hidden w-full h-[35%] flex justify-center items-center">
-            <h1 class="footer-title text-[20vw] font-[Gilroy] font-bold tracking-wider">Steam</h1>
+          <div class="footer-bottom relative overflow-hidden w-full h-[35%] flex justify-center items-center">
+            
+            <h1 class="footer-title text-[20vw] font-[comodo] font-bold tracking-wider">Steam</h1>
           </div>
         </footer>
       </div>
@@ -396,7 +402,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>

@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+@font-face {
+  font-family: elianto;
+  src: url(fonts/Elianto-Regular.ttf);
+}
+
 @font-face {
   font-family: LeagueGothic;
   src: url(fonts/LeagueGothic-Regular.otf);
@@ -8,6 +15,26 @@
 @font-face {
   font-family: Gilroy;
   src: url(fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: corbert;
+  src: url(fonts/The\ Northern\ Block\ -\ Corbert\ Condensed\ Medium.otf);
+}
+
+@font-face {
+  font-family: flexa;
+  src: url(fonts/GT-Flexa-Extended-Bold.woff2);
+}
+
+@font-face {
+  font-family: coldiac;
+  src: url(fonts/Coldiac.ttf);
+}
+
+@font-face{
+  font-family: comodo;
+  src: url(fonts/comodo.ttf);
 }
 
 :root {
@@ -43,6 +70,15 @@ body {
   padding: 0;
 }
 
+.overlay{
+  background-color: rgba(0, 0, 0, 0.562);
+}
+
+.category-page{
+  background-image: url(grad.jpg);
+  background-size: cover;
+  background-position: center;
+}
 
 
 .swiper-slide {
@@ -79,6 +115,11 @@ body {
   color: black;
 }
 
+.footer-bottom h1::selection{
+  background-color: black;
+  color: white;
+}
+
 
 
 #first, #second, #third{
@@ -88,16 +129,19 @@ body {
 }
 
 
+
+
 .cards{
-  height: 80vh;
+  height: 60vh;
   padding: 2rem 2rem;
-  border-radius: 5%;
+  border-radius: 2%;
 }
 
 .cards h1{
+  font-family: flexa;
   text-transform: capitalize;
-  font-weight: bold;
-  font-size: 3rem;
+  font-weight: 700;
+  font-size: 2.3rem;
 }
 
 
@@ -176,6 +220,10 @@ body {
   pointer-events: none;
 }
 
+.page2{
+  background-color: #25364a;
+}
+
 
 .offer-left{
   background-color: #CC7722;
@@ -191,16 +239,19 @@ body {
 }
 
 .offer-left h1{
+  font-family: flexa;
  font-size: 1.5rem;
  font-weight: 600;
 }
 
 .offer-r-top p{
   font-size: 1rem;
+  font-family: flexa;
   text-decoration: line-through;
 }
 
 .offer-r-bottom p{
+  font-family: flexa;
   font-size: 1.1rem;
   font-weight: 800;
 }
@@ -332,6 +383,12 @@ body {
 }
 
 
+.new-and-trending{
+  background-image: url(images/img-1-apexlegends.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
 
 @media screen and (max-width: 600px) {
   .swiper-slide {
@@ -350,6 +407,7 @@ body {
   }
   .cards h1{
     font-size: 1.8rem;
+    
   }
   .marquee-cards{
     width: 60vw;
@@ -378,4 +436,16 @@ body {
   }
 
 
+}
+
+
+.text-circle{
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: red;
+  z-index: 1000000;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
