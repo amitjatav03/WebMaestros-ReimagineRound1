@@ -183,7 +183,7 @@ gsap.to(first[active-1], {
 categories.forEach((val, idx) => {
   val.addEventListener("click", () => {
     gsap.to(".circle", {
-      rotate: -(4 - (idx+1))*70,
+      rotate: -(4 - (idx+1))*50,
       ease: Expo.easeInOut,
       duration: 1,
     })

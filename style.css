@@ -354,11 +354,11 @@ body {
 }
 
 .stp2{
-  transform: translateY(-50%) rotate(140deg);
+  transform: translateY(-50%) rotate(100deg);
 }
 
 .stp3{
-  transform: translateY(-50%) rotate(70deg);
+  transform: translateY(-50%) rotate(50deg);
 }
 
 .stp4{
@@ -366,11 +366,11 @@ body {
 }
 
 .stp5{
-  transform: translateY(-50%) rotate(-70deg);
+  transform: translateY(-50%) rotate(-50deg);
 }
 
 .stp6{
-  transform: translateY(-50%) rotate(-140deg);
+  transform: translateY(-50%) rotate(-100deg);
 }
 
 .stp7{
