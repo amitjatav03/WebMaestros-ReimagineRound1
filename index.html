@@ -11,6 +11,7 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -29,7 +30,7 @@
         <h1 class="font-[gilroy] font-bold text-[var(--light)]">Features & Recommendation</h1>
       </div> -->
 
-      <div class="top-bar max-sm:top-[7%] fixed w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[4500]">
+      <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
 
         <img class="max-sm:w-[35vw] w-[15vw]" src="images/steam_logo.svg"
           alt=""/>
@@ -37,17 +38,17 @@
         <i class="ri-menu-3-line max-sm:text-[8vw] text-[3.5vw] invert cursor-pointer"></i>
       </div>
 
-      <button class="vdo-btn fixed z-[5000] top-[88%] left-[50%] -translate-x-[50%] text-white bg-blue-600 px-4 py-2 rounded-md"></button>
-      <button class="close-btn fixed z-[5000] top-[-15%] left-[50%] -translate-x-[50%] text-white px-4 py-2 rounded-full bg-black text-white text-[2rem] w-[4rem] h-[4rem] hidden flex justify-center items-center">x</button>
+      <button class="vdo-btn absolute z-[120] top-[88%] left-[50%] -translate-x-[50%] text-white bg-blue-900 px-4 py-2 rounded-md">Play Video</button>
+      <button class="close-btn absolute z-[120] top-[-15%] left-[50%] -translate-x-[50%] text-white px-4 py-2 rounded-full bg-black text-white text-[2rem] w-[4rem] h-[4rem] hidden flex justify-center items-center">x</button>
 
       
       
       <div class="front relative w-full h-screen bg-[var(--dark-blue)]">
-        <div class="overlay absolute w-full h-screen z-[1000]"></div>
+        <div class="overlay absolute w-full h-screen z-[100]"></div>
 
-        <video class="absolute w-full h-screen top-0 left-0 z-[999] object-cover object-center" src="pubgnew.mp4" autoplay muted loop></video>
+        <video class="absolute w-full h-screen top-0 left-0 z-[90] object-cover object-center" src="pubgnew.mp4" autoplay muted loop></video>
 
-          <div class="swiper mySwiper absolute z-[4000] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
+          <div class="swiper mySwiper absolute z-[150] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
 
           <div class="swiper-wrapper">
 
@@ -72,8 +73,8 @@
 
       </div>
   
-      <div class="second-main w-full h-full absolute rounded-[25vw] z-[8000]">
-        <div class="category-page overflow-hidden relative w-full h-screen bg-[#EBF1FC] px-[9.5vw] py-[6vw]">
+      <!-- <div class="second-main w-full h-full absolute rounded-[25vw] z-[150]"> -->
+        <div class="category-page overflow-hidden relative w-full h-screen z-[150] bg-[#EBF1FC] px-[9.5vw] py-[6vw]" data-scroll data-scroll-speed="1">
           <h1 class="category-title font-bold text-5xl tracking-tight leading-none text-[var(--dark-blue)] font-[elianto] uppercase">Browse by <br> Categories</h1>
           <div class="circle flex justify-center items-center bg-transparent rounded-full">
             <div class="stripe stp1">
@@ -342,7 +343,7 @@
           </div>
         </div>
 
-        <footer class="w-full relative h-screen h-[90vh] bg-[#171A21] text-[--light] flex flex-col">
+        <div class="footer w-full relative left-0 bottom-0 h-screen bg-[#171A21] text-[--light] flex flex-col gap-0">
           <div class="footer-top relative top-0 w-full h-[35%] flex justify-between px-[10vw] py-8 font-[Gilroy] gap-4">
             <div class="f-top-left">
               <img class="max-sm:w-[25vw] w-[8vw]" src="images/logo_steam_footer.png" alt="">
@@ -395,19 +396,26 @@
             
             <h1 class="footer-title text-[20vw] font-[comodo] font-bold tracking-wider">Steam</h1>
           </div>
-        </footer>
-      </div>
-    </div>  
+        </div>
+      
+     
+
+    </div>
     
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
 
-    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

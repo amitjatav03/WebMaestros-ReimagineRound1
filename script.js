@@ -1,3 +1,5 @@
+// swiper-slide-fully-visible
+
 function landingPageSlider(){
   var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
@@ -46,12 +48,12 @@ function sliderContent(){
 
 
 
-Shery.mouseFollower({
-  //Parameters are optional.
-  skew: true,
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  duration: 1,
-});
+// Shery.mouseFollower({
+//   //Parameters are optional.
+//   skew: true,
+//   ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+//   duration: 1,
+// });
 
 
 // Shery.imageMasker("img" /* Element to target.*/, {
@@ -62,10 +64,10 @@ Shery.mouseFollower({
 // });
 
 
-Shery.hoverWithMediaCircle("img" /* Element to target.*/, {
-  images: ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-4-1361526.jpeg"] /*OR*/,
-  //videos: ["video1.mp4", "video2.mp4"],
-});
+// Shery.hoverWithMediaCircle("img" /* Element to target.*/, {
+//   images: ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-4-1361526.jpeg"] /*OR*/,
+//   //videos: ["video1.mp4", "video2.mp4"],
+// });
 
 
 gsap.to(".second-main", {
@@ -78,7 +80,6 @@ gsap.to(".second-main", {
     scrub: 1
   }
 })
-
 
 
 var apexImg = document.querySelector("#manorlordsImg");
@@ -99,76 +100,68 @@ apexImg.addEventListener("mouseout", function(){
 
 // FOOTER ANIMATION
 
-function footerAnime(){
-  var footerSteam = document.querySelector(".footer-title");
-  let clutter = "";
-  let footerTitle = footerSteam.textContent;
-  for(let i = 0; i<footerTitle.length; i++) {
-    clutter += `<span>${footerTitle[i]}</span>`;
-  }
-  footerSteam.innerHTML = clutter;
-  
-  
-  gsap.from(".footer-title span", {
-    top: "-350px",
-    duration: .8,
-    stagger: .1,
-    ease: "poweri.out",
-    scrollTrigger: {
-      scroller: "body",
-      trigger: ".footer-bottom",
-      // markers: true,
-      start: "top 85%",
-      end: "top 82%",
-      scrub: 3,
-    }
-  })
-  
-  
-  
-  gsap.from(".btm-line, .top-line", {
-    width: 0,
-    duration: 1,
-    delay: .5,
-    scrollTrigger: {
-      scroller: "body",
-      trigger: ".f-mid",
-      start: "top 60%",
-      end: "top 50%",
-      scrub: 1,
-    }
-  })
-  
-  gsap.from(".valve-section", {
-    opacity: 0,
-    scrollTrigger: {
-      scroller: "body",
-      trigger: ".f-mid",
-      start: "top 50%",
-      end: "top 40%",
-      scrub: 1,
-    }
-  })
-  
-  
-  gsap.from('.footer-top', {
-    y: -100,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: {
-      scroller: "body",
-      trigger: ".footer-top",
-      start: "top 50%",
-      end: "top 45%",
-      scrub: 1,
-    }
-  })
+var footerSteam = document.querySelector(".footer-title");
+let clutter = "";
+let footerTitle = footerSteam.textContent;
+for(let i = 0; i<footerTitle.length; i++) {
+clutter += `<span>${footerTitle[i]}</span>`;
 }
+footerSteam.innerHTML = clutter;
+
+
+gsap.from(".footer-title span", {
+top: "-350px",
+duration: .8,
+stagger: .1,
+ease: "poweri.out",
+scrollTrigger: {
+  scroller: "body",
+  trigger: ".footer-bottom",
+  start: "top 85%",
+  end: "top 82%",
+  scrub: 3,
+}
+})
 
 
 
-footerAnime();
+gsap.from(".btm-line, .top-line", {
+width: 0,
+duration: 1,
+delay: .5,
+scrollTrigger: {
+  scroller: "body",
+  trigger: ".f-mid",
+  start: "top 60%",
+  end: "top 50%",
+  scrub: 1,
+}
+})
 
+gsap.from(".valve-section", {
+opacity: 0,
+scrollTrigger: {
+  scroller: "body",
+  trigger: ".f-mid",
+  start: "top 50%",
+  end: "top 40%",
+  scrub: 1,
+}
+})
+
+
+gsap.from('.footer-top', {
+y: -100,
+opacity: 0,
+duration: 1,
+scrollTrigger: {
+  scroller: "body",
+  trigger: ".footer-top",
+  start: "top 50%",
+  end: "top 45%",
+  scrub: 1,
+}
+})
 
 
 
@@ -252,15 +245,34 @@ closeBtn.addEventListener("click", function(){
 
 
 
-let imgs = ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg"];
+let imgs = ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg"];
 let swiperSlides = document.querySelectorAll(".swiper-slide");
 let swiperImages = document.querySelectorAll(".swiper-slide img");
 let firstImg = document.querySelector("#firstimg");
-
+let frontImage = document.querySelector(".swiper-slide-fully-visible img");
 let idx;
 idx = 0;
-setInterval(function() {
-  firstImg.src = `${imgs[idx]}`;
-  console.log(imgs[idx]);
-  idx ++;
-}, 2000);
+
+let frontSlides = document.querySelector(".swiper-slide-fully-visible");
+
+frontSlide.addEventListener("mouseover", function(){
+  setInterval(function() {
+    if(idx>3){
+      idx = 0;
+    }
+    frontSlide.querySelector("img").src = `${imgs[idx]}`;
+    console.log(imgs[idx]);
+    idx ++;
+  }, 2000);
+
+})
+
+
+
+
+
+
+
+
+
+
