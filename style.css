@@ -37,6 +37,53 @@
   src: url(fonts/comodo.ttf);
 }
 
+@font-face {
+  font-family: gothvetica;
+  src: url(fonts/Gothvetica\ Caps\ -\ www.themarkstudio.co.za.ttf);
+}
+
+
+@font-face {
+  font-family: azonix;
+  src: url(fonts/Azonix.otf);
+}
+
+
+@font-face {
+  font-family: coves-bold;
+  src: url(fonts/Coves\ Bold.otf);
+}
+
+@font-face {
+  font-family: quirk;
+  src: url(fonts/Quirk.otf);
+}
+
+@font-face {
+  font-family: phenomena;
+  src: url(fonts/Phenomena-ExtraBold.otf);
+}
+
+@font-face {
+  font-family: kollektif;
+  src: url(fonts/Kollektif.ttf);
+}
+
+@font-face {
+  font-family: serotiva;
+  src: url(fonts/Serotiva-Medium-BF663985091d8db.otf);
+}
+
+@font-face {
+  font-family: redtrap;
+  src: url(fonts/RedtrapExpandedPuo-woG33.otf);
+}
+
+@font-face {
+  font-family: coolvetica;
+  src: url(fonts/Cocogoose-Pro-Regular-trial.ttf);
+}
+
 :root {
   --blue: #211f3f;
   --dark-blue: #161b2c;
@@ -89,9 +136,10 @@ body {
 }
 
 .swiper-slide img {
+  cursor: pointer;
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 50vw;
+  height: 70vh;
   cursor: default;
   border-radius: .5rem;
 }
@@ -138,10 +186,11 @@ body {
 }
 
 .cards h1{
-  font-family: flexa;
+  font-family: coolvetica;
   text-transform: capitalize;
-  font-weight: 700;
-  font-size: 2.3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
 
@@ -220,7 +269,7 @@ body {
   pointer-events: none;
 }
 
-.page2{
+.explore-page{
   background-color: #25364a;
 }
 
@@ -239,19 +288,19 @@ body {
 }
 
 .offer-left h1{
-  font-family: flexa;
+  font-family: azonix;
  font-size: 1.5rem;
  font-weight: 600;
 }
 
 .offer-r-top p{
-  font-size: 1rem;
-  font-family: flexa;
+  font-size: .8rem;
+  font-family: azonix;
   text-decoration: line-through;
 }
 
 .offer-r-bottom p{
-  font-family: flexa;
+  font-family: azonix;
   font-size: 1.1rem;
   font-weight: 800;
 }
@@ -305,11 +354,11 @@ body {
 }
 
 .stp2{
-  transform: translateY(-50%) rotate(100deg);
+  transform: translateY(-50%) rotate(140deg);
 }
 
 .stp3{
-  transform: translateY(-50%) rotate(50deg);
+  transform: translateY(-50%) rotate(70deg);
 }
 
 .stp4{
@@ -317,11 +366,11 @@ body {
 }
 
 .stp5{
-  transform: translateY(-50%) rotate(-50deg);
+  transform: translateY(-50%) rotate(-70deg);
 }
 
 .stp6{
-  transform: translateY(-50%) rotate(-100deg);
+  transform: translateY(-50%) rotate(-140deg);
 }
 
 .stp7{
@@ -338,8 +387,8 @@ body {
 }
 
 .first img{
-  width: 25vw;
-  height: 40vw;
+  width: 30vw;
+  height: 45vw;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -371,15 +420,18 @@ body {
 
 .panel{
   border-left: 2px solid var(--dark-blue);
-  padding: 0 2rem;
+  padding: 0 3rem;
+
 }
 
 
 .panel h2{
   color: var(--dark-blue);
-  font-size: 1.8vw;
+  color: black;
+  font-size: 2vw;
   cursor: pointer;
-  letter-spacing: 2px;
+  /* text-transform: uppercase; */
+  font-weight: bold;
 }
 
 
