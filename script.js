@@ -173,10 +173,11 @@ let first = document.querySelectorAll(".first");
 gsap.to(categories, {
   opacity: .4
 })
+greyout();
 gsap.to(categories[active-1], {
   opacity: 1
 })
-greyout();
+
 gsap.to(first[active-1], {
   opacity: 1,
   scale: 1
@@ -242,16 +243,24 @@ tl.from(".panel h2", {
   
 })
 tl.from(".circle", {
-  rotate: 90,
+  rotate: 180,
   ease: "poweri.out",
-  duration: 1,
+  duration: .8,
   scrollTrigger: {
     scroller: "body",
     trigger: ".category-page",
-    start: "top 95%",
+    start: "top 90%",
     end: "top 80%",
-    scrub: 2,
+    scrub: 2
   }
+  // scrollTrigger: {
+  //   scroller: "body",
+  //   trigger: ".category-page",
+  //   markers: true,
+  //   start: "top 95%",
+  //   end: "top 80%",
+  //   scrub: 2
+  // }
 })
 
 
@@ -260,27 +269,43 @@ let videoBtn = document.querySelector(".vdo-btn");
 let closeBtn = document.querySelector(".close-btn");
 let overlay = document.querySelector(".overlay");
 
+let playToggle = 0;
 videoBtn.addEventListener("click", function(){
-  // swiper.style.top = "-100vh";
-  overlay.style.display = "none";
-  closeBtn.style.display = "block";
-  gsap.to(".close-btn", {
-    top: "15%"
-  })
-  gsap.to(swiper, {
-    top: "-100vh"
-  })
+  if(playToggle === 0) {
+    videoBtn.classList.remove("ri-play-circle-fill");
+    videoBtn.classList.add("ri-close-circle-fill")
+    
+    // swiper.style.top = "-100vh";
+    overlay.style.display = "none";
+    // closeBtn.style.display = "block";
+    // gsap.to(".close-btn", {
+      //   top: "15%"
+      // })
+      gsap.to(swiper, {
+        top: "-100vh"
+      })
+      playToggle = 1;
+    }
+    else if(playToggle === 1) {
+      videoBtn.classList.remove("ri-close-circle-fill");
+      videoBtn.classList.add("ri-play-circle-fill")
+      // overlay.style.display = "block";
+      gsap.to(swiper, {
+        top: "50%"
+      })
+      playToggle = 0;
+    }
 })
 
-closeBtn.addEventListener("click", function(){
-  overlay.style.display = "block";
-    gsap.to(".close-btn", {
-      top: "-15%"
-    })
-    gsap.to(swiper, {
-      top: "50%"
-    })
-})
+// closeBtn.addEventListener("click", function(){
+//   overlay.style.display = "block";
+//     gsap.to(".close-btn", {
+//       top: "-15%"
+//     })
+//     gsap.to(swiper, {
+//       top: "50%"
+//     })
+// })
 
 
 
@@ -341,9 +366,13 @@ function slider() {
 let navBtn = document.querySelector(".nav-btn");
 let navMenu = document.querySelector(".nav-menu");
 let naveCloseBtn = document.querySelector(".nav-close-btn");
+let landingPageVideo = document.querySelector(".main-video");
+
 
 let navToggle;
 navBtn.addEventListener("click", function(){
+  landingPageVideo.src = "";
+  landingPageVideo.src = "pubgnew.mp4";
 
   navMenu.style.display = "block";
   navBtn.style.zIndex = 500,
@@ -424,3 +453,7 @@ gsap.from(".offer-title h1", {
     scrub: 1
   }
 })
+
+
+
+

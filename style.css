@@ -121,6 +121,17 @@ body {
   background-color: rgba(0, 0, 0, 0.562);
 }
 
+.vdo-btn{
+  transition: all linear .2s;
+}
+
+.vdo-btn:hover{
+  transform: translateX(-50%) scale(1.2);
+}
+
+
+
+
 .category-page{
   background-image: url(grad.jpg);
   background-size: cover;

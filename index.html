@@ -38,8 +38,9 @@
         <i class="nav-btn ri-menu-3-line max-sm:text-[8vw] text-[3.5vw] invert cursor-pointer"></i>
       </div>
 
-      <button class="vdo-btn absolute z-[120] top-[88%] left-[50%] -translate-x-[50%] text-white bg-zinc-900 px-4 py-2 rounded-md">Play Now</button>
-      <button class="close-btn absolute z-[120] top-[-5%] left-[50%] -translate-x-[50%] text-white px-4 py-2 rounded-full bg-black text-white text-[2rem] w-[4rem] h-[4rem] hidden flex justify-center items-center">x</button>
+      <!-- <button class="vdo-btn absolute z-[120] top-[88%] left-[50%] -translate-x-[50%] text-white bg-zinc-900 px-4 py-2 rounded-md"><i class="ri-play-circle-fill"></i></button> -->
+      <i class="ri-play-circle-fill vdo-btn absolute z-[120] top-[88%] left-[50%] -translate-x-[50%] text-white text-7xl cursor-pointer"></i>
+      <!-- <button class="close-btn absolute z-[120] top-[-5%] left-[50%] -translate-x-[50%] text-white px-4 py-2 rounded-full bg-black text-white text-[2rem] w-[4rem] h-[4rem] hidden flex justify-center items-center">x</button>   -->
 
       
       
@@ -50,7 +51,7 @@
           <button class="nav-close-btn rounded-md bg-black text-white px-4 py-1 text-xl">Close</button>
         </div>
 
-        <video class="absolute w-full h-screen top-0 left-0 z-[90] object-cover object-center" src="pubgnew.mp4" autoplay muted loop></video>
+        <video class="main-video absolute w-full h-screen top-0 left-0 z-[90] object-cover object-center" src="pubgnew.mp4" autoplay loop></video>
 
           <div class="swiper mySwiper absolute z-[150] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
 
@@ -158,7 +159,7 @@
           </div>
         </div>
 
-        <div class="explore-page w-full p-[1rem] flex flex-col gap-[2rem] py-14 px-10">
+        <!-- <div class="explore-page w-full p-[1rem] flex flex-col gap-[2rem] py-14 px-10">
 
           <h1 class="explore-title max-sm:text-4xl max-sm:text-center font-bold text-7xl text-white uppercase font-[azonix] text-center mb-10">Explore More</h1>
 
@@ -196,7 +197,15 @@
               <h1>Steam Gift Cards</h1>
             </div>
           </div>
-        </div>  
+        </div>   -->
+
+        <div class="explore-page w-full h-screen bg-blue-300 flex justify-center items-center">
+          <div class="circular-img-container relative w-[90vh] h-[90vh] bg-red-400 rounded-full overflow-hidden">
+            <img src="images/pubg-img.jpg" class="absolute w-[15vw] top-[-10] left-1/2 -translate-x-1/2" alt="">
+            <img src="images/pubg-img.jpg" class="absolute w-[15vw] top-[10%] left-[70%] alt="">
+          </div>
+          <div class="new-and-trending"></div>
+        </div>
 
         
 
