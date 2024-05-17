@@ -176,8 +176,10 @@ gsap.to(categories, {
 gsap.to(categories[active-1], {
   opacity: 1
 })
+greyout();
 gsap.to(first[active-1], {
-  opacity: 1
+  opacity: 1,
+  scale: 1
 })
 
 categories.forEach((val, idx) => {
