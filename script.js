@@ -193,7 +193,8 @@ categories.forEach((val, idx) => {
       opacity: 1
     })
     gsap.to(first[idx], {
-      opacity: 1
+      opacity: 1,
+      scale: 1
     })
   })
 })
@@ -204,7 +205,8 @@ function greyout() {
     opacity: .6
   })
   gsap.to(first, {
-    opacity: 1
+    opacity: .4,
+    scale: .2
   })
 }
 
@@ -356,6 +358,9 @@ naveCloseBtn.addEventListener("click", function(){
   })
   navMenu.style.display = "none";
 })
+
+
+
 
 
 
