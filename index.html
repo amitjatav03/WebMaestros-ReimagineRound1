@@ -11,7 +11,6 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -59,16 +58,19 @@
 
             <div class="swiper-slide">
               <img id="firstimg" src="images/img-1-apexlegends.jpg"/>
-              <h1>APEX LEGENDS</h1>
+              <h1 class="imgtext">APEX <br> LEGENDS</h1>
             </div>
             <div class="swiper-slide">
-              <img id="manorlordsImg" src="images/pubg-img.jpg" />
+              <img id="pubgImg" src="images/pubg-img.jpg" />
+              <h1 class="imgtext">PUBG</h1>
             </div>
             <div class="swiper-slide">
               <img src="images/img-3-vrising.jpg" />
+              <h1 class="imgtext">VRISING</h1>
             </div>
             <div class="swiper-slide">
               <img src="images/ghost-of-tsushima.jpg" />
+              <h1 class="imgtext">Ghost of <br> Tshushima</h1>
             </div>
           </div>
 
@@ -79,85 +81,85 @@
       </div>
   
       <!-- <div class="second-main w-full h-full absolute rounded-[25vw] z-[150]"> -->
-        <div class="category-page overflow-hidden relative w-full h-[120vh] z-[150] bg-[#EBF1FC] px-[9.5vw] py-[10vw]" >
-          <h1 class="category-title font-bold text-5xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix] uppercase">Browse by</h1>
-          <h1 class="category-title font-bold text-8xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix] uppercase">Categories</h1>
-          <div class="circle flex justify-center items-center bg-transparent rounded-full">
-            <div class="stripe stp1">
-              <div class="first">
-                <!-- <h1>Action</h1> -->
-                <img src="images/categories images/action.png" alt="">
-              </div>
-              <div class="sec">
-                <div class="smcircle"></div>
-              </div>
+      <div class="category-page overflow-hidden relative w-full h-[120vh] z-[150] bg-[#EBF1FC] px-[9.5vw] py-[10vw]">
+        <h1 class="category-title font-bold text-5xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix] uppercase">Browse by</h1>
+        <h1 class="category-title font-bold text-8xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix] uppercase">Categories</h1>
+        <div class="circle flex justify-center items-center bg-transparent rounded-full">
+          <div class="stripe stp1">
+            <div class="first">
+              <!-- <h1>Action</h1> -->
+              <img src="images/categories images/action.png" alt="">
             </div>
-            <div class="stripe stp2">
-              <div class="first">
-                <img src="images/categories images/anime.png" alt="">
-                <!-- <h1>Anime</h1> -->
-              </div>
-              <div class="sec">
-                <div class="smcircle"></div>
-              </div>
-            </div>
-            <div class="stripe stp3">
-              <div class="first">
-                <img src="images/categories images/sports.png" alt="">
-                <!-- <h1>All Sports</h1> -->
-              </div>
-              <div class="sec">
-                <div class="smcircle"></div>
-              </div>
-            </div>
-            <div class="stripe stp4">
-              <div class="first">
-                <!-- <h1>Role Playing</h1> -->
-                <img src="images/categories images/action-godofwar.png" alt="">
-              </div>
-              <div class="sec">
-                <div class="smcircle"></div>
-              </div>
-            </div>
-            <div class="stripe stp5">
-              <div class="first">
-                <img src="images/categories images/survival.png" alt="">
-                <!-- <h1>Survival</h1> -->
-              </div>
-              <div class="sec">
-                <div class="smcircle"></div>
-              </div>
-            </div>
-            <div class="stripe stp6">
-              <div class="first">
-                <img src="images/categories images/multiplayer.png" alt="">
-                <!-- <h1>Multiplayer</h1> -->
-              </div>
-              <div class="sec">
-                <div class="smcircle"></div>
-              </div>
-            </div>
-            <div class="stripe stp7">
-              <div class="first">
-                <img src="images/categories images/puzzle.png" alt="">
-                <!-- <h1>Puzzle</h1> -->
-              </div>
-              <div class="sec">
-                <div class="smcircle"></div>
-              </div>
+            <div class="sec">
+              <div class="smcircle"></div>
             </div>
           </div>
-
-          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[60%] left-[10%] -translate-y-1/2 justify-center ">
-            <h2 class="font-[comodo] tracking-wider ">Action</h2>
-            <h2 class="font-[comodo] tracking-wider ">Anime</h2>
-            <h2 class="font-[comodo] tracking-wider ">All Sports</h2>
-            <h2 class="font-[comodo] tracking-wider ">Role Playing</h2>
-            <h2 class="font-[comodo] tracking-wider ">Survival</h2>
-            <h2 class="font-[comodo] tracking-wider ">Multiplayer</h2>
-            <h2 class="font-[comodo] tracking-wider ">Puzzle</h2>
+          <div class="stripe stp2">
+            <div class="first">
+              <img src="images/categories images/anime.png" alt="">
+              <!-- <h1>Anime</h1> -->
+            </div>
+            <div class="sec">
+              <div class="smcircle"></div>
+            </div>
+          </div>
+          <div class="stripe stp3">
+            <div class="first">
+              <img src="images/categories images/sports.png" alt="">
+              <!-- <h1>All Sports</h1> -->
+            </div>
+            <div class="sec">
+              <div class="smcircle"></div>
+            </div>
+          </div>
+          <div class="stripe stp4">
+            <div class="first">
+              <!-- <h1>Role Playing</h1> -->
+              <img src="images/categories images/action-godofwar.png" alt="">
+            </div>
+            <div class="sec">
+              <div class="smcircle"></div>
+            </div>
+          </div>
+          <div class="stripe stp5">
+            <div class="first">
+              <img src="images/categories images/survival.png" alt="">
+              <!-- <h1>Survival</h1> -->
+            </div>
+            <div class="sec">
+              <div class="smcircle"></div>
+            </div>
+          </div>
+          <div class="stripe stp6">
+            <div class="first">
+              <img src="images/categories images/multiplayer.png" alt="">
+              <!-- <h1>Multiplayer</h1> -->
+            </div>
+            <div class="sec">
+              <div class="smcircle"></div>
+            </div>
+          </div>
+          <div class="stripe stp7">
+            <div class="first">
+              <img src="images/categories images/puzzle.png" alt="">
+              <!-- <h1>Puzzle</h1> -->
+            </div>
+            <div class="sec">
+              <div class="smcircle"></div>
+            </div>
           </div>
         </div>
+
+        <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[60%] left-[10%] -translate-y-1/2 justify-center ">
+          <h2 class="font-[comodo] tracking-wider ">Action</h2>
+          <h2 class="font-[comodo] tracking-wider ">Anime</h2>
+          <h2 class="font-[comodo] tracking-wider ">All Sports</h2>
+          <h2 class="font-[comodo] tracking-wider ">Role Playing</h2>
+          <h2 class="font-[comodo] tracking-wider ">Survival</h2>
+          <h2 class="font-[comodo] tracking-wider ">Multiplayer</h2>
+          <h2 class="font-[comodo] tracking-wider ">Puzzle</h2>
+        </div>
+      </div>
 
         <!-- <div class="explore-page w-full p-[1rem] flex flex-col gap-[2rem] py-14 px-10">
 
@@ -199,12 +201,14 @@
           </div>
         </div>   -->
 
-        <div class="explore-page w-full h-screen bg-blue-300 flex justify-center items-center">
-          <div class="circular-img-container relative w-[90vh] h-[90vh] bg-red-400 rounded-full overflow-hidden">
-            <img src="images/pubg-img.jpg" class="absolute w-[15vw] top-[-10] left-1/2 -translate-x-1/2" alt="">
-            <img src="images/pubg-img.jpg" class="absolute w-[15vw] top-[10%] left-[70%] alt="">
-          </div>
-          <div class="new-and-trending"></div>
+        <div class="explore-page w-full h-[200vh] bg-black flex justify-center items-center relative" data-scroll data-scroll-speed-2>
+          <h1 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl text-center text-white" >New & <br>Trending</h1>
+          <img class="absolute top-[10%] left-[5%]" src="images/Steamimages/Steamimages/New and trending/1000Resist.jpg" alt="" data-scroll data-scroll-speed=".2">
+          <img class="absolute top-[25%] left-[65%]" src="images/Steamimages/Steamimages/New and trending/Instruments of destruction.jpg" alt="" data-scroll data-scroll-speed=".2">
+          <img class="absolute top-[35%] left-[15%]" src="images/Steamimages/Steamimages/New and trending/Crow country.jpg" alt="" data-scroll data-scroll-speed=".2">
+          <img class="absolute top-[60%] left-1/2" src="images/Steamimages/Steamimages/New and trending/Legion IX.jpg" alt="" data-scroll data-scroll-speed=".2">
+          <img class="absolute top-[70%] left-[10%]" src="images/Steamimages/Steamimages/New and trending/Rabbit and steel.jpg" alt="" data-scroll data-scroll-speed=".4">
+          <img class="absolute top-[87%] right-[20%]" src="images/Steamimages/Steamimages/New and trending/Cluckmecch oasis.jpg" alt="" data-scroll data-scroll-speed=".7">
         </div>
 
         
@@ -425,12 +429,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
+
     <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     
     <script src="script.js"></script>

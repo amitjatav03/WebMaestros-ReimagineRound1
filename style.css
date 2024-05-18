@@ -1,3 +1,4 @@
+@import 'node_modules/locomotive-scroll/dist/locomotive-scroll';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
@@ -118,7 +119,7 @@ body {
 }
 
 .overlay{
-  background-color: rgba(0, 0, 0, 0.562);
+  background-color: rgba(0, 0, 0, 0.676);
 }
 
 .vdo-btn{
@@ -144,6 +145,8 @@ body {
   background-size: cover;
   width: 50vw;
   height: 70vh;
+  overflow: hidden;
+  border-radius: .5rem;
 }
 
 .swiper-slide img {
@@ -158,20 +161,24 @@ body {
 
 .swiper-slide h1{
   position: absolute;
+  left: -10%;
+  text-shadow: 5px 5px 10px black;
+  font-family: redtrap;
+  color: white;
   top: 50%;
   z-index: 999;
   font-size: 5vw;
   font-weight: 600;
+  line-height: 5vw;
+  opacity: 0;
+  transform: scale(0);
+  transition: all linear .5s;
   display: none;
 }
 
-#second-main {
-  border-radius: 2%;
-  width: 100%;
-  /* background-color: var(--chocolate); */
-  position: absolute;
-  z-index: 2000;
-  color: black;
+.swiper-slide-active .imgtext{
+  opacity: 1;
+  transform: scale(1);
 }
 
 .footer-bottom h1::selection{
@@ -511,4 +518,34 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.apex-slide{
+  background-image: url(images/apex-images/apex1.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+
+@keyframes changeApexBg{
+  0%{
+    background-image: url(images/apex-images/apex1.jpg);
+  }
+  25%{
+    background-image: url(images/apex-images/apex2.jpg);
+  }
+  75%{
+    background-image: url(images/apex-images/apex3.jpg);
+  }
+  100%{
+    background-image: url(images/apex-images/apex4.jpg);
+  }
+}
+
+
+
+.explore-page img{
+  width: 25vw;
+  height: 30vh;
 }

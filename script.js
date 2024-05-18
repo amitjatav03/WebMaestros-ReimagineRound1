@@ -1,3 +1,13 @@
+
+(function () {
+  const locomotiveScroll = new LocomotiveScroll({
+    el: document.querySelector(".front-page"),
+    smooth: true,
+    direction: 'horizontal'
+  });
+})();
+
+
 // swiper-slide-fully-visible
 
 function landingPageSlider(){
@@ -47,7 +57,6 @@ function sliderContent(){
 
 
 
-
 Shery.mouseFollower({
   //Parameters are optional.
   skew: true,
@@ -82,16 +91,6 @@ Shery.hoverWithMediaCircle("img" /* Element to target.*/, {
 // })
 
 
-var apexImg = document.querySelector("#manorlordsImg");
-var apexTitle =document.querySelector("#manorlordsTitle");
-
-apexImg.addEventListener("mouseenter", function(){
-  apexTitle.style.display = "block";
-})
-
-apexImg.addEventListener("mouseout", function(){
-  apexTitle.style.display = "none";
-})
 
 
 
@@ -289,7 +288,7 @@ videoBtn.addEventListener("click", function(){
     else if(playToggle === 1) {
       videoBtn.classList.remove("ri-close-circle-fill");
       videoBtn.classList.add("ri-play-circle-fill")
-      // overlay.style.display = "block";
+      overlay.style.display = "block";
       gsap.to(swiper, {
         top: "50%"
       })
@@ -312,43 +311,45 @@ videoBtn.addEventListener("click", function(){
 function slider() {
   let imgs = ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg"];
 
-  let imagesContainer = [["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"], ["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"], ["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"], ["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"]]
+  let imagesContainer = [["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"], ["images/gos/gos1.jpg", "images/gos/gos2.jpg", "images/gos/gos3.jpg", "images/gos/gos4.jpg"], ["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"], ["images/pubg-images/pubg1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"]]
   
   let swiperSlides = document.querySelectorAll(".swiper-slide");
-  let swiperImages = document.querySelectorAll(".swiper-slide img");
-  let firstImg = document.querySelector("#firstimg");
-  let frontImage = document.querySelector(".swiper-slide-fully-visible img");
+  // let swiperImages = document.querySelectorAll(".swiper-slide img");
+  // let firstImg = document.querySelector("#firstimg");
+  // let frontImage = document.querySelector(".swiper-slide-fully-visible img");
   let idx;
   idx = 0;
   
   let frontSlide = document.querySelector(".swiper-slide-fully-visible");
-  
-  frontSlide.addEventListener("mouseenter", function(){
-    setInterval(function() {
-      if(idx>3){
-        idx = 0;
-      }
-      swiperSlides.forEach((slide ,index) => {
-        if(slide.classList.contains("swiper-slide-fully-visible")){
-          slide.querySelector("img").src = `${imagesContainer[index][idx]}`;
-        }
-      })
-      idx ++; 
-    }, 3000);
-  
-  })
-  frontSlide.addEventListener("mouseleave", function(){
-    idx = 0;
+
+  setInterval(function() {
+    if(idx>3){
+      idx = 0;
+    }
     swiperSlides.forEach((slide ,index) => {
-      if(slide.classList.contains("swiper-slide-fully-visible")){
+      if(slide.classList.contains("swiper-slide-active")){
+        console.log(index);
         slide.querySelector("img").src = `${imagesContainer[index][idx]}`;
       }
     })
+    idx ++; 
+  }, 3000);
   
-  })
+  // frontSlide.addEventListener("mouseleave", function(){
+  //   swiperSlides.forEach((slide ,index) => {
+  //     if(slide.classList.contains("swiper-slide-active")){
+  //       slide.querySelector("img").src = `${imagesContainer[index][0]}`;
+  //     }
+  //   })
+  
+  // })
 }
 
-// slider();
+slider();
+
+
+
+
 
 
 
@@ -456,4 +457,20 @@ gsap.from(".offer-title h1", {
 
 
 
+
+
+
+// gsap.to(".explore-page img", {
+//   y: -400,
+//   duration: 2,
+//   stagger: 1,
+//   scrollTrigger: {
+//     scroller: "body",
+//     trigger: ".explore-page",
+//     markers: true,
+//     start: "top 20%",
+//     end: "top 100%",
+//     scrub: 5,
+//   }
+// })
 
