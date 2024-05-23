@@ -85,6 +85,16 @@
   src: url(fonts/Cocogoose-Pro-Regular-trial.ttf);
 }
 
+@font-face {
+  font-family: adieu;
+  src: url(fonts/Adieu-Regular.ttf);
+}
+
+@font-face {
+  font-family: gosha;
+  src: url(fonts/PPGoshaSans-Bold.otf);
+}
+
 :root {
   --blue: #211f3f;
   --dark-blue: #161b2c;

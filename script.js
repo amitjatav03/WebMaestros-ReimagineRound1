@@ -164,6 +164,7 @@ scrollTrigger: {
 
 
 
+
 // CATEGORY SECTION
 let active = 4;
 let categories = document.querySelectorAll(".panel h2");
@@ -241,16 +242,16 @@ tl.from(".panel h2", {
   }
   
 })
-tl.from(".circle", {
+gsap.from(".circle", {
   rotate: 180,
   ease: "poweri.out",
   duration: .8,
   scrollTrigger: {
     scroller: "body",
     trigger: ".category-page",
-    start: "top 90%",
-    end: "top 80%",
-    scrub: 2
+    start: "top 90%"
+    // end: "top 80%",
+    // scrub: 2
   }
   // scrollTrigger: {
   //   scroller: "body",
