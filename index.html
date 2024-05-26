@@ -23,11 +23,10 @@
   </head>
 
   <body>
+
+
     <div class="main">
 
-      <!-- <div class="title absolute text-white left-1/2 -translate-x-[50%] top-[5%] text-[2vw] uppercase">
-        <h1 class="font-[gilroy] font-bold text-[var(--light)]">Features & Recommendation</h1>
-      </div> -->
 
       <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
 
@@ -37,14 +36,13 @@
         <i class="nav-btn ri-menu-3-line max-sm:text-[8vw] text-[3.5vw] invert cursor-pointer"></i>
       </div>
 
-      <!-- <button class="vdo-btn absolute z-[120] top-[88%] left-[50%] -translate-x-[50%] text-white bg-zinc-900 px-4 py-2 rounded-md"><i class="ri-play-circle-fill"></i></button> -->
       <i class="ri-play-circle-fill vdo-btn absolute z-[120] top-[90%] left-[50%] -translate-x-[50%] text-blue-900 text-6xl bg-white w-5 h-5 flex justify-center items-center rounded-full cursor-pointer border-none"></i>
-      <!-- <button class="close-btn absolute z-[120] top-[-5%] left-[50%] -translate-x-[50%] text-white px-4 py-2 rounded-full bg-black text-white text-[2rem] w-[4rem] h-[4rem] hidden flex justify-center items-center">x</button>   -->
 
       
       
-      <div class="front relative w-full h-screen bg-[var(--dark-blue)]">
-        <div class="overlay absolute w-full h-screen z-[100]"></div>
+      <!-- LANDING PAGE -->
+      <div class="landing-page relative w-full h-screen bg-[var(--dark-blue)]">
+        <div class="overlay absolute w-full h-screen z-[100] "></div>
 
         <div class="nav-menu bg-purple-600 w-full h-0 relative z-[200] px-10 py-20 hidden">
           <button class="nav-close-btn rounded-md bg-black text-white px-4 py-1 text-xl">Close</button>
@@ -80,15 +78,19 @@
 
       </div>
   
-      <!-- <div class="second-main w-full h-full absolute rounded-[25vw] z-[150]"> -->
+
+      <!-- CATEGORY SECTION  -->
       <div class="category-page overflow-hidden relative w-full h-[120vh] z-[150] bg-[#EBF1FC] px-[9.5vw] py-[10vw]">
-        <h1 class="category-title font-bold text-5xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix] uppercase">Browse by</h1>
-        <h1 class="category-title font-bold text-8xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix] uppercase">Category</h1>
+        <audio class="category-panel-hover" src="sounds/hover.mp3" autoplay="true"></audio>
+
+
+        <h1 class="category-title font-bold text-5xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix]">browse by</h1>
+        <h1 class="category-title font-bold text-8xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix]">Category</h1>
         <div class="circle flex justify-center items-center bg-transparent rounded-full">
           <div class="stripe stp1">
             <div class="first">
               <!-- <h1>Action</h1> -->
-              <img src="images/categories images/action.png" alt="">
+              <img src="images/categories images/lara-croft.png" alt="">
             </div>
             <div class="sec">
               <div class="smcircle"></div>
@@ -105,7 +107,7 @@
           </div>
           <div class="stripe stp3">
             <div class="first">
-              <img src="images/categories images/sports.png" alt="">
+              <img src="images/categories images/sports-fight.png" alt="">
               <!-- <h1>All Sports</h1> -->
             </div>
             <div class="sec">
@@ -132,7 +134,7 @@
           </div>
           <div class="stripe stp6">
             <div class="first">
-              <img src="images/categories images/multiplayer.png" alt="">
+              <img src="images/categories images/pubg-multip.png" alt="">
               <!-- <h1>Multiplayer</h1> -->
             </div>
             <div class="sec">
@@ -161,263 +163,241 @@
         </div>
       </div>
 
-        <!-- <div class="explore-page w-full p-[1rem] flex flex-col gap-[2rem] py-14 px-10">
-
-          <h1 class="explore-title max-sm:text-4xl max-sm:text-center font-bold text-7xl text-white uppercase font-[azonix] text-center mb-10">Explore More</h1>
-
-          <div id="first">
-
-            <div class="cards max-sm:w-full max-sm:h-[45vh] first-cards new-and-trending bg-[#D4DDFB] w-1/2">
-              <h1>New & Trending</h1>
+      <!-- STEAM GIFT CARDS SECTION -->
+      <div class="steam-gift-cards w-full h-screen bg-[#2A475E] font-[azonix] relative flex justify-center items-center">
+        <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <h1 class="explore-title text-7xl uppercase absolute top-[8%] left-[10%] font-[azonix] tracking-tighter text-gray-100">STEAM <br> GIFT CARDS</h1>
+        <div class="container h-1/2 flex">
+            <div class="left-cont w-1/2 h-full relative">
+                <img class="gift-cards card1" src="images/giftcards-images/lcard1.png">
+                <img class="gift-cards card2" src="images/giftcards-images/lcard2.png">
+                <img class="gift-cards card3" src="images/giftcards-images/lcard5.png">
+                <img class="gift-cards card4" src="images/giftcards-images/lcard4.png">
+                <img class="gift-cards card5" src="images/giftcards-images/lcard3.png">
+                <img class="gift-cards card6 front-left" src="images/giftcards-images/lcard6.png">
             </div>
+            <div class="right-cont w-1/2 h-full relative">
+                <img class="gift-rcards rcard1" src="images/giftcards-images/rcard1.png">
+                <img class="gift-rcards rcard2" src="images/giftcards-images/rcard2.png">
+                <img class="gift-rcards rcard3" src="images/giftcards-images/rcard3.png">
+                <img class="gift-rcards rcard4" src="images/giftcards-images/rcard4.png">
+                <img class="gift-rcards rcard5" src="images/giftcards-images/rcard5.png">
+                <img class="gift-rcards rcard6" src="images/giftcards-images/rcard6.png">
+            </div>
+        </div>
+    </div>
 
-            <div class="cards top-seller max-sm:w-full max-sm:h-[45vh] first-cards top-seller bg-zinc-500 w-1/2 flex flex-col">
-              <h1>Top seller</h1>
-              <div class="top-seller-btm w-[100%] h-[80%] bg-red-400">
+      
+      <!-- OFFER SECTION -->
+      <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen bg-[var(--dark-blue)] flex justify-center flex-col gap-10">
+        <div class="offer-title max-sm:mt-20 px-[8vw]">
+          <h1 class="max-sm:text-4xl text-4xl tracking-tight text-[var(--light)] font-[azonix] uppercase">Special</h1>
+          <h1 class="max-sm:text-4xl text-8xl tracking-tight text-white font-[azonix] uppercase">Offers</h1>
+        </div>
+        <div class="marque-effect relative max-sm:h-4/5 h-1/2 overflow-hidden">
+          <div class="blur-left absolute left-0 top-0"></div>
+          <div class="blur-right absolute right-0 top-0"></div>
+          <div class="move h-full absolute top-0 left-0 whitespace-nowrap">
+            <div class="marquee-cards">
+              <div class="img-section">
+                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
+
+              </div>
+              <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
+                  <div class="offer-left w-1/2 flex justify-center items-center">
+                    <h1 class="text-2xl font-semibold">-20%</h1>
+                  </div>
+                  <div class="offer-right w-1/2 flex flex-col">
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                  </div>
+                </div>
               </div>
             </div>
+            <div class="marquee-cards">
+              <div class="img-section">
+                <img class="marquee-img" src="images/img-1-apexlegends.jpg" alt="">
 
+              </div>
+              <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
+                  <div class="offer-left w-1/2 flex justify-center items-center">
+                    <h1 class="text-2xl font-semibold">-20%</h1>
+                  </div>
+                  <div class="offer-right w-1/2 flex flex-col">
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="marquee-cards">
+              <div class="img-section">
+                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
+
+              </div>
+              <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
+                  <div class="offer-left w-1/2 flex justify-center items-center">
+                    <h1 class="text-2xl font-semibold">-20%</h1>
+                  </div>
+                  <div class="offer-right w-1/2 flex flex-col">
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="marquee-cards">
+              <div class="img-section">
+                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
+
+              </div>
+              <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
+                  <div class="offer-left w-1/2 flex justify-center items-center">
+                    <h1 class="text-2xl font-semibold">-20%</h1>
+                  </div>
+                  <div class="offer-right w-1/2 flex flex-col">
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="marquee-cards">
+              <div class="img-section">
+                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
+
+              </div>
+              <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
+                  <div class="offer-left w-1/2 flex justify-center items-center">
+                    <h1 class="text-2xl font-semibold">-20%</h1>
+                  </div>
+                  <div class="offer-right w-1/2 flex flex-col">
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="marquee-cards">
+              <div class="img-section">
+                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/8f0a57df9911fe494ebfe064/spotlight_image_english.jpg?t=1715185347" alt="">
+
+              </div>
+              <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
+                  <div class="offer-left w-1/2 flex justify-center items-center">
+                    <h1 class="text-2xl font-semibold">-20%</h1>
+                  </div>
+                  <div class="offer-right w-1/2 flex flex-col">
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>$1,040</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="marquee-cards">
+              <div class="img-section">
+                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
+
+              </div>
+              <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
+                  <div class="offer-left w-1/2 flex justify-center items-center">
+                    <h1 class="text-2xl font-semibold">-20%</h1>
+                  </div>
+                  <div class="offer-right w-1/2 flex flex-col">
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>$1,040</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="marquee-cards">
+              <div class="img-section">
+                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
+
+              </div>
+              <div class="offer-section w-full h-[45%] flex justify-center items-center">
+                <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
+                  <div class="offer-left w-1/2 flex justify-center items-center">
+                    <h1 class="text-2xl font-semibold">-20%</h1>
+                  </div>
+                  <div class="offer-right w-1/2 flex flex-col">
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>$1,040</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
+          
+        </div>
+      </div>
 
-          <div id="second">
-            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards popular bg-blue-300 w-2/6">
-              <h1>Popular</h1>
+
+      <!-- FOOTER SECTION  -->
+      <div class="footer w-full relative left-0 bottom-0 h-screen bg-[#171A21] text-[--light] font-[Gilroy] flex flex-col gap-0">
+        <!-- FOOTER TOP -->
+        <div class="footer-top relative top-0 w-full h-[35%] flex justify-between px-[10vw] py-8 gap-4">
+          <div class="f-top-left">
+            <img class="max-sm:w-[25vw] w-[8vw]" src="images/logo_steam_footer.png" alt="">
+          </div>
+          <div class="f-top-right flex max-sm:gap-[2vw] gap-[8vw] text-xl">
+            <div class="f-right1 flex flex-col">
+              <a class="font-[Gilroy] capitalize" href="#">about valve</a>
+              <a class="font-[Gilroy] capitalize" href="#">jobs</a>
+              <a class="font-[Gilroy] capitalize" href="#">steamworks</a>
+              <a class="font-[Gilroy] capitalize" href="#">steam distribution</a>
+              <a class="font-[Gilroy] capitalize" href="#">support</a>
+              <a class="font-[Gilroy] capitalize" href="#">gift cards</a>
             </div>
-            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards incoming bg-zinc-400 w-2/6">
-              <h1>Upcoming</h1>
-            </div>
-            <div class="cards max-sm:w-full max-sm:h-[45vh] second-cards specials bg-[#ffefe0] w-2/6">
-              <h1>Specials</h1>
+            <div class="f-right2 flex flex-col uppercase tracking-normal">
+              <a class="font-[Gilroy] capitalize" href="#"><span><i class="ri-facebook-circle-fill"></i></span>Steam</a>
+              <a class="font-[Gilroy] lowercase" href="#"><span><i class="ri-twitter-x-fill"></i></span>@steam</a>
             </div>
           </div>
-
-          <div id="third">
-            <div class="cards max-sm:w-full max-sm:h-[45vh] third-cards streaming-now w-3/5 bg-zinc-500">
-              <h1>Streaming Now</h1>
-            </div>
-            <div class="cards max-sm:w-full max-sm:h-[45vh] third-cards steam-gift-cards w-2/5 bg-[#b3a79d]">
-              <h1>Steam Gift Cards</h1>
-            </div>
-          </div>
-        </div>   -->
-
-        <div class="explore-page w-full h-[200vh] bg-black flex justify-center items-center relative" data-scroll data-scroll-speed-2>
-          <h1 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-8xl text-center text-white" >New & <br>Trending</h1>
-          <img class="absolute top-[10%] left-[5%]" src="images/Steamimages/Steamimages/New and trending/1000Resist.jpg" alt="" data-scroll data-scroll-speed=".2">
-          <img class="absolute top-[25%] left-[65%]" src="images/Steamimages/Steamimages/New and trending/Instruments of destruction.jpg" alt="" data-scroll data-scroll-speed=".2">
-          <img class="absolute top-[35%] left-[15%]" src="images/Steamimages/Steamimages/New and trending/Crow country.jpg" alt="" data-scroll data-scroll-speed=".2">
-          <img class="absolute top-[60%] left-1/2" src="images/Steamimages/Steamimages/New and trending/Legion IX.jpg" alt="" data-scroll data-scroll-speed=".2">
-          <img class="absolute top-[70%] left-[10%]" src="images/Steamimages/Steamimages/New and trending/Rabbit and steel.jpg" alt="" data-scroll data-scroll-speed=".4">
-          <img class="absolute top-[87%] right-[20%]" src="images/Steamimages/Steamimages/New and trending/Cluckmecch oasis.jpg" alt="" data-scroll data-scroll-speed=".7">
+          
         </div>
 
-        
+        <!-- FOOTER MID -->
+        <div class="footer-mid w-full h-[30%] flex justify-center items-center">
 
-        <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen bg-[var(--dark-blue)] flex justify-center flex-col gap-10">
-          <div class="offer-title max-sm:mt-20 px-[8vw]">
-            <h1 class="max-sm:text-4xl text-4xl tracking-tight text-[var(--light)] font-[azonix] uppercase">Special</h1>
-            <h1 class="max-sm:text-4xl text-8xl tracking-tight text-white font-[azonix] uppercase">Offers</h1>
-          </div>
-          <div class="marque-effect relative max-sm:h-4/5 h-1/2 overflow-hidden">
-            <div class="blur-left absolute left-0 top-0"></div>
-            <div class="blur-right absolute right-0 top-0"></div>
-            <div class="move h-full absolute top-0 left-0 whitespace-nowrap">
-              <div class="marquee-cards">
-                <div class="img-section">
-                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
+          <div class="f-mid w-4/5 flex flex-col gap-[1rem]">
 
-                </div>
-                <div class="offer-section w-full h-[45%] flex justify-center items-center">
-                  <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
-                    <div class="offer-left w-1/2 flex justify-center items-center">
-                      <h1 class="text-2xl font-semibold">-20%</h1>
-                    </div>
-                    <div class="offer-right w-1/2 flex flex-col">
-                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                      <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
-                    </div>
-                  </div>
-                </div>
+            <div class="top-line w-full h-[1px] bg-[var(--light)]"></div>
+
+            <div class="valve-section w-full px-[10vw] flex flex-col font-[Gilroy] justify-center items-center  gap-[1rem]">
+
+              <div class="valve-content flex max-sm:flex-col max-sm:justify-center max-sm:items-center gap-[1rem]">
+
+                <img class="w-[8vw] max-sm:w-[15vw]" src="images/footerLogo_valve_new.png" alt="">
+
+                <p class="font-[Gilroy] max-sm:text-center max-sm:text-[2.5vw]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable.</p>
+
               </div>
-              <div class="marquee-cards">
-                <div class="img-section">
-                  <img class="marquee-img" src="images/img-1-apexlegends.jpg" alt="">
 
-                </div>
-                <div class="offer-section w-full h-[45%] flex justify-center items-center">
-                  <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
-                    <div class="offer-left w-1/2 flex justify-center items-center">
-                      <h1 class="text-2xl font-semibold">-20%</h1>
-                    </div>
-                    <div class="offer-right w-1/2 flex flex-col">
-                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                      <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
-                    </div>
-                  </div>
-                </div>
+              <div class="valve-links flex justify-center gap-[2rem] max-sm:gap-[1rem]">
+                <a class="font-[Gilroy] capitalize" href="#">privacy policy</a>
+                <a class="font-[Gilroy] capitalize" href="#">legal</a>
+                <a class="font-[Gilroy] capitalize" href="#">steam subscriber agreement</a>
+                <a class="font-[Gilroy] capitalize" href="#">refunds</a>
+                <a class="font-[Gilroy] capitalize" href="#">cookies</a>
               </div>
-              <div class="marquee-cards">
-                <div class="img-section">
-                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
-
-                </div>
-                <div class="offer-section w-full h-[45%] flex justify-center items-center">
-                  <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
-                    <div class="offer-left w-1/2 flex justify-center items-center">
-                      <h1 class="text-2xl font-semibold">-20%</h1>
-                    </div>
-                    <div class="offer-right w-1/2 flex flex-col">
-                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                      <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="marquee-cards">
-                <div class="img-section">
-                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
-
-                </div>
-                <div class="offer-section w-full h-[45%] flex justify-center items-center">
-                  <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
-                    <div class="offer-left w-1/2 flex justify-center items-center">
-                      <h1 class="text-2xl font-semibold">-20%</h1>
-                    </div>
-                    <div class="offer-right w-1/2 flex flex-col">
-                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                      <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="marquee-cards">
-                <div class="img-section">
-                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
-
-                </div>
-                <div class="offer-section w-full h-[45%] flex justify-center items-center">
-                  <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
-                    <div class="offer-left w-1/2 flex justify-center items-center">
-                      <h1 class="text-2xl font-semibold">-20%</h1>
-                    </div>
-                    <div class="offer-right w-1/2 flex flex-col">
-                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                      <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="marquee-cards">
-                <div class="img-section">
-                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/8f0a57df9911fe494ebfe064/spotlight_image_english.jpg?t=1715185347" alt="">
-
-                </div>
-                <div class="offer-section w-full h-[45%] flex justify-center items-center">
-                  <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
-                    <div class="offer-left w-1/2 flex justify-center items-center">
-                      <h1 class="text-2xl font-semibold">-20%</h1>
-                    </div>
-                    <div class="offer-right w-1/2 flex flex-col">
-                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                      <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>$1,040</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="marquee-cards">
-                <div class="img-section">
-                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
-
-                </div>
-                <div class="offer-section w-full h-[45%] flex justify-center items-center">
-                  <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
-                    <div class="offer-left w-1/2 flex justify-center items-center">
-                      <h1 class="text-2xl font-semibold">-20%</h1>
-                    </div>
-                    <div class="offer-right w-1/2 flex flex-col">
-                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                      <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>$1,040</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="marquee-cards">
-                <div class="img-section">
-                  <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
-
-                </div>
-                <div class="offer-section w-full h-[45%] flex justify-center items-center">
-                  <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
-                    <div class="offer-left w-1/2 flex justify-center items-center">
-                      <h1 class="text-2xl font-semibold">-20%</h1>
-                    </div>
-                    <div class="offer-right w-1/2 flex flex-col">
-                      <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                      <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>$1,040</p></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
             </div>
-            
+            <div class="btm-line w-full h-[1px] bg-[var(--light)]"></div>
           </div>
         </div>
-
-        <div class="footer w-full relative left-0 bottom-0 h-screen bg-[#171A21] text-[--light] flex flex-col gap-0">
-          <div class="footer-top relative top-0 w-full h-[35%] flex justify-between px-[10vw] py-8 font-[Gilroy] gap-4">
-            <div class="f-top-left">
-              <img class="max-sm:w-[25vw] w-[8vw]" src="images/logo_steam_footer.png" alt="">
-            </div>
-            <div class="f-top-right flex max-sm:gap-[2vw] gap-[8vw] text-xl">
-              <div class="f-right1 flex flex-col">
-                <a class="font-[Gilroy] capitalize" href="#">about valve</a>
-                <a class="font-[Gilroy] capitalize" href="#">jobs</a>
-                <a class="font-[Gilroy] capitalize" href="#">steamworks</a>
-                <a class="font-[Gilroy] capitalize" href="#">steam distribution</a>
-                <a class="font-[Gilroy] capitalize" href="#">support</a>
-                <a class="font-[Gilroy] capitalize" href="#">gift cards</a>
-              </div>
-              <div class="f-right2 flex flex-col uppercase tracking-normal">
-                <a class="font-[Gilroy] capitalize" href="#"><span><i class="ri-facebook-circle-fill"></i></span>Steam</a>
-                <a class="font-[Gilroy] lowercase" href="#"><span><i class="ri-twitter-x-fill"></i></span>@steam</a>
-              </div>
-            </div>
-            
-          </div>
-          <div class="footer-mid w-full h-[30%] flex justify-center items-center">
-
-            <div class="f-mid w-4/5 flex flex-col gap-[1rem]">
-
-              <div class="top-line w-full h-[1px] bg-[var(--light)]"></div>
-
-              <div class="valve-section w-full px-[10vw] flex flex-col font-[Gilroy] justify-center items-center  gap-[1rem]">
-
-                <div class="valve-content flex max-sm:flex-col max-sm:justify-center max-sm:items-center gap-[1rem]">
-
-                  <img class="w-[8vw] max-sm:w-[15vw]" src="images/footerLogo_valve_new.png" alt="">
-
-                  <p class="font-[Gilroy] max-sm:text-center max-sm:text-[2.5vw]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable.</p>
-
-                </div>
-
-                <div class="valve-links flex justify-center gap-[2rem] max-sm:gap-[1rem]">
-                  <a class="font-[Gilroy] capitalize" href="#">privacy policy</a>
-                  <a class="font-[Gilroy] capitalize" href="#">legal</a>
-                  <a class="font-[Gilroy] capitalize" href="#">steam subscriber agreement</a>
-                  <a class="font-[Gilroy] capitalize" href="#">refunds</a>
-                  <a class="font-[Gilroy] capitalize" href="#">cookies</a>
-                </div>
-              </div>
-              <div class="btm-line w-full h-[1px] bg-[var(--light)]"></div>
-            </div>
-          </div>
-            
-          <div class="footer-bottom relative overflow-hidden w-full h-[35%] flex justify-center items-center">
-            
-            <h1 class="footer-title text-[20vw] font-[comodo] font-bold tracking-wider">Steam</h1>
-          </div>
+          
+        <div class="footer-bottom relative overflow-hidden w-full h-[35%] flex justify-center items-center">
+          <h1 class="footer-title text-[20vw] font-bold tracking-wider">Steam</h1>
         </div>
+      </div>
       
      
 
