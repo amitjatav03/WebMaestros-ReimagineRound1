@@ -291,7 +291,7 @@ document.querySelector(".category-page").addEventListener("mousemove", function(
 
 let catHoverSound = document.querySelector(".category-panel-hover");
 categories.forEach(function(cat){
-  cat.addEventListener("mousemove", function(){
+  cat.addEventListener("click", function(){
     console.log("hoverinng")
     catHoverSound.play();
   })
