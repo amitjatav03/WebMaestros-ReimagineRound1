@@ -383,6 +383,9 @@ slider();
 
 // STEAM GIFT CARDS SECTION 
 
+let swooshSound = document.querySelector(".swoosh-sound");
+let giftContainer = document.querySelector(".container");
+
 
 
 function giftCardsAnimation(){

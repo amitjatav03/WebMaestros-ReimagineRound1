@@ -162,18 +162,19 @@ body {
 .img-section{
   width: 100%;
   height: 65%;
-  background-color: orangered;
   overflow: hidden;
 }
 
 .marquee-cards img{
   height: 100%;
   width: 100%;
+  transition: all .4s ease;
 }
 
 .marquee-cards:hover .marquee-img{
   transform: scale(1.05);
 }
+
 
 
 .blur-left{
@@ -403,7 +404,7 @@ body {
 
 .left-cont img, .right-cont img{
   position: absolute;
-  width: 300px;
+  width: 320px;
   top: 60%;
   transform: translateY(-50%);
   /* transition: all .3s ease-in; */
@@ -463,7 +464,7 @@ body {
 }
 
 .card6{
-  height: 85%;
+  height: 90%;
   right: 0;
   z-index: 5;
   border-top-left-radius: 10px;
@@ -481,7 +482,7 @@ body {
       width: 0%;
   }
   100%{
-      width: 300px;
+      width: 320px;
   }
 }
 
@@ -534,7 +535,7 @@ body {
 }
 
 .rcard6{
-  height: 85%;
+  height: 90%;
   left: 0;
   z-index: 5;
   border-top-left-radius: 0;
