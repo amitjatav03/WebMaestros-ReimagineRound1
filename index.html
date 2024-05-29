@@ -17,6 +17,7 @@
     />
     
     <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css" />
@@ -26,38 +27,57 @@
   <body>
 
 
-    <div class="main">
+    <div class="main overflow-hidden">
 
 
-      <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
+      
 
-        <img class="max-sm:w-[35vw] w-[15vw]" src="images/steam_logo.svg"
-          alt=""/>
+      
 
-        <i class="nav-btn ri-menu-3-line max-sm:text-[8vw] text-[3.5vw] invert cursor-pointer"></i>
-      </div>
 
-      <i class="ri-play-circle-fill vdo-btn absolute z-[120] top-[90%] left-[50%] -translate-x-[50%] text-blue-900 text-6xl bg-white w-5 h-5 flex justify-center items-center rounded-full cursor-pointer border-none"></i>
-
+      
       
       
       <!-- LANDING PAGE -->
       <div class="landing-page relative w-full h-screen bg-[var(--dark-blue)]">
-        <div class="overlay absolute w-full h-screen z-[100] "></div>
 
-        <div class="nav-menu bg-purple-600 w-full h-0 relative z-[200] px-10 py-20 hidden">
-          <button class="nav-close-btn rounded-md bg-black text-white px-4 py-1 text-xl">Close</button>
+        <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
+
+          <img class="max-sm:w-[35vw] w-[12vw]" src="images/steam_logo.svg"
+            alt=""/>
+  
+          <div class="top-right flex items-center justify-center gap-5">
+            <button class="install-btn bg-green-800 text-white px-3 py-3 rounded-lg hover:bg-green-700 transition">Install Steam</button>
+            <i class="nav-btn ri-menu-3-line max-sm:text-[8vw] text-[2.5vw] invert cursor-pointer"></i>
+  
+          </div>
         </div>
 
-        <video class="main-video absolute w-full h-screen top-0 left-0 z-[90] object-cover object-center" src="pubgnew.mp4" autoplay loop muted></video>
+        <div class="nav-menu absolute top-0 left-0 w-full h-0 z-[4000] bg-blue-800 px-20 py-10 opacity-0 hidden">
+          <button class="close-nav text-5xl mb-20 bg-black rounded-lg text-white px-4 py-2 hover:bg-zinc-800">Close Nav</button>
+          <h1 class="text-8xl hover:text-white cursor-pointer">STORE</h1>
+          <h1 class="text-8xl hover:text-white cursor-pointer">COMMUNITY</h1>
+          <h1 class="text-8xl hover:text-white cursor-pointer">ABOUT</h1>
+          <h1 class="text-8xl hover:text-white cursor-pointer">POINTS SHOP</h1>
+        </div>
+
+        <div class="img-crsr w-[15rem] h-[15rem] bg-slate-700 rounded-full absolute z-[1900] opacity-0"></div>
+
+        <div class="overlay absolute w-full h-screen z-[100] "></div>
+
+        <i class="ri-play-circle-fill vdo-btn absolute z-[120] top-[90%] left-[50%] -translate-x-[50%] text-slate-800 text-6xl bg-white w-7 h-7 flex justify-center items-center rounded-full cursor-pointer border-none"></i>  
+
+        
+
+        <video class="main-video absolute w-full h-screen top-0 left-0 z-[90] object-cover object-center" src="videos/pubgnew.mp4" autoplay loop muted></video>
 
           <div class="swiper mySwiper absolute z-[150] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
 
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <img id="firstimg" src="images/img-1-apexlegends.jpg"/>
-              <h1 class="imgtext">APEX <br> LEGENDS</h1>
+              <img id="firstimg" src="images/landing-page-images/apex/img1.jpg"/>
+              <!-- <h1 class="imgtext">APEX <br> LEGENDS</h1> -->
             </div>
             <div class="swiper-slide">
               <img id="pubgImg" src="images/pubg-img.jpg" />
@@ -154,13 +174,13 @@
         </div>
 
         <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[60%] left-[10%] -translate-y-1/2 justify-center ">
-          <h2 class="font-[gosha] uppercase tracking-wider">Action</h2>
-          <h2 class="font-[gosha] uppercase tracking-wider">Anime</h2>
-          <h2 class="font-[gosha] uppercase tracking-wider">All Sports</h2>
-          <h2 class="font-[gosha] uppercase tracking-wider">Role Playing</h2>
-          <h2 class="font-[gosha] uppercase tracking-wider">Survival</h2>
-          <h2 class="font-[gosha] uppercase tracking-wider">Multiplayer</h2>
-          <h2 class="font-[gosha] uppercase tracking-wider">Puzzle</h2>
+          <h2 class="font-[poppins] uppercase tracking-wider">Action</h2>
+          <h2 class="font-[poppins] uppercase tracking-wider">Anime</h2>
+          <h2 class="font-[poppins] uppercase tracking-wider">All Sports</h2>
+          <h2 class="font-[poppins] uppercase tracking-wider">Role Playing</h2>
+          <h2 class="font-[poppins] uppercase tracking-wider">Survival</h2>
+          <h2 class="font-[poppins] uppercase tracking-wider">Multiplayer</h2>
+          <h2 class="font-[poppins] uppercase tracking-wider">Puzzle</h2>
         </div>
       </div>
 
@@ -168,9 +188,9 @@
       <div class="steam-gift-cards w-full h-screen bg-[#2A475E] font-[azonix] relative flex justify-center items-center">
         <audio class="swoosh-sound" src="sounds/swoosh-sound-effect-for-fight-scenes-or-transitions-1-149889.mp3"></audio>
         <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-        <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[azonix] tracking-tighter text-gray-100">STEAM <br> GIFT CARDS</h1>
+        <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[poppins] font-bold text-gray-100">STEAM <br> GIFT CARDS</h1>
         <!-- <button class="gift-btn absolute top-[84%] bg-[#114869] px-4 py-2 text-2xl text-white rounded-md font-[gosha] uppercase hover:bg-[#134261] hover:text-[var(--light)]">Give the Gift of game</button> -->
-        <img class="absolute top-[5%] left-[28.5%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
+        <img class="absolute top-[5%] left-[27.5%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
         <div class="container absolute top-[55%] -translate-y-1/2 h-1/2 flex">
             <div class="left-cont w-1/2 h-full relative">
                 <img class="gift-cards card1" src="images/giftcards-images/lcard1.png">
@@ -190,6 +210,15 @@
             </div>
         </div>
     </div>
+
+    <!-- EXPLORE MORE SECTION  -->
+      <div class="explore-more-page relative w-full h-[300vh] bg-white">
+        <div class="mid-flip-card absolute top-1/5">
+          <div class="img-cont relative bg-blue-500 w-[600px] h-[500px] overflow-hidden ">
+            <img class="mid-flip-img absolute w-[2000px] h-[1000px] top-[-20%]" src="https://wallpapercave.com/wp/wp2296365.jpg" alt="">
+          </div>
+        </div>
+      </div>
 
       
       <!-- OFFER SECTION -->
@@ -399,6 +428,7 @@
         </div>
           
         <div class="footer-bottom relative overflow-hidden w-full h-[35%] flex justify-center items-center">
+          <div class="footer-circle w-[5vw] h-[5vw] bg-blue-500 absolute z-[250] rounded-full"></div>
           <h1 class="footer-title text-[20vw] font-bold tracking-wider">Steam</h1>
         </div>
       </div>
@@ -417,7 +447,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@beta/bundled/locomotive-scroll.min.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
     
     <script src="script.js"></script>

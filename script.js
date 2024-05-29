@@ -1,11 +1,32 @@
 
-(function () {
-  const locomotiveScroll = new LocomotiveScroll({
-    el: document.querySelector(".main"),
-    smooth: true,
-    lerp: 0.2,
-  });
-})();
+// (function () {
+//   const locomotiveScroll = new LocomotiveScroll({
+//     el: document.querySelector(".main"),
+//     smooth: true,
+// })();
+
+
+
+// CURSORS
+
+let imgCursor = document.querySelector(".img-crsr");
+let swipSlides = document.querySelectorAll(".swiper-slide");
+
+swipSlides.forEach((slid) => {
+  slid.addEventListener("mousemove", function(dets){
+    console.log(dets.target);
+    imgCursor.style.opacity = "1";
+    gsap.to(imgCursor, {
+      x: dets.x - 100,
+      y: dets.y - 100,
+    })
+  })
+  slid.addEventListener("mouseleave", function(dets){
+    imgCursor.style.opacity = "0";
+  })
+})
+
+
 
 function loco() {
   function init() {
@@ -14,14 +35,14 @@ function loco() {
     // Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
   
     const locoScroll = new LocomotiveScroll({
-      el: document.querySelector("#main"),
+      el: document.querySelector(".main"),
       smooth: true
     });
     // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
     locoScroll.on("scroll", ScrollTrigger.update);
   
-    // tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
-    ScrollTrigger.scrollerProxy("#main", {
+    // tell ScrollTrigger to use these proxy methods for the ".main" element since Locomotive Scroll is hijacking things
+    ScrollTrigger.scrollerProxy(".main", {
       scrollTop(value) {
         return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
       }, // we don't have to define a scrollLeft because we're only scrolling vertically.
@@ -34,7 +55,7 @@ function loco() {
         };
       },
       // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-      pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
+      pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
     });
   
   
@@ -49,6 +70,7 @@ function loco() {
   init()
 }
 
+loco();
 
 
 
@@ -111,7 +133,10 @@ function sheryJs(){
     duration: 1,
   });
 }
-sheryJs();
+// sheryJs();
+
+
+
 
 
 
@@ -134,7 +159,7 @@ function footerAnimation(){
   stagger: .1,
   ease: "poweri.out",
   scrollTrigger: {
-    scroller: "body",
+    scroller: ".main",
     trigger: ".footer-bottom",
     start: "top 85%",
     end: "top 82%",
@@ -149,7 +174,7 @@ function footerAnimation(){
   duration: 1,
   delay: .5,
   scrollTrigger: {
-    scroller: "body",
+    scroller: ".main",
     trigger: ".f-mid",
     start: "top 60%",
     end: "top 50%",
@@ -160,7 +185,7 @@ function footerAnimation(){
   gsap.from(".valve-section", {
   opacity: 0,
   scrollTrigger: {
-    scroller: "body",
+    scroller: ".main",
     trigger: ".f-mid",
     start: "top 50%",
     end: "top 40%",
@@ -174,7 +199,7 @@ function footerAnimation(){
   opacity: 0,
   duration: 1,
   scrollTrigger: {
-    scroller: "body",
+    scroller: ".main",
     trigger: ".footer-top",
     start: "top 50%",
     end: "top 45%",
@@ -245,7 +270,7 @@ tl.from(".category-title", {
   x: -600,
   duration: 2,
   scrollTrigger: {
-    scroller: "body",
+    scroller: ".main",
     trigger: ".category-page",
     start: "top 90%",
     end: "top 80%",
@@ -258,7 +283,7 @@ tl.from(".panel h2", {
   duration: .4,
   stagger: .05,
   scrollTrigger: {
-    scroller: "body",
+    scroller: ".main",
     trigger: ".category-page",
     start: "top 85%",
     end: "top 75%",
@@ -271,7 +296,7 @@ gsap.from(".circle", {
   ease: "poweri.out",
   duration: .8,
   scrollTrigger: {
-    scroller: "body",
+    scroller: ".main",
     trigger: ".category-page",
     start: "top 90%"
   }
@@ -338,9 +363,8 @@ videoBtn.addEventListener("click", function(){
 
 
 function slider() {
-  let imgs = ["images/img-1-apexlegends.jpg", "images/img-2-manorlords.jpg", "images/img-3-vrising.jpg", "images/img-1-apexlegends.jpg"];
 
-  let imagesContainer = [["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"], ["images/gos/gos1.jpg", "images/gos/gos2.jpg", "images/gos/gos3.jpg", "images/gos/gos4.jpg"], ["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"], ["images/pubg-images/pubg1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"]]
+  let imagesContainer = [["images/landing-page-images/apex/img1.jpg", "images/landing-page-images/apex/img2.jpg", "images/landing-page-images/apex/img3.jpg", "images/landing-page-images/apex/img4.jpg"], ["images/gos/gos1.jpg", "images/gos/gos2.jpg", "images/gos/gos3.jpg", "images/gos/gos4.jpg"], ["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"], ["images/pubg-images/pubg1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"]]
   
   let swiperSlides = document.querySelectorAll(".swiper-slide");
   // let swiperImages = document.querySelectorAll(".swiper-slide img");
@@ -357,7 +381,6 @@ function slider() {
     }
     swiperSlides.forEach((slide ,index) => {
       if(slide.classList.contains("swiper-slide-active")){
-        console.log(index);
         slide.querySelector("img").src = `${imagesContainer[index][idx]}`;
       }
     })
@@ -375,7 +398,6 @@ function slider() {
 }
 
 slider();
-
 
 
 
@@ -461,32 +483,25 @@ giftCardsAnimation();
 
 
 
-
+// NAVIGATION MENU 
 let navBtn = document.querySelector(".nav-btn");
+let closeNav = document.querySelector(".close-nav");
 let navMenu = document.querySelector(".nav-menu");
-let naveCloseBtn = document.querySelector(".nav-close-btn");
-let landingPageVideo = document.querySelector(".main-video");
 
-
-let navToggle;
 navBtn.addEventListener("click", function(){
-  landingPageVideo.src = "";
-  landingPageVideo.src = "pubgnew.mp4";
-
-  navMenu.style.display = "block";
-  navBtn.style.zIndex = 500,
   gsap.to(navMenu, {
-    height: "100vh",
-    duration: .5
+    opacity: 1,
+    display: "block",
+    height: "100%",
   })
 })
 
-naveCloseBtn.addEventListener("click", function(){
+closeNav.addEventListener("click", function(){
   gsap.to(navMenu, {
-    height: "0",
-    duration: 2,
+    opacity: 0,
+    height: 0,
+    display: "none"
   })
-  navMenu.style.display = "none";
 })
 
 
@@ -501,12 +516,36 @@ gsap.from(".offer-title h1", {
   x: -800,
   opacity: 0,
   scrollTrigger: {
-    scroller: "body",
+    scroller: ".main",
     trigger: ".offer-page",
     start: "top 60%",
     end: "top 50%",
     scrub: 1
   }
+})
+
+
+
+
+let footerCircle = document.querySelector(".footer-circle");
+let footerBottom = document.querySelector(".footer-bottom");
+
+footerBottom.addEventListener("mousemove", function(dets){
+  gsap.to(footerCircle, {
+    x: dets.x - 100,
+    y: dets.y - 500,
+  })
+  gsap.to(footerCircle, {
+    transform: "scale(20)",
+    duration: 6,
+  })
+})
+
+footerBottom.addEventListener("mouseleave", function(dets){
+  gsap.to(footerCircle, {
+    transform: "scale(.1)",
+    duration: 1,
+  })
 })
 
 

@@ -51,6 +51,12 @@ body {
   padding: 0;
 }
 
+.img-crsr{
+  transition: all .1s ease;
+  transform-origin: center;
+  mix-blend-mode: difference;
+}
+
 
 .vdo-btn{
   transition: all linear .2s;
@@ -70,7 +76,7 @@ body {
 
 
 .category-page{
-  background-image: url(grad.jpg);
+  background-image: url(images/gradient/grad.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -90,8 +96,12 @@ body {
   display: block;
   width: 50vw;
   height: 70vh;
-  cursor: default;
   border-radius: .5rem;
+  transition: all .2s linear;
+}
+
+.swiper-slide img:hover{
+  transform: scale(1.1);
 }
 
 
@@ -339,8 +349,8 @@ body {
 }
 
 .panel{
-  border-left: 2px solid var(--dark-blue);
-  padding: 0 3rem;
+  /* border-left: 2px solid var(--dark-blue); */
+  padding: 0 1rem;
 
 }
 
@@ -348,7 +358,7 @@ body {
 .panel h2{
   color: var(--dark-blue);
   color: black;
-  font-size: 2vw;
+  font-size: 2.2vw;
   cursor: pointer;
   /* text-transform: uppercase; */
   font-weight: bold;
@@ -408,7 +418,11 @@ body {
   top: 60%;
   transform: translateY(-50%);
   /* transition: all .3s ease-in; */
+  -webkit-filter: drop-shadow(5px 15px 10px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 }
+
+
 
 @keyframes fadeLastImg {
   0%{
@@ -430,6 +444,7 @@ body {
   animation-name: fadeLastImg;
   animation-duration: .3s;
 }
+
 
 .card2{
   height: 45%;
@@ -476,6 +491,7 @@ body {
   animation-name: splitOutLeft;
   animation-duration: .4s;
 }
+
 
 @keyframes splitOutLeft{
   0%{
@@ -548,6 +564,13 @@ body {
 }
 
 
+/* -------------------- EXPLORE MORE SECTION ---------------------- */
+.img-cont{
+  clip-path: polygon(0% 28%, 6% 19%, 6% 0, 55% 0, 65% 8%, 100% 8%, 100% 100%, 32% 100%, 23% 92%, 0 92%);
+}
+
+
+
 
 
 
@@ -567,6 +590,12 @@ body {
 .footer-bottom h1:selection{
   background-color: black;
   color: white;
+}
+
+.footer-circle{
+  mix-blend-mode:color-burn;
+  transform-origin: center;
+  transform: scale(.1);
 }
 
 
