@@ -518,7 +518,7 @@ footerBottom.addEventListener("mousemove", (dets) => {
   gsap.to(footerCircle, {
     // display: "block",
     scale: 20,
-    duration: .5
+    duration: 2
   })
 })
 
@@ -526,7 +526,7 @@ footerBottom.addEventListener("mouseleave", () => {
   gsap.to(footerCircle, {
     // display: "none",
     scale: 0,
-    duration: .6
+    duration: 2.4
   })
 })
 

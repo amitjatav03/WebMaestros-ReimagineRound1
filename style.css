@@ -85,7 +85,7 @@ body {
 
 .category-page{
   /* background-image: url(images/gradient/grad.jpg); */
-  background-color: white;
+  background-color: var(--light);
   background-size: cover;
   background-position: center;
 }
@@ -367,11 +367,13 @@ body {
 .panel h2{
   color: var(--dark-blue);
   color: black;
-  font-size: 2.2vw;
+  font-size: 3.2vw;
   cursor: pointer;
   /* text-transform: uppercase; */
   font-weight: bold;
+  line-height: 3.7vw;
 }
+
 
 .panel h2:hover{
   color: #171D25;
