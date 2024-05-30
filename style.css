@@ -55,6 +55,7 @@ body {
   transition: all .1s ease;
   transform-origin: center;
   mix-blend-mode: difference;
+  pointer-events: none;
 }
 
 
@@ -72,11 +73,19 @@ body {
 }
 
 
-
-
+.rounded-div-wrapper{
+  z-index: 1200;
+}
+/* 
+.rounded-div{
+  background-image: url(images/gradient/grad.jpg);
+  background-size: cover;
+  background-position: bottom;
+} */
 
 .category-page{
-  background-image: url(images/gradient/grad.jpg);
+  /* background-image: url(images/gradient/grad.jpg); */
+  background-color: white;
   background-size: cover;
   background-position: center;
 }
@@ -587,15 +596,21 @@ body {
 
 }
 
-.footer-bottom h1:selection{
+.footer-bottom{
+  cursor: pointer;
+}
+
+.footer-bottom h1::selection{
   background-color: black;
   color: white;
 }
 
 .footer-circle{
-  mix-blend-mode:color-burn;
-  transform-origin: center;
-  transform: scale(.1);
+  top: 0;
+  left: 0 ;
+  mix-blend-mode:darken;
+
+  transform: translate(-50%, -50%) scale(0);
 }
 
 

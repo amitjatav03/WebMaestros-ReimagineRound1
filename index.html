@@ -39,7 +39,7 @@
       
       
       <!-- LANDING PAGE -->
-      <div class="landing-page relative w-full h-screen bg-[var(--dark-blue)]">
+      <div class="landing-page relative w-full h-screen bg-[var(--dark-blue)] z-[1000]">
 
         <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
 
@@ -53,7 +53,7 @@
           </div>
         </div>
 
-        <div class="nav-menu absolute top-0 left-0 w-full h-0 z-[4000] bg-blue-800 px-20 py-10 opacity-0 hidden">
+        <div class="nav-menu absolute top-0 left-0 w-full h-0 z-[400] bg-blue-800 px-20 py-10 opacity-0 hidden">
           <button class="close-nav text-5xl mb-20 bg-black rounded-lg text-white px-4 py-2 hover:bg-zinc-800">Close Nav</button>
           <h1 class="text-8xl hover:text-white cursor-pointer">STORE</h1>
           <h1 class="text-8xl hover:text-white cursor-pointer">COMMUNITY</h1>
@@ -61,7 +61,7 @@
           <h1 class="text-8xl hover:text-white cursor-pointer">POINTS SHOP</h1>
         </div>
 
-        <!-- <div class="img-crsr w-[15rem] h-[15rem] bg-slate-700 rounded-full absolute z-[1900] opacity-0"></div> -->
+        <div class="img-crsr w-[15rem] h-[15rem] bg-slate-700 rounded-full fixed z-[999] opacity-0"></div>
 
         <div class="overlay absolute w-full h-screen z-[100] "></div>
 
@@ -101,87 +101,97 @@
   
 
       <!-- CATEGORY SECTION  -->
-      <div class="category-page overflow-hidden relative w-full h-[120vh] z-[150] bg-[#EBF1FC] px-[9.5vw] py-[10vw]">
+      <div class="category-page relative w-full z-[150] bg-[#EBF1FC] z-[1900]">
+
         <audio class="category-panel-hover" src="sounds/hover.mp3" autoplay="true"></audio>
 
 
-        <h1 class="category-title font-bold text-5xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix]">browse by</h1>
-        <h1 class="category-title font-bold text-8xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix]">Category</h1>
-        <div class="circle flex justify-center items-center bg-transparent rounded-full">
-          <div class="stripe stp1">
-            <div class="first">
-              <!-- <h1>Action</h1> -->
-              <img src="images/categories images/lara-croft.png" alt="">
+        <div class="rounded-div-wrapper w-full h-[0px] absolute mt-[10px] overflow-hidden">
+          <div class="rounded-div absolute w-[750vw] h-[750vw] bg-[#EBF1FC] rounded-full left-1/2 -translate-x-1/2"></div>
+        </div>
+
+        <div class="category-page-wrapper relative w-full h-[120vh] overflow-hidden px-[9.5vw] py-[10vw]">
+          <h1 class="category-title font-bold text-5xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix]">browse by</h1>
+          <h1 class="category-title font-bold text-8xl tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix]">Category</h1>
+          <div class="circle flex justify-center items-center bg-transparent rounded-full">
+            <div class="stripe stp1">
+              <div class="first">
+                <!-- <h1>Action</h1> -->
+                <img src="images/categories images/lara-croft.png" alt="">
+              </div>
+              <div class="sec">
+                <div class="smcircle"></div>
+              </div>
             </div>
-            <div class="sec">
-              <div class="smcircle"></div>
+            <div class="stripe stp2">
+              <div class="first">
+                <img src="images/categories images/anime.png" alt="">
+                <!-- <h1>Anime</h1> -->
+              </div>
+              <div class="sec">
+                <div class="smcircle"></div>
+              </div>
+            </div>
+            <div class="stripe stp3">
+              <div class="first">
+                <img src="images/categories images/sports-fight.png" alt="">
+                <!-- <h1>All Sports</h1> -->
+              </div>
+              <div class="sec">
+                <div class="smcircle"></div>
+              </div>
+            </div>
+            <div class="stripe stp4">
+              <div class="first">
+                <!-- <h1>Role Playing</h1> -->
+                <img src="images/categories images/action-godofwar.png" alt="">
+              </div>
+              <div class="sec">
+                <div class="smcircle"></div>
+              </div>
+            </div>
+            <div class="stripe stp5">
+              <div class="first">
+                <img src="images/categories images/survival.png" alt="">
+                <!-- <h1>Survival</h1> -->
+              </div>
+              <div class="sec">
+                <div class="smcircle"></div>
+              </div>
+            </div>
+            <div class="stripe stp6">
+              <div class="first">
+                <img src="images/categories images/pubg-multip.png" alt="">
+                <!-- <h1>Multiplayer</h1> -->
+              </div>
+              <div class="sec">
+                <div class="smcircle"></div>
+              </div>
+            </div>
+            <div class="stripe stp7">
+              <div class="first">
+                <img src="images/categories images/puzzle.png" alt="">
+                <!-- <h1>Puzzle</h1> -->
+              </div>
+              <div class="sec">
+                <div class="smcircle"></div>
+              </div>
             </div>
           </div>
-          <div class="stripe stp2">
-            <div class="first">
-              <img src="images/categories images/anime.png" alt="">
-              <!-- <h1>Anime</h1> -->
-            </div>
-            <div class="sec">
-              <div class="smcircle"></div>
-            </div>
-          </div>
-          <div class="stripe stp3">
-            <div class="first">
-              <img src="images/categories images/sports-fight.png" alt="">
-              <!-- <h1>All Sports</h1> -->
-            </div>
-            <div class="sec">
-              <div class="smcircle"></div>
-            </div>
-          </div>
-          <div class="stripe stp4">
-            <div class="first">
-              <!-- <h1>Role Playing</h1> -->
-              <img src="images/categories images/action-godofwar.png" alt="">
-            </div>
-            <div class="sec">
-              <div class="smcircle"></div>
-            </div>
-          </div>
-          <div class="stripe stp5">
-            <div class="first">
-              <img src="images/categories images/survival.png" alt="">
-              <!-- <h1>Survival</h1> -->
-            </div>
-            <div class="sec">
-              <div class="smcircle"></div>
-            </div>
-          </div>
-          <div class="stripe stp6">
-            <div class="first">
-              <img src="images/categories images/pubg-multip.png" alt="">
-              <!-- <h1>Multiplayer</h1> -->
-            </div>
-            <div class="sec">
-              <div class="smcircle"></div>
-            </div>
-          </div>
-          <div class="stripe stp7">
-            <div class="first">
-              <img src="images/categories images/puzzle.png" alt="">
-              <!-- <h1>Puzzle</h1> -->
-            </div>
-            <div class="sec">
-              <div class="smcircle"></div>
-            </div>
+  
+          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[60%] left-[10%] -translate-y-1/2 justify-center ">
+            <h2 class="font-[poppins] uppercase tracking-wider">Action</h2>
+            <h2 class="font-[poppins] uppercase tracking-wider">Anime</h2>
+            <h2 class="font-[poppins] uppercase tracking-wider">All Sports</h2>
+            <h2 class="font-[poppins] uppercase tracking-wider">Role Playing</h2>
+            <h2 class="font-[poppins] uppercase tracking-wider">Survival</h2>
+            <h2 class="font-[poppins] uppercase tracking-wider">Multiplayer</h2>
+            <h2 class="font-[poppins] uppercase tracking-wider">Puzzle</h2>
           </div>
         </div>
 
-        <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[60%] left-[10%] -translate-y-1/2 justify-center ">
-          <h2 class="font-[poppins] uppercase tracking-wider">Action</h2>
-          <h2 class="font-[poppins] uppercase tracking-wider">Anime</h2>
-          <h2 class="font-[poppins] uppercase tracking-wider">All Sports</h2>
-          <h2 class="font-[poppins] uppercase tracking-wider">Role Playing</h2>
-          <h2 class="font-[poppins] uppercase tracking-wider">Survival</h2>
-          <h2 class="font-[poppins] uppercase tracking-wider">Multiplayer</h2>
-          <h2 class="font-[poppins] uppercase tracking-wider">Puzzle</h2>
-        </div>
+
+        
       </div>
 
       <!-- STEAM GIFT CARDS SECTION -->
@@ -428,7 +438,7 @@
         </div>
           
         <div class="footer-bottom relative overflow-hidden w-full h-[35%] flex justify-center items-center">
-          <div class="footer-circle w-[5vw] h-[5vw] bg-blue-500 absolute z-[250] rounded-full"></div>
+          <div class="footer-circle w-[5vw] h-[5vw] bg-[#548397] absolute z-[550] rounded-full"></div>
           <h1 class="footer-title text-[20vw] font-bold tracking-wider">Steam</h1>
         </div>
       </div>

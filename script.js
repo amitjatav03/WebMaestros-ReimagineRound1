@@ -10,7 +10,7 @@
 // CURSORS
 
 let imgCursor = document.querySelector(".img-crsr");
-let swipSlides = document.querySelectorAll(".swiper-slide");
+let swipSlides = document.querySelectorAll(".swiper-slide img");
 
 swipSlides.forEach((slid) => {
   slid.addEventListener("mousemove", function(dets){
@@ -97,26 +97,6 @@ function landingPageSlider(){
 landingPageSlider();
 
 
-function sliderContent(){
-  let sliderWrapper = document.querySelector(".swiper-wrapper");
-  let sliderImages = [
-    {img: "images/img-1-apexlegends.jpg", title: "APEX LEGENDS"},
-    {img: "images/img-2-manorlords.jpg", title: "MANOR LORDS"},
-    {img: "images/img-3-vrising.jpg", title: "VRISING"},
-    {img: "images/img-4-1361526.jpeg", title: "GRAY ZONE"},
-  ]
-  
-  sliderImages.forEach(function(slide){
-    let swiperSlide = document.createElement("div");
-    swiperSlide.classList.add("swiper-slide");
-    swiperSlide.innerHTML = `
-        <img src="${slide.img}"/>
-        <h1>${slide.title}</h1>
-    `;
-    sliderWrapper.appendChild(swiperSlide);
-  })
-}
-sliderContent();
 
 
 
@@ -530,22 +510,34 @@ gsap.from(".offer-title h1", {
 let footerCircle = document.querySelector(".footer-circle");
 let footerBottom = document.querySelector(".footer-bottom");
 
-footerBottom.addEventListener("mousemove", function(dets){
+footerBottom.addEventListener("mousemove", (dets) => {
   gsap.to(footerCircle, {
-    x: dets.x - 100,
+    left: dets.x,
     y: dets.y - 500,
   })
   gsap.to(footerCircle, {
-    transform: "scale(20)",
-    duration: 6,
+    // display: "block",
+    scale: 20,
+    duration: .5
   })
 })
 
-footerBottom.addEventListener("mouseleave", function(dets){
+footerBottom.addEventListener("mouseleave", () => {
   gsap.to(footerCircle, {
-    transform: "scale(.1)",
-    duration: 1,
+    // display: "none",
+    scale: 0,
+    duration: .6
   })
 })
 
-
+gsap.to(".rounded-div-wrapper", {
+  height: 100,
+  marginTop: "-90px",
+  scrollTrigger: {
+    trigger: ".category-page",
+    scroller: ".main",
+    start: "top 90%",
+    end: "top 70%",
+    scrub: .8
+  }
+})
