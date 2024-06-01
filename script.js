@@ -15,10 +15,10 @@ let swipSlides = document.querySelectorAll(".swiper-slide img");
 swipSlides.forEach((slid) => {
   slid.addEventListener("mousemove", function(dets){
     console.log(dets.target);
-    imgCursor.style.opacity = "1";
+    imgCursor.style.opacity = ".5";
     gsap.to(imgCursor, {
-      x: dets.x - 100,
-      y: dets.y - 100,
+      x: dets.x - 60,
+      y: dets.y - 50,
     })
   })
   slid.addEventListener("mouseleave", function(dets){
@@ -80,7 +80,7 @@ function landingPageSlider(){
     grabCursor: true,
     mousewheel: true,
     parallax: true,
-
+    speed: "600",
     centeredSlides: true,
     slidesPerView: "auto",
     loop: true,

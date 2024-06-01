@@ -54,8 +54,7 @@ body {
 .img-crsr{
   transition: all .1s ease;
   transform-origin: center;
-  /* background-color: black; */
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   /* opacity: .2; */
   pointer-events: none;
 }
