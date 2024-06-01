@@ -16,7 +16,7 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
     
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -61,7 +61,7 @@
           <h1 class="text-8xl hover:text-white cursor-pointer">POINTS SHOP</h1>
         </div>
 
-        <div class="img-crsr w-[15rem] h-[15rem] bg-slate-700 rounded-full fixed z-[999] opacity-0"></div>
+        <div class="img-crsr w-[9rem] h-[9rem] bg-slate-700 rounded-full fixed z-[999] opacity-0"></div>
 
         <div class="overlay absolute w-full h-screen z-[100] "></div>
 
@@ -76,20 +76,22 @@
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <img id="firstimg" src="images/landing-page-images/apex/img1.jpg"/>
-              <!-- <h1 class="imgtext">APEX <br> LEGENDS</h1> -->
+              <img src="images/landing-page-images/ghost-of-tsushima/img1.jpg" />
             </div>
             <div class="swiper-slide">
-              <img id="pubgImg" src="images/pubg-img.jpg" />
-              <h1 class="imgtext">PUBG</h1>
+              <img  src="images/landing-page-images/pubg/img1.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="images/img-3-vrising.jpg" />
-              <h1 class="imgtext">VRISING</h1>
+              <img src="images/landing-page-images/valhalla/img1.jpg" />
             </div>
             <div class="swiper-slide">
-              <img src="images/ghost-of-tsushima.jpg" />
-              <h1 class="imgtext">Ghost of <br> Tshushima</h1>
+              <img src="images/landing-page-images/apex/img1.jpg"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/landing-page-images/sottr/img1.jpg"/>
+            </div>
+            <div class="swiper-slide">
+              <img src="images/landing-page-images/rdr2/img1.jpg"/>
             </div>
           </div>
 
@@ -106,18 +108,18 @@
         <audio class="category-panel-hover" src="sounds/hover.mp3" autoplay="true"></audio>
 
 
-        <div class="rounded-div-wrapper w-full h-[0px] absolute mt-[10px] overflow-hidden">
-          <div class="rounded-div absolute w-[750vw] h-[750vw] bg-[#EBF1FC] rounded-full left-1/2 -translate-x-1/2"></div>
-        </div>
+        <!-- <div class="rounded-div-wrapper w-full h-[0px] absolute mt-[10px] overflow-hidden">
+          <div class="rounded-div absolute w-[750vw] h-[750vw] bg-[#A5D2EE] rounded-full left-1/2 -translate-x-1/2"></div>
+        </div> -->
 
         <div class="category-page-wrapper relative w-full h-[120vh] overflow-hidden px-[9.5vw] py-[8vw]">
           <h1 class="category-title font-bold text-[2.8vw] tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix]">browse by</h1>
           <h1 class="category-title font-bold text-[7vw] tracking-tight leading-none text-[var(--dark-blue)] relative font-[azonix]">Category</h1>
-          <div class="circle flex justify-center items-center bg-transparent rounded-full">
+          <div class="circle flex justify-center items-center rounded-full">
             <div class="stripe stp1">
               <div class="first">
                 <!-- <h1>Action</h1> -->
-                <img src="images/categories images/lara-croft.png" alt="">
+                <img class="cat-img" src="images/categories images/lara-croft.png" alt="">
               </div>
               <div class="sec">
                 <div class="smcircle"></div>
@@ -125,7 +127,7 @@
             </div>
             <div class="stripe stp2">
               <div class="first">
-                <img src="images/categories images/anime.png" alt="">
+                <img class="cat-img" src="images/categories images/anime.png" alt="">
                 <!-- <h1>Anime</h1> -->
               </div>
               <div class="sec">
@@ -134,7 +136,7 @@
             </div>
             <div class="stripe stp3">
               <div class="first">
-                <img src="images/categories images/sports-fight.png" alt="">
+                <img class="cat-img" src="images/categories images/sports-fight.png" alt="">
                 <!-- <h1>All Sports</h1> -->
               </div>
               <div class="sec">
@@ -144,7 +146,15 @@
             <div class="stripe stp4">
               <div class="first">
                 <!-- <h1>Role Playing</h1> -->
-                <img src="images/categories images/action-godofwar.png" alt="">
+                <img class="cat-img" src="images/categories images/action-godofwar.png" alt="">
+                <div class="cat-desc absolute w-[30vw]  left-[0%] top-[-80%] rounded-md flex flex-col justify-center items-center gap-2 opacity-0">
+                  <div class="desc-title border-[1px] border-white text-white rounded-md px-2 py-1 text-[1.4vw]">Role Playing</div>
+                  <p class="desc text-[1vw] text-center text-white">
+                    Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.
+                  </p>
+                  <!-- <img class="cat-bg relative top-0 left-0 w-[100vw] h-full" src="rpg.jpg" alt=""> -->
+                </div>
+                
               </div>
               <div class="sec">
                 <div class="smcircle"></div>
@@ -152,7 +162,7 @@
             </div>
             <div class="stripe stp5">
               <div class="first">
-                <img src="images/categories images/survival.png" alt="">
+                <img class="cat-img" src="images/categories images/survival.png" alt="">
                 <!-- <h1>Survival</h1> -->
               </div>
               <div class="sec">
@@ -161,7 +171,7 @@
             </div>
             <div class="stripe stp6">
               <div class="first">
-                <img src="images/categories images/pubg-multip.png" alt="">
+                <img class="cat-img" src="images/categories images/pubg-multip.png" alt="">
                 <!-- <h1>Multiplayer</h1> -->
               </div>
               <div class="sec">
@@ -170,7 +180,7 @@
             </div>
             <div class="stripe stp7">
               <div class="first">
-                <img src="images/categories images/puzzle.png" alt="">
+                <img class="cat-img" src="images/categories images/puzzle.png" alt="">
                 <!-- <h1>Puzzle</h1> -->
               </div>
               <div class="sec">

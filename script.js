@@ -78,10 +78,12 @@ function landingPageSlider(){
   var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
+    mousewheel: true,
+    parallax: true,
+
     centeredSlides: true,
     slidesPerView: "auto",
     loop: true,
-    mousewheel: true,
     coverflowEffect: {
       rotate: 70,
       stretch: 30,
@@ -91,6 +93,7 @@ function landingPageSlider(){
     },
     pagination: {
       el: ".swiper-pagination",
+      type: "bullets"
     },
 });
 }
@@ -198,13 +201,47 @@ footerAnimation();
 let active = 4;
 let categories = document.querySelectorAll(".panel h2");
 let first = document.querySelectorAll(".first");
+let catImages = document.querySelectorAll(".cat-img");
+let desc = document.querySelector(".cat-desc");
+
+let catToggle = 0;
+catImages.forEach(function(catImg, idx){
+  catImg.addEventListener("click", function(){
+    // alert();
+    console.log(idx);
+    if(catToggle === 0) {
+      gsap.to(catImg, {
+        width: "20vw",
+        height: "32vw",
+        duration: .4
+      })
+      gsap.to(desc, {
+        opacity: 1,
+      })
+      catToggle = 1;
+    } else{
+      gsap.to(catImg, {
+        width: "30vw",
+        height: "45vw",
+        duration: .4
+      })
+      gsap.to(desc, {
+        opacity: 0,
+      })
+      catToggle = 0;
+    }
+    // catImg.style.width = "20vw";
+    // catImg.style.height = "35vw";
+  })
+})
 
 gsap.to(categories, {
   opacity: .4
 })
 greyout();
 gsap.to(categories[active-1], {
-  opacity: 1
+  opacity: 1,
+  fontWeight: "bold"
 })
 
 gsap.to(first[active-1], {
@@ -222,7 +259,8 @@ categories.forEach((val, idx) => {
     greyout();
 
     gsap.to(val, {
-      opacity: 1
+      opacity: 1,
+      fontWeight: "bold",
     })
     gsap.to(first[idx], {
       opacity: 1,
@@ -234,7 +272,8 @@ categories.forEach((val, idx) => {
 
 function greyout() {
   gsap.to(categories, {
-    opacity: .6
+    opacity: .6,
+    fontWeight: "normal"
   })
   gsap.to(first, {
     opacity: .4,
@@ -247,14 +286,14 @@ function greyout() {
 let tl = gsap.timeline();
 
 tl.from(".category-title", {
-  x: -600,
-  duration: 2,
+  y: -600,
+  duration: 1,
   scrollTrigger: {
     scroller: ".main",
     trigger: ".category-page",
     start: "top 90%",
     end: "top 80%",
-    scrub: 2
+    scrub: 1
   }
 })
 
@@ -265,8 +304,8 @@ tl.from(".panel h2", {
   scrollTrigger: {
     scroller: ".main",
     trigger: ".category-page",
-    start: "top 85%",
-    end: "top 75%",
+    start: "top 75%",
+    end: "top 65%",
     scrub: 1
   }
   
@@ -344,7 +383,14 @@ videoBtn.addEventListener("click", function(){
 
 function slider() {
 
-  let imagesContainer = [["images/landing-page-images/apex/img1.jpg", "images/landing-page-images/apex/img2.jpg", "images/landing-page-images/apex/img3.jpg", "images/landing-page-images/apex/img4.jpg"], ["images/gos/gos1.jpg", "images/gos/gos2.jpg", "images/gos/gos3.jpg", "images/gos/gos4.jpg"], ["images/apex-images/apex1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"], ["images/pubg-images/pubg1.jpg", "images/apex-images/apex2.jpg", "images/apex-images/apex3.jpg", "images/apex-images/apex4.jpg"]]
+  let imagesContainer = [
+    ["images/landing-page-images/sottr/img1.jpg", "images/landing-page-images/sottr/img2.jpg", "images/landing-page-images/sottr/img3.jpg", "images/landing-page-images/sottr/img4.jpg"], 
+    ["images/landing-page-images/rdr2/img1.jpg", "images/landing-page-images/rdr2/img2.jpg", "images/landing-page-images/rdr2/img3.jpg", "images/landing-page-images/rdr2/img4.jpg"], 
+    ["images/landing-page-images/ghost-of-tsushima/img1.jpg", "images/landing-page-images/ghost-of-tsushima/img2.jpg", "images/landing-page-images/ghost-of-tsushima/img3.jpg", "images/landing-page-images/ghost-of-tsushima/img4.jpg"], 
+    ["images/landing-page-images/pubg/img1.jpg", "images/landing-page-images/pubg/img2.jpg", "images/landing-page-images/pubg/img3.jpg", "images/landing-page-images/pubg/img4.jpg"],
+    ["images/landing-page-images/valhalla/img1.jpg", "images/landing-page-images/valhalla/img2.jpg", "images/landing-page-images/valhalla/img3.jpg", "images/landing-page-images/valhalla/img4.jpg"], 
+    ["images/landing-page-images/apex/img1.jpg", "images/landing-page-images/apex/img2.jpg", "images/landing-page-images/apex/img3.jpg", "images/landing-page-images/apex/img4.jpg"], 
+  ];
   
   let swiperSlides = document.querySelectorAll(".swiper-slide");
   // let swiperImages = document.querySelectorAll(".swiper-slide img");
@@ -363,9 +409,13 @@ function slider() {
       if(slide.classList.contains("swiper-slide-active")){
         slide.querySelector("img").src = `${imagesContainer[index][idx]}`;
       }
+      // if(!slide.classList.contains("swiper-slide-active")){
+      //   slide.querySelector("img").src = `${imagesContainer[index][0]}`;
+      // }
+      
     })
     idx ++; 
-  }, 3000);
+  }, 2000);
   
   // frontSlide.addEventListener("mouseleave", function(){
   //   swiperSlides.forEach((slide ,index) => {
@@ -464,28 +514,28 @@ giftCardsAnimation();
 
 
 // NAVIGATION MENU 
-let navBtn = document.querySelector(".nav-btn");
-let closeNav = document.querySelector(".close-nav");
-let navMenu = document.querySelector(".nav-menu");
-
-navBtn.addEventListener("click", function(){
-  gsap.to(navMenu, {
-    opacity: 1,
-    display: "block",
-    height: "100%",
+function navMenu(){
+  let navBtn = document.querySelector(".nav-btn");
+  let closeNav = document.querySelector(".close-nav");
+  let navMenu = document.querySelector(".nav-menu");
+  
+  navBtn.addEventListener("click", function(){
+    gsap.to(navMenu, {
+      opacity: 1,
+      display: "block",
+      height: "100%",
+    })
   })
-})
-
-closeNav.addEventListener("click", function(){
-  gsap.to(navMenu, {
-    opacity: 0,
-    height: 0,
-    display: "none"
+  
+  closeNav.addEventListener("click", function(){
+    gsap.to(navMenu, {
+      opacity: 0,
+      height: 0,
+      display: "none"
+    })
   })
-})
-
-
-
+}
+navMenu();
 
 
 
@@ -507,28 +557,34 @@ gsap.from(".offer-title h1", {
 
 
 
-let footerCircle = document.querySelector(".footer-circle");
-let footerBottom = document.querySelector(".footer-bottom");
+function footerTitleHoverAnime(){
+  let footerCircle = document.querySelector(".footer-circle");
+  let footerBottom = document.querySelector(".footer-bottom");
+  
+  footerBottom.addEventListener("mousemove", (dets) => {
+    gsap.to(footerCircle, {
+      left: dets.x,
+      y: dets.y - 500,
+    })
+    gsap.to(footerCircle, {
+      // display: "block",
+      scale: 20,
+      duration: 2
+    })
+  })
+  
+  footerBottom.addEventListener("mouseleave", () => {
+    gsap.to(footerCircle, {
+      // display: "none",
+      scale: 0,
+      duration: 2.4
+    })
+  })
+}
 
-footerBottom.addEventListener("mousemove", (dets) => {
-  gsap.to(footerCircle, {
-    left: dets.x,
-    y: dets.y - 500,
-  })
-  gsap.to(footerCircle, {
-    // display: "block",
-    scale: 20,
-    duration: 2
-  })
-})
+footerTitleHoverAnime();
 
-footerBottom.addEventListener("mouseleave", () => {
-  gsap.to(footerCircle, {
-    // display: "none",
-    scale: 0,
-    duration: 2.4
-  })
-})
+
 
 gsap.to(".rounded-div-wrapper", {
   height: 100,

@@ -54,7 +54,9 @@ body {
 .img-crsr{
   transition: all .1s ease;
   transform-origin: center;
+  /* background-color: black; */
   mix-blend-mode: difference;
+  /* opacity: .2; */
   pointer-events: none;
 }
 
@@ -85,7 +87,10 @@ body {
 
 .category-page{
   /* background-image: url(images/gradient/grad.jpg); */
-  background-color: var(--light);
+  /* background-color: var(--light); */
+  /* background-image: url(rpg.jpg); */
+  /* background-color: #104E73; */
+  background: linear-gradient(to bottom, #a7d4ef, #35639b);
   background-size: cover;
   background-position: center;
 }
@@ -110,7 +115,7 @@ body {
 }
 
 .swiper-slide img:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 
@@ -325,6 +330,7 @@ body {
   width: 30vw;
   height: 45vw;
   position: absolute;
+  cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -366,11 +372,11 @@ body {
 
 .panel h2{
   color: var(--dark-blue);
-  color: black;
-  font-size: 3.2vw;
+  /* color: rgb(37, 36, 36); */
+  font-size: 2.5vw;
   cursor: pointer;
   /* text-transform: uppercase; */
-  font-weight: bold;
+  /* font-weight: bold; */
   line-height: 3.7vw;
 }
 
@@ -611,9 +617,9 @@ body {
   top: 0;
   left: 0 ;
   mix-blend-mode:darken;
-
   transform: translate(-50%, -50%) scale(0);
 }
+
 
 
 
