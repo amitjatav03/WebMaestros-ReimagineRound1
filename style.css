@@ -21,6 +21,11 @@
   src: url(fonts/PPGoshaSans-Bold.otf);
 }
 
+@font-face {
+  font-family: redtrap;
+  src: url(fonts/RedtrapExpandedPuo-woG33.otf);
+}
+
 :root {
   --blue: #211f3f;
   --dark-blue: #161b2c;
@@ -77,6 +82,12 @@ body {
 .rounded-div-wrapper{
   z-index: 1200;
 }
+
+/* .nav-menu{
+  background-image: url(nav-bg.jpg);
+  background-position: center;
+  background-size: cover;
+} */
 /* 
 .rounded-div{
   background-image: url(images/gradient/grad.jpg);
@@ -85,12 +96,14 @@ body {
 } */
 
 .category-page{
-  /* background-image: url(images/gradient/grad.jpg); */
+  background-image: url(images/gradient/grad.jpg);
   /* background-color: var(--light); */
   /* background-image: url(rpg.jpg); */
   /* background-color: #104E73; */
-  background: linear-gradient(to bottom, #a7d4ef, #35639b);
-  background-size: cover;
+  /* background: linear-gradient(to bottom, #104E73, #104E73); */
+  /* background: linear-gradient(to bottom, #CFE5D9, #1E5977); */
+  background: linear-gradient(to bottom, #CFE5D9, #114361);
+  background-size: cover; 
   background-position: center;
 }
 
@@ -219,11 +232,6 @@ body {
   pointer-events: none;
 }
 
-.explore-page{
-  background-color: #25364a;
-}
-
-
 .offer-left{
   background-color: #CC7722;
 }
@@ -264,6 +272,16 @@ body {
 .offer{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;  
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.category-side-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(to right, black, transparent);
 }
 
 .circle{
@@ -371,6 +389,7 @@ body {
 
 .panel h2{
   color: var(--dark-blue);
+  /* color: white; */
   /* color: rgb(37, 36, 36); */
   font-size: 2.5vw;
   cursor: pointer;
@@ -381,7 +400,8 @@ body {
 
 
 .panel h2:hover{
-  color: #171D25;
+  /* color: #171D25; */
+  color: var(--light);
 }
 
 
@@ -405,14 +425,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-
-
-
-
-.explore-page img{
-  width: 25vw;
-  height: 30vh;
-}
 
 
 
@@ -581,12 +593,84 @@ body {
 
 
 /* -------------------- EXPLORE MORE SECTION ---------------------- */
-.img-cont{
-  clip-path: polygon(0% 28%, 6% 19%, 6% 0, 55% 0, 65% 8%, 100% 8%, 100% 100%, 32% 100%, 23% 92%, 0 92%);
+.explore-page{
+  background-color: #111b26;
+  /* background: rgb(26,42,59);
+background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, rgba(57,101,122,1) 100%); */
+}
+
+.exp-titles{
+  cursor: pointer;
 }
 
 
+.slice{
+  width: 100%;
+  height: 15rem;
+  border: 1px solid var(--light);
+  transition: all .2s linear;
+  background: rgba(35, 31, 31, 0.107);
+  transform: scale(.7);
+  cursor: pointer;
+}
 
+.slice-img{
+  width: 20rem;
+  height: 14rem;
+  border-radius: 2px;
+  transform: translateX(-50%) scale(0);
+  transform-origin: center;
+  transition: all .2s linear;
+}
+
+.slice:hover{
+  /* background-color: #C5DDD3; */
+  background: linear-gradient(to right, #CFE5D9, #114361);
+  color: #000;
+  padding: 0 3rem;
+  border: none;
+}
+
+.slice:hover .slice-img{
+  transform: translateX(-50%) scale(1.15);
+} 
+.slice:hover .slice-title {
+  color: black;
+} 
+.slice:hover .slice-ico {
+  color: black;
+} 
+.slice:hover .slice-r-text {
+  color: black;
+} 
+
+.slice-left-r p{
+  display: flex;
+  gap: 5px;
+}
+
+.slice-left-r p span{
+  font-family: gilroy;
+  font-weight: bold;
+  /* border: 1px solid #dadada;
+  background-color: #111b26; */
+  /* border: 1px solid greenyellow; */
+  color: #022C22;
+  background-color: #22C55E;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
+
+.slice-left-r p span:nth-child(2){
+  background-color: #60A5FA;
+}
+.slice-left-r p span:nth-child(3){
+  background-color: #F43F5E;
+}
+.slice-left-r p span:nth-child(4){
+  background-color: #FACC15;
+}
 
 
 
@@ -614,9 +698,14 @@ body {
 
 .footer-circle{
   top: 0;
-  left: 0 ;
+  left: 0;
   mix-blend-mode:darken;
   transform: translate(-50%, -50%) scale(0);
+}
+
+.navicon{
+  margin-right: 1rem;
+  font-size: 2.8rem;
 }
 
 
