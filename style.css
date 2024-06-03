@@ -623,6 +623,15 @@ background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, r
   transition: all .2s linear;
 }
 
+
+.slimg1{
+  width: 13rem;
+  height: 20rem;
+  transform: translateX(-50%) scale(0);
+  transform-origin: center;
+  transition: all .2s linear;
+}
+
 .slice:hover{
   /* background-color: #C5DDD3; */
   background: linear-gradient(to right, #CFE5D9, #114361);
@@ -632,6 +641,9 @@ background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, r
 }
 
 .slice:hover .slice-img{
+  transform: translateX(-50%) scale(1.15);
+} 
+.slice:hover .slimg1{
   transform: translateX(-50%) scale(1.15);
 } 
 .slice:hover .slice-title {
