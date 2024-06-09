@@ -26,6 +26,11 @@
   src: url(fonts/RedtrapExpandedPuo-woG33.otf);
 }
 
+@font-face {
+  font-family: abc;
+  src: url(fonts/ABCWhyteVariable.8506f1e8.woff2);
+}
+
 :root {
   --blue: #211f3f;
   --dark-blue: #161b2c;
@@ -64,6 +69,11 @@ body {
   pointer-events: none;
 }
 
+.category-crsr{
+  transform-origin: center;
+  pointer-events: none;
+}
+
 
 .vdo-btn{
   transition: all linear .2s;
@@ -94,6 +104,27 @@ body {
   background-size: cover;
   background-position: bottom;
 } */
+
+.nav-menu h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-family: abc;
+  font-size: 4vw;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  line-height: 4.2vw;
+  letter-spacing: -3px;
+  padding: 0 20px 0 6px;
+}
+
+.nav-menu h1:hover{
+  background-color: white;
+  color: black;
+}
 
 .category-page{
   background-image: url(images/gradient/grad.jpg);
@@ -164,7 +195,6 @@ body {
   animation-play-state: running;
   display: flex;
   gap: 2rem;
-  white-space: nowrap;
   padding: 0 5vw;
 }
 .marque-effect .move:hover{
@@ -275,14 +305,17 @@ body {
 }
 
 
-.category-side-overlay{
+.clicked-category{
+  background-color: rgba(0, 0, 0, 0.551);
+}
+/* .category-side-overlay{
   position: absolute;
   top: 0;
   left: 0;
   width: 60%;
   height: 100%;
   background: linear-gradient(to right, black, transparent);
-}
+} */
 
 .circle{
   position: absolute;
@@ -350,6 +383,8 @@ body {
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-filter: drop-shadow(5px 15px 10px #222);
+  filter: drop-shadow(5px 15px 5px #222);
 }
 
 .stp6>.first>img{
@@ -439,6 +474,7 @@ body {
 .explore-title{
   text-shadow: 3px 3px 2px rgba(6, 0, 0, 1);
 }
+
 
 .left-cont img, .right-cont img{
   position: absolute;
@@ -594,9 +630,17 @@ body {
 
 /* -------------------- EXPLORE MORE SECTION ---------------------- */
 .explore-page{
-  background-color: #111b26;
+  /* background-color: #111b26; */
   /* background: rgb(26,42,59);
 background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, rgba(57,101,122,1) 100%); */
+background: rgb(17,76,112);
+background: radial-gradient(circle, rgba(17,76,112,1) 0%, rgba(26,42,59,1) 68%, rgba(57,101,122,1) 100%);
+background: rgb(26,42,59);
+background: linear-gradient(90deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 50%, rgba(27,69,94,1) 100%);
+}
+
+.selected-section{
+  transition: all .4s linear;
 }
 
 .exp-titles{
@@ -605,13 +649,36 @@ background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, r
 
 
 .slice{
-  width: 100%;
-  height: 15rem;
+  width: 90%;
+  height: 400px;
   border: 1px solid var(--light);
   transition: all .2s linear;
   background: rgba(35, 31, 31, 0.107);
+  position: relative;
   transform: scale(.7);
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 7vw;
+  overflow: hidden;
+  border-radius: 10px;
+  z-index: 100;
+}
+
+.slice-overlay{
+  position: absolute;
+  width: 100%;
+  /* height: 100%; */
+  height: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.264);
+  z-index: -1;
+}
+
+.slice:hover .slice-overlay{
+  height: 100%;
 }
 
 .slice-img{
@@ -621,8 +688,19 @@ background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, r
   transform: translateX(-50%) scale(0);
   transform-origin: center;
   transition: all .2s linear;
-}
+} 
 
+/* .slice::after{
+  content: "";
+  position: absolute; 
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.519);
+  border: none;
+  border-radius: 10px;
+} */
 
 .slimg1{
   width: 13rem;
@@ -633,8 +711,7 @@ background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, r
 }
 
 .slice:hover{
-  /* background-color: #C5DDD3; */
-  background: linear-gradient(to right, #CFE5D9, #114361);
+  background-size: cover;
   color: #000;
   padding: 0 3rem;
   border: none;
@@ -646,7 +723,7 @@ background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, r
 .slice:hover .slimg1{
   transform: translateX(-50%) scale(1.15);
 } 
-.slice:hover .slice-title {
+/* .slice:hover .slice-title {
   color: black;
 } 
 .slice:hover .slice-ico {
@@ -654,7 +731,7 @@ background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, r
 } 
 .slice:hover .slice-r-text {
   color: black;
-} 
+}  */
 
 .slice-left-r p{
   display: flex;
@@ -719,8 +796,6 @@ background: linear-gradient(82deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 54%, r
   margin-right: 1rem;
   font-size: 2.8rem;
 }
-
-
 
 
 /* ---------------------- RESPONSIVENESS ------------------------ */

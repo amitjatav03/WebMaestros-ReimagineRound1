@@ -53,21 +53,56 @@
           </div>
         </div>
 
-        <div class="nav-menu absolute bg-black top-0 left-0 w-full h-0 z-[400] px-20 py-10 opacity-0 hidden">
-          <img class="nav-bg absolute z-[-1] w-[full] h-[full] top-0 left-0" src="nav-bg.jpg" alt="">
-          <button class="close-nav text-5xl mb-20 rounded-full text-black px-4 py-2 hover:bg-zinc-800"><i class="ri-close-line text-white"></i></button>
-          <h1 class="text-6xl text-white hover:text-blue-200 cursor-pointer"><i class="ri-store-3-fill navicon"></i>Store</h1>
-          <h1 class="text-6xl text-white hover:text-blue-200 cursor-pointer"><i class="ri-community-line navicon"></i>Community</h1>
-          <h1 class="text-6xl text-white hover:text-blue-200 cursor-pointer"><i class="ri-newspaper-line navicon"></i>About</h1>
-          <h1 class="text-6xl text-white hover:text-blue-200 cursor-pointer"><i class="ri-newspaper-line navicon"></i>Support</h1>
-          <h1 class="text-6xl text-white hover:text-blue-200 cursor-pointer"><i class="ri-newspaper-line navicon"></i>News</h1>
-          <h1 class="text-6xl text-white hover:text-blue-200 cursor-pointer"><i class="ri-newspaper-line navicon"></i>Labs</h1>
-          <h1 class="text-6xl text-white hover:text-blue-200 cursor-pointer"><i class="ri-newspaper-line navicon"></i>Points Shop</h1>
+        <div class="nav-menu absolute bg-slate-900 top-[2%] left-[-50%] w-[70%] h-[96%] z-[700] px-24 py-10 opacity-0 rounded-[10px]">
+          <!-- <img class="nav-bg absolute z-[-1] w-[full] h-[full] top-0 left-0" src="nav-bg.jpg" alt=""> -->
+           <audio class="open-nav-sound" src="sound-effects/UI_menu_OPEN.mp3"></audio>
+           <audio class="close-nav-sound" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
+           <audio class="nav-hover-sound" src="sound-effects/UI_menu_rollover.mp3"></audio>
+           <i class="nav-logo-steam absolute ri-steam-fill text-white text-[25vw] left-[55%] top-1/2 -translate-y-1/2"></i>
+          <i class="close-nav text-6xl cursor-pointer ri-close-line text-white"></i>
+          <div class="nav-items mt-10 flex flex-col items-start">
+            <h1>Store</h1>
+            <h1>Community</h1>
+            <h1>About</h1>
+            <h1>Support</h1>
+            <h1>News</h1>
+            <h1>Labs</h1>
+            <h1>Points Shop</h1>
+          </div>
+        </div>
+
+        <div class="install-steam-section relative bg-[#1D2024] -top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[98%] h-[96%] z-[500] px-40 py-10 flex justify-center items-center rounded-lg gap-2">
+          <i class="close-steam-install ri-close-large-fill absolute right-[12%] z-[600] top-[7%] cursor-pointer text-[2.2vw] text-white"></i>
+          <div class="install-left w-[40%] h-full flex flex-col gap-4 justify-center">
+            <img class="w-[17vw]" src="images/steam-logo-install-steam.svg" alt="">
+            <h3 class="text-white text-[1.5vw]">Steam is the ultimate destination for playing, discussing, and creating games.</h3>
+            <div class="active-audience flex gap-[20%]">
+              <div class="online-audience">
+                <h5 class="text-slate-300 text-[.8vw]"><i class="ri-circle-fill text-blue-500"></i> &nbsp; ONLINE</h5>
+                <h3 class="text-white text-[2vw]">24,776,252</h3>
+              </div>
+              <div class="playing-now-audience">
+                <h5 class="text-slate-300 text-[.8vw]"><i class="ri-circle-fill text-green-500"></i> &nbsp; PLAYING NOW</h5>
+                <h3 class="text-white text-[2vw]">6,827,808</h3>
+              </div>
+            </div>
+            <button class="text-white bg-[#0971E5] text-start px-4 py-4 text-[1.1vw]">Get the app for mobile</button>
+            <p class="text-white text-[.85vw] text-center">The <span class="underline">Steam mobile apps</span> support your PC gaming experience on the go</p>
+            <h4 class="font-bold text-white text-[1.1vw] text-center">Start playing now...</h4>
+            <button class="text-white bg-[#303336] text-start px-4 py-4 text-[1.1vw]">Get the app for PC</button>
+          </div>
+          <div class="install-right w-[60%] h-full flex justify-center items-center">
+            <video width="100%" height="auto" autoplay=""  muted="" loop=""  poster="https://cdn.akamai.steamstatic.com/store/about/videos/about_hero_loop_web.png">
+              <source src="https://cdn.akamai.steamstatic.com/store/about/videos/about_hero_loop_web.webm" type="video/webm">
+              <source src="https://cdn.akamai.steamstatic.com/store/about/videos/about_hero_loop_web.mp4" type="video/mp4">
+            </video>
+          </div>
+          
         </div>
 
         <div class="img-crsr w-[8rem] h-[8rem] bg-black rounded-full fixed z-[999] opacity-0"></div>
 
-        <div class="overlay absolute w-full h-screen z-[100] "></div>
+        <div class="overlay top-0 left-0 absolute w-full h-screen z-[100] "></div>
 
         <i class="ri-play-circle-fill vdo-btn absolute z-[120] top-[90%] left-[50%] -translate-x-[50%] text-slate-800 text-6xl bg-white w-7 h-7 flex justify-center items-center rounded-full cursor-pointer border-none"></i>  
 
@@ -109,8 +144,15 @@
       <!-- CATEGORY SECTION  -->
       <div class="category-page relative w-full z-[150] bg-[#EBF1FC] z-[1900]">
 
-        <audio class="category-panel-hover" src="sounds/hover.mp3" autoplay="true" muted></audio>
-        <video class="rpg-bg absolute w-full h-full absolute top-0 left-0 opacity-0" src="live wallpapers/rpg2.mp4" autoplay muted loop></video>
+        <audio class="category-panel-hover" src="sound-effects/category-items-click.mp3" autoplay="true"></audio>
+        <div class="clicked-category absolute w-full h-full top-0 left-0 flex flex-col items-center justify-center opacity-0 px-20">
+          <video class="rpg-bg w-full h-full z-[-1] absolute top-0 left-0" src="live wallpapers/rpg2.mp4" autoplay muted loop></video>
+          <h1 class="text-[5vw] text-white font-[abc] font-semibold">ROLE PLAYING</h1>
+          <p class="desc text-[2.5vw] text-center text-white">
+            Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.
+          </p>
+        </div>
+        
 
         <!-- <div class="rounded-div-wrapper w-full h-[0px] absolute mt-[10px] overflow-hidden">
           <div class="rounded-div absolute w-[750vw] h-[750vw] bg-[#A5D2EE] rounded-full left-1/2 -translate-x-1/2"></div>
@@ -118,6 +160,11 @@
 
         <div class="category-page-wrapper relative w-full h-[120vh] overflow-hidden px-[9.5vw] py-[8vw]">
           <div class="category-side-overlay opacity-0 absolute top-0 left-0 w-[60%] h-full"></div>
+
+
+          <div class="category-crsr absolute cursor-pointer w-[8rem] h-[8rem] border-2 border-black top-0 left-0 rounded-full flex justify-center items-center scale-0 z-[500]">
+            <div class="inner-circle w-[6.5rem] h-[6.5rem] bg-black rounded-full text-white flex justify-center items-center">CLICK</div>
+          </div>
 
 
           <h1 class="category-title font-bold text-[2.8vw] tracking-tight leading-none text-black relative font-[redtrap] uppercase">browse by</h1>
@@ -157,12 +204,11 @@
                 <audio class="rpg-bgm" src="sounds/god-of-war-rpg.mp3"></audio>
                 <img class="cat-img" src="images/categories images/action-godofwar.png" alt="">
                 <div class="cat-desc absolute w-[30vw]  left-[0%] top-[-80%] rounded-md flex flex-col justify-center items-center gap-2 opacity-0">
-                  <div class="desc-title text-white rounded-md px-2 py-1 text-[1.4vw]">Role Playing</div>
-                  <p class="desc text-[1vw] text-center text-white">
-                    Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.
-                  </p>
+                  <!-- <div class="desc-title text-white rounded-md px-2 py-1 text-[1.4vw]">Role Playing</div> -->
+                  
                   <!-- <img class="cat-bg relative top-0 left-0 w-[100vw] h-full" src="rpg.jpg" alt=""> -->
                 </div>
+                
                 
               </div>
               <div class="sec">
@@ -217,9 +263,9 @@
       <div class="steam-gift-cards w-full h-screen bg-[#2A475E] font-[azonix] relative flex justify-center items-center">
         <audio class="swoosh-sound" src="sounds/swoosh-sound-effect-for-fight-scenes-or-transitions-1-149889.mp3"></audio>
         <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
-        <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[poppins] font-bold text-gray-100">STEAM <br> GIFT CARDS</h1>
+        <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[redtrap] font-bold text-gray-100">STEAM <br> GIFT CARDS</h1>
         <!-- <button class="gift-btn absolute top-[84%] bg-[#114869] px-4 py-2 text-2xl text-white rounded-md font-[gosha] uppercase hover:bg-[#134261] hover:text-[var(--light)]">Give the Gift of game</button> -->
-        <img class="absolute top-[5%] left-[27.5%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
+        <img class="absolute top-[5%] left-[34.5%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
         <div class="container absolute top-[55%] -translate-y-1/2 h-1/2 flex">
             <div class="left-cont w-1/2 h-full relative">
                 <img class="gift-cards card1" src="images/giftcards-images/lcard1.png">
@@ -238,23 +284,100 @@
                 <img class="gift-rcards rcard6" src="images/giftcards-images/rcard6.png">
             </div>
         </div>
-    </div>
+      </div>
 
     <!-- EXPLORE MORE SECTION  -->
       <div class="explore-page w-full flex relative justify-center items-center pb-20">
-        <div class="explore-container  w-[70%] rounded-md overflow-hidden">
-          <div class="select-sections w-full h-[15vh] flex justify-between items-center px-20 mb-12 mt-12 border-b-2 border-gray-700">
+        <audio class="slice-hover-sound" src="sound-effects/UI_menu_rollover.mp3"></audio>
+        <div class="explore-container w-[70%] rounded-md overflow-hidden">
+          <div class="select-sections w-full flex justify-between items-center px-20 mb-12 mt-12 border-b-2 border-gray-700">
             <h2 class="exp-titles text-[2vw] text-[--light] border-2 rounded-md px-2 border-[--light]">New & Trending</h2>
             <h2 class="exp-titles text-[1.8vw] text-white">Top Sellers</h2>
             <h2 class="exp-titles text-[1.8vw] text-white">Popular Upcoming</h2>
             <h2 class="exp-titles text-[1.8vw] text-white">Specials</h2>
           </div>
-          <div class="selected-section relative w-full h-[90%] whitespace-nowrap">
+          <div class="selected-section relative w-full h-[200vh]">
             
               
-            <div class="new-and-trending-section  w-full h-full inline-block white flex flex-col gap-6">
+            <div class="new-and-trending-section absolute w-full h-full inline-block flex flex-col  items-center gap-6">
+              <div class="slice hover:bg-[url('/explore-imgs/alice.jpg')] hover:bg-center">
+                <div class="slice-overlay"></div>
+                <div class="slice-left w-[60%] h-full flex gap-10 items-center">
+                  <div class="slice-left-r">
+                    <h3 class="slice-title text-4xl tracking-tight text-white">Alice in the Nightmare Land</h3>
+                    <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
+                    <p class="slice-badge text-gray-400">
+                      <span>FPS</span>
+                      <span>Shooter</span>
+                      <span>Multiplayer</span>
+                      <span>Competitive</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="slice-right">
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                </div>
+              </div>  
+              <div class="slice hover:bg-[url('/explore-imgs/black-myth.jpg')] hover:bg-center">
+                <div class="slice-overlay"></div>
+                <div class="slice-left w-[60%] h-full flex gap-10 items-center">
+                  <div class="slice-left-r">
+                    <h3 class="slice-title text-4xl tracking-tight text-white">Black Myth: Wukong</h3>
+                    <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
+                    <p class="slice-badge text-gray-400">
+                      <span>Mythoplogy</span>
+                      <span>Action</span>
+                      <span>Action RPG</span>
+                      <span>RPG</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="slice-right">
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                </div>
+              </div>  
+              <div class="slice hover:bg-[url('/explore-imgs/empires-of-undergrowth.jpg')] hover:bg-bottom">
+                <div class="slice-overlay"></div>
+                <div class="slice-left w-[60%] h-full flex gap-10 items-center">
+                  <div class="slice-left-r">
+                    <h3 class="slice-title text-4xl tracking-tight text-white">Empires of the Undergrowth</h3>
+                    <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
+                    <p class="slice-badge text-gray-400">
+                      <span>FPS</span>
+                      <span>Shooter</span>
+                      <span>Multiplayer</span>
+                      <span>Competitive</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="slice-right">
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                </div>
+              </div>  
+              <div class="slice hover:bg-[url('/explore-imgs/killer-klowns.jpg')] hover:bg-center">
+                <div class="slice-overlay"></div>
+                <div class="slice-left w-[60%] h-full flex gap-10 items-center">
+                  <div class="slice-left-r">
+                    <h3 class="slice-title text-4xl tracking-tight text-white">Killer Klowns from Outer Space</h3>
+                    <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
+                    <p class="slice-badge text-gray-400">
+                      <span>FPS</span>
+                      <span>Shooter</span>
+                      <span>Multiplayer</span>
+                      <span>Competitive</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="slice-right">
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                </div>
+              </div>  
               
-              <div class="slice flex w-full justify-between items-center px-16 rounded-md relative">
+              <div class="slice">
                 <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                   <div class="slice-left-r">
                     <h3 class="slice-title text-4xl tracking-tight text-white">Counter-Strike 2</h3>
@@ -268,11 +391,71 @@
                   </div>
                 </div>
                 <div class="slice-right">
-                  <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt="">
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
                   <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
                 </div>
               </div>  
-              <div class="slice flex w-full justify-between items-center px-16 rounded-md relative">
+              <div class="slice">
+                <div class="slice-left w-[60%] h-full flex gap-10 items-center">
+                  <div class="slice-left-r">
+                    <h3 class="slice-title text-4xl tracking-tight text-white">Counter-Strike 2</h3>
+                    <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
+                    <p class="slice-badge text-gray-400">
+                      <span>FPS</span>
+                      <span>Shooter</span>
+                      <span>Multiplayer</span>
+                      <span>Competitive</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="slice-right">
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                </div>
+              </div>  
+            </div>
+            <div class="top-sellers-section absolute left-[100%] w-full h-full inline-block flex flex-col  items-center gap-6">
+              <div class="slice hover:bg-[url('/explore-imgs/black-myth.jpg')] hover:bg-center">
+                <div class="slice-overlay"></div>
+                
+                <div class="slice-left w-[60%] h-full flex gap-10 items-center">
+                  <div class="slice-left-r">
+                    <h3 class="slice-title text-4xl tracking-tight text-white">Black Myth: Wukong</h3>
+                    <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
+                    <p class="slice-badge text-gray-400">
+                      <span>Mythoplogy</span>
+                      <span>Action</span>
+                      <span>Action RPG</span>
+                      <span>RPG</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="slice-right">
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                </div>
+              </div>  
+              <div class="slice hover:bg-[url('/explore-imgs/counter-strike.jpg')] hover:bg-top">
+                <div class="slice-overlay"></div>
+                <div class="slice-left w-[60%] h-full flex gap-10 items-center">
+                  <div class="slice-left-r">
+                    <h3 class="slice-title text-4xl tracking-tight text-white">Counter-Strike 2</h3>
+                    <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
+                    <p class="slice-badge text-gray-400">
+                      <span>FPS</span>
+                      <span>Shooter</span>
+                      <span>Multiplayer</span>
+                      <span>Competitive</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="slice-right">
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                </div>
+              </div>  
+              <div class="slice hover:bg-[url('/explore-imgs/destiny-2.jpg')] hover:bg-center">
+                <div class="slice-overlay"></div>
                 <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                   <div class="slice-left-r">
                     <h3 class="slice-title text-4xl tracking-tight text-white">Destiny 2</h3>
@@ -286,14 +469,15 @@
                   </div>
                 </div>
                 <div class="slice-right">
-                  <img class="slice-img absolute left-[60%] top-[-4%]" src="images/pubg-images/pubg1.jpg" alt="">
-                  <h3 class=".slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
                 </div>
               </div>  
-              <div class="slice flex w-full justify-between items-center px-16 rounded-md relative">
+              <div class="slice hover:bg-[url('/explore-imgs/sf.jpg')] hover:bg-top">
+                <div class="slice-overlay"></div>
                 <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                   <div class="slice-left-r">
-                    <h3 class="slice-title text-4xl tracking-tight text-white">Diablo</h3>
+                    <h3 class="slice-title text-4xl tracking-tight text-white">Street Fighter 6</h3>
                     <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                     <p class="slice-badge text-gray-400">
                       <span>FPS</span>
@@ -304,11 +488,12 @@
                   </div>
                 </div>
                 <div class="slice-right">
-                  <img class="slice-img absolute left-[60%] top-[-4%]" src="images/gos/img1.jpg" alt="">
-                  <h3 class=".slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
                 </div>
               </div>  
-              <div class="slice flex w-full justify-between items-center px-16 rounded-md relative">
+              <div class="slice hover:bg-[url('/explore-imgs/dota-2.jpg')] hover:bg-center">
+                <div class="slice-overlay"></div>
                 <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                   <div class="slice-left-r">
                     <h3 class="slice-title text-4xl tracking-tight text-white">Dota 2</h3>
@@ -322,32 +507,32 @@
                   </div>
                 </div>
                 <div class="slice-right">
-                  <img class="slice-img absolute left-[60%] top-[-4%]" src="images/landing-page-images/rdr2/img3.jpg" alt="">
-                  <h3 class=".slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
                 </div>
               </div>  
-              <div class="slice flex w-full justify-between items-center px-16 rounded-md relative">
+              <div class="slice hover:bg-[url('/explore-imgs/elden-ring.jpg')] hover:bg-top">
+                <div class="slice-overlay"></div>
                 <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                   <div class="slice-left-r">
                     <h3 class="slice-title text-4xl tracking-tight text-white">Elden Ring</h3>
                     <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                     <p class="slice-badge text-gray-400">
-                      <span>FPS</span>
-                      <span>Shooter</span>
-                      <span>Multiplayer</span>
-                      <span>Competitive</span>
+                      <span>Souls-like</span>
+                      <span>Dark Fantasy</span>
+                      <span>Open World</span>
+                      <span>RPG</span>
                     </p>
                   </div>
                 </div>
                 <div class="slice-right">
-                  <img class="slice-img absolute left-[60%] top-[-4%]" src="images/landing-page-images/sottr/img2.jpg" alt="">
-                  <h3 class=".slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                  <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
                 </div>
               </div>  
             </div>
-            <div class="top-sellers-section bg-red-500 w-full h-full inline-block white"></div>
-            <div class="popular-upcoming-section bg-purple-500 w-full h-full inline-block white"></div>
-            <div class="specials-section bg-zinc-500 w-full h-full inline-block white"></div>
+            <div class="popular-upcoming-section absolute bg-purple-500 w-full h-full inline-block left-[200%]"></div>
+            <div class="specials-section absolute bg-zinc-500 w-full h-full inline-block left-[300%]"></div>
           </div>
         </div>
       </div>
@@ -356,8 +541,8 @@
       <!-- OFFER SECTION -->
       <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen bg-[var(--dark-blue)] flex justify-center flex-col gap-10">
         <div class="offer-title max-sm:mt-20 px-[8vw]">
-          <h1 class="max-sm:text-4xl text-4xl tracking-tight text-[var(--light)] font-[azonix] uppercase">Special</h1>
-          <h1 class="max-sm:text-4xl text-8xl tracking-tight text-white font-[azonix] uppercase">Offers</h1>
+          <h1 class="max-sm:text-4xl text-4xl tracking-tight text-[var(--light)] font-[redtrap] uppercase">Special</h1>
+          <h1 class="max-sm:text-4xl text-8xl tracking-tight text-white font-[redtrap] uppercase">Offers</h1>
         </div>
         <div class="marque-effect relative max-sm:h-4/5 h-1/2 overflow-hidden">
           <div class="blur-left absolute left-0 top-0"></div>

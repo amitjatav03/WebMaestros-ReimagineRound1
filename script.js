@@ -14,7 +14,6 @@ let swipSlides = document.querySelectorAll(".swiper-slide img");
 
 swipSlides.forEach((slid) => {
   slid.addEventListener("mousemove", function(dets){
-    console.log(dets.target);
     imgCursor.style.opacity = ".5";
     gsap.to(imgCursor, {
       x: dets.x - 60,
@@ -199,6 +198,8 @@ footerAnimation();
 
 // CATEGORY SECTION
 let active = 4;
+let catSection = document.querySelector(".category-page");
+let catPanel = document.querySelector(".panel");
 let categories = document.querySelectorAll(".panel h2");
 let first = document.querySelectorAll(".first");
 let catImages = document.querySelectorAll(".cat-img");
@@ -206,15 +207,42 @@ let desc = document.querySelector(".cat-desc");
 let rpgAudio = document.querySelector(".rpg-bgm");
 let catCircle = document.querySelector(".circle");
 let catToggle = 0;
-let rpgBg = document.querySelector(".rpg-bg");
+let rpgBg = document.querySelector(".clicked-category");
 let catOverlay = document.querySelector(".category-side-overlay");
+let catCursor = document.querySelector(".category-crsr");
+let catTitle = document.querySelectorAll(".category-title");
+
+catSection.addEventListener("mousemove", function(dets){
+  gsap.to(catCursor, {
+    left: dets.x - 30,
+    top: dets.y - 40,
+  })
+})
+
+catImages.forEach(function(catImg){
+  catImg.addEventListener("mousemove", function(){
+    gsap.to(catCursor, {
+      scale: 1,
+    }) 
+  })
+  catImg.addEventListener("mouseout", function(){
+    gsap.to(catCursor, {
+      scale: 0,
+    }) 
+  })
+})
+
+
 
 
 catImages.forEach(function(catImg, idx){
   catImg.addEventListener("click", function(){
     // alert();
-    console.log(idx);
     if(catToggle === 0) {
+      catTitle.forEach(t => {
+        t.style.display = "none";
+      })
+      catPanel.style.display = "none";
       rpgAudio.play();
       rpgBg.style.opacity = 1;
       catOverlay.style.opacity = 1;
@@ -229,6 +257,10 @@ catImages.forEach(function(catImg, idx){
       })
       catToggle = 1;
     } else{
+      catTitle.forEach(t => {
+        t.style.display = "block";
+      })
+      catPanel.style.display = "block";
       rpgAudio.pause();
       rpgAudio.currentTime = 0;
       rpgBg.style.opacity = 0;
@@ -350,9 +382,10 @@ gsap.from(".circle", {
 let catHoverSound = document.querySelector(".category-panel-hover");
 categories.forEach(function(cat){
   cat.addEventListener("click", function(){
-    console.log("hoverinng")
+    catHoverSound.currentTime = ".25";
+    catHoverSound.speed = "12";
     catHoverSound.play();
-  })
+    })
 })
 
 function stopSongs() {
@@ -369,12 +402,16 @@ let swiper = document.querySelector(".swiper");
 let videoBtn = document.querySelector(".vdo-btn");
 let closeBtn = document.querySelector(".close-btn");
 let overlay = document.querySelector(".overlay");
+let mainVid = document.querySelector(".main-video");
 
 let playToggle = 0;
 videoBtn.addEventListener("click", function(){
   if(playToggle === 0) {
     videoBtn.classList.remove("ri-play-circle-fill");
-    videoBtn.classList.add("ri-close-circle-fill")
+    videoBtn.classList.add("ri-close-circle-fill");
+    mainVid.currentTime = 0;
+    mainVid.play();
+    mainVid.muted = !mainVid.muted; 
     
     overlay.style.display = "none";
       gsap.to(swiper, {
@@ -386,6 +423,7 @@ videoBtn.addEventListener("click", function(){
       videoBtn.classList.remove("ri-close-circle-fill");
       videoBtn.classList.add("ri-play-circle-fill")
       overlay.style.display = "block";
+      mainVid.muted = !mainVid.muted;
       gsap.to(swiper, {
         top: "50%"
       })
@@ -518,26 +556,51 @@ function navMenu(){
   let navBtn = document.querySelector(".nav-btn");
   let closeNav = document.querySelector(".close-nav");
   let navMenu = document.querySelector(".nav-menu");
+  let openNavSound = document.querySelector(".open-nav-sound");
+  let closeNavSound = document.querySelector(".close-nav-sound");
+  
+
+
   
   navBtn.addEventListener("click", function(){
+    openNavSound.currentTime = ".20";
+    openNavSound.play();
     gsap.to(navMenu, {
+      duration: .2,
+      ease: "poweri.out",
       opacity: 1,
-      display: "block",
-      height: "100%",
+      left: "1%",
     })
   })
   
   closeNav.addEventListener("click", function(){
+    closeNavSound.play();
     gsap.to(navMenu, {
+      duration: .2,
+      ease: "poweri.out",
       opacity: 0,
-      height: 0,
-      display: "none"
+      left: "-50%",
     })
   })
+
+  
+
 }
 navMenu();
 
 
+let navItems = document.querySelectorAll(".nav-items h1");
+let navHoverSound = document.querySelector(".nav-hover-sound");
+
+navItems.forEach(function(item){
+  item.addEventListener("mouseover", function(){
+    navHoverSound.play();
+  })
+  item.addEventListener("mouseout", function(){
+    navHoverSound.pause();
+    navHoverSound.currentTime = "0";
+  })
+})
 
 
 
@@ -586,31 +649,20 @@ footerTitleHoverAnime();
 
 
 
-gsap.to(".rounded-div-wrapper", {
-  height: 100,
-  marginTop: "-90px",
-  scrollTrigger: {
-    trigger: ".category-page",
-    scroller: ".main",
-    start: "top 90%",
-    end: "top 70%",
-    scrub: .8
-  }
-})
+// gsap.to(".rounded-div-wrapper", {
+//   height: 100,
+//   marginTop: "-90px",
+//   scrollTrigger: {
+//     trigger: ".category-page",
+//     scroller: ".main",
+//     start: "top 90%",
+//     end: "top 70%",
+//     scrub: .8
+//   }
+// })
 
 
 
-document.querySelector(".nav-menu").addEventListener("mousemove", function(event){
-  var width = window.innerWidth;
-  var height = window.innerHeight;
-  positionX = (event.clientX/width) - 0.55;
-  positionY = (event.clientY/height) - 0.55;
-  gsap.to(".nav-bg", { 
-      rotationY: positionX * 10,
-      rotationX: positionY * 25,
-      ease: "none"
-  });
-})
 
 
 
@@ -622,10 +674,64 @@ gsap.to(".slice", {
   scrollTrigger: {
     scroller: ".main",
     trigger: ".explore-page",
-    start: "top 80%",
+    start: "top 90%",
     end: "top -80%",
     scrub: .2
   }
 })
 
 
+
+let expTitles = document.querySelectorAll(".exp-titles");
+let selectedCont = document.querySelector(".selected-section");
+expTitles.forEach((etitle, eidx) => {
+  etitle.addEventListener("click", function(){
+    selectedCont.style.transform = `translateX(-${eidx*100}%)`;
+  })
+})
+
+
+
+let NewAndTrendingCont = document.querySelector(".new-and-trending-section");
+
+
+
+
+// INSTALL STEAM MENU 
+function installSteam(){
+  let installBtn = document.querySelector(".install-btn");
+  let closeBtnSteam = document.querySelector(".close-steam-install");
+  let installSteam = document.querySelector(".install-steam-section");
+  
+  installBtn.addEventListener("click", function(){
+    gsap.to(installSteam, {
+      duration: .2,
+      ease: "poweri.out",
+      top: "50%",
+    })
+  })
+  
+  closeBtnSteam.addEventListener("click", function(){
+    gsap.to(installSteam, {
+      duration: .2,
+      ease: "poweri.out",
+      top: "-50%",
+    })
+  })
+}
+installSteam();  
+
+
+
+
+let slices = document.querySelectorAll(".slice");
+let sliceHover = document.querySelector(".slice-hover-sound");
+slices.forEach((slice)=>{
+  slice.addEventListener("mousemove", ()=>{
+    sliceHover.play();
+  })
+  slice.addEventListener("mouseout", ()=>{
+    sliceHover.pause();
+    sliceHover.currentTime = "0";
+  })
+})
