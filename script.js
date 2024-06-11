@@ -14,10 +14,11 @@ let swipSlides = document.querySelectorAll(".swiper-slide img");
 
 swipSlides.forEach((slid) => {
   slid.addEventListener("mousemove", function(dets){
+    console.log(dets.target);
     imgCursor.style.opacity = ".5";
     gsap.to(imgCursor, {
-      x: dets.x - 60,
-      y: dets.y - 50,
+      x: dets.x - 90,
+      y: dets.y - 800,
     })
   })
   slid.addEventListener("mouseleave", function(dets){
@@ -91,8 +92,7 @@ function landingPageSlider(){
       slideShadows: true,
     },
     pagination: {
-      el: ".swiper-pagination",
-      type: "bullets"
+      el: ".swiper-pagination"
     },
 });
 }
@@ -566,6 +566,7 @@ function navMenu(){
     openNavSound.currentTime = ".20";
     openNavSound.play();
     gsap.to(navMenu, {
+      display: "block",
       duration: .2,
       ease: "poweri.out",
       opacity: 1,
@@ -576,6 +577,7 @@ function navMenu(){
   closeNav.addEventListener("click", function(){
     closeNavSound.play();
     gsap.to(navMenu, {
+      display: "none",
       duration: .2,
       ease: "poweri.out",
       opacity: 0,
@@ -668,14 +670,27 @@ footerTitleHoverAnime();
 
 
 
-gsap.to(".slice", {
+gsap.to(".nt-slice", {
   scale: 1,
   stagger: 0.2,
   scrollTrigger: {
     scroller: ".main",
-    trigger: ".explore-page",
-    start: "top 90%",
-    end: "top -80%",
+    trigger: ".new-and-trending-section",
+    start: "top 80%",
+    end: "top -70%",
+    scrub: .2
+  }
+})
+
+
+gsap.to(".ts-slice", {
+  scale: 1,
+  stagger: 0.2,
+  scrollTrigger: {
+    scroller: ".main",
+    trigger: ".top-sellers-section",
+    start: "top 80%",
+    end: "top -90%",
     scrub: .2
   }
 })
@@ -735,3 +750,4 @@ slices.forEach((slice)=>{
     sliceHover.currentTime = "0";
   })
 })
+

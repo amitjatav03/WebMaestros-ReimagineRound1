@@ -74,6 +74,10 @@ body {
   pointer-events: none;
 }
 
+.inner-circle{
+  background-color: #0000009e;
+}
+
 
 .vdo-btn{
   transition: all linear .2s;
@@ -759,6 +763,69 @@ background: linear-gradient(90deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 50%, r
 }
 .slice-left-r p span:nth-child(4){
   background-color: #FACC15;
+}
+
+.nt-slice:nth-child(1):hover{
+  background-image: url(explore-imgs/alice.jpg);
+  background-position: center;
+}
+
+.nt-slice:nth-child(2):hover{
+  background-image: url(explore-imgs/black-myth.jpg);
+  background-position: center;
+}
+
+.nt-slice:nth-child(3):hover{
+  background-image: url(explore-imgs/empires-of-undergrowth.jpg);
+  background-position: bottom;
+}
+
+.nt-slice:nth-child(4):hover{
+  background-image: url(explore-imgs/killer-klowns.jpg);
+  background-position: center;
+}
+
+.nt-slice:nth-child(5):hover{
+  background-image: url(explore-imgs/alice.jpg);
+  background-position: center;
+}
+
+.nt-slice:nth-child(6):hover{
+  background-image: url(explore-imgs/alice.jpg);
+  background-position: center;
+}
+
+
+/* ---- top seller section ----  */
+
+.ts-slice:nth-child(1):hover{
+  background-image: url(explore-imgs/black-myth.jpg);
+  background-position: center;
+}
+
+.ts-slice:nth-child(2):hover{
+  background-image: url(explore-imgs/counter-strike.jpg);
+  background-position: top;
+}
+
+.ts-slice:nth-child(3):hover{
+  background-image: url(explore-imgs/destiny-2.jpg);
+  background-position: center;
+}
+
+.ts-slice:nth-child(4):hover{
+  background-image: url(explore-imgs/sf.jpg);
+  background-position: top;
+}
+
+.ts-slice:nth-child(5):hover{
+  background-image: url(explore-imgs/dota-2.jpg);
+  background-position: center;
+}
+
+.ts-slice:nth-child(6):hover{
+  background-image: url(explore-imgs/elden-ring.jpg);
+  background-position: top;
 }
 
 
