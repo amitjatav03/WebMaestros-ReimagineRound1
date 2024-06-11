@@ -558,30 +558,32 @@ function navMenu(){
   let navMenu = document.querySelector(".nav-menu");
   let openNavSound = document.querySelector(".open-nav-sound");
   let closeNavSound = document.querySelector(".close-nav-sound");
-  
+  let navOverlay = document.querySelector(".nav-overlay");
 
 
   
   navBtn.addEventListener("click", function(){
     openNavSound.currentTime = ".20";
+    navOverlay.style.display = "block";
     openNavSound.play();
     gsap.to(navMenu, {
       display: "block",
       duration: .2,
       ease: "poweri.out",
       opacity: 1,
-      left: "1%",
-    })
-  })
-  
-  closeNav.addEventListener("click", function(){
+      right: "1%",
+      })
+      })
+      
+      closeNav.addEventListener("click", function(){
+    navOverlay.style.display = "none";
     closeNavSound.play();
     gsap.to(navMenu, {
       display: "none",
       duration: .2,
       ease: "poweri.out",
       opacity: 0,
-      left: "-50%",
+      right: "-50%",
     })
   })
 
