@@ -567,7 +567,7 @@ function navMenu(){
     navOverlay.style.display = "block";
     openNavSound.play();
     gsap.to(navMenu, {
-      display: "block",
+      display: "flex",
       duration: .2,
       ease: "poweri.out",
       opacity: 1,
@@ -575,7 +575,7 @@ function navMenu(){
       })
       })
       
-      closeNav.addEventListener("click", function(){
+    closeNav.addEventListener("click", function(){
     navOverlay.style.display = "none";
     closeNavSound.play();
     gsap.to(navMenu, {
@@ -672,30 +672,30 @@ footerTitleHoverAnime();
 
 
 
-gsap.to(".nt-slice", {
-  scale: 1,
-  stagger: 0.2,
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".new-and-trending-section",
-    start: "top 80%",
-    end: "top -70%",
-    scrub: .2
-  }
-})
+// gsap.to(".nt-slice", {
+//   scale: 1,
+//   stagger: 0.2,
+//   scrollTrigger: {
+//     scroller: ".main",
+//     trigger: ".new-and-trending-section",
+//     start: "top 80%",
+//     end: "top -70%",
+//     scrub: .2
+//   }
+// })
 
 
-gsap.to(".ts-slice", {
-  scale: 1,
-  stagger: 0.2,
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".top-sellers-section",
-    start: "top 80%",
-    end: "top -90%",
-    scrub: .2
-  }
-})
+// gsap.to(".ts-slice", {
+//   scale: 1,
+//   stagger: 0.2,
+//   scrollTrigger: {
+//     scroller: ".main",
+//     trigger: ".top-sellers-section",
+//     start: "top 80%",
+//     end: "top -90%",
+//     scrub: .2
+//   }
+// })
 
 
 

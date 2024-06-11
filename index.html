@@ -45,21 +45,23 @@
         </div>
 
         <div class="nav-overlay hidden z-[500] absolute w-full h-full top-0 left-0"></div>
-        <div class="nav-menu hidden absolute bg-[#193146] bg-zinc-950 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] px-16 py-10 opacity-0 rounded-[10px]">
-          <!-- <img class="nav-bg absolute z-[-1] w-[full] h-[full] top-0 left-0" src="nav-bg.jpg" alt=""> -->
-           <audio class="open-nav-sound" src="sound-effects/UI_menu_OPEN.mp3"></audio>
-           <audio class="close-nav-sound" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
-           <audio class="nav-hover-sound" src="sound-effects/UI_menu_rollover.mp3"></audio>
-           <!-- <i class="nav-logo-steam absolute ri-steam-fill text-white text-[25vw] left-[55%] top-1/2 -translate-y-1/2"></i> -->
-          <i class="close-nav text-6xl cursor-pointer ri-close-line block text-end text-white"></i>
-          <div class="nav-items mt-10 flex flex-col items-start ">
-            <h1>Store</h1>
-            <h1>Community</h1>
-            <h1>About</h1>
-            <h1>Support</h1>
-            <h1>News</h1>
-            <h1>Labs</h1>
-            <h1>Points Shop</h1>
+        
+        <audio class="open-nav-sound absolute" src="sound-effects/UI_menu_OPEN.mp3"></audio>
+        <audio class="close-nav-sound absolute" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
+        <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
+        <div class="nav-menu hidden absolute bg-[#193146] bg-slate-950 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12">
+           <div class="nav-items flex flex-col items-start w-[80%] h-full justify-between py-40">
+             <h1>Store</h1>
+             <h1>Community</h1>
+             <h1>About</h1>
+             <h1>Support</h1>
+             <h1>News</h1>
+             <h1>Labs</h1>
+             <h1>Points Shop</h1>
+          </div>
+          <div class="nav-right w-[20%] h-full flex flex-col items-center justify-start gap-[18vw] border-l-[.01px] border-neutral-700 py-4">
+            <i class="close-nav text-5xl cursor-pointer ri-close-line block text-end text-white"></i>
+            <i class="ri-steam-line text-white text-5xl"></i>
           </div>
         </div>
 

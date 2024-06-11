@@ -109,18 +109,19 @@ body {
   background-position: bottom;
 } */
 
+
 .nav-menu h1{
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 5px;
   font-family: abc;
-  font-size: 4vw;
+  font-size: 3vw;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
   color: white;
-  line-height: 4.2vw;
+  line-height: 3vw;
   letter-spacing: -3px;
   padding: 0 20px 0 6px;
 }
@@ -659,7 +660,7 @@ background: linear-gradient(90deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 50%, r
   transition: all .2s linear;
   background: rgba(35, 31, 31, 0.107);
   position: relative;
-  transform: scale(.7);
+  transform: scale(1);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -865,8 +866,10 @@ background: linear-gradient(90deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 50%, r
 }
 
 .nav-overlay{
-  background-color: #0c4a6e97;
+  /* background-color: #0c4a6e97; */
+  background-color: #84bbd2c5;
 }
+
 
 
 /* ---------------------- RESPONSIVENESS ------------------------ */
