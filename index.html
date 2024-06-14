@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Steam</title>
+    <title>Welcome to Steam</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
@@ -15,6 +15,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
     
     <!-- <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
@@ -27,10 +28,61 @@
   <body>
 
 
+
+
     <div class="main overflow-hidden">
-     
+
+      
       <!-- LANDING PAGE -->
       <div class="landing-page relative w-full h-screen bg-[var(--dark-blue)] z-[1000]">
+        <div class="loader w-full h-screen bg-sky-950 overflow-hidden absolute top-0 left-0 z-[1200]">
+            <div class="upper-circle">
+                <div class="clk-stripe clk-stp1">
+                    <h2>0</h2>
+                    <h2>5</h2>
+                </div>
+                <div class="clk-stripe clk-stp2">
+                    <h2>1</h2>
+                    <h2>6</h2>
+                </div>
+                <div class="clk-stripe clk-stp3">
+                    <h2>2</h2>
+                    <h2>7</h2>
+                </div>
+                <div class="clk-stripe clk-stp4">
+                    <h2>3</h2>
+                    <h2>8</h2>
+                </div>
+                <div class="clk-stripe clk-stp5">
+                    <h2>4</h2>
+                    <h2>9</h2>
+                </div>
+            </div>
+            <div class="lower-circle">
+                <div class="lclk-stripe lclk-stp1">
+                    <h2>2</h2>
+                    <h2>7</h2>
+                </div>
+                <div class="lclk-stripe lclk-stp2">
+                    <h2>1</h2>
+                    <h2>6</h2>
+                </div>
+                <div class="lclk-stripe lclk-stp3">
+                    <h2>0</h2>
+                    <h2>5</h2>
+                </div>
+                <div class="lclk-stripe lclk-stp4">
+                    <h2>9</h2>
+                    <h2>4</h2>
+                </div>
+                <div class="lclk-stripe lclk-stp5">
+                    <h2>8</h2>
+                    <h2>3</h2>
+                </div>
+            </div>
+  
+            <div class="mid-circle w-24 h-24 rounded-full bg-sky-950 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]"></div>
+        </div>
 
         <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
 
@@ -51,6 +103,7 @@
         <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
         <div class="nav-menu hidden absolute bg-[#193146] bg-slate-950 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12">
            <div class="nav-items flex flex-col items-start w-[80%] h-full justify-between py-40">
+             <h2 class="signin-btn text-white mb-6 font-[abc] text-2xl uppercase font-bold rounded-[5px] px-2 py-1 mb-20 absolute top-[5%]">Sign In</h2>
              <h1>Store</h1>
              <h1>Community</h1>
              <h1>About</h1>
@@ -61,7 +114,7 @@
           </div>
           <div class="nav-right w-[20%] h-full flex flex-col items-center justify-start gap-[18vw] border-l-[.01px] border-neutral-700 py-4">
             <i class="close-nav text-5xl cursor-pointer ri-close-line block text-end text-white"></i>
-            <i class="ri-steam-line text-white text-5xl"></i>
+            <i class="ri-steam-fill text-white text-5xl"></i>
           </div>
         </div>
 
@@ -136,15 +189,17 @@
   
 
       <!-- CATEGORY SECTION  -->
-      <div class="category-page relative w-full z-[150] bg-[#EBF1FC] z-[1900]">
+      <div class="category-page relative w-full h-full bg-[#EBF1FC] z-[1900]">
 
         <audio class="category-panel-hover" src="sound-effects/category-items-click.mp3" autoplay="true"></audio>
-        <div class="clicked-category absolute w-full h-full top-0 left-0 flex flex-col items-center justify-center opacity-0 px-20">
+        <div class="clicked-category absolute w-full h-full top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20">
+          <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
           <video class="rpg-bg w-full h-full z-[-1] absolute top-0 left-0" src="live wallpapers/rpg2.mp4" autoplay muted loop></video>
-          <h1 class="text-[5vw] text-white font-[abc] font-semibold">ROLE PLAYING</h1>
-          <p class="desc text-[2.5vw] text-center text-white">
+          <h1 class="text-[4vw] z-[1250] text-white font-[abc] tracking-tight font-semibold">ROLE PLAYING</h1>
+          <p class="desc w-[65%] z-[1250] text-[1.6vw] text-center text-white">
             Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.
           </p>
+          <button class="border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-2xl px-2 py-1 rounded-md">View More</button>
         </div>
         
 
@@ -153,7 +208,7 @@
         </div> -->
 
         <div class="category-page-wrapper relative w-full h-[120vh] overflow-hidden px-[9.5vw] py-[8vw]">
-          <div class="category-side-overlay opacity-0 absolute top-0 left-0 w-[60%] h-full"></div>
+          
 
 
           <div class="category-crsr absolute cursor-pointer w-[8rem] h-[8rem] border-2 border-black top-0 left-0 rounded-full flex justify-center items-center scale-0 z-[500]">
@@ -195,7 +250,7 @@
               <div class="first">
                 <!-- <h1>Role Playing</h1> -->
                 
-                <audio class="rpg-bgm" src="sounds/god-of-war-rpg.mp3"></audio>
+                <audio class="rpg-bgm" src="sound-effects/UI_menu_OPEN.mp3"></audio>
                 <img class="cat-img" src="images/categories images/action-godofwar.png" alt="">
                 <div class="cat-desc absolute w-[30vw]  left-[0%] top-[-80%] rounded-md flex flex-col justify-center items-center gap-2 opacity-0">
                   <!-- <div class="desc-title text-white rounded-md px-2 py-1 text-[1.4vw]">Role Playing</div> -->
@@ -762,6 +817,29 @@
           </div>
         </div>
       </div>
+
+      <!-- STREAMING NOW -->
+       <div class="streaming-now-section w-full h-screen bg-blue-900 flex px-20 py-6">
+        <div class="streaming-left w-[40%] h-full flex flex-col items-center justify-center">
+          <h1 class="text-7xl font-bold font-[redtrap] text-white">STREAMING</h1>
+          <h1 class="text-7xl font-bold font-[redtrap] text-white">NOW</h1>
+          <button class="text-black mt-12 font-bold text-3xl bg-white px-4 py-1 rounded-md">View More</button>
+        </div>
+        <div class="streaming-right w-[60%] h-full">
+          <div class="stream-row1 flex w-full h-2/6 gap-4 items-center justify-end px-20">
+            <div class="stream-video"></div>
+            <div class="stream-video"></div>
+          </div>
+          <div class="stream-row2 flex w-full h-2/6 gap-4 items-center justify-start px-20">
+            <div class="stream-video"></div>
+            <div class="stream-video"></div>
+          </div>
+          <div class="stream-row3 flex w-full h-2/6 gap-4 items-center justify-end px-20">
+            <div class="stream-video"></div>
+            <div class="stream-video"></div>
+          </div>
+        </div>
+       </div>
 
       
       <!-- OFFER SECTION -->

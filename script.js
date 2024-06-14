@@ -6,6 +6,36 @@
 // })();
 
 
+function loader() {
+  let tl = gsap.timeline();
+
+
+  for(let i=0; i<9; i++){
+      tl.to(".upper-circle", {
+          // transform: `translate(-50%, -50%) rotateZ(-81deg)`,
+          rotation: "+=36",
+          duration: .3,
+          ease: "circ.out"
+        })  
+      }
+  
+  gsap.to(".lower-circle", {
+    rotation: "955",
+      duration: 3,
+      ease: "circ.out"
+    })
+  
+    
+    
+  tl.to(".loader", {
+      delay: 1,
+      y: "-100%",
+      ease: "circ.out"
+  })
+}
+
+loader();
+
 
 // CURSORS
 
@@ -244,8 +274,9 @@ catImages.forEach(function(catImg, idx){
       })
       catPanel.style.display = "none";
       rpgAudio.play();
+      rpgBg.style.display = "flex";
       rpgBg.style.opacity = 1;
-      catOverlay.style.opacity = 1;
+      catOverlay.style.opacity = .6;
       gsap.to(catImg, {
         // width: "20vw",
         // height: "32vw",
@@ -264,6 +295,7 @@ catImages.forEach(function(catImg, idx){
       rpgAudio.pause();
       rpgAudio.currentTime = 0;
       rpgBg.style.opacity = 0;
+      rpgBg.style.display = "hidden";
       catOverlay.style.opacity = 0;
       gsap.to(catImg, {
         width: "30vw",
@@ -719,8 +751,10 @@ function installSteam(){
   let installBtn = document.querySelector(".install-btn");
   let closeBtnSteam = document.querySelector(".close-steam-install");
   let installSteam = document.querySelector(".install-steam-section");
+  let navOverlay = document.querySelector(".nav-overlay");
   
   installBtn.addEventListener("click", function(){
+    navOverlay.style.display = "block";
     gsap.to(installSteam, {
       duration: .2,
       ease: "poweri.out",
@@ -728,7 +762,8 @@ function installSteam(){
     })
   })
   
-  closeBtnSteam.addEventListener("click", function(){
+closeBtnSteam.addEventListener("click", function(){
+    navOverlay.style.display = "none";
     gsap.to(installSteam, {
       duration: .2,
       ease: "poweri.out",

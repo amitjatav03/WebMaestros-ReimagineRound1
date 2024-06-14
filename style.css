@@ -109,6 +109,10 @@ body {
   background-position: bottom;
 } */
 
+.signin-btn{
+  background: linear-gradient(to right, #06BFFF, #2680FF);
+}
+
 
 .nav-menu h1{
   display: flex;
@@ -125,6 +129,7 @@ body {
   letter-spacing: -3px;
   padding: 0 20px 0 6px;
 }
+
 
 .nav-menu h1:hover{
   background-color: white;
@@ -920,4 +925,141 @@ background: linear-gradient(90deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 50%, r
   }
 
 
+}
+
+
+
+.streaming-now-section{
+  background: linear-gradient(to bottom, #104E73, #1B2838);
+}
+
+.stream-video{
+  width: 17vw;
+  height: 92%;
+  background-color: lightseagreen;
+  border-radius: 10px;
+}
+
+
+html, body{
+  width: 100%;
+  height: 100%;
+}
+
+.upper-circle{
+  position: absolute;
+  z-index: 2;
+  width: 17vw;
+  height: 17vw;
+  border-radius: 50%;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(-55deg);
+}
+
+.clk-stripe{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  font-size: 2rem;
+  color: white; 
+  top: 50%;
+}
+
+.clk-stripe h2, .lclk-stripe h2{
+  font-family: azonix;
+}
+
+.clk-stripe h2:nth-child(odd){
+  transform: rotateZ(90deg);
+}
+  
+.clk-stripe h2:nth-child(even){
+  transform: rotateZ(-90deg);
+}
+  
+.clk-stp1{
+  transform: translateY(-50%) rotateZ(-36deg);
+}
+  
+.clk-stp2{
+  transform: translateY(-50%) rotateZ(-72deg);
+}
+  
+.clk-stp3{
+  transform: translateY(-50%) rotateZ(-108deg);
+}
+  
+.clk-stp4{
+  transform: translateY(-50%) rotateZ(-144deg);
+}
+  
+.clk-stp5{
+  transform: translateY(-50%) rotateZ(-180deg);
+}
+
+
+
+
+
+.lower-circle{
+  position: absolute;
+  z-index: 2;
+  width: 17vw;
+  height: 17vw;
+  border-radius: 50%;
+  top: 68%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateZ(-180deg);
+}
+
+
+
+.lclk-stripe{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  position: absolute;
+  width: 100%;
+  height: 2rem;
+  font-size: 2rem;
+  color: white; 
+  top: 50%;
+}
+
+.lclk-stripe h2:nth-child(odd){
+  transform: rotateZ(-90deg);
+}
+
+.lclk-stripe h2:nth-child(even){
+  transform: rotateZ(90deg);
+}
+  
+.lclk-stp1{
+  transform: translateY(-50%) rotateZ(-36deg);
+}
+  
+.lclk-stp2{
+  transform: translateY(-50%) rotateZ(-72deg);
+}
+  
+.lclk-stp3{
+  transform: translateY(-50%) rotateZ(-108deg);
+}
+  
+.lclk-stp4{
+  transform: translateY(-50%) rotateZ(-144deg);
+}
+  
+.lclk-stp5{
+  transform: translateY(-50%) rotateZ(-180deg);
+}
+
+.mid-circle{
+  mix-blend-mode: multiply;
 }
