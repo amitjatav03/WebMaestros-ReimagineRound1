@@ -66,7 +66,8 @@ function loco() {
   
     const locoScroll = new LocomotiveScroll({
       el: document.querySelector(".main"),
-      smooth: true
+      smooth: true,
+      lerp: 0.08
     });
     // each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
     locoScroll.on("scroll", ScrollTrigger.update);
@@ -234,13 +235,23 @@ let categories = document.querySelectorAll(".panel h2");
 let first = document.querySelectorAll(".first");
 let catImages = document.querySelectorAll(".cat-img");
 let desc = document.querySelector(".cat-desc");
-let rpgAudio = document.querySelector(".rpg-bgm");
+let catBgm;
 let catCircle = document.querySelector(".circle");
 let catToggle = 0;
-let rpgBg = document.querySelector(".clicked-category");
-let catOverlay = document.querySelector(".category-side-overlay");
+var catOverlay;
 let catCursor = document.querySelector(".category-crsr");
 let catTitle = document.querySelectorAll(".category-title");
+let clickedCategory = document.querySelector(".clicked-category");
+let closeCatBtn;
+let categoryDetails = [
+  {categoryTitle: "ACTION", categoryDesc: "Dive into high-speed, adrenaline-pumping adventures where reflexes and skill are key. Experience intense combat, thrilling chases, and epic battles in dynamic and fast-paced environments.", wallpaperSrc: "live wallpapers/action.mp4", categoryAudio: "sounds/category-sounds/s1.mp3"},
+  {categoryTitle: "ANIME", categoryDesc: "Dive into vibrant worlds inspired by your favorite anime. Enjoy captivating storylines, stylized visuals, and dynamic gameplay that bring beloved characters and epic adventures to life.", wallpaperSrc: "live wallpapers/anime2.mp4", categoryAudio: "sounds/category-sounds/s2.mp3"},
+  {categoryTitle: "ALL SPORTS", categoryDesc: "Experience the thrill of competition with realistic or fantasy sports simulations. Play your favorite sports, master skills, and compete for glory in immersive and dynamic arenas.", wallpaperSrc: "live wallpapers/all-sports.mp4", categoryAudio: "sounds/category-sounds/s3.mp3"},
+  {categoryTitle: "ROLL PLAYING", categoryDesc: "Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.", wallpaperSrc: "live wallpapers/rpg.mp4", categoryAudio: "sounds/category-sounds/s4.mp3"},
+  {categoryTitle: "SURVIVAL", categoryDesc: "Test your endurance and resourcefulness in harsh environments. Gather resources, build shelters, and fend off dangers as you strive to stay alive in challenging settings.", wallpaperSrc: "live wallpapers/survival.mp4", categoryAudio: "sounds/category-sounds/s5.mp3"},
+  {categoryTitle: "MULTIPLAYER", categoryDesc: "Connect with friends and players worldwide in competitive or cooperative modes. Engage in battles, teamwork, and strategic gameplay across a variety of exciting and dynamic environments.", wallpaperSrc: "live wallpapers/multiplayer.mp4", categoryAudio: "sounds/category-sounds/s6.mp3"},
+  {categoryTitle: "PUZZLE", categoryDesc: "Challenge your mind with engaging and thought-provoking puzzles. Test your logic, strategy, and problem-solving skills across a variety of captivating and addictive gameplay experiences.", wallpaperSrc: "live wallpapers/puzzle.mp4", categoryAudio: "sounds/category-sounds/s7.mp3"}
+]
 
 catSection.addEventListener("mousemove", function(dets){
   gsap.to(catCursor, {
@@ -267,51 +278,74 @@ catImages.forEach(function(catImg){
 
 catImages.forEach(function(catImg, idx){
   catImg.addEventListener("click", function(){
-    // alert();
-    if(catToggle === 0) {
-      catTitle.forEach(t => {
-        t.style.display = "none";
-      })
-      catPanel.style.display = "none";
-      rpgAudio.play();
-      rpgBg.style.display = "flex";
-      rpgBg.style.opacity = 1;
-      catOverlay.style.opacity = .6;
-      gsap.to(catImg, {
-        // width: "20vw",
-        // height: "32vw",
-        opacity: 0,
-        duration: .4
-      })
-      gsap.to(desc, {
-        opacity: 1,
-      })
-      catToggle = 1;
-    } else{
-      catTitle.forEach(t => {
-        t.style.display = "block";
-      })
-      catPanel.style.display = "block";
-      rpgAudio.pause();
-      rpgAudio.currentTime = 0;
-      rpgBg.style.opacity = 0;
-      rpgBg.style.display = "hidden";
-      catOverlay.style.opacity = 0;
-      gsap.to(catImg, {
-        width: "30vw",
-        height: "45vw",
-        opacity: 1,
-        duration: .4
-      })
-      gsap.to(desc, {
-        opacity: 0,
-      })
-      catToggle = 0;
-    }
-    // catImg.style.width = "20vw";
-    // catImg.style.height = "35vw";
+    clickedCategory.innerHTML = ``;
+    let clickedCatDetails = `
+      <audio class="cat-bgm" src="${categoryDetails[idx].categoryAudio}"></audio>
+      <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
+      <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
+      <h1 class="text-[4vw] z-[1250] text-white font-[abc] tracking-tight font-semibold">${categoryDetails[idx].categoryTitle}</h1>
+      <p class="desc w-[65%] z-[1250] text-[1.6vw] text-center text-white">
+        ${categoryDetails[idx].categoryDesc}
+      </p>
+      <button class="view border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-2xl px-2 py-1 rounded-md">View More</button>
+      <i id="cc" class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] cursor-pointer hover:text-slate-500"></i>
+      `;
+    clickedCategory.innerHTML = clickedCatDetails;
+    catOverlay = document.querySelector(".category-side-overlay");
+    catBgm = document.querySelector(".cat-bgm");
+    
+    catTitle.forEach(t => {
+      t.style.display = "none";
+    })
+    catPanel.style.display = "none";
+    catBgm.play();
+    clickedCategory.style.display = "flex";
+    clickedCategory.style.opacity = 1;
+    catOverlay.style.opacity = .6;
+    catOverlay.style.display = "block";
+    gsap.to(catImg, {
+      // width: "20vw",
+      // height: "32vw",
+      opacity: 0,
+      duration: .4
+    })
+    gsap.to(desc, {
+      opacity: 1,
+    })
+    closeCatBtn = document.querySelector(".close-cat");
+
+  closeCatBtn.addEventListener("click", function(){
+    console.log("Hello");
+    catTitle.forEach(t => {
+      t.style.display = "block";
+    })
+    catPanel.style.display = "block";
+    catBgm.pause();
+    catBgm.currentTime = 0;
+    clickedCategory.style.opacity = 0;
+    clickedCategory.style.display = "none";
+    catOverlay.style.opacity = 0;
+    catOverlay.style.display = "none";
+    gsap.to(catImg, {
+      width: "30vw",
+      height: "45vw",
+      opacity: 1,
+      duration: .4
+    })
+    gsap.to(desc, {
+      opacity: 0,
+    })
+  });
   })
+  
+  
 })
+
+
+
+
+
+
 
 gsap.to(categories, {
   opacity: .4
@@ -424,6 +458,27 @@ function stopSongs() {
   catHoverSound.pause();
   catHoverSound.currentTime = 0;
 }
+
+
+// CLICKED Category
+
+// catImages.forEach((img, idx) => {
+//   img.addEventListener("click", () => {
+//     let clickedCatDetails = `
+//       <audio class="rpg-bgm" src="${categoryDetails[idx].categoryAudio}"></audio>
+//       <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
+//       <video class="rpg-bg w-full h-full z-[-1] absolute top-0 left-0" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
+//       <h1 class="text-[4vw] z-[1250] text-white font-[abc] tracking-tight font-semibold">${categoryDetails[idx].categoryTitle}</h1>
+//       <p class="desc w-[65%] z-[1250] text-[1.6vw] text-center text-white">
+//         ${categoryDetails[idx].categoryDesc}
+//       </p>
+//       <button class="border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-2xl px-2 py-1 rounded-md">View More</button>
+//       <i class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] cursor-pointer hover:text-slate-500"></i>
+//     `
+//     clickedCategory.innerHTML = clickedCatDetails;
+
+//   })
+// })
 
 
 
@@ -592,6 +647,8 @@ function navMenu(){
   let closeNavSound = document.querySelector(".close-nav-sound");
   let navOverlay = document.querySelector(".nav-overlay");
 
+  openNavSound.volume = 1;
+  closeNavSound.volume = 1;
 
   
   navBtn.addEventListener("click", function(){

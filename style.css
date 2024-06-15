@@ -11,6 +11,11 @@
 }
 
 @font-face {
+  font-family: tungsten;
+  src: url(fonts/tungsten.ttf);
+}
+
+@font-face {
   font-family: azonix;
   src: url(fonts/Azonix.otf);
 }
@@ -327,6 +332,18 @@ body {
   background: linear-gradient(to right, black, transparent);
 } */
 
+.close-cat{
+  z-index: 1250;
+  color: white;
+  font-size: 4.5vw;
+  cursor: pointer;
+  /* close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] cursor-pointer hover:text-slate-500 */
+}
+
+.close-cat:hover{
+  color: #0b1d3d;
+}
+
 .circle{
   position: absolute;
   width: 200vh;
@@ -386,7 +403,7 @@ body {
   position: relative;
 }
 
-.first img{
+.cat-img{
   width: 30vw;
   height: 45vw;
   position: absolute;
@@ -395,6 +412,10 @@ body {
   transform: translateY(-50%);
   -webkit-filter: drop-shadow(5px 15px 10px #222);
   filter: drop-shadow(5px 15px 5px #222);
+}
+
+.puzzle-img{
+  width: 22vw;
 }
 
 .stp6>.first>img{
