@@ -35,7 +35,7 @@
     <div class="main overflow-hidden">
 
       <!-- LOADER  -->
-      <div class="loader w-full h-screen bg-sky-950 overflow-hidden absolute top-0 left-0 z-[1200]"> -->
+      <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
           <div class="upper-circle">
               <div class="clk-stripe clk-stp1">
                   <h2>0</h2>
@@ -82,7 +82,7 @@
           </div>
 
           <div class="mid-circle w-24 h-24 rounded-full bg-sky-950 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]"></div>
-      </div> 
+      </div>  
 
 
       <!-- LANDING PAGE -->
@@ -101,13 +101,17 @@
         </div>
 
         <div class="nav-overlay hidden z-[500] absolute w-full h-full top-0 left-0"></div>
-        
+
         <audio class="open-nav-sound absolute" src="sound-effects/UI_menu_OPEN.mp3"></audio>
         <audio class="close-nav-sound absolute" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
         <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
-        <div class="nav-menu hidden absolute bg-[#193146] bg-slate-950 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12">
+        <div class="nav-menu hidden absolute bg-[#121422] bg-slate-950 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12">
            <div class="nav-items flex flex-col items-start w-[80%] h-full justify-between py-40">
-             <h2 class="signin-btn text-white mb-6 font-[abc] text-2xl cursor-pointer uppercase font-bold rounded-[5px] px-2 py-1 mb-20 absolute top-[5%]">Sign In</h2>
+            <div class="search-bar absolute top-[6%] flex justify-between items-center w-[15vw]">
+              <p class="text-white text-white text-xl uppercase">Search</p>
+              <i class="ri-search-2-line text-white text-2xl"></i>
+            </div>
+             <h2 class="signin-btn rounded-lg bg-green-700 text-white mb-6 font-[abc] text-2xl cursor-pointer uppercase font-semibold  px-4 py-1 mb-20 absolute top-[5%] left-[55%]">Sign In</h2>
              <h1 class="shuffle">Store</h1>
              <h1 class="shuffle">Community</h1>
              <h1 class="shuffle">About</h1>
@@ -218,7 +222,7 @@
 
 
           <div class="category-crsr absolute cursor-pointer w-[8rem] h-[8rem]  top-0 left-0 rounded-full flex justify-center items-center scale-0 z-[500]">
-            <div class="inner-circle w-[6.5rem] h-[6.5rem]  rounded-full text-white flex justify-center items-center">CLICK</div>
+            <div class="inner-circle w-full h-full  rounded-full text-white flex justify-center items-center">CLICK</div>
           </div>
 
 
@@ -316,7 +320,7 @@
 
       <!-- STEAM GIFT CARDS SECTION -->
       <div class="steam-gift-cards w-full h-screen bg-[#2A475E] font-[redtrap] relative flex justify-center items-center">
-        <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <!-- <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div> -->
         <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[redtrap] font-bold text-gray-100">STEAM <br> GIFT CARDS</h1>
         <img class="steam-gc-img absolute top-[5%] left-[34.5%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
         <div class="container absolute top-[55%] -translate-y-1/2 h-1/2 flex">
@@ -800,7 +804,7 @@
 
       
       <!-- OFFER SECTION -->
-      <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen bg-[var(--dark-blue)] flex justify-center flex-col gap-10">
+      <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen  flex justify-center flex-col gap-10">
         <div class="offer-title max-sm:mt-20 px-[8vw]">
           <h1 class="max-sm:text-4xl text-4xl tracking-tight text-[var(--light)] font-[redtrap] uppercase">Special</h1>
           <h1 class="max-sm:text-4xl text-8xl tracking-tight text-white font-[redtrap] uppercase">Offers</h1>

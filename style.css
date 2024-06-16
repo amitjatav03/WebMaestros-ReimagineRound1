@@ -72,7 +72,8 @@ html, body {
 }
 
 .clk-stripe h2, .lclk-stripe h2{
-  font-family: azonix;
+  font-family: poppins;
+  font-weight: bold;
 }
 
 .clk-stripe h2:nth-child(odd){
@@ -222,14 +223,16 @@ html, body {
   padding: 0 20px 0 6px;
 }
 
-
+.search-bar{
+  border-bottom: 2px solid white;
+}
 .nav-menu h1:hover{
   background-color: white;
   color: black;
 }
 
 .signin-btn{
-  background: linear-gradient(to right, #06BFFF, #2680FF);
+  /* background: linear-gradient(to right, #06BFFF, #2680FF); */
   transition: all .2s ease;
 }
 .signin-btn:hover{
@@ -291,7 +294,9 @@ html, body {
 /* ------------- CATEGORY PAGE --------------- */
 
 .category-page{
-  background: linear-gradient(to bottom, #CFE5D9, #114361);
+  /* background: linear-gradient(to bottom, #CFE5D9, #114361); */
+  background: rgb(188,223,254);
+background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 34%, rgba(226,250,255,1) 100%);
 }
 
 .clicked-category{
@@ -509,6 +514,11 @@ html, body {
   pointer-events: none;
 }
 
+.offer-page{
+  background: linear-gradient(to bottom, #11235A, #121B24);
+  
+}
+
 .offer-left{
   background-color: #CC7722;
 }
@@ -564,7 +574,9 @@ html, body {
 }
 
 .steam-gift-cards{
-  background: linear-gradient(to bottom, #104E73, #1B2838);
+  /* background: linear-gradient(to bottom, #104E73, #1B2838); */
+  /* background: linear-gradient(to right, #121825, #111428); */
+  background: linear-gradient(to right, #131F57, #111428);
   overflow: hidden;
 }
 
@@ -754,7 +766,7 @@ html, body {
   background-color: white;
   font-weight: bold;
   padding: 0px 10px;
-  border-radius: 15px;
+  border-radius: 4px;
   /* border-bottom: 2px solid white; */
   border: 2px solid white;
   letter-spacing: -2px;
@@ -763,7 +775,9 @@ html, body {
 
 
 .explore-page{
-  background: linear-gradient(90deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 50%, rgba(27,69,94,1) 100%);
+  /* background: linear-gradient(90deg, rgba(26,42,59,1) 0%, rgba(17,76,112,1) 50%, rgba(27,69,94,1) 100%); */
+  /* background: linear-gradient(to right, #131F57, #111428); */
+  background: linear-gradient(to right, #121825, #111428);
 }
 
 .selected-section{
