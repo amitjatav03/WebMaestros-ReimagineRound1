@@ -44,8 +44,7 @@ let swipSlides = document.querySelectorAll(".swiper-slide img");
 
 swipSlides.forEach((slid) => {
   slid.addEventListener("mousemove", function(dets){
-    console.log(dets.target);
-    imgCursor.style.opacity = ".5";
+    imgCursor.style.opacity = ".7";
     gsap.to(imgCursor, {
       x: dets.x - 90,
       y: dets.y - 800,
@@ -282,7 +281,7 @@ catImages.forEach(function(catImg, idx){
     let clickedCatDetails = `
       <audio class="cat-bgm" src="${categoryDetails[idx].categoryAudio}"></audio>
       <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
-      <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
+      <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
       <h1 class="text-[4vw] z-[1250] text-white font-[abc] tracking-tight font-semibold">${categoryDetails[idx].categoryTitle}</h1>
       <p class="desc w-[65%] z-[1250] text-[1.6vw] text-center text-white">
         ${categoryDetails[idx].categoryDesc}
@@ -353,7 +352,7 @@ gsap.to(categories, {
 greyout();
 gsap.to(categories[active-1], {
   opacity: 1,
-  fontWeight: "bold"
+  fontWeight: "bold",
 })
 
 gsap.to(first[active-1], {
@@ -845,3 +844,76 @@ slices.forEach((slice)=>{
   })
 })
 
+
+
+
+
+// Shuffle letter Navigation Hover
+jQuery('document').ready(function($) {
+	// Set effect velocity in ms
+	var velocity = 50;
+	
+	var shuffleElement = $('.shuffle');
+
+	$.each( shuffleElement, function(index, item) {
+		$(item).attr('data-text', $(item).text());
+	});
+
+	var shuffle = function(o) {
+		for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+		return o;
+	};
+
+	var shuffleText = function(element, originalText) {
+		var elementTextArray = [];
+		var randomText = [];
+
+		for ( i=0;i<originalText.length;i++) {
+			elementTextArray.push(originalText.charAt([i]));
+		};
+
+		var repeatShuffle = function(times, index) {
+			if ( index == times ) {
+				element.text(originalText);
+				return;
+			} 
+
+			setTimeout( function() {
+				randomText = shuffle(elementTextArray);
+				for (var i=0;i<index;i++) {
+					randomText[i] = originalText[i];	
+				}
+				randomText = randomText.join('');
+				element.text(randomText);
+				index++;
+				repeatShuffle(times, index);
+			}, velocity);	
+		}
+		repeatShuffle(element.text().length, 0);
+	}
+
+	shuffleElement.mouseenter(function() {
+		shuffleText($(this), $(this).data('text'));
+	});
+});
+
+
+
+
+
+// New and Trending Section 
+
+let exploreTitles = document.querySelectorAll(".exp-titles");
+
+exploreTitles.forEach(function(exTitle){
+  exTitle.addEventListener("click", function(){
+    inactiveTitle();
+    exTitle.classList.add("active-title");
+  })
+})
+
+function inactiveTitle(){
+  exploreTitles.forEach(function(exTitle){
+    exTitle.classList.remove("active-title")
+  })
+}

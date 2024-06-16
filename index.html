@@ -7,6 +7,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
     />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -32,57 +34,59 @@
 
     <div class="main overflow-hidden">
 
-      
+      <!-- LOADER  -->
+      <div class="loader w-full h-screen bg-sky-950 overflow-hidden absolute top-0 left-0 z-[1200]"> -->
+          <div class="upper-circle">
+              <div class="clk-stripe clk-stp1">
+                  <h2>0</h2>
+                  <h2>5</h2>
+              </div>
+              <div class="clk-stripe clk-stp2">
+                  <h2>1</h2>
+                  <h2>6</h2>
+              </div>
+              <div class="clk-stripe clk-stp3">
+                  <h2>2</h2>
+                  <h2>7</h2>
+              </div>
+              <div class="clk-stripe clk-stp4">
+                  <h2>3</h2>
+                  <h2>8</h2>
+              </div>
+              <div class="clk-stripe clk-stp5">
+                  <h2>4</h2>
+                  <h2>9</h2>
+              </div>
+          </div>
+          <div class="lower-circle">
+              <div class="lclk-stripe lclk-stp1">
+                  <h2>2</h2>
+                  <h2>7</h2>
+              </div>
+              <div class="lclk-stripe lclk-stp2">
+                  <h2>1</h2>
+                  <h2>6</h2>
+              </div>
+              <div class="lclk-stripe lclk-stp3">
+                  <h2>0</h2>
+                  <h2>5</h2>
+              </div>
+              <div class="lclk-stripe lclk-stp4">
+                  <h2>9</h2>
+                  <h2>4</h2>
+              </div>
+              <div class="lclk-stripe lclk-stp5">
+                  <h2>8</h2>
+                  <h2>3</h2>
+              </div>
+          </div>
+
+          <div class="mid-circle w-24 h-24 rounded-full bg-sky-950 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]"></div>
+      </div> 
+
+
       <!-- LANDING PAGE -->
       <div class="landing-page relative w-full h-screen bg-[var(--dark-blue)] z-[1000]">
-        <div class="loader w-full h-screen bg-sky-950 overflow-hidden absolute top-0 left-0 z-[1200]">
-            <div class="upper-circle">
-                <div class="clk-stripe clk-stp1">
-                    <h2>0</h2>
-                    <h2>5</h2>
-                </div>
-                <div class="clk-stripe clk-stp2">
-                    <h2>1</h2>
-                    <h2>6</h2>
-                </div>
-                <div class="clk-stripe clk-stp3">
-                    <h2>2</h2>
-                    <h2>7</h2>
-                </div>
-                <div class="clk-stripe clk-stp4">
-                    <h2>3</h2>
-                    <h2>8</h2>
-                </div>
-                <div class="clk-stripe clk-stp5">
-                    <h2>4</h2>
-                    <h2>9</h2>
-                </div>
-            </div>
-            <div class="lower-circle">
-                <div class="lclk-stripe lclk-stp1">
-                    <h2>2</h2>
-                    <h2>7</h2>
-                </div>
-                <div class="lclk-stripe lclk-stp2">
-                    <h2>1</h2>
-                    <h2>6</h2>
-                </div>
-                <div class="lclk-stripe lclk-stp3">
-                    <h2>0</h2>
-                    <h2>5</h2>
-                </div>
-                <div class="lclk-stripe lclk-stp4">
-                    <h2>9</h2>
-                    <h2>4</h2>
-                </div>
-                <div class="lclk-stripe lclk-stp5">
-                    <h2>8</h2>
-                    <h2>3</h2>
-                </div>
-            </div>
-  
-            <div class="mid-circle w-24 h-24 rounded-full bg-sky-950 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]"></div>
-        </div>
 
         <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
 
@@ -90,7 +94,7 @@
             alt=""/>
   
           <div class="top-right flex items-center justify-center gap-5">
-            <button class="install-btn bg-green-800 text-white px-3 py-3 rounded-lg hover:bg-green-700 transition">Install Steam</button>
+            <button class="install-btn bg-green-800 text-white px-3 py-3 font-[poppins] rounded-lg hover:bg-green-700 transition">Install Steam</button>
             <i class="nav-btn ri-menu-3-line max-sm:text-[8vw] text-[2.5vw] invert cursor-pointer"></i>
   
           </div>
@@ -103,14 +107,14 @@
         <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
         <div class="nav-menu hidden absolute bg-[#193146] bg-slate-950 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12">
            <div class="nav-items flex flex-col items-start w-[80%] h-full justify-between py-40">
-             <h2 class="signin-btn text-white mb-6 font-[abc] text-2xl uppercase font-bold rounded-[5px] px-2 py-1 mb-20 absolute top-[5%]">Sign In</h2>
-             <h1>Store</h1>
-             <h1>Community</h1>
-             <h1>About</h1>
-             <h1>Support</h1>
-             <h1>News</h1>
-             <h1>Labs</h1>
-             <h1>Points Shop</h1>
+             <h2 class="signin-btn text-white mb-6 font-[abc] text-2xl cursor-pointer uppercase font-bold rounded-[5px] px-2 py-1 mb-20 absolute top-[5%]">Sign In</h2>
+             <h1 class="shuffle">Store</h1>
+             <h1 class="shuffle">Community</h1>
+             <h1 class="shuffle">About</h1>
+             <h1 class="shuffle">Support</h1>
+             <h1 class="shuffle">News</h1>
+             <h1 class="shuffle">Labs</h1>
+             <h1 class="shuffle">Points Shop</h1>
           </div>
           <div class="nav-right w-[20%] h-full flex flex-col items-center justify-start gap-[18vw] border-l-[.01px] border-neutral-700 py-4">
             <i class="close-nav text-5xl cursor-pointer ri-close-line block text-end text-white"></i>
@@ -147,7 +151,9 @@
           
         </div>
 
-        <div class="img-crsr w-[8rem]  h-[8rem] bg-black rounded-full fixed z-[999] opacity-0"></div>
+        <div class="img-crsr flex items-center justify-center w-[8rem]  h-[8rem] bg-black rounded-full fixed z-[999] opacity-0">
+          <p class="text-white text-[1vw] font-bold font-[poppins]">View <br>More</p>
+        </div>
         
         <div class="overlay top-0 left-0 absolute w-full h-screen z-[100] "></div>
         
@@ -189,17 +195,15 @@
   
 
       <!-- CATEGORY SECTION  -->
-      <div class="category-page relative w-full h-full bg-[#EBF1FC] z-[1900]">
+      <div class="category-page relative w-full h-[120vh] bg-[#EBF1FC] z-[1900]">
         <audio class="category-panel-hover" src="sound-effects/category-items-click.mp3" autoplay="true"></audio>
         
-        <div class="clicked-category absolute w-full h-full top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20">
+        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20">
           <audio class="cat-bgm" src=""></audio>
-          <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
-          <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0" src="live wallpapers/rpg2.mp4" autoplay muted loop></video>
-          <h1 class="text-[4vw] z-[1250] text-white font-[abc] tracking-tight font-semibold">ROLE PLAYING</h1>
-          <p class="desc w-[65%] z-[1250] text-[1.6vw] text-center text-white">
-            Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.
-          </p>
+          <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute w-full h-full"></div>
+          <video class="cat-bg w-full h-[full] z-[-1] absolute top-0 left-0 object-cover" src="" autoplay muted loop></video>
+          <h1 class="text-[4vw] z-[1250] text-white font-[abc] tracking-tight font-semibold"></h1>
+          <p class="desc w-[65%] z-[1250] text-[1.6vw] text-center text-white"></p>
           <button class="view border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-2xl px-2 py-1 rounded-md">View More</button>
           <i id="cc" class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] cursor-pointer hover:text-slate-500"></i>
         </div>
@@ -295,14 +299,14 @@
             </div>
           </div>
   
-          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[60%] left-[10%] -translate-y-1/2 justify-center ">
-            <h2 class="font-[poppins] uppercase tracking-wider">Action</h2>
-            <h2 class="font-[poppins] uppercase tracking-wider">Anime</h2>
-            <h2 class="font-[poppins] uppercase tracking-wider">All Sports</h2>
-            <h2 class="font-[poppins] uppercase tracking-wider">Role Playing</h2>
-            <h2 class="font-[poppins] uppercase tracking-wider">Survival</h2>
-            <h2 class="font-[poppins] uppercase tracking-wider">Multiplayer</h2>
-            <h2 class="font-[poppins] uppercase tracking-wider">Puzzle</h2>
+          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[59%] left-[10%] -translate-y-1/2 justify-center ">
+            <h2 class="panel-items">Action</h2>
+            <h2 class="panel-items">Anime</h2>
+            <h2 class="panel-items">All Sports</h2>
+            <h2 class="panel-items">Role Playing</h2>
+            <h2 class="panel-items">Survival</h2>
+            <h2 class="panel-items">Multiplayer</h2>
+            <h2 class="panel-items">Puzzle</h2>
           </div>
         </div>
 
@@ -311,12 +315,10 @@
       </div>
 
       <!-- STEAM GIFT CARDS SECTION -->
-      <div class="steam-gift-cards w-full h-screen bg-[#2A475E] font-[azonix] relative flex justify-center items-center">
-        <audio class="swoosh-sound" src="sounds/swoosh-sound-effect-for-fight-scenes-or-transitions-1-149889.mp3"></audio>
+      <div class="steam-gift-cards w-full h-screen bg-[#2A475E] font-[redtrap] relative flex justify-center items-center">
         <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[redtrap] font-bold text-gray-100">STEAM <br> GIFT CARDS</h1>
-        <!-- <button class="gift-btn absolute top-[84%] bg-[#114869] px-4 py-2 text-2xl text-white rounded-md font-[gosha] uppercase hover:bg-[#134261] hover:text-[var(--light)]">Give the Gift of game</button> -->
-        <img class="absolute top-[5%] left-[34.5%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
+        <img class="steam-gc-img absolute top-[5%] left-[34.5%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
         <div class="container absolute top-[55%] -translate-y-1/2 h-1/2 flex">
             <div class="left-cont w-1/2 h-full relative">
                 <img class="gift-cards card1" src="images/giftcards-images/lcard1.png">
@@ -341,11 +343,11 @@
       <div class="explore-page w-full flex relative justify-center items-center pb-20">
         <audio class="slice-hover-sound" src="sound-effects/UI_menu_rollover.mp3"></audio>
         <div class="explore-container w-[70%] rounded-md overflow-hidden">
-          <div class="select-sections w-full flex justify-between items-center px-20 mb-20 mt-12">
-            <h2 class="exp-titles text-[2vw] text-[--light] border-2 rounded-md px-2 border-[--light]">New & Trending</h2>
-            <h2 class="exp-titles text-[1.8vw] text-white">Top Sellers</h2>
-            <h2 class="exp-titles text-[1.8vw] text-white">Popular Upcoming</h2>
-            <h2 class="exp-titles text-[1.8vw] text-white">Specials</h2>
+          <div class="select-sections w-full flex justify-between gap-10 items-center px-20 mb-20 mt-12">
+            <h2 class="exp-titles active-title">New & Trending</h2>
+            <h2 class="exp-titles">Top Sellers</h2>
+            <h2 class="exp-titles">Popular Upcoming</h2>
+            <h2 class="exp-titles">Specials</h2>
           </div>
           <div class="selected-section relative w-full h-[200vh]">
             
@@ -367,7 +369,7 @@
                 </div>
                 <div class="slice-right">
                   <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                  <h3 class="slice-r-text text-[1.2vw] text-white border-[1px] border-white rounded-md px-2 py-1">Free to Play</h3>
+                  <h3 class="slice-r-text text-[1.2vw] text-white  rounded-[25px] px-4 py-2">Free to Play</h3>
                 </div>
               </div>  
               <div class="slice nt-slice">
@@ -820,28 +822,6 @@
         </div>
       </div>
 
-      <!-- STREAMING NOW -->
-       <div class="streaming-now-section w-full h-screen bg-blue-900 flex px-20 py-6">
-        <div class="streaming-left w-[40%] h-full flex flex-col items-center justify-center">
-          <h1 class="text-7xl font-bold font-[redtrap] text-white">STREAMING</h1>
-          <h1 class="text-7xl font-bold font-[redtrap] text-white">NOW</h1>
-          <button class="text-black mt-12 font-bold text-3xl bg-white px-4 py-1 rounded-md">View More</button>
-        </div>
-        <div class="streaming-right w-[60%] h-full">
-          <div class="stream-row1 flex w-full h-2/6 gap-4 items-center justify-end px-20">
-            <div class="stream-video"></div>
-            <div class="stream-video"></div>
-          </div>
-          <div class="stream-row2 flex w-full h-2/6 gap-4 items-center justify-start px-20">
-            <div class="stream-video"></div>
-            <div class="stream-video"></div>
-          </div>
-          <div class="stream-row3 flex w-full h-2/6 gap-4 items-center justify-end px-20">
-            <div class="stream-video"></div>
-            <div class="stream-video"></div>
-          </div>
-        </div>
-       </div>
 
       
       <!-- OFFER SECTION -->
