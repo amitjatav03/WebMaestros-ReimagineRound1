@@ -429,8 +429,8 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 
-.panel h2:hover{
-  color: var(--light);
+.panel-items:hover{
+  color: rgb(68, 114, 132);
 }
 
 
@@ -456,7 +456,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 
 .marquee-cards{
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; 
+  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;  */
   display: flex;
   flex-direction: column;
   white-space: nowrap;
@@ -498,23 +498,23 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 .blur-left{
   width: 25%;
   height: 100%;
-  background-color: var(--dark-blue);
+  background-color: #111632;
   z-index: 800;
-  background: linear-gradient(to right, var(--dark-blue), transparent);
+  background: linear-gradient(to right, #111632, transparent);
   pointer-events: none;
 }
 
 .blur-right{
   width: 40%;
   height: 100%;
-  background-color: var(--dark-blue);
+  background-color: #111632;
   z-index: 800;
-  background: linear-gradient(to left, var(--dark-blue), transparent);
+  background: linear-gradient(to left, #111632, transparent);
   pointer-events: none;
 }
 
 .offer-page{
-  background: linear-gradient(to bottom, #11235A, #121B24);
+  background: linear-gradient(to bottom, #11235A, #121528);
   
 }
 
@@ -570,6 +570,11 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 .steam-gc-img{
   -webkit-filter: drop-shadow(2px 2px 5px #104E73);
   filter: drop-shadow(2px 1px 5px #4e87a8);
+  transition: all linear .2s;
+}
+.steam-gc-img:hover{
+  transform: scale(1.02);
+  transform-origin: center;
 }
 
 .steam-gift-cards{
@@ -586,7 +591,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 .left-cont img, .right-cont img{
   position: absolute;
-  width: 320px;
+  width: 280px;
   top: 60%;
   transform: translateY(-50%);
   /* transition: all .3s ease-in; */
@@ -670,7 +675,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
       width: 0%;
   }
   100%{
-      width: 320px;
+      width: 280px;
   }
 }
 
@@ -949,7 +954,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 .pu-slice:nth-child(2):hover{
-  background-image: url(explore-imgs/dota2-.jpeg);
+  background-image: url(explore-imgs/dota-2.jpg);
   background-position: center;
 }
 
