@@ -795,7 +795,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 .slice{
   width: 90%;
-  height: 400px;
+  height: 25vh;
   border: 1px solid white;
   transition: all .2s linear;
   background: rgba(35, 31, 31, 0.107);
@@ -1057,6 +1057,27 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 /* ---------------------- RESPONSIVENESS ------------------------ */
 
 @media screen and (max-width: 600px) {
+  .circle{
+    left: 75%;
+  }
+  .panel-items{
+    font-size: 3vh;
+    line-height: 3.2vh;
+  }
+  .upper-circle{
+    top: 38%;
+    width: 25vh;
+    height: 25vh;
+  }
+  .lower-circle{
+    top: 62%;
+    width: 25vh;
+    height: 25vh;
+  }
+  .nav-menu h1{
+    font-size: 4vh;
+    line-height: 2vw;
+  }
   .swiper-slide {
     width: 80vw;
     height: 30vh;
@@ -1075,6 +1096,26 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
     font-size: 1.8rem;
     
   }
+  .left-cont img, .right-cont img{
+    width: 200px;
+  }
+  @keyframes splitOutLeft{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 200px;
+    }
+  }
+
+  .exp-titles{
+    font-size: 3vh;
+  }
+  .slice{
+    height: 10vh;
+    width: 100%;
+  }
+  
   .marquee-cards{
     width: 60vw;
     height: 70%;

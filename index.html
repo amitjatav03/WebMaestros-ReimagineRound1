@@ -105,7 +105,7 @@
         <audio class="open-nav-sound absolute" src="sound-effects/UI_menu_OPEN.mp3"></audio>
         <audio class="close-nav-sound absolute" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
         <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
-        <div class="nav-menu hidden absolute bg-[#121422] bg-slate-950 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12">
+        <div class="nav-menu hidden absolute bg-[#121422] bg-slate-950 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12 max-sm:w-[100%] max-sm:h-screen">
            <div class="nav-items flex flex-col items-start w-[80%] h-full justify-between py-40">
             <div class="search-bar absolute top-[6%] flex justify-between items-center w-[15vw]">
               <p class="text-white text-white text-xl uppercase">Search</p>
@@ -199,7 +199,7 @@
   
 
       <!-- CATEGORY SECTION  -->
-      <div class="category-page relative w-full h-[120vh] bg-[#EBF1FC] z-[1900]">
+      <div class="category-page relative w-full h-[120vh] max-sm:h-[80vh] bg-[#EBF1FC] z-[1900]">
         <audio class="category-panel-hover" src="sound-effects/category-items-click.mp3" autoplay="true"></audio>
         
         <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20">
@@ -217,7 +217,7 @@
           <div class="rounded-div absolute w-[750vw] h-[750vw] bg-[#A5D2EE] rounded-full left-1/2 -translate-x-1/2"></div>
         </div> -->
 
-        <div class="category-page-wrapper relative w-full h-[120vh] overflow-hidden px-[9.5vw] py-[8vw]">
+        <div class="category-page-wrapper relative w-full h-[120vh] max-sm:h-[80vh] overflow-hidden px-[9.5vw] py-[8vw]">
           
 
 
@@ -226,8 +226,8 @@
           </div>
 
 
-          <h1 class="category-title font-bold text-[2.8vw] tracking-tight leading-none text-black relative font-[redtrap] uppercase">browse by</h1>
-          <h1 class="category-title font-bold text-[7vw] tracking-tight leading-none text-black relative font-[redtrap] uppercase">Category</h1>
+          <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[4.5vw] tracking-tight leading-none text-black relative font-[redtrap] uppercase">browse by</h1>
+          <h1 class="category-title font-bold text-8xl max-sm:text-[5.6vh] tracking-tight leading-none text-black relative font-[redtrap] uppercase">Category</h1>
           <div class="circle flex justify-center items-center rounded-full">
             <div class="stripe stp1">
               <div class="first">
@@ -303,7 +303,7 @@
             </div>
           </div>
   
-          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[59%] left-[10%] -translate-y-1/2 justify-center ">
+          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[59%] left-[10%] max-sm:top-[50%] max-sm:left-[5%] -translate-y-1/2 justify-center ">
             <h2 class="panel-items">Action</h2>
             <h2 class="panel-items">Anime</h2>
             <h2 class="panel-items">All Sports</h2>
@@ -319,10 +319,10 @@
       </div>
 
       <!-- STEAM GIFT CARDS SECTION -->
-      <div class="steam-gift-cards w-full h-screen bg-[#2A475E] font-[redtrap] relative flex justify-center items-center">
+      <div class="steam-gift-cards w-full h-screen max-sm:h-[70vh] bg-[#2A475E] font-[redtrap] relative flex justify-center items-center">
         <!-- <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div> -->
-        <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[redtrap] font-bold text-gray-100">STEAM <br> GIFT CARDS</h1>
-        <img class="steam-gc-img absolute top-[5%] left-[34.5%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
+        <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[redtrap] font-bold text-gray-100 max-sm:text-4xl">STEAM <br> GIFT CARDS</h1>
+        <img class="steam-gc-img absolute top-[5%] left-[34.5%] max-sm:w-[10rem] max-sm:top-[3%] max-sm:left-[57%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
         <div class="container absolute top-[55%] -translate-y-1/2 h-1/2 flex">
             <div class="left-cont w-1/2 h-full relative">
                 <img class="gift-cards card1" src="images/giftcards-images/lcard1.png">
@@ -361,7 +361,7 @@
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Ghost Of Tsushima</h3>
+                  <h3 class="slice-title text-4xl  tracking-tight text-white">Ghost Of Tsushima</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
