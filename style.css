@@ -1052,6 +1052,32 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   background-color: #84bbd2c5;
 }
 
+.overlay-grain-pattern.overlay-grain-basic {
+  opacity: .03;
+  mix-blend-mode: normal;
+  filter: contrast(2);
+  background-size: 5em;
+}
+
+.overlay-grain-pattern {
+  opacity: .5;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-image: url(gr.jpg);
+  /* background-color: red; */
+  background-position: 50%;
+  background-size: 5vw;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
 
 
 /* ---------------------- RESPONSIVENESS ------------------------ */

@@ -35,7 +35,8 @@
     <div class="main overflow-hidden">
 
       <!-- LOADER  -->
-      <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
+      <!-- <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
+        <div class="overlay-grain-pattern overlay-grain-basic"></div>
           <div class="upper-circle">
               <div class="clk-stripe clk-stp1">
                   <h2>0</h2>
@@ -82,7 +83,7 @@
           </div>
 
           <div class="mid-circle w-24 h-24 rounded-full bg-sky-950 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]"></div>
-      </div>  
+      </div>   -->
 
 
       <!-- LANDING PAGE -->
@@ -105,7 +106,9 @@
         <audio class="open-nav-sound absolute" src="sound-effects/UI_menu_OPEN.mp3"></audio>
         <audio class="close-nav-sound absolute" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
         <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
-        <div class="nav-menu hidden absolute bg-[#121422] bg-slate-950 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12 max-sm:w-[100%] max-sm:h-screen">
+        <div class="nav-menu hidden absolute bg-[#121422] bg-slate-900 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12 max-sm:w-[100%] max-sm:h-screen">
+          <div class="overlay-grain-pattern overlay-grain-basic"></div>
+          <div class="cross-line absolute w-[7.4vw] h-[.1px] bg-[#424140] top-[12%] right-0"></div>
            <div class="nav-items flex flex-col items-start w-[80%] h-full justify-between py-40">
             <div class="search-bar absolute top-[6%] flex justify-between items-center w-[15vw]">
               <p class="text-white text-white text-xl uppercase">Search</p>
@@ -127,6 +130,8 @@
         </div>
 
         <div class="install-steam-section relative bg-[#1D2024] -top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[98%] h-[96%] z-[500] px-40 py-10 flex justify-center items-center rounded-lg gap-2">
+          <div class="overlay-grain-pattern overlay-grain-basic"></div>
+          
           <i class="close-steam-install ri-close-large-fill absolute right-[12%] z-[600] top-[7%] cursor-pointer text-[2.2vw] text-white"></i>
           <div class="install-left w-[40%] h-full flex flex-col gap-4 justify-center">
             <img class="w-[17vw]" src="images/steam-logo-install-steam.svg" alt="">
@@ -200,6 +205,7 @@
 
       <!-- CATEGORY SECTION  -->
       <div class="category-page relative w-full h-[120vh] max-sm:h-[80vh] bg-[#EBF1FC] z-[1900]">
+        <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <audio class="category-panel-hover" src="sound-effects/category-items-click.mp3" autoplay="true"></audio>
         
         <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20">
@@ -320,6 +326,7 @@
 
       <!-- STEAM GIFT CARDS SECTION -->
       <div class="steam-gift-cards w-full h-screen max-sm:h-[70vh] bg-[#2A475E] font-[redtrap] relative flex justify-center items-center">
+        <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <!-- <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div> -->
         <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[redtrap] font-bold text-gray-100 max-sm:text-4xl">STEAM <br> GIFT CARDS</h1>
         <img class="steam-gc-img absolute top-[5%] left-[34.5%] max-sm:w-[10rem] max-sm:top-[3%] max-sm:left-[57%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
@@ -345,6 +352,7 @@
 
     <!-- EXPLORE MORE SECTION  -->
     <div class="explore-page w-full flex relative justify-center items-center pb-20">
+      <div class="overlay-grain-pattern overlay-grain-basic"></div>
       <audio class="slice-hover-sound" src="sound-effects/UI_menu_rollover.mp3"></audio>
       <div class="explore-container w-[70%] rounded-md overflow-hidden">
         <div class="select-sections w-full flex justify-between gap-10 items-center px-20 mb-20 mt-12">
@@ -833,6 +841,7 @@
       
       <!-- OFFER SECTION -->
       <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen  flex justify-center flex-col gap-10">
+        <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <div class="offer-title max-sm:mt-20 px-[8vw]">
           <h1 class="max-sm:text-4xl text-4xl tracking-tight text-[var(--light)] font-[redtrap] uppercase">Special</h1>
           <h1 class="max-sm:text-4xl text-8xl tracking-tight text-white font-[redtrap] uppercase">Offers</h1>
@@ -987,6 +996,7 @@
       <!-- FOOTER SECTION  -->
       <div class="footer w-full relative left-0 bottom-0 h-screen  bg-[#0F172A] text-[--light] font-[Gilroy] flex flex-col gap-0">
         <!-- FOOTER TOP -->
+        <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <div class="footer-top relative top-0 w-full h-[35%] flex justify-between px-[10vw] py-8 gap-4">
           <div class="f-top-left">
             <img class="max-sm:w-[25vw] w-[8vw]" src="images/logo_steam_footer.png" alt="">

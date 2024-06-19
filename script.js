@@ -899,8 +899,6 @@ jQuery('document').ready(function($) {
 
 
 
-
-
 // New and Trending Section 
 
 let exploreTitles = document.querySelectorAll(".exp-titles");
