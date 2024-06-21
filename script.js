@@ -127,7 +127,7 @@ function landingPageSlider(){
   var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
-    // mousewheel: true,
+    mousewheel: true,
     parallax: true,
     speed: "600",
     centeredSlides: true,
