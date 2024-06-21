@@ -1,8 +1,16 @@
 @import 'node_modules/locomotive-scroll/dist/locomotive-scroll';
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 /* -------------- IMPORTING FONTS ---------------  */
+@font-face {
+  font-family: blogh;
+  src: url(fonts/Blogh.otf);
+}
+@font-face {
+  font-family: tungsten;
+  src: url(fonts/tungsten.ttf);
+}
 @font-face {
   font-family: Gilroy;
   src: url(fonts/Gilroy-Regular.ttf);
@@ -19,7 +27,34 @@
   font-family: abc;
   src: url(fonts/ABCWhyteVariable.8506f1e8.woff2);
 }
-
+@font-face {
+  font-family: gestura;
+  src: url(fonts/GesturaDisplay-Regular.woff2);
+}
+@font-face {
+  font-family: aeonik;
+  src: url(fonts/AeonikFono-Regular.woff2);
+}
+@font-face {
+  font-family: twk;
+  src: url(fonts/TWKEverett-Regular.woff2);
+}
+@font-face {
+  font-family: twk2;
+  src: url(fonts/TWKEverett-Regular\ \(1\).woff2);
+}
+@font-face {
+  font-family: gaster;
+  src: url(fonts/DxGaster-Thin.otf);
+}
+@font-face {
+  font-family: highpro;
+  src: url(fonts/Highpro-lgY7X.ttf);
+}
+@font-face {
+  font-family: vortex;
+  src: url(fonts/vortex-sans-black.ttf);
+}
 
 /* --------------- DECLARING VARIABLES --------------  */
 
@@ -170,8 +205,10 @@ html, body {
 /* ------------ CURSORS ------------ */
 
 .img-crsr{
-  transition: all .1s ease;
+  transition: all .0s ease;
   pointer-events: none;
+  background-color: black;
+  filter: blur(8%);
 }
 
 .category-crsr{
@@ -182,6 +219,11 @@ html, body {
   background-color: #0000009e;
 }
 
+
+.explore-crsr{
+  transition: all .0s ease;
+  pointer-events: none;
+}
 
 
 
@@ -212,13 +254,14 @@ html, body {
   justify-content: center;
   border-radius: 5px;
   font-family: abc;
+  letter-spacing: -3px;
+  /* font-family: gestura; */
   font-size: 3vw;
   text-transform: uppercase;
   cursor: pointer;
   font-weight: bold;
   color: white;
   line-height: 3vw;
-  letter-spacing: -3px;
   padding: 0 20px 0 6px;
 }
 
@@ -420,7 +463,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 
 .panel-items{
-  font-family: poppins;
+  font-family: gestura; 
   text-transform: uppercase;
   color: var(--dark-blue);
   font-size: 2.5vw;
@@ -532,19 +575,19 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 .offer-left h1{
-  font-family: azonix;
+  font-family: aeonik;
  font-size: 1.5rem;
  font-weight: 600;
 }
 
 .offer-r-top p{
   font-size: .8rem;
-  font-family: azonix;
+  font-family: aeonik;
   text-decoration: line-through;
 }
 
 .offer-r-bottom p{
-  font-family: azonix;
+  font-family: aeonik;
   font-size: 1.1rem;
   font-weight: 800;
 }
@@ -743,7 +786,8 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 .slice-right h3{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: linear-gradient(to right, #075985, #0369A1)
+  background: linear-gradient(to right, #075985, #0369A1);
+
 }
 
 
@@ -757,7 +801,8 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 .exp-titles{
   font-size: 1.7vw;
   color: #D4D4D8;
-  font-family: poppins;
+  /* font-family: poppins; */
+  font-family: twk;
 }
 .exp-titles:hover{
   border-bottom: 2px solid #d4d4d8;
@@ -794,11 +839,11 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 
 .slice{
-  width: 90%;
+  width: 100%;
   height: 25vh;
-  border: 1px solid white;
+  border-top: 1px solid rgb(118, 118, 118);
   transition: all .2s linear;
-  background: rgba(35, 31, 31, 0.107);
+  /* background: rgba(35, 31, 31, 0.107); */
   position: relative;
   transform: scale(1);
   cursor: pointer;
@@ -807,10 +852,14 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   align-items: center;
   padding: 0 7vw;
   overflow: hidden;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   z-index: 100;
 }
 
+.slice-title{
+  font-family: gestura;
+  text-transform: uppercase;
+}
 .slice-overlay{
   position: absolute;
   width: 100%;
@@ -835,6 +884,12 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   transition: all .2s linear;
 } 
 
+.slice-badge span{ 
+  font-family: aeonik;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 
 .slimg1{
   width: 13rem;
@@ -844,9 +899,9 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   transition: all .2s linear;
 }
 
-.slice{
+/* .slice{
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-}
+} */
 
 .slice:hover{
   background-size: cover;
@@ -1006,22 +1061,18 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   background-image: url(explore-imgs/cuphead.jpg);
   background-position: center;
 }
-.slice-right h3{
+.slice-right{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: linear-gradient(to right, #075985, #0369A1)
+  background: linear-gradient(to right, #075985, #0369A1);
+  font-family: gestura;
 }
 
 
 
 /* ------------------------- FOOTER ------------------------- */
 
-.footer{
-  font-family: 'gilroy';
-}
-
-
 .footer-title span{
-  font-family: 'gilroy';
+  font-family: aeonik;
   position: relative;
 
 }

@@ -35,7 +35,7 @@
     <div class="main overflow-hidden">
 
       <!-- LOADER  -->
-      <!-- <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
+      <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
           <div class="upper-circle">
               <div class="clk-stripe clk-stp1">
@@ -83,11 +83,11 @@
           </div>
 
           <div class="mid-circle w-24 h-24 rounded-full bg-sky-950 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]"></div>
-      </div>   -->
+      </div>  
 
 
       <!-- LANDING PAGE -->
-      <div class="landing-page relative w-full h-screen bg-[var(--dark-blue)] z-[1000]">
+      <div data-scroll class="landing-page relative w-full h-screen bg-[var(--dark-blue)] z-[1000]">
 
         <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
 
@@ -106,7 +106,7 @@
         <audio class="open-nav-sound absolute" src="sound-effects/UI_menu_OPEN.mp3"></audio>
         <audio class="close-nav-sound absolute" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
         <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
-        <div class="nav-menu hidden absolute bg-[#121422] bg-slate-900 top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12 max-sm:w-[100%] max-sm:h-screen">
+        <div class="nav-menu hidden absolute bg-[#1D2024] top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12 max-sm:w-[100%] max-sm:h-screen">
           <div class="overlay-grain-pattern overlay-grain-basic"></div>
           <div class="cross-line absolute w-[7.4vw] h-[.1px] bg-[#424140] top-[12%] right-0"></div>
            <div class="nav-items flex flex-col items-start w-[80%] h-full justify-between py-40">
@@ -160,8 +160,8 @@
           
         </div>
 
-        <div class="img-crsr flex items-center justify-center w-[8rem]  h-[8rem] bg-black rounded-full fixed z-[999] opacity-0">
-          <p class="text-white text-[1vw] font-bold font-[poppins]">View <br>More</p>
+        <div class="img-crsr flex items-center justify-center w-[8rem]  h-[8rem] rounded-full fixed z-[999] opacity-0">
+          <p class="text-white text-[1vw] font-bold font-[poppins]">< Drag ></p>
         </div>
         
         <div class="overlay top-0 left-0 absolute w-full h-screen z-[100] "></div>
@@ -204,7 +204,7 @@
   
 
       <!-- CATEGORY SECTION  -->
-      <div class="category-page relative w-full h-[120vh] max-sm:h-[80vh] bg-[#EBF1FC] z-[1900]">
+      <div data-scroll  class="category-page relative w-full h-[120vh] max-sm:h-[80vh] bg-[#EBF1FC] z-[1900]">
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <audio class="category-panel-hover" src="sound-effects/category-items-click.mp3" autoplay="true"></audio>
         
@@ -232,8 +232,8 @@
           </div>
 
 
-          <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[4.5vw] tracking-tight leading-none text-black relative font-[redtrap] uppercase">browse by</h1>
-          <h1 class="category-title font-bold text-8xl max-sm:text-[5.6vh] tracking-tight leading-none text-black relative font-[redtrap] uppercase">Category</h1>
+          <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[4.5vw] tracking-tight leading-none text-black relative font-[redtrap] font-bolder uppercase">browse by</h1>
+          <h1 class="category-title font-bold text-[7vw] max-sm:text-[5.6vh] tracking-tight leading-none text-black relative font-[redtrap] font-bold uppercase">Category</h1>
           <div class="circle flex justify-center items-center rounded-full">
             <div class="stripe stp1">
               <div class="first">
@@ -325,7 +325,7 @@
       </div>
 
       <!-- STEAM GIFT CARDS SECTION -->
-      <div class="steam-gift-cards w-full h-screen max-sm:h-[70vh] bg-[#2A475E] font-[redtrap] relative flex justify-center items-center">
+      <div data-scroll data-scroll-speed="-5" data-scroll-delay="70%" class="steam-gift-cards relative w-full h-screen max-sm:h-[70vh] bg-[#2A475E] font-[redtrap] z-[2400] relative flex justify-center items-center ">
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <!-- <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div> -->
         <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[redtrap] font-bold text-gray-100 max-sm:text-4xl">STEAM <br> GIFT CARDS</h1>
@@ -351,7 +351,9 @@
       </div>
 
     <!-- EXPLORE MORE SECTION  -->
-    <div class="explore-page w-full flex relative justify-center items-center pb-20">
+    <div class="explore-page w-full flex relative justify-center items-center py-12 z-[3000]">
+      <div class="explore-crsr fixed w-[4rem] h-[4rem] bg-slate-500 rounded-full z-[5000]"></div>
+
       <div class="overlay-grain-pattern overlay-grain-basic"></div>
       <audio class="slice-hover-sound" src="sound-effects/UI_menu_rollover.mp3"></audio>
       <div class="explore-container w-[70%] rounded-md overflow-hidden">
@@ -361,7 +363,7 @@
           <h2 class="exp-titles">Popular Upcoming</h2>
           <h2 class="exp-titles">Specials</h2>
         </div>
-        <div class="selected-section relative w-full h-[200vh]">
+        <div class="selected-section relative w-full h-[180vh]">
           
             
           <div class="new-and-trending-section absolute w-full h-full inline-block flex flex-col  items-center gap-6">
@@ -994,7 +996,7 @@
 
 
       <!-- FOOTER SECTION  -->
-      <div class="footer w-full relative left-0 bottom-0 h-screen  bg-[#0F172A] text-[--light] font-[Gilroy] flex flex-col gap-0">
+      <div data-scroll data-scroll-speed="-2" class="footer w-full relative left-0 bottom-0 h-screen  bg-[#0D0F12] text-[--light] font-[Gilroy] flex flex-col gap-0">
         <!-- FOOTER TOP -->
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <div class="footer-top relative top-0 w-full h-[35%] flex justify-between px-[10vw] py-8 gap-4">
@@ -1003,16 +1005,16 @@
           </div>
           <div class="f-top-right flex max-sm:gap-[2vw] gap-[8vw] text-xl">
             <div class="f-right1 flex flex-col">
-              <a class="font-[Gilroy] capitalize" href="#">about valve</a>
-              <a class="font-[Gilroy] capitalize" href="#">jobs</a>
-              <a class="font-[Gilroy] capitalize" href="#">steamworks</a>
-              <a class="font-[Gilroy] capitalize" href="#">steam distribution</a>
-              <a class="font-[Gilroy] capitalize" href="#">support</a>
-              <a class="font-[Gilroy] capitalize" href="#">gift cards</a>
+              <a class="font-[aeonik] capitalize" href="#">about valve</a>
+              <a class="font-[aeonik] capitalize" href="#">jobs</a>
+              <a class="font-[aeonik] capitalize" href="#">steamworks</a>
+              <a class="font-[aeonik] capitalize" href="#">steam distribution</a>
+              <a class="font-[aeonik] capitalize" href="#">support</a>
+              <a class="font-[aeonik] capitalize" href="#">gift cards</a>
             </div>
             <div class="f-right2 flex flex-col uppercase tracking-normal">
-              <a class="font-[Gilroy] capitalize" href="#"><span><i class="ri-facebook-circle-fill"></i></span>Steam</a>
-              <a class="font-[Gilroy] lowercase" href="#"><span><i class="ri-twitter-x-fill"></i></span>@steam</a>
+              <a class="font-[aeonik] capitalize" href="#"><span><i class="ri-facebook-circle-fill"></i></span>Steam</a>
+              <a class="font-[aeonik] lowercase" href="#"><span><i class="ri-twitter-x-fill"></i></span>@steam</a>
             </div>
           </div>
           
@@ -1031,16 +1033,16 @@
 
                 <img class="w-[8vw] max-sm:w-[15vw]" src="images/footerLogo_valve_new.png" alt="">
 
-                <p class="font-[Gilroy] max-sm:text-center max-sm:text-[2.5vw]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable.</p>
+                <p class="font-[twk] max-sm:text-center max-sm:text-[2.5vw]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable.</p>
 
               </div>
 
               <div class="valve-links flex justify-center gap-[2rem] max-sm:gap-[1rem]">
-                <a class="font-[Gilroy] capitalize" href="#">privacy policy</a>
-                <a class="font-[Gilroy] capitalize" href="#">legal</a>
-                <a class="font-[Gilroy] capitalize" href="#">steam subscriber agreement</a>
-                <a class="font-[Gilroy] capitalize" href="#">refunds</a>
-                <a class="font-[Gilroy] capitalize" href="#">cookies</a>
+                <a class="font-[aeonik] capitalize" href="#">privacy policy</a>
+                <a class="font-[aeonik] capitalize" href="#">legal</a>
+                <a class="font-[aeonik] capitalize" href="#">steam subscriber agreement</a>
+                <a class="font-[aeonik] capitalize" href="#">refunds</a>
+                <a class="font-[aeonik] capitalize" href="#">cookies</a>
               </div>
             </div>
             <div class="btm-line w-full h-[1px] bg-[var(--light)]"></div>

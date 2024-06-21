@@ -44,14 +44,33 @@ let swipSlides = document.querySelectorAll(".swiper-slide img");
 
 swipSlides.forEach((slid) => {
   slid.addEventListener("mousemove", function(dets){
+    
     imgCursor.style.opacity = ".7";
     gsap.to(imgCursor, {
-      x: dets.x - 90,
-      y: dets.y - 800,
+      x: dets.x - 60,
+      y: dets.y - 760,
     })
   })
   slid.addEventListener("mouseleave", function(dets){
     imgCursor.style.opacity = "0";
+  })
+})
+
+let exploreSlices = document.querySelectorAll(".slice");
+let expCursor = document.querySelector(".explore-crsr");
+let expPage = document.querySelector(".explore-page");
+let sliceOverlay = document.querySelector(".slice-overlay");
+
+exploreSlices.forEach((slice) => {
+  slice.addEventListener("mousemove", function(dets){
+    expCursor.style.opacity = ".7";
+    gsap.to(imgCursor, {
+      x: dets.x - 50,
+      y: dets.y - 50,
+    })
+  })
+  slice.addEventListener("mouseleave", function(dets){
+    expCursor.style.opacity = "0";
   })
 })
 
@@ -108,7 +127,7 @@ function landingPageSlider(){
   var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
     grabCursor: true,
-    mousewheel: true,
+    // mousewheel: true,
     parallax: true,
     speed: "600",
     centeredSlides: true,
@@ -118,7 +137,7 @@ function landingPageSlider(){
       rotate: 70,
       stretch: 30,
       depth: 200,
-      modifier: 1,
+      modifier:1 ,
       slideShadows: true,
     },
     pagination: {
