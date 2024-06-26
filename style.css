@@ -11,10 +11,10 @@
   font-family: tungsten;
   src: url(fonts/tungsten.ttf);
 }
-@font-face {
+/* @font-face {
   font-family: Gilroy;
   src: url(fonts/Gilroy-Regular.ttf);
-}
+} */
 @font-face {
   font-family: azonix;
   src: url(fonts/Azonix.otf);
@@ -626,6 +626,9 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   background: linear-gradient(to right, #131F57, #111428);
   overflow: hidden;
 }
+.slide-stripe{
+  background: linear-gradient(to right, #131F57, #111428);
+}
 
 .explore-title{
   text-shadow: 3px 3px 2px rgba(6, 0, 0, 1);
@@ -699,7 +702,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 .card6{
-  height: 90%;
+  height: 85%;
   right: 0;
   z-index: 5;
   border-top-left-radius: 10px;
@@ -771,7 +774,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 .rcard6{
-  height: 90%;
+  height: 85%;
   left: 0;
   z-index: 5;
   border-top-left-radius: 0;
@@ -1153,7 +1156,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   }
   .nav-menu h1{
     font-size: 4vh;
-    line-height: 2vw;
+    line-height: 1vw;
   }
   .swiper-slide {
     width: 80vw;
@@ -1204,10 +1207,10 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
     width: 5%;
   }
   .footer-top a{
-    font-size: 3vw;
+    font-size: 3.6vw;
   }
   .valve-links a{
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     text-align: center;
   }
   .offer h1{

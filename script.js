@@ -577,6 +577,19 @@ slider();
 
 
 // STEAM GIFT CARDS SECTION 
+let slideStripe = document.querySelector(".slide-stripe");
+gsap.to(slideStripe, {
+  height: 0,
+  scrollTrigger:{
+    scroller: ".main",
+    trigger: ".steam-gift-cards",
+    markers:true,
+    start: "top 30%",
+    end: "top 0%",
+    scrub: .9,
+  }
+})
+
 
 let swooshSound = document.querySelector(".swoosh-sound");
 let giftContainer = document.querySelector(".container");
@@ -678,7 +691,7 @@ function navMenu(){
       duration: .2,
       ease: "poweri.out",
       opacity: 1,
-      right: "1%",
+      right: "0%",
       })
       })
       

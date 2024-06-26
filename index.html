@@ -35,7 +35,7 @@
     <div class="main overflow-hidden">
 
       <!-- LOADER  -->
-      <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
+      <!-- <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
           <div class="upper-circle">
               <div class="clk-stripe clk-stp1">
@@ -83,7 +83,7 @@
           </div>
 
           <div class="mid-circle w-24 h-24 rounded-full bg-sky-950 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5]"></div>
-      </div>  
+      </div>   -->
 
 
       <!-- LANDING PAGE -->
@@ -106,10 +106,10 @@
         <audio class="open-nav-sound absolute" src="sound-effects/UI_menu_OPEN.mp3"></audio>
         <audio class="close-nav-sound absolute" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
         <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
-        <div class="nav-menu hidden absolute bg-[#1D2024] top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12 max-sm:w-[100%] max-sm:h-screen">
+        <div class="nav-menu hidden absolute bg-[#1D2024] top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12 max-sm:w-[100vw] max-sm:rounded-none max-sm:top-0 max-sm:h-screen">
           <div class="overlay-grain-pattern overlay-grain-basic"></div>
           <div class="cross-line absolute w-[7.4vw] h-[.1px] bg-[#424140] top-[12%] right-0"></div>
-           <div class="nav-items flex flex-col items-start w-[80%] h-full justify-between py-40">
+           <div class="nav-items flex flex-col items-start w-[80%] max-sm:h-[70%] h-full justify-between py-40">
             <div class="search-bar absolute top-[6%] flex justify-between items-center w-[15vw]">
               <p class="text-white text-white text-xl uppercase">Search</p>
               <i class="ri-search-2-line text-white text-2xl"></i>
@@ -325,11 +325,14 @@
       </div>
 
       <!-- STEAM GIFT CARDS SECTION -->
-      <div data-scroll data-scroll-speed="-5" data-scroll-delay="70%" class="steam-gift-cards relative w-full h-screen max-sm:h-[70vh] bg-[#2A475E] font-[redtrap] z-[2400] relative flex justify-center items-center ">
+      <div class="steam-gift-cards relative w-full h-screen max-sm:h-[70vh] bg-[#2A475E] font-[redtrap] z-[2400] relative flex justify-center items-center ">
+        <div class="slide-stripe w-full h-[70%] bg-black absolute bottom-0 z-[5000]">
+          <div class="overlay-grain-pattern overlay-grain-basic"></div>
+        </div>
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <!-- <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div> -->
-        <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[8%] left-[10%] font-[redtrap] font-bold text-gray-100 max-sm:text-4xl">STEAM <br> GIFT CARDS</h1>
-        <img class="steam-gc-img absolute top-[5%] left-[34.5%] max-sm:w-[10rem] max-sm:top-[3%] max-sm:left-[57%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt="">
+        <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[10%] left-[10%] font-[redtrap] font-bold text-gray-100 max-sm:text-4xl">STEAM <br> GIFT CARDS</h1>
+        <!-- <img class="steam-gc-img absolute top-[5%] left-[34.5%] max-sm:w-[10rem] max-sm:top-[3%] max-sm:left-[57%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt=""> -->
         <div class="container absolute top-[55%] -translate-y-1/2 h-1/2 flex">
             <div class="left-cont w-1/2 h-full relative">
                 <img class="gift-cards card1" src="images/giftcards-images/lcard1.png">
@@ -996,14 +999,14 @@
 
 
       <!-- FOOTER SECTION  -->
-      <div data-scroll data-scroll-speed="-2" class="footer w-full relative left-0 bottom-0 h-screen  bg-[#0D0F12] text-[--light] font-[Gilroy] flex flex-col gap-0">
+      <div data-scroll data-scroll-speed="-2" class="footer w-full relative left-0 bottom-0 h-screen bg-[#0D0F12] text-[--light] font-[Gilroy] flex flex-col gap-0">
         <!-- FOOTER TOP -->
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
-        <div class="footer-top relative top-0 w-full h-[35%] flex justify-between px-[10vw] py-8 gap-4">
+        <div class="footer-top relative top-0 w-full h-[35%] flex max-sm:flex-col justify-between px-[10vw] py-8 gap-4">
           <div class="f-top-left">
             <img class="max-sm:w-[25vw] w-[8vw]" src="images/logo_steam_footer.png" alt="">
           </div>
-          <div class="f-top-right flex max-sm:gap-[2vw] gap-[8vw] text-xl">
+          <div class="f-top-right flex max-sm:gap-[2vw] max-sm:justify-between gap-[8vw] text-xl">
             <div class="f-right1 flex flex-col">
               <a class="font-[aeonik] capitalize" href="#">about valve</a>
               <a class="font-[aeonik] capitalize" href="#">jobs</a>
@@ -1033,7 +1036,7 @@
 
                 <img class="w-[8vw] max-sm:w-[15vw]" src="images/footerLogo_valve_new.png" alt="">
 
-                <p class="font-[twk] max-sm:text-center max-sm:text-[2.5vw]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable.</p>
+                <p class="font-[twk] max-sm:text-center max-sm:text-[3vw]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable.</p>
 
               </div>
 
