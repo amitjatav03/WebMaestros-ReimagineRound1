@@ -251,7 +251,6 @@ html, body {
 .nav-menu h1{
   display: flex;
   align-items: center;
-  justify-content: center;
   border-radius: 5px;
   font-family: abc;
   letter-spacing: -3px;
@@ -261,13 +260,11 @@ html, body {
   cursor: pointer;
   font-weight: bold;
   color: white;
-  line-height: 3vw;
+  text-align: start;
+  line-height: 3.5vw;
   padding: 0 20px 0 6px;
 }
 
-.search-bar{
-  border-bottom: 2px solid white;
-}
 .nav-menu h1:hover{
   background-color: white;
   color: black;
@@ -417,7 +414,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 .cat-img{
   width: 30vw;
   height: 45vw;
-  position: absolute;
+  position: relative;
   cursor: pointer;
   top: 50%;
   transform: translateY(-50%);
@@ -806,6 +803,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   color: #D4D4D8;
   /* font-family: poppins; */
   font-family: twk;
+  cursor: pointer;
 }
 .exp-titles:hover{
   border-bottom: 2px solid #d4d4d8;
@@ -834,10 +832,6 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 .selected-section{
   transition: all .4s linear;
-}
-
-.exp-titles{
-  cursor: pointer;
 }
 
 
@@ -888,7 +882,6 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 } 
 
 .slice-badge span{ 
-  font-family: aeonik;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -1064,11 +1057,6 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   background-image: url(explore-imgs/cuphead.jpg);
   background-position: center;
 }
-.slice-right{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: linear-gradient(to right, #075985, #0369A1);
-  font-family: gestura;
-}
 
 
 
@@ -1137,12 +1125,23 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 /* ---------------------- RESPONSIVENESS ------------------------ */
 
 @media screen and (max-width: 600px) {
+  .slice-badge span{ 
+    font-size: .6rem;
+  }
+  .cat-img{
+    width: 50vw;
+    height: 40vh;
+  }
   .circle{
-    left: 75%;
+    left: 85%;
   }
   .panel-items{
+    font-family: abc;
+    font-weight: bold;
+    letter-spacing: -1px;
     font-size: 3vh;
-    line-height: 3.2vh;
+    line-height: 3.1vh;
+    padding: .3rem 0;
   }
   .upper-circle{
     top: 38%;
@@ -1156,7 +1155,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   }
   .nav-menu h1{
     font-size: 4vh;
-    line-height: 1vw;
+    line-height: 10vw;
   }
   .swiper-slide {
     width: 80vw;
@@ -1189,10 +1188,16 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   }
 
   .exp-titles{
-    font-size: 3vh;
+    font-size: 3.5vw;
+    text-align: center;
+  }
+  .active-title{
+    font-size: 3.7vw;
+    letter-spacing: .2px;
+    
   }
   .slice{
-    height: 10vh;
+    height: 15vh;
     width: 100%;
   }
   
@@ -1220,6 +1225,9 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   .offer p{
     font-size: .8rem;
     font-weight: bold;
+  }
+  .footer-title span{
+    font-size: 25vw;
   }
 
 

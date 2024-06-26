@@ -106,22 +106,31 @@
         <audio class="open-nav-sound absolute" src="sound-effects/UI_menu_OPEN.mp3"></audio>
         <audio class="close-nav-sound absolute" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
         <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
-        <div class="nav-menu hidden absolute bg-[#1D2024] top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex pl-12 max-sm:w-[100vw] max-sm:rounded-none max-sm:top-0 max-sm:h-screen">
+
+        <div class="nav-menu hidden absolute bg-[#1D2024] top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex max-sm:w-[100vw] max-sm:rounded-none max-sm:top-0 max-sm:h-screen">
           <div class="overlay-grain-pattern overlay-grain-basic"></div>
+
           <div class="cross-line absolute w-[7.4vw] h-[.1px] bg-[#424140] top-[12%] right-0"></div>
-           <div class="nav-items flex flex-col items-start w-[80%] max-sm:h-[70%] h-full justify-between py-40">
-            <div class="search-bar absolute top-[6%] flex justify-between items-center w-[15vw]">
-              <p class="text-white text-white text-xl uppercase">Search</p>
-              <i class="ri-search-2-line text-white text-2xl"></i>
-            </div>
-             <h2 class="signin-btn rounded-lg bg-green-700 text-white mb-6 font-[abc] text-2xl cursor-pointer uppercase font-semibold  px-4 py-1 mb-20 absolute top-[5%] left-[55%]">Sign In</h2>
-             <h1 class="shuffle">Store</h1>
-             <h1 class="shuffle">Community</h1>
-             <h1 class="shuffle">About</h1>
-             <h1 class="shuffle">Support</h1>
-             <h1 class="shuffle">News</h1>
-             <h1 class="shuffle">Labs</h1>
-             <h1 class="shuffle">Points Shop</h1>
+
+           <div class="nav-items flex flex-col items-between justify-between w-[80%] h-full">
+             <div class="nav-top w-full h-[20%] flex justify-between items-center px-10 max-sm:flex-col max-sm:justify-between max-sm:items-start max-sm h-[25%] py-10">
+
+               <div class="search-bar flex gap-2 px-4">
+                 <i class="ri-search-2-line text-white text-2xl"></i> 
+                 <input type="text" placeholder="Search..." class="bg-transparent font-[aeonik] text-white outline-none placeholder:text-white text-xl border-b-[1px] border-white w-[60%]">
+               </div>
+              <button class="signin-btn rounded-md text-white mb-6 font-[gilroy] text-xl font-bold cursor-pointer bg-green-800 px-4 py-1">Sign In</button>
+             </div>
+
+             <div class="nav-main w-full h-[75%] px-10 py-10 gap-20 max-sm:h-[70%]">
+               <h1 class="shuffle">Store</h1>
+               <h1 class="shuffle">Community</h1>
+               <h1 class="shuffle">About</h1>
+               <h1 class="shuffle">Support</h1>
+               <h1 class="shuffle">News</h1>
+               <h1 class="shuffle">Labs</h1>
+               <h1 class="shuffle">Points Shop</h1>
+             </div>
           </div>
           <div class="nav-right w-[20%] h-full flex flex-col items-center justify-start gap-[18vw] border-l-[.01px] border-neutral-700 py-4">
             <i class="close-nav text-5xl cursor-pointer ri-close-line block text-end text-white"></i>
@@ -166,7 +175,7 @@
         
         <div class="overlay top-0 left-0 absolute w-full h-screen z-[100] "></div>
         
-        <i class="ri-play-circle-fill vdo-btn absolute z-[120] top-[90%] left-[50%] -translate-x-[50%] text-slate-800 text-6xl bg-white w-7 h-7 flex justify-center items-center rounded-full cursor-pointer border-none"></i>  
+        <i class="ri-play-circle-fill vdo-btn absolute z-[120] top-[90%] left-[50%] -translate-x-[50%] text-slate-800 text-6xl bg-white w-7 h-7 flex justify-center items-center rounded-full cursor-pointer border-none max-sm:top-[85%]"></i>  
         
         
         
@@ -204,7 +213,7 @@
   
 
       <!-- CATEGORY SECTION  -->
-      <div data-scroll  class="category-page relative w-full h-[120vh] max-sm:h-[80vh] bg-[#EBF1FC] z-[1900]">
+      <div data-scroll  class="category-page relative w-full h-[120vh] max-sm:h-[70vh] bg-[#EBF1FC] z-[1900]">
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <audio class="category-panel-hover" src="sound-effects/category-items-click.mp3" autoplay="true"></audio>
         
@@ -223,7 +232,7 @@
           <div class="rounded-div absolute w-[750vw] h-[750vw] bg-[#A5D2EE] rounded-full left-1/2 -translate-x-1/2"></div>
         </div> -->
 
-        <div class="category-page-wrapper relative w-full h-[120vh] max-sm:h-[80vh] overflow-hidden px-[9.5vw] py-[8vw]">
+        <div class="category-page-wrapper relative w-full h-[120vh] max-sm:h-[80vh] overflow-hidden px-[9.5vw] py-[8vw] max-sm:pt-[15vw]">
           
 
 
@@ -232,7 +241,7 @@
           </div>
 
 
-          <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[4.5vw] tracking-tight leading-none text-black relative font-[redtrap] font-bolder uppercase">browse by</h1>
+          <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[6vw] max-sm:text-slate-800 tracking-tight leading-none text-black relative font-[redtrap] font-bolder uppercase">browse by</h1>
           <h1 class="category-title font-bold text-[7vw] max-sm:text-[5.6vh] tracking-tight leading-none text-black relative font-[redtrap] font-bold uppercase">Category</h1>
           <div class="circle flex justify-center items-center rounded-full">
             <div class="stripe stp1">
@@ -309,7 +318,7 @@
             </div>
           </div>
   
-          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[59%] left-[10%] max-sm:top-[50%] max-sm:left-[5%] -translate-y-1/2 justify-center ">
+          <div class="panel absolute flex flex-col w-1/2 h-[35%] top-[59%] left-[10%]  max-sm:top-[50%] max-sm:left-[5%] -translate-y-1/2 justify-center ">
             <h2 class="panel-items">Action</h2>
             <h2 class="panel-items">Anime</h2>
             <h2 class="panel-items">All Sports</h2>
@@ -354,47 +363,43 @@
       </div>
 
     <!-- EXPLORE MORE SECTION  -->
-    <div class="explore-page w-full flex relative justify-center items-center py-12 z-[3000]">
+    <div class="explore-page w-full flex relative justify-center items-center py-12 z-[3000] max-sm:py-6">
       <div class="explore-crsr fixed w-[4rem] h-[4rem] bg-slate-500 rounded-full z-[5000]"></div>
 
       <div class="overlay-grain-pattern overlay-grain-basic"></div>
       <audio class="slice-hover-sound" src="sound-effects/UI_menu_rollover.mp3"></audio>
-      <div class="explore-container w-[70%] rounded-md overflow-hidden">
-        <div class="select-sections w-full flex justify-between gap-10 items-center px-20 mb-20 mt-12">
+      <div class="explore-container w-[70%] rounded-md overflow-hidden max-sm:w-[100%]">
+        <div class="select-sections w-full flex justify-between gap-10 items-center px-20 mb-20 mt-12 max-sm:px-2">
           <h2 class="exp-titles active-title">New & Trending</h2>
           <h2 class="exp-titles">Top Sellers</h2>
           <h2 class="exp-titles">Popular Upcoming</h2>
           <h2 class="exp-titles">Specials</h2>
         </div>
-        <div class="selected-section relative w-full h-[180vh]">
+        <div class="selected-section relative w-full h-[160vh] max-sm:h-[100vh]">
           
             
-          <div class="new-and-trending-section absolute w-full h-full inline-block flex flex-col  items-center gap-6">
+          <div class="new-and-trending-section absolute w-full h-full inline-block flex flex-col  items-center gap-0">
             <div class="slice nt-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl  tracking-tight text-white">Ghost Of Tsushima</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw]  tracking-tight text-white">Ghost Of Tsushima</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
                     <span style="background-color:#FACC15">Adventure</span>
-                    
-                    
                   </p>
                 </div>
               </div>
-              <div class="slice-right w-[100px] height-[2vw] flex items-center justify-center rounded-[50px]">
-                
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>>
+              <div class="slice-right">
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Black Myth Wukong</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Black Myth Wukong</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
 
@@ -405,15 +410,14 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Empires Of The Undergrowth</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Empires Of The Undergrowth</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color: #Fa7406">Simulation</span>
@@ -422,15 +426,15 @@
                   </p>
                 </div>
               </div>
-              <div class="slice-right w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[poppins] rounded-md overflow-hidden">
+              <div class="slice-right w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[poppins] rounded-md overflow-hidden max-sm:w-[25vw] max-sm:h-[12vw]">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
                 
                   <div class="h-full w-[40%] bg-green-600 flex justify-center items-center px-2 py-4">
-                    <span class="discount font-bold text-[1.2vw]">-35%</span>
+                    <span class="discount font-bold text-[1.2vw] max-sm:text-[3vw]">-35%</span>
                   </div>
                   <div class="pricing_tag w-[60%] bg-sky-800 h-full flex flex-col justify-center items-center">
-                    <span class="original_price text-sm line-through text-zinc-200">$11.96</span>
-                    <div class="discounted_price text-xl text-[#A3E635] font-semibold">$7.77</div>
+                    <span class="original_price text-[1vw] max-sm:text-[3vw] line-through text-zinc-200">$11.96</span>
+                    <div class="discounted_price text-[1.3vw] max-sm:text-[3vw] text-[#A3E635] font-semibold">$7.77</div>
                   </div>
                 </div>
               </div>
@@ -439,7 +443,7 @@
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Street Fighter 6 </h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Street Fighter 6 </h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43f52">Action</span>
@@ -450,13 +454,13 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Elden Ring</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Elden Ring</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43f52">Action</span>
@@ -468,13 +472,13 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Baludar's Gate</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Baludar's Gate</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43f52">Adventure</span>
@@ -484,17 +488,17 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$35.89</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$35.89</h3>
               </div>
             </div>  
           </div>
-          <div class="top-sellers-section absolute left-[100%] w-full h-full inline-block flex flex-col items-center gap-6">
+          <div class="top-sellers-section absolute left-[100%] w-full h-full inline-block flex flex-col items-center gap-0">
             <div class="slice ts-slice">
               <div class="slice-overlay"></div>
               
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Pubg</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Pubg</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43f52">Action</span>
@@ -506,14 +510,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Counter-Strike 2</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Counter-Strike 2</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43f52">Action</span>
@@ -522,14 +526,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Black Myth Wukong</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Black Myth Wukong</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -540,14 +544,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Destiny 2</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Destiny 2</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -557,14 +561,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Dota 2</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Dota 2</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -574,14 +578,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Elden Ring</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Elden Ring</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43f52">Action</span>
@@ -592,17 +596,17 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
               </div>
             </div>  
           </div>
-          <div class="popular-upcoming-section absolute left-[200%] w-full h-full inline-block flex flex-col items-center gap-6">
+          <div class="popular-upcoming-section absolute left-[200%] w-full h-full inline-block flex flex-col items-center gap-0">
             <div class="slice pu-slice">
               <div class="slice-overlay"></div>
               
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">God Of War</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">God Of War</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -613,14 +617,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$39.49</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$39.49</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Dota 2</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Dota 2</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -630,14 +634,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Avatar Frontiers Of Pandora</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Avatar Frontiers Of Pandora</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -647,14 +651,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-white font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Frostpunk 2</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Frostpunk 2</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color: #Fa7406">Simulation</span>
@@ -664,14 +668,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$21.54</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$21.54</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Still Wakes The Deep</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Still Wakes The Deep</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -680,14 +684,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$39.49</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$39.49</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Elden Ring</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Elden Ring</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43f52">Action</span>
@@ -698,17 +702,17 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
               </div>
             </div> 
           </div>
-          <div class="specials-section absolute left-[300%] w-full h-full inline-block flex flex-col items-center gap-6">
+          <div class="specials-section absolute left-[300%] w-full h-full inline-block flex flex-col items-center gap-0">
             <div class="slice s-slice">
               <div class="slice-overlay"></div>
               
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Dead Space</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Dead Space</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -731,7 +735,7 @@
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Sifu</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Sifu</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -755,7 +759,7 @@
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Street Fighter 6</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Street Fighter 6</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -780,7 +784,7 @@
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Assassin Creed Mirage</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Assassin Creed Mirage</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>
@@ -790,7 +794,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$89.99 </h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$89.99 </h3>
                 
               </div>
             </div>  
@@ -798,7 +802,7 @@
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Uncharted</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Uncharted</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     
@@ -808,14 +812,14 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$39.49</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$39.49</h3>
               </div>
             </div>  
             <div class="slice s-slice">
               <div class="slice-overlay"></div>
               <div class="slice-left w-[60%] h-full flex gap-10 items-center">
                 <div class="slice-left-r">
-                  <h3 class="slice-title text-4xl tracking-tight text-white">Cuphead</h3>
+                  <h3 class="slice-title leading-none  text-4xl max-sm:text-[4.2vw] tracking-tight text-white">Cuphead</h3>
                   <i class="slice-ico ri-windows-fill text-2xl text-white"></i>
                   <p class="slice-badge text-gray-400">
                     <span style="background-color:#F43F5E">Action</span>

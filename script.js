@@ -583,7 +583,6 @@ gsap.to(slideStripe, {
   scrollTrigger:{
     scroller: ".main",
     trigger: ".steam-gift-cards",
-    markers:true,
     start: "top 30%",
     end: "top 0%",
     scrub: .9,
