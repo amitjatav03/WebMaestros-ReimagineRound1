@@ -909,6 +909,15 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   background-color: #FACC15;
 } */
 
+.nt-slice:nth-child(1):hover{
+  background-image: url(images/explore-images/GhostOfTsushima.webp);
+  background-position: center;
+}
+
+.nt-slice:nth-child(2):hover{
+  background-image: url(images/explore-images/black-myth.jpg);
+  background-position: center;
+}
 
 .nt-slice:nth-child(3):hover{
   background-image: url(images/explore-images/empiresofundergrowth.jpg);
