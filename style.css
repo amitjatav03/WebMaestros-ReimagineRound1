@@ -910,32 +910,32 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 } */
 
 .nt-slice:nth-child(1):hover{
-  background-image: url(images/explore-images//GhostOfTsushima.jpeg);
+  background-image: url(images/explore-images/GhostOfTsushima.jpeg);
   background-position: center;
 }
 
 .nt-slice:nth-child(2):hover{
-  background-image: url(images/explore-images//black-myth.jpg);
+  background-image: url(images/explore-images/black-myth.jpg);
   background-position: center;
 }
 
 .nt-slice:nth-child(3):hover{
-  background-image: url(images/explore-images//empiresofundergrowth.jpg);
+  background-image: url(images/explore-images/empiresofundergrowth.jpg);
   background-position: bottom;
 }
 
 .nt-slice:nth-child(4):hover{
-  background-image: url(images/explore-images//streetfighter6.jpeg);
+  background-image: url(images/explore-images/streetfighter6.jpeg);
   background-position: center;
 }
 
 .nt-slice:nth-child(5):hover{
-  background-image: url(images/explore-images//eldenring.jpeg);
+  background-image: url(images/explore-images/eldenring.jpeg);
   background-position: center;
 }
 
 .nt-slice:nth-child(6):hover{
-  background-image: url(images/explore-images//baludarsgte.jpg);
+  background-image: url(images/explore-images/baludarsgte.jpg);
   background-position: center;
 }
 
@@ -948,86 +948,86 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 .ts-slice:nth-child(2):hover{
-  background-image: url(images/explore-images//counterstrike.jpeg);
+  background-image: url(images/explore-images/counterstrike.jpeg);
   background-position: center;
 }
 
 .ts-slice:nth-child(3):hover{
-  background-image: url(images/explore-images//black-myth.jpg);
+  background-image: url(images/explore-images/black-myth.jpg);
   background-position: center;
 }
 
 .ts-slice:nth-child(4):hover{
-  background-image: url(images/explore-images//destiny-2.jpg);
+  background-image: url(images/explore-images/destiny-2.jpg);
   background-position: center;
 }
 
 .ts-slice:nth-child(5):hover{
-  background-image: url(images/explore-images//dota-2.jpg);
+  background-image: url(images/explore-images/dota-2.jpg);
   background-position: center;
 }
 
 .ts-slice:nth-child(6):hover{
-  background-image: url(images/explore-images//eldenring.jpeg);
+  background-image: url(images/explore-images/eldenring.jpeg);
   background-position: center;
 }
 
 .pu-slice:nth-child(1):hover{
-  background-image: url(images/explore-images//godofwarr.jpg);
+  background-image: url(images/explore-images/godofwarr.jpg);
   background-position: center;
 }
 
 .pu-slice:nth-child(2):hover{
-  background-image: url(images/explore-images//dota-2.jpg);
+  background-image: url(images/explore-images/dota-2.jpg);
   background-position: center;
 }
 
 .pu-slice:nth-child(3):hover{
-  background-image: url(images/explore-images//afop1.jpg);
+  background-image: url(images/explore-images/afop1.jpg);
   background-position: center;
 }
 
 .pu-slice:nth-child(4):hover{
-  background-image: url(images/explore-images//frostpunk2.jpg);
+  background-image: url(images/explore-images/frostpunk2.jpg);
   background-position: center;
 }
 
 .pu-slice:nth-child(5):hover{
-  background-image: url(images/explore-images//stillwakesthedeal.png);
+  background-image: url(images/explore-images/stillwakesthedeal.png);
   background-position: center;
 }
 
 .pu-slice:nth-child(6):hover{
-  background-image: url(images/explore-images//eldenring.jpeg);
+  background-image: url(images/explore-images/eldenring.jpeg);
   background-position: center;
 }
 .s-slice:nth-child(1):hover{
-  background-image: url(images/explore-images//deadspace.jpg);
+  background-image: url(images/explore-images/deadspace.jpg);
   background-position: center;
 }
 
 .s-slice:nth-child(2):hover{
-  background-image: url(images/explore-images//sifu.jpg);
+  background-image: url(images/explore-images/sifu.jpg);
   background-position: center;
 }
 
 .s-slice:nth-child(3):hover{
-  background-image: url(images/explore-images//streetfighter6.jpeg);
+  background-image: url(images/explore-images/streetfighter6.jpeg);
   background-position: center;
 }
 
 .s-slice:nth-child(4):hover{
-  background-image: url(images/explore-images//assassincreedmariage.jpg);
+  background-image: url(images/explore-images/assassincreedmariage.jpg);
   background-position: center;
 }
 
 .s-slice:nth-child(5):hover{
-  background-image: url(images/explore-images//uncharted.jpeg);
+  background-image: url(images/explore-images/uncharted.jpeg);
   background-position: center;
 }
 
 .s-slice:nth-child(6):hover{
-  background-image: url(images/explore-images//cuphead.jpg);
+  background-image: url(images/explore-images/cuphead.jpg);
   background-position: center;
 }
 
