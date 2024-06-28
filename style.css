@@ -3,57 +3,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 /* -------------- IMPORTING FONTS ---------------  */
-@font-face {
-  font-family: blogh;
-  src: url(fonts/Blogh.otf);
-}
-@font-face {
-  font-family: tungsten;
-  src: url(fonts/tungsten.ttf);
-}
-/* @font-face {
-  font-family: Gilroy;
-  src: url(fonts/Gilroy-Regular.ttf);
-} */
+
 @font-face {
   font-family: azonix;
-  src: url(fonts/Azonix.otf);
+  src: url(fonts/azonix.woff2);
 }
 @font-face {
   font-family: redtrap;
-  src: url(fonts/RedtrapExpandedPuo-woG33.otf);
+  src: url(fonts/redtrap.woff2);
 }
 @font-face {
   font-family: abc;
-  src: url(fonts/ABCWhyteVariable.8506f1e8.woff2);
+  src: url(fonts/abc.woff2);
 }
 @font-face {
   font-family: gestura;
-  src: url(fonts/GesturaDisplay-Regular.woff2);
+  src: url(fonts/gestura.woff2);
 }
 @font-face {
   font-family: aeonik;
-  src: url(fonts/AeonikFono-Regular.woff2);
+  src: url(fonts/aeonik.woff2);
 }
 @font-face {
   font-family: twk;
-  src: url(fonts/TWKEverett-Regular.woff2);
-}
-@font-face {
-  font-family: twk2;
-  src: url(fonts/TWKEverett-Regular\ \(1\).woff2);
-}
-@font-face {
-  font-family: gaster;
-  src: url(fonts/DxGaster-Thin.otf);
-}
-@font-face {
-  font-family: highpro;
-  src: url(fonts/Highpro-lgY7X.ttf);
-}
-@font-face {
-  font-family: vortex;
-  src: url(fonts/vortex-sans-black.ttf);
+  src: url(fonts/twk.woff2);
 }
 
 /* --------------- DECLARING VARIABLES --------------  */
@@ -937,32 +910,32 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 } */
 
 .nt-slice:nth-child(1):hover{
-  background-image: url(explore-imgs/GhostOfTsushima.jpeg);
+  background-image: url(images/explore-images//GhostOfTsushima.jpeg);
   background-position: center;
 }
 
 .nt-slice:nth-child(2):hover{
-  background-image: url(explore-imgs/black-myth.jpg);
+  background-image: url(images/explore-images//black-myth.jpg);
   background-position: center;
 }
 
 .nt-slice:nth-child(3):hover{
-  background-image: url(explore-imgs/empiresofundergrowth.jpg);
+  background-image: url(images/explore-images//empiresofundergrowth.jpg);
   background-position: bottom;
 }
 
 .nt-slice:nth-child(4):hover{
-  background-image: url(explore-imgs/streetfighter6.jpeg);
+  background-image: url(images/explore-images//streetfighter6.jpeg);
   background-position: center;
 }
 
 .nt-slice:nth-child(5):hover{
-  background-image: url(explore-imgs/eldenring.jpeg);
+  background-image: url(images/explore-images//eldenring.jpeg);
   background-position: center;
 }
 
 .nt-slice:nth-child(6):hover{
-  background-image: url(explore-imgs/baludarsgte.jpg);
+  background-image: url(images/explore-images//baludarsgte.jpg);
   background-position: center;
 }
 
@@ -970,91 +943,91 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 /* ---- top seller section ----  */
 
 .ts-slice:nth-child(1):hover{
-  background-image: url(explore-imgs/pubg.jpeg);
+  background-image: url(images/explore-images/pubg.jpeg);
   background-position: center;
 }
 
 .ts-slice:nth-child(2):hover{
-  background-image: url(explore-imgs/counterstrike.jpeg);
+  background-image: url(images/explore-images//counterstrike.jpeg);
   background-position: center;
 }
 
 .ts-slice:nth-child(3):hover{
-  background-image: url(explore-imgs/black-myth.jpg);
+  background-image: url(images/explore-images//black-myth.jpg);
   background-position: center;
 }
 
 .ts-slice:nth-child(4):hover{
-  background-image: url(explore-imgs/destiny-2.jpg);
+  background-image: url(images/explore-images//destiny-2.jpg);
   background-position: center;
 }
 
 .ts-slice:nth-child(5):hover{
-  background-image: url(explore-imgs/dota-2.jpg);
+  background-image: url(images/explore-images//dota-2.jpg);
   background-position: center;
 }
 
 .ts-slice:nth-child(6):hover{
-  background-image: url(explore-imgs/eldenring.jpeg);
+  background-image: url(images/explore-images//eldenring.jpeg);
   background-position: center;
 }
 
 .pu-slice:nth-child(1):hover{
-  background-image: url(explore-imgs/godofwarr.jpg);
+  background-image: url(images/explore-images//godofwarr.jpg);
   background-position: center;
 }
 
 .pu-slice:nth-child(2):hover{
-  background-image: url(explore-imgs/dota-2.jpg);
+  background-image: url(images/explore-images//dota-2.jpg);
   background-position: center;
 }
 
 .pu-slice:nth-child(3):hover{
-  background-image: url(explore-imgs/afop1.jpg);
+  background-image: url(images/explore-images//afop1.jpg);
   background-position: center;
 }
 
 .pu-slice:nth-child(4):hover{
-  background-image: url(explore-imgs/frostpunk2.jpg);
+  background-image: url(images/explore-images//frostpunk2.jpg);
   background-position: center;
 }
 
 .pu-slice:nth-child(5):hover{
-  background-image: url(explore-imgs/stillwakesthedeal.png);
+  background-image: url(images/explore-images//stillwakesthedeal.png);
   background-position: center;
 }
 
 .pu-slice:nth-child(6):hover{
-  background-image: url(explore-imgs/eldenring.jpeg);
+  background-image: url(images/explore-images//eldenring.jpeg);
   background-position: center;
 }
 .s-slice:nth-child(1):hover{
-  background-image: url(explore-imgs/deadspace.jpg);
+  background-image: url(images/explore-images//deadspace.jpg);
   background-position: center;
 }
 
 .s-slice:nth-child(2):hover{
-  background-image: url(explore-imgs/sifu.jpg);
+  background-image: url(images/explore-images//sifu.jpg);
   background-position: center;
 }
 
 .s-slice:nth-child(3):hover{
-  background-image: url(explore-imgs/streetfighter6.jpeg);
+  background-image: url(images/explore-images//streetfighter6.jpeg);
   background-position: center;
 }
 
 .s-slice:nth-child(4):hover{
-  background-image: url(explore-imgs/assassincreedmariage.jpg);
+  background-image: url(images/explore-images//assassincreedmariage.jpg);
   background-position: center;
 }
 
 .s-slice:nth-child(5):hover{
-  background-image: url(explore-imgs/uncharted.jpeg);
+  background-image: url(images/explore-images//uncharted.jpeg);
   background-position: center;
 }
 
 .s-slice:nth-child(6):hover{
-  background-image: url(explore-imgs/cuphead.jpg);
+  background-image: url(images/explore-images//cuphead.jpg);
   background-position: center;
 }
 

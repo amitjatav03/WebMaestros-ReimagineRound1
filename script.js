@@ -585,7 +585,7 @@ gsap.to(slideStripe, {
     trigger: ".steam-gift-cards",
     start: "top 30%",
     end: "top 0%",
-    scrub: .9,
+    scrub: 2,
   }
 })
 
