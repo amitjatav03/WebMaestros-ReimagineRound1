@@ -265,7 +265,7 @@ let categoryDetails = [
   {categoryTitle: "ACTION", categoryDesc: "Dive into high-speed, adrenaline-pumping adventures where reflexes and skill are key. Experience intense combat, thrilling chases, and epic battles in dynamic and fast-paced environments.", wallpaperSrc: "live wallpapers/action.mp4", categoryAudio: "sounds/category-sounds/s1.mp3"},
   {categoryTitle: "ANIME", categoryDesc: "Dive into vibrant worlds inspired by your favorite anime. Enjoy captivating storylines, stylized visuals, and dynamic gameplay that bring beloved characters and epic adventures to life.", wallpaperSrc: "live wallpapers/anime2.mp4", categoryAudio: "sounds/category-sounds/s2.mp3"},
   {categoryTitle: "ALL SPORTS", categoryDesc: "Experience the thrill of competition with realistic or fantasy sports simulations. Play your favorite sports, master skills, and compete for glory in immersive and dynamic arenas.", wallpaperSrc: "live wallpapers/all-sports.mp4", categoryAudio: "sounds/category-sounds/s3.mp3"},
-  {categoryTitle: "ROLL PLAYING", categoryDesc: "Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.", wallpaperSrc: "live wallpapers/rpg.mp4", categoryAudio: "sounds/category-sounds/s4.mp3"},
+  {categoryTitle: "ROLE PLAYING", categoryDesc: "Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.", wallpaperSrc: "live wallpapers/rpg.mp4", categoryAudio: "sounds/category-sounds/s4.mp3"},
   {categoryTitle: "SURVIVAL", categoryDesc: "Test your endurance and resourcefulness in harsh environments. Gather resources, build shelters, and fend off dangers as you strive to stay alive in challenging settings.", wallpaperSrc: "live wallpapers/survival.mp4", categoryAudio: "sounds/category-sounds/s5.mp3"},
   {categoryTitle: "MULTIPLAYER", categoryDesc: "Connect with friends and players worldwide in competitive or cooperative modes. Engage in battles, teamwork, and strategic gameplay across a variety of exciting and dynamic environments.", wallpaperSrc: "live wallpapers/multiplayer.mp4", categoryAudio: "sounds/category-sounds/s6.mp3"},
   {categoryTitle: "PUZZLE", categoryDesc: "Challenge your mind with engaging and thought-provoking puzzles. Test your logic, strategy, and problem-solving skills across a variety of captivating and addictive gameplay experiences.", wallpaperSrc: "live wallpapers/puzzle.mp4", categoryAudio: "sounds/category-sounds/s7.mp3"}
@@ -301,12 +301,12 @@ catImages.forEach(function(catImg, idx){
       <audio class="cat-bgm" src="${categoryDetails[idx].categoryAudio}"></audio>
       <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
       <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
-      <h1 class="text-[4vw] z-[1250] text-white font-[abc] tracking-tight font-semibold">${categoryDetails[idx].categoryTitle}</h1>
-      <p class="desc w-[65%] z-[1250] text-[1.6vw] text-center text-white">
+      <h1 class="text-[4vw] max-sm:text-[8vw] z-[1250] text-white font-[gestura] tracking-tight font-semibold">${categoryDetails[idx].categoryTitle}</h1>
+      <p class="desc max-sm:text-[3.2vw] max-sm:w-[80%] w-[65%] z-[1250] text-[1.6vw] font-[aeonik] text-center text-white">
         ${categoryDetails[idx].categoryDesc}
       </p>
-      <button class="view border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-2xl px-2 py-1 rounded-md">View More</button>
-      <i id="cc" class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] cursor-pointer hover:text-slate-500"></i>
+      <button class="view border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-[2vw] max-sm:text-[4vw] px-2 py-1 rounded-md">View More</button>
+      <i id="cc" class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] max-sm:text-[8vw] font-[twk] cursor-pointer hover:text-slate-500"></i>
       `;
     clickedCategory.innerHTML = clickedCatDetails;
     catOverlay = document.querySelector(".category-side-overlay");
