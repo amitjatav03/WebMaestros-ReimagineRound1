@@ -333,7 +333,6 @@ catImages.forEach(function(catImg, idx){
     closeCatBtn = document.querySelector(".close-cat");
 
   closeCatBtn.addEventListener("click", function(){
-    console.log("Hello");
     catTitle.forEach(t => {
       t.style.display = "block";
     })
@@ -345,11 +344,21 @@ catImages.forEach(function(catImg, idx){
     catOverlay.style.opacity = 0;
     catOverlay.style.display = "none";
     gsap.to(catImg, {
-      width: "30vw",
-      height: "45vw",
+      // width: "30vw",
+      // height: "45vw",
       opacity: 1,
       duration: .4
     })
+    // let v = window.matchMedia("(max-width: 650px)");
+    // if(v.matches) {
+    //   gsap.to(catImg, {
+    //     width: "50vw",
+    //     height: "40vh",
+    //     opacity: 1,
+    //     duration: .4
+    //   })
+    // }
+    
     gsap.to(desc, {
       opacity: 0,
     })
