@@ -3,36 +3,32 @@
   <head>
     <meta charset="utf-8" />
     <title>Welcome to Steam</title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
-    />
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+    
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+    <!-- JQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- RemixIcon CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
+
+    <!-- Swiper CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     
     <!-- <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-
+    
+    
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="responsive.css">
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
   <body>
 
-
-
-
-    <div class="main overflow-hidden">
+    <div class="main bg-[url(steam-bg.png)] bg-repeat overflow-hidden">
 
       <!-- LOADER  -->
       <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
@@ -87,7 +83,7 @@
 
 
       <!-- LANDING PAGE -->
-      <div data-scroll class="landing-page relative w-full h-screen bg-[var(--dark-blue)] z-[1000]">
+      <div class="landing-page relative w-full h-screen z-[1000]">
 
         <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
 
@@ -213,8 +209,8 @@
   
 
       <!-- CATEGORY SECTION  -->
-      <div data-scroll  class="category-page relative w-full h-[120vh] max-sm:h-[70vh] bg-[#EBF1FC] z-[1900]">
-        <div class="overlay-grain-pattern overlay-grain-basic"></div>
+      <div class="category-page bg-[url(steam-bg.png)] bg-repeat relative w-full h-[120vh] max-sm:h-[70vh] bg-[#EBF1FC] z-[1900]">
+        <!-- <div class="overlay-grain-pattern overlay-grain-basic"></div> -->
         <audio class="category-panel-hover" src="sound-effects/category-items-click.mp3" autoplay="true"></audio>
         
         <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
@@ -241,8 +237,8 @@
           </div>
 
 
-          <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[6vw] max-sm:text-slate-800 tracking-tight leading-none text-black relative font-[redtrap] font-bolder uppercase">browse by</h1>
-          <h1 class="category-title font-bold text-[7vw] max-sm:text-[5.6vh] tracking-tight leading-none text-black relative font-[redtrap] font-bold uppercase">Category</h1>
+          <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[6vw] max-sm:text-slate-800 tracking-tight leading-none text-slate-200 relative font-[redtrap] font-bolder uppercase">browse by</h1>
+          <h1 class="category-title font-bold text-[7vw] max-sm:text-[5.6vh] tracking-tight leading-none text-slate-200 relative font-[redtrap] font-bold uppercase">Category</h1>
           <div class="circle flex justify-center items-center rounded-full">
             <div class="stripe stp1">
               <div class="first">
@@ -332,13 +328,127 @@
 
         
       </div>
+      
+      <div class="more-games bg-[url(steam-bg.png)] bg-repeat w-full flex items-center justify-center gap-4 py-20">
+          <div class="mg-container w-[80%] flex flex-col gap-4">
+            <div class="mg-row1 flex gap-4">
+              <div class="mg-cards basis-1/4 h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/257032261/movie480_vp9.webm?t=1718789373" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img1.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-40%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 4,799</span>&#8377 2,879</h2>
+                </div>
+              </div>
+              <div class="mg-cards basis-1/4 h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/256815511/movie480_vp9.webm?t=1669135891" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img2.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-67%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 1,749</span>&#8377 577</h2>
+                </div>
+              </div>
+              <div class="mg-cards basis-1/4 h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/256985132/movie480_vp9.webm?t=1712756070" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img3.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-20%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 730</span>&#8377 584</h2>
+                </div>
+              </div>
+              <div class="mg-cards basis-1/4 h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/256934289/microtrailer.webm?t=1678316556" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img4.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-50%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 819</span>&#8377 409</h2>
+                </div>
+              </div>
+            </div>
+            <div class="mg-row2 flex gap-4">
+              <div class="mg-cards basis-1/3 h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/257004269/movie480_vp9.webm?t=1709132456" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img5.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-25%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 250</span>&#8377 187</h2>
+                </div>
+              </div>
+              <div class="mg-cards basis-1/3 h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/257022389/movie480_vp9.webm?t=1715622572" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img6.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-20%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 3,499</span>&#8377 2,799</h2>
+                </div>
+              </div>
+              <div class="mg-cards basis-1/3 h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/256784649/movie480_vp9.webm?t=1588870791" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img7.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-33%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 565 </span>&#8377 378</h2>
+                </div>
+              </div>
+            </div>
+            <div class="mg-row3 flex gap-4">
+              <div class="mg-cards w-[25%] h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/256982920/movie480_vp9.webm?t=1700104657" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img8.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-50%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 250</span>&#8377 187</h2>
+                </div>
+              </div>
+              <div class="mg-cards w-[25%] h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/256918530/movie480_vp9.webm?t=1670012877" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img9.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-33%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 565</span>&#8377 378</h2>
+                </div>
+              </div>
+              <div class="mg-cards w-[25%] h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/256998299/movie480_vp9.webm?t=1712013029" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img10.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-10%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 770</span>&#8377 693</h2>
+                </div>
+              </div>
+              <div class="mg-cards w-[25%] h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/256897204/movie480_vp9.webm?t=1715645472" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img11.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-20%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 730</span>&#8377 584</h2>
+                </div>
+              </div>
+            </div>
+            <div class="mg-row4 flex gap-4">
+              <div class="mg-cards basis-1/3 h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/256983888/movie480_vp9.webm?t=1700582401" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img12.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-30%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 1,175</span>&#8377 822</h2>
+                </div>
+              </div>
+              <div class="mg-cards basis-1/3 h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/257006667/movie480_vp9.webm?t=1710365932" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img13.webp"></video>
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-50%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 880</span>&#8377 440</h2>
+                </div>
+              </div>
+              <div class="mg-cards basis-1/3 flex flex-col items-start justify-start h-[15rem]">
+                <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/257006667/movie480_vp9.webm?t=1710365932" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img14.webp"></video>
+         
+                <div class="mg-pricing bg-black h-[15%] w-[60%] flex">
+                  <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-75%</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2">&#8377 1,500</span>&#8377 375</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+
+
 
       <!-- STEAM GIFT CARDS SECTION -->
-      <div class="steam-gift-cards relative w-full h-screen max-sm:h-[70vh] bg-[#2A475E] font-[redtrap] z-[2400] relative flex justify-center items-center ">
-        <div class="slide-stripe w-full h-[100%] bg-black absolute bottom-0 z-[5000]">
+      <div class="steam-gift-cards bg-[url(steam-bg.png)] bg-repeat relative w-full h-screen max-sm:h-[70vh] bg-[#2A475E] font-[redtrap] z-[2400] relative flex justify-center items-center ">
+        <!-- <div class="slide-stripe w-full h-[100%] bg-black absolute bottom-0 z-[5000]">
           <div class="overlay-grain-pattern overlay-grain-basic"></div>
-        </div>
-        <div class="overlay-grain-pattern overlay-grain-basic"></div>
+        </div> -->
+        <!-- <div class="overlay-grain-pattern overlay-grain-basic"></div> -->
         <!-- <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div> -->
         <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[10%] left-[10%] font-[redtrap] font-bold text-gray-100 max-sm:text-4xl">STEAM <br> GIFT CARDS</h1>
         <!-- <img class="steam-gc-img absolute top-[5%] left-[34.5%] max-sm:w-[10rem] max-sm:top-[3%] max-sm:left-[57%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.png" alt=""> -->
@@ -363,10 +473,10 @@
       </div>
 
     <!-- EXPLORE MORE SECTION  -->
-    <div class="explore-page w-full flex relative justify-center items-center py-12 z-[3000] max-sm:py-6">
-      <div class="explore-crsr fixed w-[4rem] h-[4rem] bg-slate-500 rounded-full z-[5000]"></div>
+    <div class="explore-page bg-[url(steam-bg.png)] bg-repeat w-full flex relative justify-center items-center py-12 z-[3000] max-sm:py-6">
+      <!-- <div class="explore-crsr fixed w-[4rem] h-[4rem] bg-slate-500 rounded-full z-[5000]"></div> -->
 
-      <div class="overlay-grain-pattern overlay-grain-basic"></div>
+      <!-- <div class="overlay-grain-pattern overlay-grain-basic"></div> -->
       <audio class="slice-hover-sound" src="sound-effects/UI_menu_rollover.mp3"></audio>
       <div class="explore-container w-[70%] rounded-md overflow-hidden max-sm:w-[100%]">
         <div class="select-sections w-full flex justify-between gap-10 items-center px-20 mb-20 mt-12 max-sm:px-2">
@@ -392,7 +502,7 @@
                 </div>
               </div>
               <div class="slice-right">
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
@@ -410,7 +520,7 @@
                 </div>
               </div>
               <div class="slice-right">
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
@@ -454,7 +564,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
@@ -472,7 +582,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
@@ -488,7 +598,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$35.89</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$35.89</h3>
               </div>
             </div>  
           </div>
@@ -544,7 +654,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$43.08</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
@@ -596,7 +706,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$43.08</h3>
               </div>
             </div>  
           </div>
@@ -617,7 +727,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$39.49</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$39.49</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
@@ -668,7 +778,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$21.54</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$21.54</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
@@ -684,7 +794,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$39.49</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$39.49</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
@@ -702,7 +812,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$43.08</h3>
               </div>
             </div> 
           </div>
@@ -794,7 +904,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$89.99 </h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$89.99 </h3>
                 
               </div>
             </div>  
@@ -812,7 +922,7 @@
               </div>
               <div class="slice-right">
                 <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">$39.49</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[white] font-semibold px-4 py-2">$39.49</h3>
               </div>
             </div>  
             <div class="slice s-slice">
@@ -849,15 +959,15 @@
 
       
       <!-- OFFER SECTION -->
-      <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen  flex justify-center flex-col gap-10">
+      <div class="offer-page bg-[url(steam-bg.png)] bg-repeat relative z-[3000] w-full max-sm:h-[70vh] h-screen  flex justify-center flex-col gap-10">
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <div class="offer-title max-sm:mt-20 px-[8vw]">
           <h1 class="max-sm:text-4xl text-4xl tracking-tight text-[var(--light)] font-[redtrap] uppercase">Special</h1>
           <h1 class="max-sm:text-4xl text-8xl tracking-tight text-white font-[redtrap] uppercase">Offers</h1>
         </div>
         <div class="marque-effect relative max-sm:h-4/5 h-1/2 overflow-hidden">
-          <div class="blur-left absolute left-0 top-0"></div>
-          <div class="blur-right absolute right-0 top-0"></div>
+          <!-- <div class="blur-left absolute left-0 top-0"></div>
+          <div class="blur-right absolute right-0 top-0"></div> -->
           <div class="move h-full absolute top-0 left-0 whitespace-nowrap">
             <div class="marquee-cards">
               <div class="img-section">
@@ -1003,7 +1113,7 @@
 
 
       <!-- FOOTER SECTION  -->
-      <div class="footer w-full relative left-0 bottom-0 h-screen bg-[#0D0F12] text-[--light] font-[Gilroy] flex flex-col gap-0">
+      <div class="footer w-full relative left-0 bottom-0 h-screen bg-[#0D0F12] text-[--light] flex flex-col gap-0">
         <!-- FOOTER TOP -->
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <div class="footer-top relative top-0 w-full h-[35%] flex max-sm:flex-col justify-between px-[10vw] py-8 gap-4">
@@ -1070,7 +1180,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

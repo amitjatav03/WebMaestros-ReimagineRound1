@@ -1,4 +1,4 @@
-@import 'node_modules/locomotive-scroll/dist/locomotive-scroll';
+/* @import 'node_modules/locomotive-scroll/dist/locomotive-scroll'; */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
@@ -388,7 +388,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   width: 30vw;
   height: 45vw;
   position: relative;
-  cursor: pointer;
+  cursor: none;
   top: 50%;
   transform: translateY(-50%);
   -webkit-filter: drop-shadow(5px 15px 10px #222);
@@ -429,7 +429,8 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 .panel-items{
   font-family: gestura; 
   text-transform: uppercase;
-  color: var(--dark-blue);
+  /* color: var(--dark-blue); */
+  color: white;
   font-size: 2.5vw;
   cursor: pointer;
   line-height: 3.7vw;
@@ -441,7 +442,14 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 
-
+/* ------------- MORE GAMES -------------- */
+.mg-vid{
+  transition: all .2s ease;
+  cursor: pointer;
+}
+.mg-vid:hover{
+  scale: 1.05;
+}
 
 
 
@@ -753,7 +761,9 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 .slice-right h3{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background: linear-gradient(to right, #075985, #0369A1);
+  /* background: linear-gradient(to right, #075985, #0369A1); */
+  background-color: rgba(0, 0, 0, 0.642);
+  opacity: 0.8;
 
 }
 
@@ -851,6 +861,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 .slice-badge span{ 
   text-transform: uppercase;
   font-weight: bold;
+  color: black;
 }
 
 
@@ -888,9 +899,9 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 .slice-left-r p span{
   font-family: gilroy;
   font-weight: bold;
-  color: #022C22;
+  /* color: #022C22; */
+  
   background-color: #22C55E;
-  border-radius: 5px;
   padding: 2px 6px;
 }
 /* .slice-left-r p span:nth-child(2){
@@ -1102,6 +1113,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
     left: 85%;
   }
   .panel-items{
+
     font-family: abc;
     font-weight: bold;
     letter-spacing: -1px;
