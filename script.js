@@ -876,13 +876,12 @@ function inactiveTitle() {
 
 let mgCont = document.querySelector(".mg-container");
 gsap.to(mgCont, {
-  scale: 1.2,
-  duration: 2,
+  scale: 1.4,
+  duration: 1,
   scrollTrigger: {
     scroller: ".main",
     trigger: ".mg-container", 
-    markers: true,
-    scrub: 2,
+    scrub: .2,
     start: "top -100%",
   }
 })
