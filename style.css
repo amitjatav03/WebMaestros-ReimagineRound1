@@ -549,21 +549,21 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 .offer-left h1{
-  font-family: aeonik;
+  font-family: twk;
  font-size: 1.5rem;
  font-weight: 600;
 }
 
 .offer-r-top p{
   font-size: .8rem;
-  font-family: aeonik;
+  font-family: twk;
   text-decoration: line-through;
 }
 
-.offer-r-bottom p{
-  font-family: aeonik;
+.twk-r-bottom p{
+  font-family: twk;
   font-size: 1.1rem;
-  font-weight: 800;
+  font-weight: bold;
 }
 
 .offer-section{
@@ -760,6 +760,10 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   animation-duration: 0.3s;
 }
 
+
+.free-to-play{
+  background-color: #A3E635;
+}
 
 .slice-right h3{
   background: linear-gradient(to right, #075985, #0369A1);

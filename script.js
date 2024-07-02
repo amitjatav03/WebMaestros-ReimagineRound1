@@ -890,3 +890,10 @@ if(winCheck.matches) {
   })
 
 }
+
+
+let portraitView = window.matchMedia("(max-width: 600px)");
+if(portraitView.matches) {
+  let mainVid = document.querySelector(".main-video");
+  mainVid.src = "videos/main-video-portrait.mp4";
+}

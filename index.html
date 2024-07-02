@@ -87,11 +87,11 @@
 
         <div class="top-bar max-sm:top-[7%] absolute w-[90vw] h-[10vw] top-[-2%] left-[50%] -translate-x-[50%] flex justify-between items-center z-[120]">
 
-          <img class="max-sm:w-[35vw] w-[12vw]" src="images/steam_logo.svg"
+          <img loading="lazy" class="max-sm:w-[35vw] w-[12vw]" src="images/steam_logo.svg"
             alt=""/>
   
           <div class="top-right flex items-center justify-center gap-5">
-            <button class="install-btn bg-green-800 text-white px-3 py-3 font-[poppins] rounded-lg hover:bg-green-700 transition">Install Steam</button>
+            <button class="install-btn bg-green-800 text-white px-3 py-3 font-[twk] rounded-lg hover:bg-green-700 transition">Install Steam</button>
             <i class="nav-btn ri-menu-3-line max-sm:text-[8vw] text-[2.5vw] invert cursor-pointer"></i>
   
           </div>
@@ -134,29 +134,32 @@
           </div>
         </div>
 
-        <div class="install-steam-section relative bg-[#1D2024] -top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[98%] h-[96%] z-[500] px-40 py-10 flex justify-center items-center rounded-lg gap-2">
+        <div class="install-steam-section relative bg-[#1D2024] -top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[98%] h-[96%] max-sm:h-[60%] z-[500] px-40 py-10 flex justify-center items-center max-sm:flex-col rounded-lg gap-2 max-sm:px-2">
           <div class="overlay-grain-pattern overlay-grain-basic"></div>
           
-          <i class="close-steam-install ri-close-large-fill absolute right-[12%] z-[600] top-[7%] cursor-pointer text-[2.2vw] text-white"></i>
-          <div class="install-left w-[40%] h-full flex flex-col gap-4 justify-center">
-            <img class="w-[17vw]" src="images/steam-logo-install-steam.svg" alt="">
-            <h3 class="text-white text-[1.5vw]">Steam is the ultimate destination for playing, discussing, and creating games.</h3>
+          <i class="close-steam-install ri-close-large-fill absolute right-[12%] z-[600] top-[7%] max-sm:top-[3%] max-sm:right-[6%]  cursor-pointer text-[2.2vw] text-white max-sm:text-[7vw]"></i>
+
+          <div class="install-left w-[40%] max-sm:w-[80%]  h-full flex flex-col gap-4 justify-center">
+
+            <img loading="lazy" class="w-[17vw] max-sm:w-[25vw]" src="images/steam-logo-install-steam.svg" alt="">
+            <h3 class="text-white text-[1.5vw] max-sm:text-[3.2vw] ">Steam is the ultimate destination for playing, discussing, and creating games.</h3>
             <div class="active-audience flex gap-[20%]">
               <div class="online-audience">
-                <h5 class="text-slate-300 text-[.8vw]"><i class="ri-circle-fill text-blue-500"></i> &nbsp; ONLINE</h5>
-                <h3 class="text-white text-[2vw]">24,776,252</h3>
+                <h5 class="text-slate-300 text-[.8vw] max-sm:text-[2.2vw]"><i class="ri-circle-fill text-blue-500"></i> &nbsp; ONLINE</h5>
+                <h3 class="text-white text-[2vw] max-sm:text-[4vw]">24,776,252</h3>
               </div>
               <div class="playing-now-audience">
-                <h5 class="text-slate-300 text-[.8vw]"><i class="ri-circle-fill text-green-500"></i> &nbsp; PLAYING NOW</h5>
-                <h3 class="text-white text-[2vw]">6,827,808</h3>
+                <h5 class="text-slate-300 text-[.8vw] max-sm:text-[2.2vw]"><i class="ri-circle-fill text-green-500"></i> &nbsp; PLAYING NOW</h5>
+                <h3 class="text-white text-[2vw] max-sm:text-[4vw]">6,827,808</h3>
               </div>
             </div>
-            <button class="text-white bg-[#0971E5] text-start px-4 py-4 text-[1.1vw]">Get the app for mobile</button>
-            <p class="text-white text-[.85vw] text-center">The <span class="underline">Steam mobile apps</span> support your PC gaming experience on the go</p>
-            <h4 class="font-bold text-white text-[1.1vw] text-center">Start playing now...</h4>
-            <button class="text-white bg-[#303336] text-start px-4 py-4 text-[1.1vw]">Get the app for PC</button>
+            <button class="text-white bg-[#0971E5] text-start px-4 py-4 text-[1.1vw] max-sm:text-[3vw] max-sm:px-2 max-sm:py-2">Get the app for mobile</button>
+            <p class="text-white text-[.85vw] text-center max-sm:text-[2.4vw]">The <span class="underline">Steam mobile apps</span> support your PC gaming experience on the go</p>
+            <h4 class="font-bold text-white text-[1.1vw] text-center max-sm:text-[2.8vw]">Start playing now...</h4>
+            <button class="text-white bg-[#303336] text-start px-4 py-4 text-[1.1vw] max-sm:text-[3vw] max-sm:px-2 max-sm:py-2">Get the app for PC</button>
           </div>
-          <div class="install-right w-[60%] h-full flex justify-center items-center">
+
+          <div class="install-right w-[60%] max-sm:w-[80%] h-full flex justify-center items-center max-sm:hidden">
             <video width="100%" height="auto" autoplay=""  muted="" loop=""  poster="https://cdn.akamai.steamstatic.com/store/about/videos/about_hero_loop_web.png">
               <source src="https://cdn.akamai.steamstatic.com/store/about/videos/about_hero_loop_web.webm" type="video/webm">
               <source src="https://cdn.akamai.steamstatic.com/store/about/videos/about_hero_loop_web.mp4" type="video/mp4">
@@ -166,7 +169,7 @@
         </div>
 
         <div class="img-crsr flex items-center justify-center w-[8rem]  h-[8rem] rounded-full fixed z-[999] opacity-0">
-          <p class="text-white text-[1vw] font-bold font-[poppins]">< Drag ></p>
+          <p class="text-white text-[1vw] font-bold font-[twk]">< Drag ></p>
         </div>
         
         <div class="overlay top-0 left-0 absolute w-full h-screen z-[100] "></div>
@@ -175,29 +178,29 @@
         
         
         
-        <video class="main-video absolute w-full h-screen top-0 left-0 z-[90] object-cover object-center" src="videos/landing-page-video.mp4" autoplay loop muted></video>
+        <video class="main-video absolute w-full h-screen top-0 left-0 z-[90] object-cover object-center" src="videos/main-video.mp4" autoplay loop muted></video>
         
         <div class="swiper mySwiper absolute z-[150] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
 
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
-              <img src="images/landing-page-images/ghost-of-tsushima/img1.webp" />
+              <img loading="lazy" src="images/landing-page-images/ghost-of-tsushima/img1.webp" />
             </div>
             <div class="swiper-slide">
-              <img  src="images/landing-page-images/pubg/img1.webp" />
+              <img loading="lazy"  src="images/landing-page-images/pubg/img1.webp" />
             </div>
             <div class="swiper-slide">
-              <img src="images/landing-page-images/valhalla/img1.webp" />
+              <img loading="lazy" src="images/landing-page-images/valhalla/img1.webp" />
             </div>
             <div class="swiper-slide">
-              <img src="images/landing-page-images/apex/img1.webp"/>
+              <img loading="lazy" src="images/landing-page-images/apex/img1.webp"/>
             </div>
             <div class="swiper-slide">
-              <img src="images/landing-page-images/sottr/img1.webp"/>
+              <img loading="lazy" src="images/landing-page-images/sottr/img1.webp"/>
             </div>
             <div class="swiper-slide">
-              <img src="images/landing-page-images/rdr2/img1.webp"/>
+              <img loading="lazy" src="images/landing-page-images/rdr2/img1.webp"/>
             </div>
           </div>
 
@@ -237,13 +240,13 @@
           </div>
 
 
-          <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[6vw] max-sm:text-slate-800 tracking-tight leading-none text-slate-200 relative font-[redtrap] font-bolder uppercase">browse by</h1>
+          <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[6vw] max-sm:text-slate-200 tracking-tight leading-none text-slate-200 relative font-[redtrap] font-bolder uppercase">browse by</h1>
           <h1 class="category-title font-bold text-[7vw] max-sm:text-[5.6vh] tracking-tight leading-none text-slate-200 relative font-[redtrap] font-bold uppercase">Category</h1>
           <div class="circle flex justify-center items-center rounded-full">
             <div class="stripe stp1">
               <div class="first">
                 <!-- <h1>Action</h1> -->
-                <img class="cat-img" src="images/categories-images/img1.webp" alt="">
+                <img loading="lazy" class="cat-img" src="images/categories-images/img1.webp" alt="">
               </div>
               <div class="sec">
                 <div class="smcircle"></div>
@@ -251,7 +254,7 @@
             </div>
             <div class="stripe stp2">
               <div class="first">
-                <img class="cat-img" src="images/categories-images/img2.webp" alt="">
+                <img loading="lazy" class="cat-img" src="images/categories-images/img2.webp" alt="">
                 <!-- <h1>Anime</h1> -->
               </div>
               <div class="sec">
@@ -260,7 +263,7 @@
             </div>
             <div class="stripe stp3">
               <div class="first">
-                <img class="cat-img" src="images/categories-images/img3.webp" alt="">
+                <img loading="lazy" class="cat-img" src="images/categories-images/img3.webp" alt="">
                 <!-- <h1>All Sports</h1> -->
               </div>
               <div class="sec">
@@ -272,11 +275,11 @@
                 <!-- <h1>Role Playing</h1> -->
                 
                 
-                <img class="cat-img" src="images/categories-images/img4.webp" alt="">
+                <img loading="lazy" class="cat-img" src="images/categories-images/img4.webp" alt="">
                 <div class="cat-desc absolute w-[30vw]  left-[0%] top-[-80%] rounded-md flex flex-col justify-center items-center gap-2 opacity-0">
                   <!-- <div class="desc-title text-white rounded-md px-2 py-1 text-[1.4vw]">Role Playing</div> -->
                   
-                  <!-- <img class="cat-bg relative top-0 left-0 w-[100vw] h-full" src="rpg.jpg" alt=""> -->
+                  <!-- <img loading="lazy" class="cat-bg relative top-0 left-0 w-[100vw] h-full" src="rpg.jpg" alt=""> -->
                 </div>
                 
                 
@@ -287,7 +290,7 @@
             </div>
             <div class="stripe stp5">
               <div class="first">
-                <img class="cat-img" src="images/categories-images/img5.webp" alt="">
+                <img loading="lazy" class="cat-img" src="images/categories-images/img5.webp" alt="">
                 <!-- <h1>Survival</h1> -->
               </div>
               <div class="sec">
@@ -296,7 +299,7 @@
             </div>
             <div class="stripe stp6">
               <div class="first">
-                <img class="cat-img" src="images/categories-images/img6.webp" alt="">
+                <img loading="lazy" class="cat-img" src="images/categories-images/img6.webp" alt="">
                 <!-- <h1>Multiplayer</h1> -->
               </div>
               <div class="sec">
@@ -305,7 +308,7 @@
             </div>
             <div class="stripe stp7">
               <div class="first">
-                <img class="cat-img" src="images/categories-images/img7.webp" alt="">
+                <img loading="lazy" class="cat-img" src="images/categories-images/img7.webp" alt="">
                 <!-- <h1>Puzzle</h1> -->
               </div>
               <div class="sec">
@@ -336,7 +339,7 @@
                 <video loop onmouseover="this.play(); this.currentTime='5'" onmouseout="this.pause(); this.currentTime='0'; this.load();" preload="none" muted src="https://cdn.akamai.steamstatic.com/steam/apps/257032261/movie480_vp9.webm?t=1718789373" class="mg-vid w-full h-[85%] object-cover bg-red-200" poster="images/more-games-images/mg-img1.webp"></video>
                 <div class="mg-pricing bg-black h-[15%] w-[60%] max-sm:w-[100%] flex">
                   <h2 class="mg-disc bg-[#A1CD44] w-1/3 h-full font-bold font-[twk] flex items-center justify-center">-40%</h2>
-                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2 ">&#8377 4,799</span>&#8377 2,879</h2>
+                  <h2 class="mg-price text-white w-2/3 h-full font-bold font-twk flex items-center justify-center"><span class="text-zinc-400 line-through px-2 ">&#8377 1,799</span>&#8377 879</h2>
                 </div>
               </div>
               <div class="mg-cards basis-1/4 h-[17rem] max-sm:basis-[48.5%] max-sm:h-[14rem]">
@@ -444,30 +447,30 @@
 
 
       <!-- STEAM GIFT CARDS SECTION -->
-      <div class="steam-gift-cards relative w-full h-screen max-sm:h-[70vh] bg-[#2A475E] font-[redtrap] z-[2400] relative flex justify-center items-center ">
+      <div class="steam-gift-cards relative w-full h-screen max-sm:h-[60vh] bg-[#2A475E] font-[redtrap] z-[2400] relative flex justify-center items-center ">
         <!-- <div class="slide-stripe w-full h-[100%] bg-black absolute bottom-0 z-[5000]">
           <div class="overlay-grain-pattern overlay-grain-basic"></div>
         </div> -->
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <!-- <div class="ruler w-[.08px] h-full bg-gray-800 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div> -->
         <h1 class="explore-title cursor-pointer text-7xl uppercase absolute top-[10%] left-[10%] font-[redtrap] font-bold text-gray-100 max-sm:text-4xl">STEAM <br> GIFT CARDS</h1>
-        <!-- <img class="steam-gc-img absolute top-[5%] left-[34.5%] max-sm:w-[10rem] max-sm:top-[3%] max-sm:left-[57%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.webp" alt=""> -->
-        <div class="container absolute top-[55%] -translate-y-1/2 h-1/2 flex">
+        <!-- <img loading="lazy" class="steam-gc-img absolute top-[5%] left-[34.5%] max-sm:w-[10rem] max-sm:top-[3%] max-sm:left-[57%] cursor-pointer w-[15rem]" src="images/giftcards-images/steam gift cards.webp" alt=""> -->
+        <div class="container absolute top-[55%] -translate-y-1/2 h-1/2 flex max-sm:h-[45%]">
             <div class="left-cont w-1/2 h-full relative">
-                <img class="gift-cards card1" src="images/giftcards-images/lcard1.webp">
-                <img class="gift-cards card2" src="images/giftcards-images/lcard2.webp">
-                <img class="gift-cards card3" src="images/giftcards-images/lcard5.webp">
-                <img class="gift-cards card4" src="images/giftcards-images/lcard4.webp">
-                <img class="gift-cards card5" src="images/giftcards-images/lcard3.webp">
-                <img class="gift-cards card6 front-left" src="images/giftcards-images/lcard6.webp">
+                <img loading="lazy" class="gift-cards card1" src="images/giftcards-images/lcard1.webp">
+                <img loading="lazy" class="gift-cards card2" src="images/giftcards-images/lcard2.webp">
+                <img loading="lazy" class="gift-cards card3" src="images/giftcards-images/lcard5.webp">
+                <img loading="lazy" class="gift-cards card4" src="images/giftcards-images/lcard4.webp">
+                <img loading="lazy" class="gift-cards card5" src="images/giftcards-images/lcard3.webp">
+                <img loading="lazy" class="gift-cards card6 front-left" src="images/giftcards-images/lcard6.webp">
             </div>
             <div class="right-cont w-1/2 h-full relative">
-                <img class="gift-rcards rcard1" src="images/giftcards-images/rcard1.webp">
-                <img class="gift-rcards rcard2" src="images/giftcards-images/rcard2.webp">
-                <img class="gift-rcards rcard3" src="images/giftcards-images/rcard3.webp">
-                <img class="gift-rcards rcard4" src="images/giftcards-images/rcard4.webp">
-                <img class="gift-rcards rcard5" src="images/giftcards-images/rcard5.webp">
-                <img class="gift-rcards rcard6" src="images/giftcards-images/rcard6.webp">
+                <img loading="lazy" class="gift-rcards rcard1" src="images/giftcards-images/rcard1.webp">
+                <img loading="lazy" class="gift-rcards rcard2" src="images/giftcards-images/rcard2.webp">
+                <img loading="lazy" class="gift-rcards rcard3" src="images/giftcards-images/rcard3.webp">
+                <img loading="lazy" class="gift-rcards rcard4" src="images/giftcards-images/rcard4.webp">
+                <img loading="lazy" class="gift-rcards rcard5" src="images/giftcards-images/rcard5.webp">
+                <img loading="lazy" class="gift-rcards rcard6" src="images/giftcards-images/rcard6.webp">
             </div>
         </div>
       </div>
@@ -502,7 +505,7 @@
                 </div>
               </div>
               <div class="slice-right">
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 3,299</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
@@ -520,7 +523,7 @@
                 </div>
               </div>
               <div class="slice-right">
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$43.08</h3>
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 4,599</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
@@ -536,15 +539,15 @@
                   </p>
                 </div>
               </div>
-              <div class="slice-right w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[poppins] rounded-md overflow-hidden max-sm:w-[25vw] max-sm:h-[12vw]">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+              <div class="slice-right w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[twk] rounded-[5px] overflow-hidden max-sm:w-[25vw] max-sm:h-[12vw]">
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
                 
                   <div class="h-full w-[40%] bg-green-600 flex justify-center items-center px-2 py-4">
                     <span class="discount font-bold text-[1.2vw] max-sm:text-[3vw]">-35%</span>
                   </div>
                   <div class="pricing_tag w-[60%] bg-sky-800 h-full flex flex-col justify-center items-center">
-                    <span class="original_price text-[1vw] max-sm:text-[3vw] line-through text-zinc-200">$11.96</span>
-                    <div class="discounted_price text-[1.3vw] max-sm:text-[3vw] text-[#A3E635] font-semibold">$7.77</div>
+                    <span class="original_price text-[1vw] max-sm:text-[3vw] line-through text-zinc-200">₹ 999</span>
+                    <div class="discounted_price text-[1.3vw] max-sm:text-[3vw] text-[#A3E635] font-semibold">₹ 649</div>
                   </div>
                 </div>
               </div>
@@ -563,8 +566,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$43.08</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 1,999</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
@@ -581,8 +584,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$43.08</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 2,519</h3>
               </div>
             </div>  
             <div class="slice nt-slice">
@@ -597,8 +600,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$35.89</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 2,399</h3>
               </div>
             </div>  
           </div>
@@ -619,8 +622,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-white bg-green-600 font-semibold rounded-[5px] px-4 py-2 free-to-play">Free to Play</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
@@ -635,8 +638,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 349</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
@@ -653,8 +656,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$43.08</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 4,599</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
@@ -670,8 +673,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-white bg-green-600 font-semibold rounded-[5px] px-4 py-2 free-to-play">Free to Play</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
@@ -687,8 +690,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 1,999</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
@@ -705,8 +708,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$43.08</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 2,519</h3>
               </div>
             </div>  
           </div>
@@ -726,8 +729,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$39.49</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 3,299</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
@@ -743,8 +746,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-white bg-green-600 font-semibold rounded-[5px] px-4 py-2 free-to-play">Free to Play</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
@@ -760,8 +763,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold rounded-[5px] px-4 py-2">Free to Play</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 2,099</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
@@ -777,8 +780,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$21.54</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 1,800</h3>
               </div>
             </div>  
             <div class="slice pu-slice">
@@ -793,8 +796,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$39.49</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 1,350</h3>
               </div>
             </div>  
             <div class="slice ts-slice">
@@ -811,8 +814,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$43.08</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 2,519</h3>
               </div>
             </div> 
           </div>
@@ -830,14 +833,14 @@
                   </p>
                 </div>
               </div>
-              <div class="slice-right  w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[poppins] rounded-md overflow-hidden">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+              <div class="slice-right w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[twk] rounded-[5px] overflow-hidden max-sm:w-[25vw] max-sm:h-[12vw]">
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
                 <div class="h-full w-[40%] bg-green-600 flex justify-center items-center px-2 py-4">
-                  <span class="discount font-bold text-[1.2vw]">-70%</span>
+                  <span class="discount font-bold text-[1.2vw] max-sm:text-[3vw]">-65%</span>
                 </div>
                 <div class="pricing_tag w-[60%] bg-sky-800 h-full flex flex-col justify-center items-center">
-                  <span class="original_price text-sm line-through text-zinc-200">$35.89</span>
-                  <div class="discounted_price text-xl text-[#A3E635] font-semibold">$10.76</div>
+                  <span class="original_price text-sm line-through text-zinc-200 max-sm:text-[3vw]">₹ 3,499</span>
+                  <div class="discounted_price text-xl text-[#A3E635] font-semibold max-sm:text-[3vw]">₹ 1,224</div>
                 </div>
               </div>
             </div>  
@@ -854,14 +857,14 @@
                   </p>
                 </div>
               </div>
-              <div class="slice-right  w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[poppins] rounded-md overflow-hidden ">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+              <div class="slice-right w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[twk] rounded-[5px] overflow-hidden max-sm:w-[25vw] max-sm:h-[12vw]">
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
                 <div class="h-full w-[40%] bg-green-600 flex justify-center items-center px-2 py-4">
-                  <span class="discount font-bold text-[1.2vw]">-50%</span>
+                  <span class="discount font-bold text-[1.2vw] max-sm:text-[3vw]">-50%</span>
                 </div>
                 <div class="pricing_tag w-[60%] bg-sky-800 h-full flex flex-col justify-center items-center">
-                  <span class="original_price text-sm line-through text-zinc-200">$14.95</span>
-                  <div class="discounted_price text-xl text-[#A3E635] font-semibold">$7.47</div>
+                  <span class="original_price text-sm line-through text-zinc-200 max-sm:text-[3vw]">₹ 1,249</span>
+                  <div class="discounted_price text-xl text-[#A3E635] font-semibold max-sm:text-[3vw]">₹ 624</div>
                 </div>
               </div>
             </div>  
@@ -877,17 +880,21 @@
                   </p>
                 </div>
               </div>
-              <div class="slice-right  w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[poppins] rounded-md overflow-hidden">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+              <!-- <div class="slice-right  w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[twk] rounded-md overflow-hidden"> -->
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
                
                
-                  <div class="h-full w-[40%] bg-green-600 flex justify-center items-center px-2 py-4">
+                  <!-- <div class="h-full w-[40%] bg-green-600 flex justify-center items-center px-2 py-4">
                     <span class="discount font-bold text-[1.2vw]">-50%</span>
                   </div>
                   <div class="pricing_tag w-[60%] bg-sky-800 h-full flex flex-col justify-center items-center">
                     <span class="original_price text-sm line-through text-zinc-200">$47.86</span>
                     <div class="discounted_price text-xl text-[#A3E635] font-semibold">$23.93</div>
                   </div>
+              </div> -->
+              <div class="slice-right">
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 1,999</h3>
               </div>
             </div>  
             <div class="slice s-slice">
@@ -903,8 +910,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$89.99 </h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px]  font-semibold px-4 py-2">₹ 4,599 </h3>
                 
               </div>
             </div>  
@@ -921,8 +928,8 @@
                 </div>
               </div>
               <div class="slice-right">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
-                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] font-semibold px-4 py-2">$39.49</h3>
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+                <h3 class="slice-r-text text-[1.2vw] max-sm:text-[3vw] text-[#A3E635] rounded-[5px] font-semibold px-4 py-2">₹ 1,649</h3>
               </div>
             </div>  
             <div class="slice s-slice">
@@ -937,15 +944,15 @@
                   </p>
                 </div>
               </div>
-              <div class="slice-right w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[poppins] rounded-md overflow-hidden">
-                <!-- <img class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
+              <div class="slice-right w-[12vw] h-[4vw] text-[1.2vw] text-white  flex items-center justify-center font-[twk] rounded-[5px] overflow-hidden max-sm:w-[25vw] max-sm:h-[12vw]">
+                <!-- <img loading="lazy" class="slimg1 absolute left-[60%] top-[-30%]" src="sliceimg1.png" alt=""> -->
                  
                   <div class="h-full w-[40%] bg-green-600 flex justify-center items-center px-2 py-4">
-                    <span class="discount font-bold text-[1.2vw]">-30%</span>
+                    <span class="discount font-bold text-[1.2vw] max-sm:text-[3vw]">-30%</span>
                   </div>
                   <div class="pricing_tag w-[60%] bg-sky-800 h-full flex flex-col justify-center items-center">
-                    <span class="original_price text-sm line-through text-zinc-200">$6.76</span>
-                    <div class="discounted_price text-xl text-[#A3E635] font-semibold">$4.73</div>
+                    <span class="original_price text-sm line-through text-zinc-200 max-sm:text-[3vw]">₹ 565</span>
+                    <div class="discounted_price text-xl text-[#A3E635] font-semibold max-sm:text-[3vw]">₹ 395</div>
                   </div>
               </div>
             </div>
@@ -953,17 +960,17 @@
 
           <!-- <div class="specials-section absolute bg-zinc-500 w-full h-full inline-block left-[300%]"></div> -->
         </div>
-      </div>
-    </div>
+      </div></div>
+
 
 
       
       <!-- OFFER SECTION -->
       <div class="offer-page relative z-[3000] w-full max-sm:h-[70vh] h-screen  flex justify-center flex-col gap-10">
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
-        <div class="offer-title max-sm:mt-20 px-[8vw]">
-          <h1 class="max-sm:text-4xl text-4xl tracking-tight text-[var(--light)] font-[redtrap] uppercase">Special</h1>
-          <h1 class="max-sm:text-4xl text-8xl tracking-tight text-white font-[redtrap] uppercase">Offers</h1>
+        <div class="offer-title max-sm:mt-20 px-[8vw] pb-10 max-sm:pb-4">
+          <h1 class="max-sm:text-[6vw] text-4xl tracking-tight leading-none text-[var(--light)] font-[redtrap] uppercase">Special</h1>
+          <h1 class="max-sm:text-[5.6vh] text-8xl tracking-tight leading-none text-white font-[redtrap] uppercase">Offers</h1>
         </div>
         <div class="marque-effect relative max-sm:h-4/5 h-1/2 overflow-hidden">
           <div class="blur-left absolute left-0 top-0"></div>
@@ -971,41 +978,41 @@
           <div class="move h-full absolute top-0 left-0 whitespace-nowrap">
             <div class="marquee-cards">
               <div class="img-section">
-                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
+                <img loading="lazy" class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
 
               </div>
               <div class="offer-section w-full h-[45%] flex justify-center items-center">
                 <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
                   <div class="offer-left w-1/2 flex justify-center items-center">
-                    <h1 class="text-2xl font-semibold">-20%</h1>
+                    <h1 class="text-2xl font-semibold">-75%</h1>
                   </div>
                   <div class="offer-right w-1/2 flex flex-col">
-                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>₹ 2,999</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>₹ 749</p></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="marquee-cards">
               <div class="img-section">
-                <img class="marquee-img" src="images/landing-page-images/apex/img1.webp" alt="">
+                <img loading="lazy" class="marquee-img" src="images/landing-page-images/apex/img1.webp" alt="">
 
               </div>
               <div class="offer-section w-full h-[45%] flex justify-center items-center">
                 <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
                   <div class="offer-left w-1/2 flex justify-center items-center">
-                    <h1 class="text-2xl font-semibold">-20%</h1>
+                    <h1 class="text-2xl font-semibold">-60%</h1>
                   </div>
                   <div class="offer-right w-1/2 flex flex-col">
-                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>₹ 1,499 </p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>₹ 599</p></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="marquee-cards">
               <div class="img-section">
-                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
+                <img loading="lazy" class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
 
               </div>
               <div class="offer-section w-full h-[45%] flex justify-center items-center">
@@ -1014,49 +1021,49 @@
                     <h1 class="text-2xl font-semibold">-20%</h1>
                   </div>
                   <div class="offer-right w-1/2 flex flex-col">
-                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>₹ 4,299</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>₹ 3,439</p></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="marquee-cards">
               <div class="img-section">
-                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
+                <img loading="lazy" class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
 
               </div>
               <div class="offer-section w-full h-[45%] flex justify-center items-center">
                 <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
                   <div class="offer-left w-1/2 flex justify-center items-center">
-                    <h1 class="text-2xl font-semibold">-20%</h1>
+                    <h1 class="text-2xl font-semibold">-50%</h1>
                   </div>
                   <div class="offer-right w-1/2 flex flex-col">
-                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>₹ 4,499</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>₹ 2,249</p></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="marquee-cards">
               <div class="img-section">
-                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
+                <img loading="lazy" class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/c2db60878ea3ca6d3ac6e6e4/spotlight_image_english.jpg?t=1715280184" alt="">
 
               </div>
               <div class="offer-section w-full h-[45%] flex justify-center items-center">
                 <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
                   <div class="offer-left w-1/2 flex justify-center items-center">
-                    <h1 class="text-2xl font-semibold">-20%</h1>
+                    <h1 class="text-2xl font-semibold">-30%</h1>
                   </div>
                   <div class="offer-right w-1/2 flex flex-col">
-                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>$1,040</p></div>
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>₹ 3,599</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center "><p>₹ 2,519</p></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="marquee-cards">
               <div class="img-section">
-                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/8f0a57df9911fe494ebfe064/spotlight_image_english.jpg?t=1715185347" alt="">
+                <img loading="lazy" class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/8f0a57df9911fe494ebfe064/spotlight_image_english.jpg?t=1715185347" alt="">
 
               </div>
               <div class="offer-section w-full h-[45%] flex justify-center items-center">
@@ -1065,15 +1072,15 @@
                     <h1 class="text-2xl font-semibold">-20%</h1>
                   </div>
                   <div class="offer-right w-1/2 flex flex-col">
-                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                    <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>$1,040</p></div>
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>₹ 2,999</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>₹ 2,399</p></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="marquee-cards">
               <div class="img-section">
-                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
+                <img loading="lazy" class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/apps/1954200/header.jpg?t=1664298117" alt="">
 
               </div>
               <div class="offer-section w-full h-[45%] flex justify-center items-center">
@@ -1082,26 +1089,26 @@
                     <h1 class="text-2xl font-semibold">-20%</h1>
                   </div>
                   <div class="offer-right w-1/2 flex flex-col">
-                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                    <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>$1,040</p></div>
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>₹ 4,299</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>₹ 3,439</p></div>
                   </div>
                 </div>
               </div>
             </div>
             <div class="marquee-cards">
               <div class="img-section">
-                <img class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
+                <img loading="lazy" class="marquee-img" src="https://cdn.cloudflare.steamstatic.com/steam/spotlights/182f28e98a77c67bfb7e31fd/spotlight_image_english.jpg?t=1714664658 " alt="">
 
               </div>
               <div class="offer-section w-full h-[45%] flex justify-center items-center">
                 <div class="offer w-3/5 h-3/5 rounded-md flex overflow-hidden">
                   <div class="offer-left w-1/2 flex justify-center items-center">
-                    <h1 class="text-2xl font-semibold">-20%</h1>
+                    <h1 class="text-2xl font-semibold">-50%</h1>
                   </div>
                   <div class="offer-right w-1/2 flex flex-col">
-                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>$1,300</p></div>
-                    <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>$1,040</p></div>
-                  </div>
+                    <div class="offer-r-top h-1/2 flex justify-center items-center"><p>₹ 4,499</p></div>
+                    <div class="offer-r-bottom h-1/2 flex justify-center items-center"><p>₹ 2,249 </p></div></div>
+
                 </div>
               </div>
             </div>
@@ -1118,7 +1125,7 @@
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
         <div class="footer-top relative top-0 w-full h-[35%] flex max-sm:flex-col justify-between px-[10vw] py-8 gap-4">
           <div class="f-top-left">
-            <img class="max-sm:w-[25vw] w-[8vw]" src="images/logo_steam_footer.png" alt="">
+            <img loading="lazy" class="max-sm:w-[25vw] w-[8vw]" src="images/logo_steam_footer.png" alt="">
           </div>
           <div class="f-top-right flex max-sm:gap-[2vw] max-sm:justify-between gap-[8vw] text-xl">
             <div class="f-right1 flex flex-col">
@@ -1148,7 +1155,7 @@
 
               <div class="valve-content flex max-sm:flex-col max-sm:justify-center max-sm:items-center gap-[1rem]">
 
-                <img class="w-[8vw] max-sm:w-[15vw]" src="images/footerLogo_valve_new.png" alt="">
+                <img loading="lazy" class="w-[8vw] max-sm:w-[15vw]" src="images/footerLogo_valve_new.png" alt="">
 
                 <p class="font-[twk] max-sm:text-center max-sm:text-[3vw]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries. VAT included in all prices where applicable.</p>
 
