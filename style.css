@@ -200,7 +200,9 @@ html, body {
 
 
 
-
+.mg-container{
+  background-color: #3034409e;
+}
 
 .vdo-btn{
   transition: all linear .2s;
