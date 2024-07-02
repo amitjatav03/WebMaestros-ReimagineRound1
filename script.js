@@ -221,49 +221,49 @@ let categoryDetails = [
     categoryTitle: "ACTION",
     categoryDesc:
       "Dive into high-speed, adrenaline-pumping adventures where reflexes and skill are key. Experience intense combat, thrilling chases, and epic battles in dynamic and fast-paced environments.",
-    wallpaperSrc: "live wallpapers/action.mp4",
+    wallpaperSrc: "videos/live-wallpapers/action.mp4",
     categoryAudio: "sounds/category-sounds/s1.mp3",
   },
   {
     categoryTitle: "ANIME",
     categoryDesc:
       "Dive into vibrant worlds inspired by your favorite anime. Enjoy captivating storylines, stylized visuals, and dynamic gameplay that bring beloved characters and epic adventures to life.",
-    wallpaperSrc: "live wallpapers/anime2.mp4",
+    wallpaperSrc: "videos/live-wallpapers/anime2.mp4",
     categoryAudio: "sounds/category-sounds/s2.mp3",
   },
   {
     categoryTitle: "ALL SPORTS",
     categoryDesc:
       "Experience the thrill of competition with realistic or fantasy sports simulations. Play your favorite sports, master skills, and compete for glory in immersive and dynamic arenas.",
-    wallpaperSrc: "live wallpapers/all-sports.mp4",
+    wallpaperSrc: "videos/live-wallpapers/all-sports.mp4",
     categoryAudio: "sounds/category-sounds/s3.mp3",
   },
   {
     categoryTitle: "ROLE PLAYING",
     categoryDesc:
       "Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.",
-    wallpaperSrc: "live wallpapers/rpg.mp4",
+    wallpaperSrc: "videos/live-wallpapers/rpg.mp4",
     categoryAudio: "sounds/category-sounds/s4.mp3",
   },
   {
     categoryTitle: "SURVIVAL",
     categoryDesc:
       "Test your endurance and resourcefulness in harsh environments. Gather resources, build shelters, and fend off dangers as you strive to stay alive in challenging settings.",
-    wallpaperSrc: "live wallpapers/survival.mp4",
+    wallpaperSrc: "videos/live-wallpapers/survival.mp4",
     categoryAudio: "sounds/category-sounds/s5.mp3",
   },
   {
     categoryTitle: "MULTIPLAYER",
     categoryDesc:
       "Connect with friends and players worldwide in competitive or cooperative modes. Engage in battles, teamwork, and strategic gameplay across a variety of exciting and dynamic environments.",
-    wallpaperSrc: "live wallpapers/multiplayer.mp4",
+    wallpaperSrc: "videos/live-wallpapers/multiplayer.mp4",
     categoryAudio: "sounds/category-sounds/s6.mp3",
   },
   {
     categoryTitle: "PUZZLE",
     categoryDesc:
       "Challenge your mind with engaging and thought-provoking puzzles. Test your logic, strategy, and problem-solving skills across a variety of captivating and addictive gameplay experiences.",
-    wallpaperSrc: "live wallpapers/puzzle.mp4",
+    wallpaperSrc: "videos/live-wallpapers/puzzle.mp4",
     categoryAudio: "sounds/category-sounds/s7.mp3",
   },
 ];
@@ -289,9 +289,7 @@ catImages.forEach(function (catImg) {
 });
 
 catImages.forEach(function (catImg, idx) {
-  catImg.addEventListener("click", function () {
-    clickedCategory.innerHTML = ``;
-    let clickedCatDetails = `
+  let clickedCatDetails = `
       <audio class="cat-bgm" src="${categoryDetails[idx].categoryAudio}"></audio>
       <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
       <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
@@ -302,6 +300,9 @@ catImages.forEach(function (catImg, idx) {
       <button class="view border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-[2vw] max-sm:text-[4vw] px-2 py-1 rounded-md">View More</button>
       <i id="cc" class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] max-sm:text-[8vw] font-[twk] cursor-pointer hover:text-slate-500"></i>
       `;
+  catImg.addEventListener("click", function () {
+    clickedCategory.innerHTML = ``;
+    
     clickedCategory.innerHTML = clickedCatDetails;
     catOverlay = document.querySelector(".category-side-overlay");
     catBgm = document.querySelector(".cat-bgm");
@@ -310,7 +311,7 @@ catImages.forEach(function (catImg, idx) {
       t.style.display = "none";
     });
     catPanel.style.display = "none";
-    catBgm.play();
+    catBgm.play();  
     clickedCategory.style.display = "flex";
     clickedCategory.style.opacity = 1;
     catOverlay.style.opacity = 0.6;
@@ -514,40 +515,40 @@ videoBtn.addEventListener("click", function () {
 function slider() {
   let imagesContainer = [
     [
-      "images/landing-page-images/sottr/img1.jpg",
-      "images/landing-page-images/sottr/img2.jpg",
-      "images/landing-page-images/sottr/img3.jpg",
-      "images/landing-page-images/sottr/img4.jpg",
+      "images/landing-page-images/sottr/img1.webp",
+      "images/landing-page-images/sottr/img2.webp",
+      "images/landing-page-images/sottr/img3.webp",
+      "images/landing-page-images/sottr/img4.webp",
     ],
     [
-      "images/landing-page-images/rdr2/img1.jpg",
-      "images/landing-page-images/rdr2/img2.jpg",
-      "images/landing-page-images/rdr2/img3.jpg",
-      "images/landing-page-images/rdr2/img4.jpg",
+      "images/landing-page-images/rdr2/img1.webp",
+      "images/landing-page-images/rdr2/img2.webp",
+      "images/landing-page-images/rdr2/img3.webp",
+      "images/landing-page-images/rdr2/img4.webp",
     ],
     [
-      "images/landing-page-images/ghost-of-tsushima/img1.jpg",
-      "images/landing-page-images/ghost-of-tsushima/img2.jpg",
-      "images/landing-page-images/ghost-of-tsushima/img3.jpg",
-      "images/landing-page-images/ghost-of-tsushima/img4.jpg",
+      "images/landing-page-images/ghost-of-tsushima/img1.webp",
+      "images/landing-page-images/ghost-of-tsushima/img2.webp",
+      "images/landing-page-images/ghost-of-tsushima/img3.webp",
+      "images/landing-page-images/ghost-of-tsushima/img4.webp",
     ],
     [
-      "images/landing-page-images/pubg/img1.jpg",
-      "images/landing-page-images/pubg/img2.jpg",
-      "images/landing-page-images/pubg/img3.jpg",
-      "images/landing-page-images/pubg/img4.jpg",
+      "images/landing-page-images/pubg/img1.webp",
+      "images/landing-page-images/pubg/img2.webp",
+      "images/landing-page-images/pubg/img3.webp",
+      "images/landing-page-images/pubg/img4.webp",
     ],
     [
-      "images/landing-page-images/valhalla/img1.jpg",
-      "images/landing-page-images/valhalla/img2.jpg",
-      "images/landing-page-images/valhalla/img3.jpg",
-      "images/landing-page-images/valhalla/img4.jpg",
+      "images/landing-page-images/valhalla/img1.webp",
+      "images/landing-page-images/valhalla/img2.webp",
+      "images/landing-page-images/valhalla/img3.webp",
+      "images/landing-page-images/valhalla/img4.webp",
     ],
     [
-      "images/landing-page-images/apex/img1.jpg",
-      "images/landing-page-images/apex/img2.jpg",
-      "images/landing-page-images/apex/img3.jpg",
-      "images/landing-page-images/apex/img4.jpg",
+      "images/landing-page-images/apex/img1.webp",
+      "images/landing-page-images/apex/img2.webp",
+      "images/landing-page-images/apex/img3.webp",
+      "images/landing-page-images/apex/img4.webp",
     ],
   ];
 
@@ -873,15 +874,19 @@ function inactiveTitle() {
 }
 
 
+let winCheck = window.matchMedia("(min-width: 1280px)");
 
-let mgCont = document.querySelector(".mg-container");
-gsap.to(mgCont, {
-  scale: 1.4,
-  duration: 1,
-  scrollTrigger: {
-    scroller: ".main",
-    trigger: ".mg-container", 
-    scrub: .2,
-    start: "top -100%",
-  }
-})
+if(winCheck.matches) {
+  let mgCont = document.querySelector(".mg-container");
+  gsap.to(mgCont, {
+    scale: 1.4,
+    duration: 1,
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".mg-container", 
+      scrub: .2,
+      start: "top -100%",
+    }
+  })
+
+}
