@@ -480,7 +480,6 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   height: 100%;
   background-color: var(--blue);
   width: 20vw;
-  border-radius: .5rem;
   overflow: hidden;
   cursor: pointer;
 }
@@ -536,12 +535,15 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 .offer-left{
-  background-color: #CC7722;
+  /* background-color: #CC7722; */
+  background-color: #A1CD44;
+  color: black;
 }
 
 .offer-r-top{
   background-color:  #090446;
-  color: white;
+  background-color: black;
+  color: gray;
 }
 
 .offer-r-bottom{
@@ -762,13 +764,11 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 }
 
 
-.free-to-play{
-  background-color: #A3E635;
-}
 
 .slice-right h3{
-  background: linear-gradient(to right, #075985, #0369A1);
-  background-color: rgba(0, 0, 0, 0.642);
+  /* background: linear-gradient(to right, #075985, #0369A1); */
+  /* background-color: rgba(0, 0, 0, 0.642); */
+  background-color: #A1CD44;
   opacity: 0.8;
 
 }
