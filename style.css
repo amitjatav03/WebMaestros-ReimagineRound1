@@ -768,7 +768,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 .slice-right h3{
   /* background: linear-gradient(to right, #075985, #0369A1); */
   /* background-color: rgba(0, 0, 0, 0.642); */
-  background-color: #A1CD44;
+  /* background-color: #A1CD44; */
   opacity: 0.8;
 
 }
