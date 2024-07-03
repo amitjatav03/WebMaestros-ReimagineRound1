@@ -1,3 +1,5 @@
+
+
 function loco() {
   function init() {
     gsap.registerPlugin(ScrollTrigger);
@@ -682,11 +684,6 @@ if(winCheck.matches) {
 }
 
 
-let portraitView = window.matchMedia("(max-width: 640px)");
-if(portraitView.matches) {
-  let mainVid = document.querySelector(".main-video");
-  mainVid.src = "videos/main-video-portrait.mp4";
-}
 
 
 // ---------- FOOTER -------------
