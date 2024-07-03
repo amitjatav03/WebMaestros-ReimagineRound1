@@ -1201,5 +1201,15 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 
 
-
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .swiper-slide {
+    width: 50vw;
+    height: 50vh;
+  }
+  
+  .swiper-slide img {
+    width: 50vw;
+    height: 50vh;
+  }
+}
 

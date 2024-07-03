@@ -52,14 +52,14 @@ function loader() {
     tl.to(".upper-circle", {
       // transform: `translate(-50%, -50%) rotateZ(-81deg)`,
       rotation: "+=36",
-      duration: 0.4,
+      duration: 0.5,
       ease: "circ.out",
     });
   }
 
   gsap.to(".lower-circle", {
     rotation: "955",
-    duration: 4,
+    duration: 5,
     ease: "circ.out",
   });
 
@@ -682,7 +682,7 @@ if(winCheck.matches) {
 }
 
 
-let portraitView = window.matchMedia("(max-width: 600px)");
+let portraitView = window.matchMedia("(max-width: 640px)");
 if(portraitView.matches) {
   let mainVid = document.querySelector(".main-video");
   mainVid.src = "videos/main-video-portrait.mp4";
