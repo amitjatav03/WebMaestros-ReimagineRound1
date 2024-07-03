@@ -1,58 +1,3 @@
-// (function () {
-//   const locomotiveScroll = new LocomotiveScroll({
-//     el: document.querySelector(".main"),
-//     smooth: true,
-// })();
-
-function loader() {
-  let tl = gsap.timeline();
-
-  for (let i = 0; i < 9; i++) {
-    tl.to(".upper-circle", {
-      // transform: `translate(-50%, -50%) rotateZ(-81deg)`,
-      rotation: "+=36",
-      duration: 0.3,
-      ease: "circ.out",
-    });
-  }
-
-  gsap.to(".lower-circle", {
-    rotation: "955",
-    duration: 3,
-    ease: "circ.out",
-  });
-
-  tl.to(".loader", {
-    delay: 1,
-    y: "-100%",
-    ease: "circ.out",
-  });
-}
-
-loader();
-
-// CURSORS
-
-let imgCursor = document.querySelector(".img-crsr");
-let swipSlides = document.querySelectorAll(".swiper-slide img");
-
-swipSlides.forEach((slid) => {
-  slid.addEventListener("mousemove", function (dets) {
-    imgCursor.style.opacity = ".7";
-    gsap.to(imgCursor, {
-      x: dets.x - 60,
-      y: dets.y - 760,
-    });
-  });
-  slid.addEventListener("mouseleave", function (dets) {
-    imgCursor.style.opacity = "0";
-  });
-});
-
-let exploreSlices = document.querySelectorAll(".slice");
-let expPage = document.querySelector(".explore-page");
-let sliceOverlay = document.querySelector(".slice-overlay");
-
 function loco() {
   function init() {
     gsap.registerPlugin(ScrollTrigger);
@@ -100,6 +45,58 @@ function loco() {
 
 loco();
 
+function loader() {
+  let tl = gsap.timeline();
+
+  for (let i = 0; i < 9; i++) {
+    tl.to(".upper-circle", {
+      // transform: `translate(-50%, -50%) rotateZ(-81deg)`,
+      rotation: "+=36",
+      duration: 0.4,
+      ease: "circ.out",
+    });
+  }
+
+  gsap.to(".lower-circle", {
+    rotation: "955",
+    duration: 4,
+    ease: "circ.out",
+  });
+
+  tl.to(".loader", {
+    delay: 1,
+    y: "-100%",
+    ease: "circ.out",
+  });
+}
+loader();
+
+// CURSORS
+function landingPageCursor() {
+  let imgCursor = document.querySelector(".img-crsr");
+  let swipSlides = document.querySelectorAll(".swiper-slide img");
+  
+  swipSlides.forEach((slid) => {
+    slid.addEventListener("mousemove", function (dets) {
+      imgCursor.style.opacity = ".7";
+      gsap.to(imgCursor, {
+        x: dets.x - 60,
+        y: dets.y - 760,
+      });
+    });
+    slid.addEventListener("mouseleave", function (dets) {
+      imgCursor.style.opacity = "0";
+    });
+  });
+}
+landingPageCursor();
+
+let exploreSlices = document.querySelectorAll(".slice");
+let expPage = document.querySelector(".explore-page");
+let sliceOverlay = document.querySelector(".slice-overlay");
+
+
+
 function landingPageSlider() {
   var swiper = new Swiper(".mySwiper", {
     effect: "coverflow",
@@ -124,81 +121,8 @@ function landingPageSlider() {
 }
 landingPageSlider();
 
-function sheryJs() {
-  Shery.mouseFollower({
-    skew: true,
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    duration: 0.1,
-  });
 
-  Shery.imageMasker(".swiper-slide img", {
-    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-    duration: 1,
-  });
-}
-// sheryJs();
 
-function footerAnimation() {
-  var footerSteam = document.querySelector(".footer-title");
-  let clutter = "";
-  let footerTitle = footerSteam.textContent;
-  for (let i = 0; i < footerTitle.length; i++) {
-    clutter += `<span>${footerTitle[i]}</span>`;
-  }
-  footerSteam.innerHTML = clutter;
-
-  gsap.from(".footer-title span", {
-    top: "-350px",
-    duration: 0.8,
-    stagger: 0.1,
-    ease: "poweri.out",
-    scrollTrigger: {
-      scroller: ".main",
-      trigger: ".footer-bottom",
-      start: "top 85%",
-      end: "top 82%",
-      scrub: 3,
-    },
-  });
-
-  gsap.from(".btm-line, .top-line", {
-    width: 0,
-    duration: 1,
-    delay: 0.5,
-    scrollTrigger: {
-      scroller: ".main",
-      trigger: ".f-mid",
-      start: "top 60%",
-      end: "top 50%",
-      scrub: 1,
-    },
-  });
-
-  gsap.from(".valve-section", {
-    opacity: 0,
-    scrollTrigger: {
-      scroller: ".main",
-      trigger: ".f-mid",
-      start: "top 50%",
-      end: "top 40%",
-      scrub: 1,
-    },
-  });
-
-  gsap.from(".footer-top", {
-    y: -100,
-    opacity: 0,
-    duration: 1,
-    scrollTrigger: {
-      scroller: ".main",
-      trigger: ".footer-top",
-      start: "top 50%",
-      end: "top 45%",
-      scrub: 1,
-    },
-  });
-}
-footerAnimation();
 
 // CATEGORY SECTION
 let active = 4;
@@ -217,57 +141,6 @@ let catTitle = document.querySelectorAll(".category-title");
 // let clickedCategory = document.querySelector(".clicked-category");
 let clickedCatSections = document.querySelectorAll(".clicked-category");
 let closeCatBtn;
-let categoryDetails = [
-  {
-    categoryTitle: "ACTION",
-    categoryDesc:
-      "Dive into high-speed, adrenaline-pumping adventures where reflexes and skill are key. Experience intense combat, thrilling chases, and epic battles in dynamic and fast-paced environments.",
-    wallpaperSrc: "videos/live-wallpapers/action.mp4",
-    categoryAudio: "sounds/category-sounds/s1.mp3",
-  },
-  {
-    categoryTitle: "ANIME",
-    categoryDesc:
-      "Dive into vibrant worlds inspired by your favorite anime. Enjoy captivating storylines, stylized visuals, and dynamic gameplay that bring beloved characters and epic adventures to life.",
-    wallpaperSrc: "videos/live-wallpapers/anime2.mp4",
-    categoryAudio: "sounds/category-sounds/s2.mp3",
-  },
-  {
-    categoryTitle: "ALL SPORTS",
-    categoryDesc:
-      "Experience the thrill of competition with realistic or fantasy sports simulations. Play your favorite sports, master skills, and compete for glory in immersive and dynamic arenas.",
-    wallpaperSrc: "videos/live-wallpapers/all-sports.mp4",
-    categoryAudio: "sounds/category-sounds/s3.mp3",
-  },
-  {
-    categoryTitle: "ROLE PLAYING",
-    categoryDesc:
-      "Embark on epic adventures, customize characters, and explore vast worlds. Experience captivating stories where every choice matters in our diverse RPG collection.",
-    wallpaperSrc: "videos/live-wallpapers/rpg.mp4",
-    categoryAudio: "sounds/category-sounds/s4.mp3",
-  },
-  {
-    categoryTitle: "SURVIVAL",
-    categoryDesc:
-      "Test your endurance and resourcefulness in harsh environments. Gather resources, build shelters, and fend off dangers as you strive to stay alive in challenging settings.",
-    wallpaperSrc: "videos/live-wallpapers/survival.mp4",
-    categoryAudio: "sounds/category-sounds/s5.mp3",
-  },
-  {
-    categoryTitle: "MULTIPLAYER",
-    categoryDesc:
-      "Connect with friends and players worldwide in competitive or cooperative modes. Engage in battles, teamwork, and strategic gameplay across a variety of exciting and dynamic environments.",
-    wallpaperSrc: "videos/live-wallpapers/multiplayer.mp4",
-    categoryAudio: "sounds/category-sounds/s6.mp3",
-  },
-  {
-    categoryTitle: "PUZZLE",
-    categoryDesc:
-      "Challenge your mind with engaging and thought-provoking puzzles. Test your logic, strategy, and problem-solving skills across a variety of captivating and addictive gameplay experiences.",
-    wallpaperSrc: "videos/live-wallpapers/puzzle.mp4",
-    categoryAudio: "sounds/category-sounds/s7.mp3",
-  },
-];
 
 catSection.addEventListener("mousemove", function (dets) {
   gsap.to(catCursor, {
@@ -288,106 +161,8 @@ catImages.forEach(function (catImg) {
     });
   });
 });
-function catImageFunctionPrevious() {
-  catImages.forEach(function (catImg, idx) {
-    let clickedCatDetails = `
-        <audio class="cat-bgm" src="${categoryDetails[idx].categoryAudio}"></audio>
-        <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
-        <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
-        <h1 class="text-[4vw] max-sm:text-[8vw] z-[1250] text-white font-[gestura] tracking-tight font-semibold">${categoryDetails[idx].categoryTitle}</h1>
-        <p class="desc max-sm:text-[3.2vw] max-sm:w-[80%] w-[65%] z-[1250] text-[1.6vw] font-[aeonik] text-center text-white">
-          ${categoryDetails[idx].categoryDesc}
-        </p>
-        <button class="view border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-[1.5vw] max-sm:text-[4vw] px-2 py-1 rounded-md">View More</button>
-        <i id="cc" class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] max-sm:text-[8vw] font-[twk] cursor-pointer hover:text-slate-500"></i>
-        `;
-    catImg.addEventListener("click", function () {
-      clickedCategory.innerHTML = ``;
-      
-      clickedCategory.innerHTML = clickedCatDetails;
-      catOverlay = document.querySelector(".category-side-overlay");
-      catBgm = document.querySelector(".cat-bgm");
-  
-      catTitle.forEach((t) => {
-        t.style.display = "none";
-      });
-      catPanel.style.display = "none";
-      catBgm.play();  
-      clickedCategory.style.display = "flex";
-      clickedCategory.style.opacity = 1;
-      catOverlay.style.opacity = 0.6;
-      catOverlay.style.display = "block";
-      gsap.to(catImg, {
-        // width: "20vw",
-        // height: "32vw",
-        opacity: 0,
-        duration: 0.4,
-      });
-      gsap.to(desc, {
-        opacity: 1,
-      });
-      closeCatBtn = document.querySelector(".close-cat");
-  
-      closeCatBtn.addEventListener("click", function () {
-        catTitle.forEach((t) => {
-          t.style.display = "block";
-        });
-        catPanel.style.display = "block";
-        catBgm.pause();
-        catBgm.currentTime = 0;
-        clickedCategory.style.opacity = 0;
-        clickedCategory.style.display = "none";
-        catOverlay.style.opacity = 0;
-        catOverlay.style.display = "none";
-        gsap.to(catImg, {
-          // width: "30vw",
-          // height: "45vw",
-          opacity: 1,
-          duration: 0.4,
-        });
-  
-        gsap.to(desc, {
-          opacity: 0,
-        });
-      });
-    });
-  });
-  
-  gsap.to(categories, {
-    opacity: 0.4,
-  });
-  greyout();
-  gsap.to(categories[active - 1], {
-    opacity: 1,
-    fontWeight: "bold",
-  });
-  
-  gsap.to(first[active - 1], {
-    opacity: 1,
-    scale: 1,
-  });
-  
-  categories.forEach((val, idx) => {
-    val.addEventListener("click", () => {
-      gsap.to(".circle", {
-        rotate: -(4 - (idx + 1)) * 50,
-        ease: Expo.easeInOut,
-        duration: 1,
-      });
-      greyout();
-  
-      gsap.to(val, {
-        opacity: 1,
-        fontWeight: "bold",
-      });
-      gsap.to(first[idx], {
-        opacity: 1,
-        scale: 1,
-      });
-    });
-  });
-}
-// catImageFunctionPrevious();
+
+
 catImages.forEach(function (catImg, idx) {
   
   catImg.addEventListener("click", function () {
@@ -405,8 +180,6 @@ catImages.forEach(function (catImg, idx) {
     catOverlay[idx].style.opacity = 0.6;
     catOverlay[idx].style.display = "block";
     gsap.to(catImg, {
-      // width: "20vw",
-      // height: "32vw",
       opacity: 0,
       duration: 0.4,
     });
@@ -426,8 +199,6 @@ catImages.forEach(function (catImg, idx) {
       catOverlay[idx].style.opacity = 0;
       catOverlay[idx].style.display = "none";
       gsap.to(catImg, {
-        // width: "30vw",
-        // height: "45vw",
         opacity: 1,
         duration: 0.4,
       });
@@ -521,17 +292,6 @@ gsap.from(".circle", {
   },
 });
 
-// document.querySelector(".category-page").addEventListener("mousemove", function(event){
-//   var width = window.innerWidth;
-//   var height = window.innerHeight;
-//   positionX = (event.clientX/width) - 0.55;
-//   positionY = (event.clientY/height) - 0.55;
-//   gsap.to(".first img", {
-//       rotationY: positionX * 25,
-//       rotationX: positionY * 25,
-//       ease: "none"
-//   });
-// })
 
 let catHoverSound = document.querySelector(".category-panel-hover");
 categories.forEach(function (cat) {
@@ -547,25 +307,6 @@ function stopSongs() {
   catHoverSound.currentTime = 0;
 }
 
-// CLICKED Category
-
-// catImages.forEach((img, idx) => {
-//   img.addEventListener("click", () => {
-//     let clickedCatDetails = `
-//       <audio class="rpg-bgm" src="${categoryDetails[idx].categoryAudio}"></audio>
-//       <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
-//       <video class="rpg-bg w-full h-full z-[-1] absolute top-0 left-0" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
-//       <h1 class="text-[4vw] z-[1250] text-white font-[abc] tracking-tight font-semibold">${categoryDetails[idx].categoryTitle}</h1>
-//       <p class="desc w-[65%] z-[1250] text-[1.6vw] text-center text-white">
-//         ${categoryDetails[idx].categoryDesc}
-//       </p>
-//       <button class="border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-2xl px-2 py-1 rounded-md">View More</button>
-//       <i class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] cursor-pointer hover:text-slate-500"></i>
-//     `
-//     clickedCategory.innerHTML = clickedCatDetails;
-
-//   })
-// })
 
 let swiper = document.querySelector(".swiper");
 let videoBtn = document.querySelector(".vdo-btn");
@@ -678,19 +419,7 @@ gsap.from(mgCards, {
 });
 
 // STEAM GIFT CARDS SECTION
-// let slideStripe = document.querySelector(".slide-stripe");
-// gsap.to(slideStripe, {
-//   height: 0,
-//   scrollTrigger:{
-//     scroller: ".main",
-//     trigger: ".steam-gift-cards",
-//     start: "top 30%",
-//     end: "top 0%",
-//     scrub: 2,
-//   }
-// })
 
-let swooshSound = document.querySelector(".swoosh-sound");
 let giftContainer = document.querySelector(".container");
 
 function giftCardsAnimation() {
@@ -812,34 +541,8 @@ gsap.from(".offer-title h1", {
   },
 });
 
-function footerTitleHoverAnime() {
-  let footerCircle = document.querySelector(".footer-circle");
-  let footerBottom = document.querySelector(".footer-bottom");
 
-  footerBottom.addEventListener("mousemove", (dets) => {
-    gsap.to(footerCircle, {
-      left: dets.x,
-      y: dets.y - 500,
-    });
-    gsap.to(footerCircle, {
-      // display: "block",
-      scale: 20,
-      duration: 2,
-    });
-  });
 
-  footerBottom.addEventListener("mouseleave", () => {
-    gsap.to(footerCircle, {
-      // display: "none",
-      scale: 0,
-      duration: 2.4,
-    });
-  });
-}
-
-footerTitleHoverAnime();
-
-// gsap.to(".rounded-div-wrapper", {
 
 let expTitles = document.querySelectorAll(".exp-titles");
 let selectedCont = document.querySelector(".selected-section");
@@ -984,3 +687,95 @@ if(portraitView.matches) {
   let mainVid = document.querySelector(".main-video");
   mainVid.src = "videos/main-video-portrait.mp4";
 }
+
+
+// ---------- FOOTER -------------
+
+function footerAnimation() {
+  var footerSteam = document.querySelector(".footer-title");
+  let clutter = "";
+  let footerTitle = footerSteam.textContent;
+  for (let i = 0; i < footerTitle.length; i++) {
+    clutter += `<span>${footerTitle[i]}</span>`;
+  }
+  footerSteam.innerHTML = clutter;
+
+  gsap.from(".footer-title span", {
+    top: "-350px",
+    duration: 0.8,
+    stagger: 0.1,
+    ease: "poweri.out",
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".footer-bottom",
+      start: "top 85%",
+      end: "top 82%",
+      scrub: 3,
+    },
+  });
+
+  gsap.from(".btm-line, .top-line", {
+    width: 0,
+    duration: 1,
+    delay: 0.5,
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".f-mid",
+      start: "top 60%",
+      end: "top 50%",
+      scrub: 1,
+    },
+  });
+
+  gsap.from(".valve-section", {
+    opacity: 0,
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".f-mid",
+      start: "top 50%",
+      end: "top 40%",
+      scrub: 1,
+    },
+  });
+
+  gsap.from(".footer-top", {
+    y: -100,
+    opacity: 0,
+    duration: 1,
+    scrollTrigger: {
+      scroller: ".main",
+      trigger: ".footer-top",
+      start: "top 50%",
+      end: "top 45%",
+      scrub: 1,
+    },
+  });
+}
+footerAnimation();
+
+function footerTitleHoverAnime() {
+  let footerCircle = document.querySelector(".footer-circle");
+  let footerBottom = document.querySelector(".footer-bottom");
+
+  footerBottom.addEventListener("mousemove", (dets) => {
+    gsap.to(footerCircle, {
+      left: dets.x,
+      y: dets.y - 500,
+    });
+    gsap.to(footerCircle, {
+      // display: "block",
+      scale: 20,
+      duration: 2,
+    });
+  });
+
+  footerBottom.addEventListener("mouseleave", () => {
+    gsap.to(footerCircle, {
+      // display: "none",
+      scale: 0,
+      duration: 2.4,
+    });
+  });
+}
+
+footerTitleHoverAnime();
