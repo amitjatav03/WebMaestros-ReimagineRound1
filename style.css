@@ -278,29 +278,6 @@ html, body {
 }
 
 
-.swiper-slide h1{
-  position: absolute;
-  left: -10%;
-  text-shadow: 5px 5px 10px black;
-  font-family: redtrap;
-  color: white;
-  top: 50%;
-  z-index: 999;
-  font-size: 5vw;
-  font-weight: 600;
-  line-height: 5vw;
-  opacity: 0;
-  transform: scale(0);
-  transition: all linear .5s;
-  display: none;
-}
-
-.swiper-slide-active .imgtext{
-  opacity: 1;
-  transform: scale(1);
-}
-
-
 
 
 /* ------------- CATEGORY PAGE --------------- */
