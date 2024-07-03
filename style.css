@@ -267,7 +267,7 @@ html, body {
 }
 
 .swiper-slide img {
-  cursor: pointer;
+  cursor: none;
   display: block;
   width: 50vw;
   height: 70vh;
@@ -596,6 +596,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 .steam-gift-cards{
   /* background: linear-gradient(to bottom, #104E73, #1B2838); */
+  /* background: linear-gradient(to right, #121825, #111428); */
   /* background: linear-gradient(to right, #121825, #111428); */
   background: linear-gradient(to right, #131F57, #111428);
   overflow: hidden;
@@ -1103,7 +1104,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
   }
   .panel-items{
 
-    font-family: abc;
+    font-family: gestura;
     font-weight: bold;
     letter-spacing: -1px;
     font-size: 3vh;

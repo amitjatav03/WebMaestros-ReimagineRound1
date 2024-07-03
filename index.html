@@ -31,7 +31,7 @@
     <div class="main bg-[url(images/steam-bg.png)] bg-repeat overflow-hidden">
 
       <!-- LOADER  -->
-      <!-- <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
+      <div class="loader w-full h-screen bg-[#111725] overflow-hidden absolute top-0 left-0 z-[1200]">
         <div class="overlay-grain-pattern overlay-grain-basic"></div>
           <div class="upper-circle">
               <div class="clk-stripe clk-stp1">
@@ -79,7 +79,7 @@
           </div>
 
           <div class="mid-circle w-24 h-24 rounded-full bg-sky-950 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[5] max-sm:w-20 max-sm:h-20"></div>
-      </div>    -->
+      </div>   
 
 
       <!-- LANDING PAGE -->
@@ -103,7 +103,7 @@
         <audio class="close-nav-sound absolute" src="sound-effects/UI_menu_CLOSE.mp3"></audio>
         <audio class="nav-hover-sound absolute" src="sound-effects/UI_menu_rollover.mp3"></audio>
 
-        <div class="nav-menu hidden absolute bg-[#1D2024] top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex max-sm:w-[100vw] max-sm:rounded-none max-sm:top-0 max-sm:h-screen">
+        <div class="nav-menu hidden absolute bg-[#1D2024] top-[2%] right-[-50%] w-[40%] h-[96%] z-[700] opacity-0 rounded-[10px] flex max-sm:w-[100vw] max-sm:h-[95vh] max-sm:rounded-none max-sm:top-0">
           <div class="overlay-grain-pattern overlay-grain-basic"></div>
           <div class="cross-line absolute w-[8vw] max-sm:w-[20vw] h-[.1px] bg-[#424140] top-[12%] right-0"></div>
 
@@ -115,17 +115,21 @@
                  <input type="text" placeholder="Search..." class="bg-transparent font-[aeonik] text-white outline-none placeholder:text-white text-xl border-b-[1px] border-white w-[60%]">
 
                </div>
-              <button class="signin-btn rounded-md text-white mb-6 font-[abc] text-2xl font-bold cursor-pointer bg-green-800 px-3 py-1 uppercase">Sign In</button>
+              <!-- <button class="signin-btn rounded-md text-white mb-6 font-[abc] text-2xl font-bold cursor-pointer bg-green-800 px-3 py-1 uppercase">Sign In</button> -->
              </div>
 
              <div class="nav-main w-full h-[75%] px-10 py-10 gap-20 max-sm:h-[70%]">
+               <h1 class="shuffle">LOGIN</h1>
                <h1 class="shuffle">Store</h1>
                <h1 class="shuffle">Community</h1>
                <h1 class="shuffle">About</h1>
                <h1 class="shuffle">Support</h1>
                <h1 class="shuffle">News</h1>
-               <h1 class="shuffle">Labs</h1>
-               <h1 class="shuffle">Points Shop</h1>
+             </div>
+
+             <div class="nav-btm px-10 flex gap-2 flex-col py-10">
+               <img src="images/footerLogo_valve_new.png" class="w-[8vw] max-sm:w-[20vw]"  alt="">
+               <p class="text-gray-500 text-[.9vw] text-[.9vw] max-sm:text-[3vw]">© 2024 Valve Corporation. All rights reserved. All trademarks are property of their respective owners in the US and other countries.</p>
              </div>
           </div>
           <div class="nav-right w-[20%] relative h-full flex flex-col items-center justify-start gap-[18vw] border-l-[.01px] border-neutral-700 py-4">
@@ -139,10 +143,10 @@
           
           <i class="close-steam-install ri-close-large-fill absolute right-[12%] z-[600] top-[7%] max-sm:top-[3%] max-sm:right-[6%]  cursor-pointer text-[2.2vw] text-white max-sm:text-[7vw]"></i>
 
-          <div class="install-left w-[40%] max-sm:w-[80%]  h-full flex flex-col gap-4 justify-center">
+          <div class="install-left w-[40%] max-sm:w-[80%]  font-[twk]  h-full flex flex-col gap-4 justify-center">
 
             <img loading="lazy" class="w-[17vw] max-sm:w-[25vw]" src="images/steam-logo-install-steam.svg" alt="">
-            <h3 class="text-white text-[1.5vw] max-sm:text-[3.2vw] ">Steam is the ultimate destination for playing, discussing, and creating games.</h3>
+            <h3 class="text-white text-[1.5vw] max-sm:text-[3.2vw]">Steam is the ultimate destination for playing, discussing, and creating games.</h3>
             <div class="active-audience flex gap-[20%]">
               <div class="online-audience">
                 <h5 class="text-slate-300 text-[.8vw] max-sm:text-[2.2vw]"><i class="ri-circle-fill text-blue-500"></i> &nbsp; ONLINE</h5>
@@ -153,10 +157,10 @@
                 <h3 class="text-white text-[2vw] max-sm:text-[4vw]">6,827,808</h3>
               </div>
             </div>
-            <button class="text-white bg-[#0971E5] text-start px-4 py-4 text-[1.1vw] max-sm:text-[3vw] max-sm:px-2 max-sm:py-2">Get the app for mobile</button>
+            <button class="text-white bg-[#0971E5] hover:bg-blue-700 text-start px-4 py-4 text-[1.1vw] max-sm:text-[3vw] max-sm:px-2 max-sm:py-2 font-bold">Get the app for mobile</button>
             <p class="text-white text-[.85vw] text-center max-sm:text-[2.4vw]">The <span class="underline">Steam mobile apps</span> support your PC gaming experience on the go</p>
-            <h4 class="font-bold text-white text-[1.1vw] text-center max-sm:text-[2.8vw]">Start playing now...</h4>
-            <button class="text-white bg-[#303336] text-start px-4 py-4 text-[1.1vw] max-sm:text-[3vw] max-sm:px-2 max-sm:py-2">Get the app for PC</button>
+            <h4 class="font-bold text-white text-[1.1vw] text-center max-sm:text-[3vw] uppercase">Start playing now...</h4>
+            <button class="text-white bg-gray-700 hover:bg-[#303336] text-start px-4 py-4 text-[1.1vw] max-sm:text-[3vw] max-sm:px-2 max-sm:py-2 max-sm:hidden">Get the app for PC</button>
           </div>
 
           <div class="install-right w-[60%] max-sm:w-[80%] h-full flex justify-center items-center max-sm:hidden">
@@ -169,7 +173,7 @@
         </div>
 
         <div class="img-crsr flex items-center justify-center w-[8rem]  h-[8rem] rounded-full fixed z-[999] opacity-0">
-          <p class="text-white text-[1vw] font-bold font-[twk]">< Drag ></p>
+          <p class="text-white text-[1vw] font-bold font-[twk]"><- Drag -></p>
         </div>
         
         <div class="overlay top-0 left-0 absolute w-full h-screen z-[100] "></div>
@@ -1213,16 +1217,16 @@
           </div>
           <div class="f-top-right flex max-sm:gap-[2vw] max-sm:justify-between gap-[8vw] text-xl">
             <div class="f-right1 flex flex-col">
-              <a class="font-[aeonik] capitalize" href="#">about valve</a>
-              <a class="font-[aeonik] capitalize" href="#">jobs</a>
-              <a class="font-[aeonik] capitalize" href="#">steamworks</a>
-              <a class="font-[aeonik] capitalize" href="#">steam distribution</a>
-              <a class="font-[aeonik] capitalize" href="#">support</a>
-              <a class="font-[aeonik] capitalize" href="#">gift cards</a>
+              <a class="font-[aeonik] capitalize hover:text-white" href="#">about valve</a>
+              <a class="font-[aeonik] capitalize hover:text-white" href="#">jobs</a>
+              <a class="font-[aeonik] capitalize hover:text-white" href="#">steamworks</a>
+              <a class="font-[aeonik] capitalize hover:text-white" href="#">steam distribution</a>
+              <a class="font-[aeonik] capitalize hover:text-white" href="#">support</a>
+              <a class="font-[aeonik] capitalize hover:text-white" href="#">gift cards</a>
             </div>
             <div class="f-right2 flex flex-col uppercase tracking-normal">
-              <a class="font-[aeonik] capitalize" href="#"><span><i class="ri-facebook-circle-fill"></i></span>Steam</a>
-              <a class="font-[aeonik] lowercase" href="#"><span><i class="ri-twitter-x-fill"></i></span>@steam</a>
+              <a class="font-[aeonik] capitalize hover:text-white" href="#"><span><i class="ri-facebook-circle-fill"></i></span>Steam</a>
+              <a class="font-[aeonik] lowercase hover:text-white" href="#"><span><i class="ri-twitter-x-fill"></i></span>@steam</a>
             </div>
           </div>
           
@@ -1246,11 +1250,11 @@
               </div>
 
               <div class="valve-links flex justify-center gap-[2rem] max-sm:gap-[1rem]">
-                <a class="font-[aeonik] capitalize" href="#">privacy policy</a>
-                <a class="font-[aeonik] capitalize" href="#">legal</a>
-                <a class="font-[aeonik] capitalize" href="#">steam subscriber agreement</a>
-                <a class="font-[aeonik] capitalize" href="#">refunds</a>
-                <a class="font-[aeonik] capitalize" href="#">cookies</a>
+                <a class="font-[aeonik] capitalize hover:text-white" href="#">privacy policy</a>
+                <a class="font-[aeonik] capitalize hover:text-white" href="#">legal</a>
+                <a class="font-[aeonik] capitalize hover:text-white" href="#">steam subscriber agreement</a>
+                <a class="font-[aeonik] capitalize hover:text-white" href="#">refunds</a>
+                <a class="font-[aeonik] capitalize hover:text-white" href="#">cookies</a>
               </div>
             </div>
             <div class="btm-line w-full h-[1px] bg-[var(--light)]"></div>
