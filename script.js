@@ -214,7 +214,8 @@ let catToggle = 0;
 var catOverlay;
 let catCursor = document.querySelector(".category-crsr");
 let catTitle = document.querySelectorAll(".category-title");
-let clickedCategory = document.querySelector(".clicked-category");
+// let clickedCategory = document.querySelector(".clicked-category");
+let clickedCatSections = document.querySelectorAll(".clicked-category");
 let closeCatBtn;
 let categoryDetails = [
   {
@@ -287,33 +288,120 @@ catImages.forEach(function (catImg) {
     });
   });
 });
-
+function catImageFunctionPrevious() {
+  catImages.forEach(function (catImg, idx) {
+    let clickedCatDetails = `
+        <audio class="cat-bgm" src="${categoryDetails[idx].categoryAudio}"></audio>
+        <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
+        <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
+        <h1 class="text-[4vw] max-sm:text-[8vw] z-[1250] text-white font-[gestura] tracking-tight font-semibold">${categoryDetails[idx].categoryTitle}</h1>
+        <p class="desc max-sm:text-[3.2vw] max-sm:w-[80%] w-[65%] z-[1250] text-[1.6vw] font-[aeonik] text-center text-white">
+          ${categoryDetails[idx].categoryDesc}
+        </p>
+        <button class="view border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-[1.5vw] max-sm:text-[4vw] px-2 py-1 rounded-md">View More</button>
+        <i id="cc" class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] max-sm:text-[8vw] font-[twk] cursor-pointer hover:text-slate-500"></i>
+        `;
+    catImg.addEventListener("click", function () {
+      clickedCategory.innerHTML = ``;
+      
+      clickedCategory.innerHTML = clickedCatDetails;
+      catOverlay = document.querySelector(".category-side-overlay");
+      catBgm = document.querySelector(".cat-bgm");
+  
+      catTitle.forEach((t) => {
+        t.style.display = "none";
+      });
+      catPanel.style.display = "none";
+      catBgm.play();  
+      clickedCategory.style.display = "flex";
+      clickedCategory.style.opacity = 1;
+      catOverlay.style.opacity = 0.6;
+      catOverlay.style.display = "block";
+      gsap.to(catImg, {
+        // width: "20vw",
+        // height: "32vw",
+        opacity: 0,
+        duration: 0.4,
+      });
+      gsap.to(desc, {
+        opacity: 1,
+      });
+      closeCatBtn = document.querySelector(".close-cat");
+  
+      closeCatBtn.addEventListener("click", function () {
+        catTitle.forEach((t) => {
+          t.style.display = "block";
+        });
+        catPanel.style.display = "block";
+        catBgm.pause();
+        catBgm.currentTime = 0;
+        clickedCategory.style.opacity = 0;
+        clickedCategory.style.display = "none";
+        catOverlay.style.opacity = 0;
+        catOverlay.style.display = "none";
+        gsap.to(catImg, {
+          // width: "30vw",
+          // height: "45vw",
+          opacity: 1,
+          duration: 0.4,
+        });
+  
+        gsap.to(desc, {
+          opacity: 0,
+        });
+      });
+    });
+  });
+  
+  gsap.to(categories, {
+    opacity: 0.4,
+  });
+  greyout();
+  gsap.to(categories[active - 1], {
+    opacity: 1,
+    fontWeight: "bold",
+  });
+  
+  gsap.to(first[active - 1], {
+    opacity: 1,
+    scale: 1,
+  });
+  
+  categories.forEach((val, idx) => {
+    val.addEventListener("click", () => {
+      gsap.to(".circle", {
+        rotate: -(4 - (idx + 1)) * 50,
+        ease: Expo.easeInOut,
+        duration: 1,
+      });
+      greyout();
+  
+      gsap.to(val, {
+        opacity: 1,
+        fontWeight: "bold",
+      });
+      gsap.to(first[idx], {
+        opacity: 1,
+        scale: 1,
+      });
+    });
+  });
+}
+// catImageFunctionPrevious();
 catImages.forEach(function (catImg, idx) {
-  let clickedCatDetails = `
-      <audio class="cat-bgm" src="${categoryDetails[idx].categoryAudio}"></audio>
-      <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
-      <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="${categoryDetails[idx].wallpaperSrc}" autoplay muted loop></video>
-      <h1 class="text-[4vw] max-sm:text-[8vw] z-[1250] text-white font-[gestura] tracking-tight font-semibold">${categoryDetails[idx].categoryTitle}</h1>
-      <p class="desc max-sm:text-[3.2vw] max-sm:w-[80%] w-[65%] z-[1250] text-[1.6vw] font-[aeonik] text-center text-white">
-        ${categoryDetails[idx].categoryDesc}
-      </p>
-      <button class="view border-2 z-[1250] border-white hover:bg-white hover:text-black cursor-pointer mt-4 text-white text-[2vw] max-sm:text-[4vw] px-2 py-1 rounded-md">View More</button>
-      <i id="cc" class="close-cat ri-arrow-left-circle-line z-[1250] text-white text-[4.5vw] max-sm:text-[8vw] font-[twk] cursor-pointer hover:text-slate-500"></i>
-      `;
+  
   catImg.addEventListener("click", function () {
-    clickedCategory.innerHTML = ``;
-    
-    clickedCategory.innerHTML = clickedCatDetails;
     catOverlay = document.querySelector(".category-side-overlay");
-    catBgm = document.querySelector(".cat-bgm");
+    catBgm = clickedCatSections[idx].querySelector("audio");
+    closeCatBtn = document.querySelectorAll(".close-cat");
 
     catTitle.forEach((t) => {
       t.style.display = "none";
     });
     catPanel.style.display = "none";
     catBgm.play();  
-    clickedCategory.style.display = "flex";
-    clickedCategory.style.opacity = 1;
+    clickedCatSections[idx].style.display = "flex";
+    clickedCatSections[idx].style.opacity = 1;
     catOverlay.style.opacity = 0.6;
     catOverlay.style.display = "block";
     gsap.to(catImg, {
@@ -325,17 +413,16 @@ catImages.forEach(function (catImg, idx) {
     gsap.to(desc, {
       opacity: 1,
     });
-    closeCatBtn = document.querySelector(".close-cat");
 
-    closeCatBtn.addEventListener("click", function () {
+    closeCatBtn[idx].addEventListener("click", function () {
       catTitle.forEach((t) => {
         t.style.display = "block";
       });
       catPanel.style.display = "block";
       catBgm.pause();
       catBgm.currentTime = 0;
-      clickedCategory.style.opacity = 0;
-      clickedCategory.style.display = "none";
+      clickedCatSections[idx].style.opacity = 0;
+      clickedCatSections[idx].style.display = "none";
       catOverlay.style.opacity = 0;
       catOverlay.style.display = "none";
       gsap.to(catImg, {

@@ -932,7 +932,7 @@ background: linear-gradient(139deg, rgba(188,223,254,1) 0%, rgba(191,234,254,1) 
 
 .nt-slice:nth-child(3)::after{
   background-image: url(images/explore-images/ntimg3.webp);
-=
+
 }
 
 .nt-slice:nth-child(4)::after{
