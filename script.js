@@ -391,7 +391,7 @@ function catImageFunctionPrevious() {
 catImages.forEach(function (catImg, idx) {
   
   catImg.addEventListener("click", function () {
-    catOverlay = document.querySelector(".category-side-overlay");
+    catOverlay = document.querySelectorAll(".category-side-overlay");
     catBgm = clickedCatSections[idx].querySelector("audio");
     closeCatBtn = document.querySelectorAll(".close-cat");
 
@@ -402,8 +402,8 @@ catImages.forEach(function (catImg, idx) {
     catBgm.play();  
     clickedCatSections[idx].style.display = "flex";
     clickedCatSections[idx].style.opacity = 1;
-    catOverlay.style.opacity = 0.6;
-    catOverlay.style.display = "block";
+    catOverlay[idx].style.opacity = 0.6;
+    catOverlay[idx].style.display = "block";
     gsap.to(catImg, {
       // width: "20vw",
       // height: "32vw",
@@ -423,8 +423,8 @@ catImages.forEach(function (catImg, idx) {
       catBgm.currentTime = 0;
       clickedCatSections[idx].style.opacity = 0;
       clickedCatSections[idx].style.display = "none";
-      catOverlay.style.opacity = 0;
-      catOverlay.style.display = "none";
+      catOverlay[idx].style.opacity = 0;
+      catOverlay[idx].style.display = "none";
       gsap.to(catImg, {
         // width: "30vw",
         // height: "45vw",
