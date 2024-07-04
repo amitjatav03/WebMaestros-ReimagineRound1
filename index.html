@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
     
     
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="output.css"/>
 
     <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   </head>
 
   <body>
@@ -181,7 +181,7 @@
         
         
         
-        <video class="main-video absolute w-full h-screen top-0 left-0 z-[90] object-cover object-center" src="main-video.mp4" autoplay loop muted></video>
+        <video class="main-video absolute w-full h-screen top-0 left-0 z-[90] object-cover object-center" src="./videos/main-video.mp4" autoplay loop muted></video>
         
         <div class="swiper mySwiper absolute z-[150] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full">
 
@@ -215,12 +215,12 @@
   
 
       <!-- CATEGORY SECTION  -->
-      <div class="category-page bg-[url(images/steam-bg.png)] bg-repeat relative w-full h-[120vh] max-sm:h-[70vh] bg-[#EBF1FC] z-[1900]">
+      <div class="category-page bg-[url(images/steam-bg.png)] bg-repeat relative w-full h-[120vh] max-sm:h-[70vh] z-[1900]">
         <!-- <div class="overlay-grain-pattern overlay-grain-basic"></div> -->
         <audio class="category-panel-hover" src="sound-effects/category-items-click.mp3" autoplay="true"></audio>
         
         <!-- for action  -->
-        <div class="clicked-category action-cat absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
+        <div class="clicked-category action-at absolute w-full h-full scale-2 top-0 left-0  flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
           <audio class="cat-bgm" src="sounds/category-sounds/s1.mp3"></audio>
           <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
           <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="videos/live-wallpapers/action.mp4" autoplay muted loop></video>
@@ -234,7 +234,7 @@
 
 
         <!-- for anime  -->
-        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
+        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
           <audio class="cat-bgm" src="sounds/category-sounds/s2.mp3"></audio>
           <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
           <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="videos/live-wallpapers/anime2.mp4" autoplay muted loop></video>
@@ -247,7 +247,7 @@
         </div>  
 
         <!-- all sports  -->
-        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
+        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
           <audio class="cat-bgm" src="sounds/category-sounds/s3.mp3"></audio>
           <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
           <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="videos/live-wallpapers/all-sports.mp4" autoplay muted loop></video>
@@ -260,7 +260,7 @@
         </div>
 
         <!-- for rpg  -->
-        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
+        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
           <audio class="cat-bgm" src="sounds/category-sounds/s4.mp3"></audio>
           <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
           <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="videos/live-wallpapers/rpg.mp4" autoplay muted loop></video>
@@ -273,7 +273,7 @@
         </div>
 
         <!-- for survival  -->
-        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
+        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
           <audio class="cat-bgm" src="sounds/category-sounds/s5.mp3"></audio>
           <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
           <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="videos/live-wallpapers/survival.mp4" autoplay muted loop></video>
@@ -286,7 +286,7 @@
         </div>
 
         <!-- for multiplayer  -->
-        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
+        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
           <audio class="cat-bgm" src="sounds/category-sounds/s6.mp3"></audio>
           <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
           <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="videos/live-wallpapers/multiplayer.mp4" autoplay muted loop></video>
@@ -299,7 +299,7 @@
         </div>
 
         <!-- for puzzle  -->
-        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
+        <div class="clicked-category absolute w-full h-full scale-2 top-0 left-0 flex-col items-center justify-center z-[1000] hidden opacity-0 px-20 max-sm:px-0">
           <audio class="cat-bgm" src="sounds/category-sounds/s7.mp3"></audio>
           <div class="category-side-overlay bg-black opacity-0 z-[1200] absolute top-0 left-0 w-full h-full"></div>
           <video class="cat-bg w-full h-full z-[-1] absolute top-0 left-0 object-cover" src="videos/live-wallpapers/puzzle.mp4" autoplay muted loop></video>
@@ -326,7 +326,7 @@
 
 
           <h1 class="category-title font-bold text-[2.8vw] max-sm:text-[6vw] max-sm:text-slate-200 tracking-tight leading-none text-slate-200 relative font-[redtrap] font-bolder uppercase">browse by</h1>
-          <h1 class="category-title font-bold text-[7vw] max-sm:text-[5.6vh] tracking-tight leading-none text-slate-200 relative font-[redtrap] font-bold uppercase">Category</h1>
+          <h1 class="category-title font-bold text-[7vw] max-sm:text-[5.6vh] tracking-tight leading-none text-slate-200 relative font-[redtrap] uppercase">Category</h1>
           <div class="circle flex justify-center items-center rounded-full">
             <div class="stripe stp1">
               <div class="first">

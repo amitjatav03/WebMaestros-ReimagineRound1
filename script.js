@@ -2,7 +2,7 @@
 let portraitView = window.matchMedia("(max-width: 640px)");
 if(portraitView.matches) {
   let mainVid = document.querySelector(".main-video");
-  mainVid.src = "main-video-portrait.mp4";
+  mainVid.src = "./videos/main-video-portrait.mp4";
 }
 
 function loco() {
